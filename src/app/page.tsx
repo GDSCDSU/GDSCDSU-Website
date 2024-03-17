@@ -48,7 +48,7 @@ export default function HomePage() {
             <nav className="bg-white border-gray-200 dark:bg-gray-900">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="#" className="flex items-center space-x-5 rtl:space-x-reverse mx-5">
-                        <Image src='/LOGO.svg' alt='' style={{marginLeft:'10%'}} width={300} height={0} />
+                        <Image src='/LOGO.svg' alt='' width={300} height={0} />
                     </a>
                     <div className="md:hidden flex items-center">
                         <button
