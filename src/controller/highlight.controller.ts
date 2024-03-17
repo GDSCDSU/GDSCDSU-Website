@@ -6,7 +6,7 @@ import {
   fetchHighlight,
 } from "@/model";
 import { connectDB } from "../../config/database.config";
-import Cloudinary from "@/util/cloudinary";
+import uploadToCloudinary from "@/util/cloudinary";
 
 class highlight {
 
@@ -16,7 +16,11 @@ class highlight {
   // validate the request body
   private validate =  (body: FormData) => {
 
-    if(body.get('title') === null || body.get('speaker') === null || body.get('picture') === null){
+    const title = body.get('title');
+    const speaker = body.get('speaker');
+    const picture = body.get('picture');
+
+    if (!title || !speaker || !picture) {
       throw new Error('All fields are required');
     }
   }
@@ -31,10 +35,14 @@ class highlight {
       const picture = body.get("picture") as File;
       
       // uploading image on cloudinary
-      const image = await Cloudinary(picture);
+      const image = await uploadToCloudinary(picture) as any;
       
       // creating highlight
-      const highlight = await createHighlight({  picture: image.secure_url,title:body.get('title'),speaker:body.get('speaker') });
+      const highlight = await createHighlight({  
+        picture: image.secure_url,
+        title:body.get('title'),
+        speaker:body.get('speaker') 
+      });
 
      return generateResponse(
         highlight,
@@ -42,13 +50,15 @@ class highlight {
         STATUS_CODES.CREATED
       );
     } catch (error: any) {
-     return generateResponse(null, error.message, STATUS_CODES.INTERNAL_SERVER_ERROR);
+     return generateResponse(null, error.message, STATUS_CODES.UNPROCESSABLE_ENTITY);
     }
   };
   // fetch all the highlights
-  public getHighlights = async (request: Request) => {
+  public getHighlights = async () => {
     try {
+      // fetch the highlights
       const highlights = await fetchHighlight();
+
       return generateResponse(
         highlights,
         "Highlights fetched successfully",
@@ -63,16 +73,20 @@ class highlight {
   public deleteHighlights = async (request: Request) => {
     try {
       const { id } = await request.json();
- 
-      await deleteHighlight(id);
 
-     return generateResponse(
+      if(!id) throw new Error('Id is required');
+      
+     const highlight = await deleteHighlight(id);
+
+      if(!highlight) throw new Error("Highlight not found")
+     
+      return generateResponse(
         null,
         "Highlight deleted successfully",
         STATUS_CODES.SUCCESS
       );
     } catch (error: any) {
-    return generateResponse(null, error.message, STATUS_CODES.INTERNAL_SERVER_ERROR);
+    return generateResponse(null, error.message, STATUS_CODES.UNPROCESSABLE_ENTITY);
     }
   }
 

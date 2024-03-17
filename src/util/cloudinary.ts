@@ -1,20 +1,23 @@
 import { v2 as cloudinary } from 'cloudinary';
-import fs from 'fs';
 
+// Configure Cloudinary
 cloudinary.config({ 
   cloud_name: 'dgjvt9oa9', 
   api_key: '674622387414444', 
   api_secret: 'bLwQSkWWcS25VZTZYqNeEvJ9v0I'
 });
 
-const Cloudinary = async (file: File) => {
+// Function to upload image to Cloudinary
+const uploadToCloudinary = async (file:File) => {
   try {
+    
+    // Convert file to array buffer
     const arrayBuffer = await file.arrayBuffer();
     const buffer = Buffer.from(arrayBuffer);
 
-    const result:any = await new Promise((resolve, reject) => {
-      cloudinary.uploader.upload_stream({
-      }, (error, result) => {
+    // Upload stream to Cloudinary
+    const result = await new Promise((resolve, reject) => {
+      cloudinary.uploader.upload_stream({}, (error, result) => {
         if (error) {
           reject(error);
         } else {
@@ -23,12 +26,11 @@ const Cloudinary = async (file: File) => {
       }).end(buffer);
     });
 
-    console.log('Image uploaded successfully:', result.url );
     return result;
   } catch (error) {
-    console.error('Error uploading image to Cloudinary:', error);
-    throw error;
+    // console.error('Error uploading image to Cloudinary:', error);
+    throw new Error('Error uploading image to Cloudinary');
   }
 };
 
-export default Cloudinary;
+export default uploadToCloudinary;

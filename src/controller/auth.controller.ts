@@ -8,9 +8,11 @@ import jwt from 'jsonwebtoken';
 import { cookies } from "next/headers";
 
 class Auth {
+
   constructor() {
     connectDB();
   }
+
   private encryptPassword = async (password: string) => await bcrypt.hash(password, 10);
   // is user exist in database
   private isUserExist = async (email: string) => await findUser({ email });
@@ -29,6 +31,7 @@ class Auth {
   // check is user valid
   private isUserValid = async (body: LoginCredentials) => {
       const user = await this.isUserExist(body.email);
+
       if (!user)  throw new Error("User not found")
       // Validate the password of the user
     
@@ -71,7 +74,7 @@ class Auth {
    
       // create a jwt token for admin dashboard
       const token =   this.generateAccessToken(user);
-      cookies().set('jwt', token, { maxAge: 60 * 60 * 24, });
+      cookies().set('session', token, { maxAge: 60 * 60 * 24, });
 
       return generateResponse({  user,token }, "Login Successful", STATUS_CODES.SUCCESS);
     } catch (error: any) {
@@ -158,9 +161,11 @@ class Auth {
       const user = await this.isUserExist(decodeToken.email);
       if(!user) throw new Error("User with this email does not exist")
 
-      // update the password
-      user.password = body.password;
-
+      // hash the password and then update it
+      const hash = await this.encryptPassword(body.password);
+      user.password = hash;
+      user.save();
+      
       // destory the cookies
       cookies().delete('otpToken');
       

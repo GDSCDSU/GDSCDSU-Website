@@ -1,8 +1,8 @@
 import { Highlight } from "@/controller";
 import { NextRequest } from "next/server";
 
-export async function GET(request: NextRequest) {
-  return await Highlight.getHighlights(request);
+export async function GET() {
+  return await Highlight.getHighlights();
 }
 
 export async function POST(request: NextRequest) {

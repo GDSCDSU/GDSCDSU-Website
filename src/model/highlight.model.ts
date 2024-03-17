@@ -7,7 +7,6 @@ interface IHighlight {
     date: Date;
 }
 
-
 const highlightSchema = new Schema({
     title: {
         type: String,
@@ -17,16 +16,14 @@ const highlightSchema = new Schema({
     },
     picture:{
         type: String,
-    
     },
     date: {
         type: Date,
-        required: true,
         default: Date.now,
     },
 });
 
-const Highlight = mongoose.models.Highlight || mongoose.model<IUser>("Highlight", highlightSchema);
+const Highlight = mongoose.models.Highlight || mongoose.model<IHighlight>("Highlight", highlightSchema);
 
 export const createHighlight = (obj:any) => Highlight.create(obj);
 

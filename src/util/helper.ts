@@ -1,6 +1,11 @@
 export const ROLES = Object.freeze({
     LEAD: 'lead',
-    TEAM: 'team-member', 
+    TEAM: 'Executive-core-team-member', 
+  });
+  export const TEAM = Object.freeze({
+   OPERATION:"operation",
+   MARKETING:"marketing",
+   DEVELOPER:"development"
   });
 
   export const STATUS_CODES = Object.freeze({
@@ -16,3 +21,4 @@ export const ROLES = Object.freeze({
     INTERNAL_SERVER_ERROR: 500, 
   });
   
+

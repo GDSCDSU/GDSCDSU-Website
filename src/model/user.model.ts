@@ -1,17 +1,19 @@
-import mongoose, { Schema, Document } from "mongoose";
-import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
+import mongoose, { Schema } from "mongoose";
 
-interface IUser extends Document {
+interface IUser  {
   fullname: string;
   email: string;
   password: string;
   otp: string;
   isLead: boolean;
+  team:string;
+  bio:string;
+  role:string
+  tagline:string
   createdAt: Date;
   updatedAt: Date;
-  isPasswordCorrect(password: string): Promise<boolean>;
 }
+
 
 const UserSchema: Schema = new Schema(
   {
@@ -20,8 +22,6 @@ const UserSchema: Schema = new Schema(
     },
     email: {
       type: String,
-      required: true,
-      unique: true,
     },
     password: {
       type: String,
@@ -34,22 +34,44 @@ const UserSchema: Schema = new Schema(
     },
     role: {
       type: String,
-      enum: ["team-member", "lead"],
+      enum: ["Executive-core-team-member", "lead"],
+    },
+    tagline:{
+      type:String
+    },
+    bio:{
+      type:String
+    },
+    team:{
+      type:String,
+      enum:["operation","development","marketing"]
+    },
+    facebook:{
+      type:String
+    },
+    instagram:{
+      type:String
+    },
+    linkedin:{
+      type:String
+    },
+    picture:{
+      type:String
+    },
+    gmail:{
+      type:String
     },
   },
-  { timestamps: true }
+  { timestamps: true,versionKey: false  }
 );
 
-const User = mongoose.models.User || mongoose.model<IUser>("User", UserSchema);
-
-// encrypt user password before saving
-UserSchema.pre("save", async function (next) {
-  if (!this.isModified("password")) return next();
-  this.password = await bcrypt.hash(this.password as string, 10);
-  next();
-});
+const User = mongoose.models.user || mongoose.model<IUser>("user", UserSchema);
 
 
-export const createUser = (obj: IUser) => User.create(obj);
+export const createUser = (obj: any) => User.create(obj);
+
 export const findUser = (query: any) => User.findOne(query);
 
+export const findTeam = (pipeline:any) => User.aggregate([pipeline])
+
+export const deleteTeam = (id: string) => User.findByIdAndDelete(id);
