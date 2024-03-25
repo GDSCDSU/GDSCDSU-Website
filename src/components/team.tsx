@@ -17,13 +17,7 @@ export default function Team(){
                 <button className={`${styles.NavButton} ${styles.DevelopmentTeam}`}>Development Team</button>
                 <button className={`${styles.NavButton} ${styles.ExecutiveCoreTeam}`}>Executive Core Team</button>
             </div>
-            
-            <div className="QuoteDiv">
-
-            </div>
-
-           
-
+                       
     </>
     );
 }

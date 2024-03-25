@@ -1,69 +1,161 @@
 /* Founder.module.css */
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .header {
     width: 504px;
     height: 58px;
     background: #4285F4;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
   }
   
-  .content {
+  .container p {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  .card {
     width: 504px;
     height: 616px;
     background: white;
     box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.12);
     border-radius: 20px;
-    padding: 20px;
     margin-top: -1px;
-  }
-  
-  .facultyHeader {
-    width: 504px;
-    height: 58px;
-    background: #34A853;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-  }
-  
-  .facultyContent {
-    width: 504px;
-    height: 616px;
-    background: white;
-    box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.12);
-    border-radius: 20px;
     padding: 20px;
-    margin-top: -1px;
   }
   
-  .teamIcons {
+  .card img {
+    /* Add your image styles here */
+  }
+  
+  .card h2 {
+    color: #4285F4;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: #656C73;
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .group {
+    width: 170px;
+    height: 32px;
     display: flex;
     justify-content: space-between;
-    width: 170px;
     margin-top: 20px;
   }
   
-  .teamIcon {
+  .group .icon {
     width: 32px;
     height: 32px;
-    border: 1px solid #656C73;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
   }
+  
+  .group .icon .Rectangle {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #656C73;
+  }
+  
+  .group .icon .Vector {
+    width: 16px;
+    height: 16px;
+    background: #656C73;
+  }
+  
+  .group .icon .Email {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #656C73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .group .icon .Email .Vector {
+    width: 18px;
+    height: 13px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #656C73;
+  }
+
+
+  /* MaskGroup.module.css */
+
+.container {
+  width: 504px;
+  height: 276px;
+  background: white;
+  box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.12);
+  border-radius: 20px;
+}
+
+.imageContainer {
+  width: 94px;
+  height: 94px;
+  position: relative;
+}
+
+.imageContainer .Ellipse {
+  width: 94px;
+  height: 94px;
+  position: absolute;
+  background: #34A853;
+  border-radius: 9999px;
+}
+
+.imageContainer img {
+  width: 94px;
+  height: 94px;
+  position: absolute;
+}
+
+.imageContainer .Img92921 {
+  width: 108.95px;
+  height: 94px;
+  left: -7.83px;
+  position: absolute;
+}
+
+.name {
+  color: #2A2E3A;
+  font-size: 24px;
+  font-family: 'Google Sans';
+  font-weight: 700;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+
+.designation {
+  color: #656C73;
+  font-size: 16px;
+  font-family: 'Google Sans';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
+.description {
+  width: 353px;
+  text-align: justify;
+  color: #656C73;
+  font-size: 14px;
+  font-family: 'Google Sans';
+  font-weight: 400;
+  word-wrap: break-word;
+}
+
   

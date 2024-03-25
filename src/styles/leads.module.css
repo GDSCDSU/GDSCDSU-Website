@@ -1,0 +1,146 @@
+/* Leads.module.css */
+
+.container {
+    width: 122px;
+    height: 719px;
+    position: relative;
+  }
+  
+  .vector {
+    width: 0;
+    height: 188px;
+    left: 62px;
+    top: 659px;
+    position: absolute;
+    transform: rotate(-180deg);
+    transform-origin: 0 0;
+    border: 2px #EA4335 solid;
+  }
+  
+  .textYear {
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    color: #EA4335;
+    word-wrap: break-word;
+  }
+  
+  .ellipse {
+    width: 122px;
+    height: 122px;
+    left: 0;
+    top: 597px;
+    position: absolute;
+    background: #EA4335;
+  }
+  
+  .textYear2023 {
+    left: 38px;
+    top: 637px;
+  }
+  
+  .current {
+    left: 33px;
+    top: 664px;
+    font-size: 12px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    color: #FAFAFA;
+    word-wrap: break-word;
+  }
+  
+  .rectangle198 {
+    width: 903px;
+    height: 185px;
+    background: white;
+    box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+  }
+  
+  .maskGroup {
+    width: 94px;
+    height: 94px;
+    position: relative;
+  }
+  
+  .ellipse44 {
+    width: 94px;
+    height: 94px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: #34A853;
+    border-radius: 9999px;
+  }
+  
+  .image1 {
+    width: 94px;
+    height: 94px;
+    left: 0;
+    top: 0;
+    position: absolute;
+  }
+  
+  .syedAteeq {
+    color: #2A2E3A;
+    font-size: 24px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .gdscDsuLead20202021Founder {
+    color: #656C73;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .description {
+    width: 757px;
+    text-align: justify;
+    color: #656C73;
+    font-size: 14px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .socials {
+    width: 170px;
+    height: 32px;
+    position: relative;
+  }
+  
+  .group719 {
+    width: 32px;
+    height: 32px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+  }
+  
+  .rectangle190,
+  .rectangle191,
+  .rectangle193 {
+    width: 32px;
+    height: 32px;
+    border-radius: 23px;
+    border: 1px #656C73 solid;
+  }
+  
+  .vector,
+  .vector1,
+  .vector2,
+  .vector3 {
+    width: 10px;
+    height: 18px;
+    background: #656C73;
+  }
+  

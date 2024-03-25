@@ -5,6 +5,9 @@ import styles from './Founder.module.css'; // Import the CSS module
 export default function Founder() {
   return (
     <>
+    <div className="QuoteDiv">
+
+    </div>
       <div className={styles.container}>
         <p>Founder</p>
       </div>
@@ -50,24 +53,44 @@ export default function Founder() {
       </div>
 
       <div className={styles.group}>
-        <div className={styles.icon}>
-          <div className={styles.Rectangle} />
+        <div className={`${styles.group} ${styles.Rectangle}`}>
           <div className={styles.Vector} />
         </div>
-        <div className={styles.icon}>
-          <div className={styles.Rectangle} />
+        <div className={`${styles.group} ${styles.Rectangle}`}>
+          <div className={styles.Vector} />
+        </div>
+        <div className={styles.group}>
+          <div className={`${styles.Rectangle} ${styles.Vector}`} />
+          <div className={`${styles.Rectangle} ${styles.Vector}`} />
+        </div>
+        <div className={`${styles.group} ${styles.Rectangle}`}>
           <div className={styles.Vector} />
         </div>
       </div>
 
       <div className={styles.card}>
-        <div className={styles.MaskGroup}>
-          <div className={styles.Ellipse44} />
-          <img className="1" />
-          <img className="Img92921" />
+        <div className={styles.group}>
+          <div className={styles.Ellipse} />
+          <img />
+          <img />
         </div>
       </div>
-    </>
+
+
+      <div className={styles.container}>
+      <div className={styles.imageContainer}>
+        <div className={styles.Ellipse} />
+        <img className="1" src="https://via.placeholder.com/94x94" />
+        <img className={styles.Img92921} src="https://via.placeholder.com/109x94" />
+      </div>
+
+      <div className={styles.name}>tarun kumar</div>
+      <div className={styles.designation}>TECH SAMURAI</div>
+      <div className={styles.description}>
+        Like most passionate team-ups in Pakistan, the GDSC DSU Chapter started over a cup of chai and strong motivation of creating a developers-focused club. Inspired by courses like MIT's Missing Semester and Harvard CS50, the team was driven by providing quality sessions that will make them shine in their craft. Suffice to say, working with a set of resilient people who - through thick and thin - shared my ideology of selfless giving back was the highlight of 2020 for me.
+      </div>
+    </div>
+
     </>
   );
 }
