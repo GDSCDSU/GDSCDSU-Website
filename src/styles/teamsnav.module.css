@@ -1,0 +1,94 @@
+/* TeamNavigation.module.css */
+
+.TeamNavigation {
+    width: 1114px;
+    height: 54px;
+    position: relative;
+  }
+  
+  .Rectangle196 {
+    width: 1114px;
+    height: 54px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 27px;
+    border: 1px solid #4285F4;
+  }
+  
+  .Rectangle197 {
+    width: 154px;
+    height: 46px;
+    left: 4px;
+    top: 4px;
+    position: absolute;
+    background: #4285F4;
+    border-radius: 23px;
+  }
+  
+  .Founder {
+    left: 49px;
+    top: 17px;
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .Leads {
+    left: 189px;
+    top: 17px;
+    position: absolute;
+    color: #656C73;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .MarketingTeam {
+    left: 950px;
+    top: 17px;
+    position: absolute;
+    color: #656C73;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .OperationsTeam {
+    left: 535px;
+    top: 17px;
+    position: absolute;
+    color: #656C73;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .DevelopmentTeam {
+    left: 735px;
+    top: 17px;
+    position: absolute;
+    color: #656C73;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .ExecutiveCoreTeam {
+    left: 308px;
+    top: 17px;
+    position: absolute;
+    color: #656C73;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
