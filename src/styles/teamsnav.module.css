@@ -1,72 +1,49 @@
-/* Navbar.module.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .TeamNavigation {
-    width: 1114px;
-    height: 54px;
-    position: relative;
-  }
-  
-  .Rectangle196 {
-    width: 1114px;
-    height: 54px;
-    left: 0;
-    top: 0;
-    position: absolute;
-    border-radius: 27px;
-    border: 1px solid #4285F4;
-  }
-  
-  .Rectangle197 {
-    width: 154px;
-    height: 46px;
-    left: 4px;
-    top: 4px;
-    position: absolute;
-    background: #4285F4;
-    border-radius: 23px;
-  }
-  
-  .NavButton {
-    position: absolute;
-    font-size: 16px;
-    font-family: 'Google Sans';
-    font-weight: 400;
-    color: #656C73;
-    word-wrap: break-word;
-    border: none;
-    cursor: pointer;
-    background: transparent;
-  }
-  
-  .Founder {
-    left: 49px;
-    top: 17px;
-    color: white;
-    font-weight: 700;
-  }
-  
-  .Leads {
-    left: 189px;
-    top: 17px;
-  }
-  
-  .MarketingTeam {
-    left: 950px;
-    top: 17px;
-  }
-  
-  .OperationsTeam {
-    left: 535px;
-    top: 17px;
-  }
-  
-  .DevelopmentTeam {
-    left: 735px;
-    top: 17px;
-  }
-  
-  .ExecutiveCoreTeam {
-    left: 308px;
-    top: 17px;
-  }
-  
+  width: 1114px;
+  height: 54px;
+  position: relative;
+}
+
+.Rectangle196 {
+  @apply w-1114 h-54 absolute border-solid border-2 border-blue-500 rounded-full;
+  top: 0;
+  left: 0;
+}
+
+.Rectangle197 {
+  @apply w-154 h-46 absolute bg-blue-500 rounded-full;
+  top: 4px;
+  left: 4px;
+}
+
+.NavButton {
+  @apply absolute text-base font-sans font-normal text-gray-700 border-none cursor-pointer bg-transparent;
+}
+
+.Founder {
+  @apply left-49 top-17 text-white font-bold;
+}
+
+.Leads {
+  @apply left-189 top-17;
+}
+
+.MarketingTeam {
+  @apply left-950 top-17;
+}
+
+.OperationsTeam {
+  @apply left-535 top-17;
+}
+
+.DevelopmentTeam {
+  @apply left-735 top-17;
+}
+
+.ExecutiveCoreTeam {
+  @apply left-308 top-17;
+}

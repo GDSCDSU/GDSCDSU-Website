@@ -1,161 +1,85 @@
-/* Founder.module.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .container {
-    width: 504px;
-    height: 58px;
-    background: #4285F4;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  
-  .container p {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 15px;
-  }
-  
-  .card {
-    width: 504px;
-    height: 616px;
-    background: white;
-    box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.12);
-    border-radius: 20px;
-    margin-top: -1px;
-    padding: 20px;
-  }
-  
-  .card img {
-    /* Add your image styles here */
-  }
-  
-  .card h2 {
-    color: #4285F4;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .card p {
-    color: #656C73;
-    font-size: 16px;
-    margin-bottom: 15px;
-  }
-  
-  .group {
-    width: 170px;
-    height: 32px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .group .icon {
-    width: 32px;
-    height: 32px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .group .icon .Rectangle {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid #656C73;
-  }
-  
-  .group .icon .Vector {
-    width: 16px;
-    height: 16px;
-    background: #656C73;
-  }
-  
-  .group .icon .Email {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid #656C73;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .group .icon .Email .Vector {
-    width: 18px;
-    height: 13px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #656C73;
-  }
+  @apply w-504 h-58 bg-blue-500 rounded-t-lg;
+}
 
+.container p {
+  @apply text-white text-center text-lg font-bold py-4;
+}
 
-  /* MaskGroup.module.css */
+.card {
+  @apply w-504 h-616 bg-white shadow-md rounded-b-lg -mt-1 p-5;
+}
+
+.card img {
+  /* Add your image styles here */
+}
+
+.card h2 {
+  @apply text-blue-500 text-2xl font-bold mb-5;
+}
+
+.card p {
+  @apply text-gray-700 text-base mb-4;
+}
+
+.group {
+  @apply w-170 h-32 flex justify-between mt-5;
+}
+
+.group .icon {
+  @apply w-32 h-32 flex items-center justify-center;
+}
+
+.group .icon .Rectangle {
+  @apply w-32 h-32 rounded-full border border-gray-700;
+}
+
+.group .icon .Vector {
+  @apply w-16 h-16 bg-gray-700;
+}
+
+.group .icon .Email {
+  @apply w-32 h-32 rounded-full border border-gray-700 flex items-center justify-center relative;
+}
+
+.group .icon .Email .Vector {
+  @apply w-18 h-13 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-700;
+}
+
+/* MaskGroup.module.css */
 
 .container {
-  width: 504px;
-  height: 276px;
-  background: white;
-  box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.12);
-  border-radius: 20px;
+  @apply w-504 h-276 bg-white shadow-md rounded-lg;
 }
 
 .imageContainer {
-  width: 94px;
-  height: 94px;
-  position: relative;
+  @apply w-94 h-94 relative;
 }
 
 .imageContainer .Ellipse {
-  width: 94px;
-  height: 94px;
-  position: absolute;
-  background: #34A853;
-  border-radius: 9999px;
+  @apply w-94 h-94 absolute bg-green-600 rounded-full;
 }
 
 .imageContainer img {
-  width: 94px;
-  height: 94px;
-  position: absolute;
+  @apply w-94 h-94 absolute;
 }
 
 .imageContainer .Img92921 {
-  width: 108.95px;
-  height: 94px;
-  left: -7.83px;
-  position: absolute;
+  @apply w-108.95 h-94 absolute left-0;
 }
 
 .name {
-  color: #2A2E3A;
-  font-size: 24px;
-  font-family: 'Google Sans';
-  font-weight: 700;
-  text-transform: capitalize;
-  word-wrap: break-word;
+  @apply text-gray-900 text-2xl font-semibold font-sans capitalize;
 }
 
 .designation {
-  color: #656C73;
-  font-size: 16px;
-  font-family: 'Google Sans';
-  font-weight: 400;
-  word-wrap: break-word;
+  @apply text-gray-700 text-base font-normal font-sans;
 }
 
 .description {
-  width: 353px;
-  text-align: justify;
-  color: #656C73;
-  font-size: 14px;
-  font-family: 'Google Sans';
-  font-weight: 400;
-  word-wrap: break-word;
+  @apply w-353 text-justify text-gray-700 text-base font-normal font-sans;
 }
-
-  

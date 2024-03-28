@@ -2,12 +2,13 @@
 
 import React from 'react';
 import './Operations.css'; // Import the CSS file
+import Image from 'next/image';
 
 export default function Operations() {
   return (
     <>
     <div className="QuoteDiv">
-
+    <Image src='/operatiomnsquote.svg' alt='' />
     </div>
       <div className="Rectangle198">
         <div className="picheader"></div>

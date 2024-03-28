@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from './Leads.module.css'; // Import the generated CSS module
+import Image from 'next/image';
 
 export default function Leads() {
   return (
@@ -9,7 +10,7 @@ export default function Leads() {
     <>
 
     <div className="QuoteDiv">
-
+    <Image src='/leadsquote.svg' alt='' />
     </div>
     
     <div className={styles.Group827}>

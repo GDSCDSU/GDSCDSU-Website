@@ -1,146 +1,76 @@
-/* Leads.module.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .container {
-    width: 122px;
-    height: 719px;
-    position: relative;
-  }
-  
-  .vector {
-    width: 0;
-    height: 188px;
-    left: 62px;
-    top: 659px;
-    position: absolute;
-    transform: rotate(-180deg);
-    transform-origin: 0 0;
-    border: 2px #EA4335 solid;
-  }
-  
-  .textYear {
-    position: absolute;
-    font-size: 20px;
-    font-family: 'Google Sans';
-    font-weight: 700;
-    color: #EA4335;
-    word-wrap: break-word;
-  }
-  
-  .ellipse {
-    width: 122px;
-    height: 122px;
-    left: 0;
-    top: 597px;
-    position: absolute;
-    background: #EA4335;
-  }
-  
-  .textYear2023 {
-    left: 38px;
-    top: 637px;
-  }
-  
-  .current {
-    left: 33px;
-    top: 664px;
-    font-size: 12px;
-    font-family: 'Google Sans';
-    font-weight: 700;
-    color: #FAFAFA;
-    word-wrap: break-word;
-  }
-  
-  .rectangle198 {
-    width: 903px;
-    height: 185px;
-    background: white;
-    box-shadow: 0px 4px 16px 4px rgba(0, 0, 0, 0.12);
-    border-radius: 20px;
-  }
-  
-  .maskGroup {
-    width: 94px;
-    height: 94px;
-    position: relative;
-  }
-  
-  .ellipse44 {
-    width: 94px;
-    height: 94px;
-    left: 0;
-    top: 0;
-    position: absolute;
-    background: #34A853;
-    border-radius: 9999px;
-  }
-  
-  .image1 {
-    width: 94px;
-    height: 94px;
-    left: 0;
-    top: 0;
-    position: absolute;
-  }
-  
-  .syedAteeq {
-    color: #2A2E3A;
-    font-size: 24px;
-    font-family: 'Google Sans';
-    font-weight: 700;
-    word-wrap: break-word;
-  }
-  
-  .gdscDsuLead20202021Founder {
-    color: #656C73;
-    font-size: 16px;
-    font-family: 'Google Sans';
-    font-weight: 400;
-    word-wrap: break-word;
-  }
-  
-  .description {
-    width: 757px;
-    text-align: justify;
-    color: #656C73;
-    font-size: 14px;
-    font-family: 'Google Sans';
-    font-weight: 400;
-    word-wrap: break-word;
-  }
-  
-  .socials {
-    width: 170px;
-    height: 32px;
-    position: relative;
-  }
-  
-  .group719 {
-    width: 32px;
-    height: 32px;
-    left: 0;
-    top: 0;
-    position: absolute;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    display: inline-flex;
-  }
-  
-  .rectangle190,
-  .rectangle191,
-  .rectangle193 {
-    width: 32px;
-    height: 32px;
-    border-radius: 23px;
-    border: 1px #656C73 solid;
-  }
-  
-  .vector,
-  .vector1,
-  .vector2,
-  .vector3 {
-    width: 10px;
-    height: 18px;
-    background: #656C73;
-  }
-  
+  @apply w-122 h-719 relative;
+}
+
+.vector {
+  @apply absolute w-0 h-188 left-62 top-659 rotate-180 border-2 border-red-500 transform-origin-0-0;
+}
+
+.textYear {
+  @apply absolute text-2xl font-semibold font-sans text-red-500;
+}
+
+.ellipse {
+  @apply absolute w-122 h-122 bg-red-500;
+}
+
+.textYear2023 {
+  @apply absolute left-38 top-637;
+}
+
+.current {
+  @apply absolute left-33 top-664 text-xs font-semibold font-sans text-white;
+}
+
+.rectangle198 {
+  @apply w-903 h-185 bg-white shadow-md rounded-lg;
+}
+
+.maskGroup {
+  @apply w-94 h-94 relative;
+}
+
+.ellipse44 {
+  @apply absolute w-94 h-94 bg-green-600 rounded-full;
+}
+
+.image1 {
+  @apply absolute w-94 h-94;
+}
+
+.syedAteeq {
+  @apply text-gray-900 text-2xl font-semibold font-sans;
+}
+
+.gdscDsuLead20202021Founder {
+  @apply text-gray-700 text-base font-normal font-sans;
+}
+
+.description {
+  @apply w-757 text-justify text-gray-700 text-base font-normal font-sans;
+}
+
+.socials {
+  @apply w-170 h-32 relative;
+}
+
+.group719 {
+  @apply w-32 h-32 absolute top-0 left-0 flex flex-col justify-start items-start;
+}
+
+.rectangle190,
+.rectangle191,
+.rectangle193 {
+  @apply w-32 h-32 rounded-full border-solid border border-gray-700;
+}
+
+.vector,
+.vector1,
+.vector2,
+.vector3 {
+  @apply w-10 h-18 bg-gray-700;
+}

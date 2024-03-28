@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './Marketing.module.css'; // Import the generated CSS module
+import Image from 'next/image';
 
 export default function Marketing() {
   return (
     <>
     <div className="QuoteDiv">
-
+    <Image src='/marketingquote.svg' alt='' />
     </div>
       <div className={styles.Rectangle198}>
         <div className={styles.picheader}></div>

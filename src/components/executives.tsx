@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './Executives.css'; // Import the generated CSS file
+import Image from 'next/image';
 
 export default function Executives() {
   return (
@@ -9,7 +10,7 @@ export default function Executives() {
 
     <>
     <div className="QuoteDiv">
-
+    <Image src='/executivesquote.svg' alt='' />
     </div>
     
     <div className="Rectangle198">
