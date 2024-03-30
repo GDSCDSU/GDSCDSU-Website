@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .TeamNavigation {
   width: 1114px;
   height: 54px;
@@ -9,41 +5,64 @@
 }
 
 .Rectangle196 {
-  @apply w-1114 h-54 absolute border-solid border-2 border-blue-500 rounded-full;
+  width: 1114px;
+  height: 54px;
+  position: absolute;
+  border: 2px solid #3b82f6;
+  border-radius: 9999px;
   top: 0;
   left: 0;
 }
 
 .Rectangle197 {
-  @apply w-154 h-46 absolute bg-blue-500 rounded-full;
+  width: 154px;
+  height: 46px;
+  position: absolute;
+  background-color: #3b82f6;
+  border-radius: 9999px;
   top: 4px;
   left: 4px;
 }
 
 .NavButton {
-  @apply absolute text-base font-sans font-normal text-gray-700 border-none cursor-pointer bg-transparent;
+  position: absolute;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #4b5563;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .Founder {
-  @apply left-49 top-17 text-white font-bold;
+  left: 49px;
+  top: 17px;
+  color: #ffffff;
+  font-weight: 700;
 }
 
 .Leads {
-  @apply left-189 top-17;
+  left: 189px;
+  top: 17px;
 }
 
 .MarketingTeam {
-  @apply left-950 top-17;
+  left: 950px;
+  top: 17px;
 }
 
 .OperationsTeam {
-  @apply left-535 top-17;
+  left: 535px;
+  top: 17px;
 }
 
 .DevelopmentTeam {
-  @apply left-735 top-17;
+  left: 735px;
+  top: 17px;
 }
 
 .ExecutiveCoreTeam {
-  @apply left-308 top-17;
+  left: 308px;
+  top: 17px;
 }

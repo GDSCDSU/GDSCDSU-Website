@@ -1,85 +1,147 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .container {
-  @apply w-504 h-58 bg-blue-500 rounded-t-lg;
+  width: 504px;
+  height: 58px;
+  background-color: #3b82f6;
+  border-top-left-radius: 0.5rem;
 }
 
 .container p {
-  @apply text-white text-center text-lg font-bold py-4;
+  color: #ffffff;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-top: 1rem;
 }
 
 .card {
-  @apply w-504 h-616 bg-white shadow-md rounded-b-lg -mt-1 p-5;
-}
-
-.card img {
-  /* Add your image styles here */
+  width: 504px;
+  height: 616px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: -1px;
+  padding: 1.25rem;
 }
 
 .card h2 {
-  @apply text-blue-500 text-2xl font-bold mb-5;
+  color: #3b82f6;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
 }
 
 .card p {
-  @apply text-gray-700 text-base mb-4;
+  color: #4b5563;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .group {
-  @apply w-170 h-32 flex justify-between mt-5;
+  width: 170px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.25rem;
 }
 
 .group .icon {
-  @apply w-32 h-32 flex items-center justify-center;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .group .icon .Rectangle {
-  @apply w-32 h-32 rounded-full border border-gray-700;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid #4b5563;
 }
 
 .group .icon .Vector {
-  @apply w-16 h-16 bg-gray-700;
+  width: 16px;
+  height: 16px;
+  background-color: #4b5563;
 }
 
 .group .icon .Email {
-  @apply w-32 h-32 rounded-full border border-gray-700 flex items-center justify-center relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid #4b5563;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .group .icon .Email .Vector {
-  @apply w-18 h-13 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-700;
+  width: 18px;
+  height: 13px;
+  background-color: #4b5563;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-/* MaskGroup.module.css */
-
 .container {
-  @apply w-504 h-276 bg-white shadow-md rounded-lg;
+  width: 504px;
+  height: 276px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
 }
 
 .imageContainer {
-  @apply w-94 h-94 relative;
+  width: 94px;
+  height: 94px;
+  position: relative;
 }
 
 .imageContainer .Ellipse {
-  @apply w-94 h-94 absolute bg-green-600 rounded-full;
+  width: 94px;
+  height: 94px;
+  position: absolute;
+  background-color: #34d399;
+  border-radius: 9999px;
 }
 
 .imageContainer img {
-  @apply w-94 h-94 absolute;
+  width: 94px;
+  height: 94px;
+  position: absolute;
 }
 
 .imageContainer .Img92921 {
-  @apply w-108.95 h-94 absolute left-0;
+  width: 108.95px;
+  height: 94px;
+  position: absolute;
+  left: 0;
 }
 
 .name {
-  @apply text-gray-900 text-2xl font-semibold font-sans capitalize;
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 .designation {
-  @apply text-gray-700 text-base font-normal font-sans;
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  text-transform: capitalize;
 }
 
 .description {
-  @apply w-353 text-justify text-gray-700 text-base font-normal font-sans;
+  width: 353px;
+  text-align: justify;
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
 }

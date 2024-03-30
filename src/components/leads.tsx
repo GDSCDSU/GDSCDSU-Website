@@ -1,7 +1,7 @@
 // Leads.js
 
 import React from 'react';
-import styles from './Leads.module.css'; // Import the generated CSS module
+import styles from '../styles/leads.module.css'; // Import the generated CSS module
 import Image from 'next/image';
 
 export default function Leads() {
@@ -10,7 +10,7 @@ export default function Leads() {
     <>
 
     <div className="QuoteDiv">
-    <Image src='/leadsquote.svg' alt='' />
+    <Image src='/leadsquote.svg' alt='' width={400} height={400}/>
     </div>
     
     <div className={styles.Group827}>

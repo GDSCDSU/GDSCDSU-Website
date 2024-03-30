@@ -1,7 +1,7 @@
 // Development.js
 
 import React from 'react';
-import './Development.css'; // Import the generated CSS file
+import '../styles/teams.module.css'; // Import the generated CSS file
 import Image from 'next/image';
 
 export default function Development() {
@@ -9,7 +9,7 @@ export default function Development() {
     <>
 
             <div className="QuoteDiv">
-            <Image src='/developmentquote.svg' alt='' />
+            <Image src='/developmentquote.svg' alt='' width={400} height={400}/>
             </div>
       <div className="Rectangle198">
         <div className="picheader"></div>

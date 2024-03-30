@@ -1,76 +1,134 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 .container {
-  @apply w-122 h-719 relative;
+  width: 122px;
+  height: 719px;
+  position: relative;
 }
 
 .vector {
-  @apply absolute w-0 h-188 left-62 top-659 rotate-180 border-2 border-red-500 transform-origin-0-0;
+  width: 0;
+  height: 188px;
+  position: absolute;
+  left: 62px;
+  top: 659px;
+  border: 2px solid #ef4444;
+  transform: rotate(180deg);
+  transform-origin: 0 0;
 }
 
 .textYear {
-  @apply absolute text-2xl font-semibold font-sans text-red-500;
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #ef4444;
 }
 
 .ellipse {
-  @apply absolute w-122 h-122 bg-red-500;
+  width: 122px;
+  height: 122px;
+  position: absolute;
+  background-color: #ef4444;
 }
 
 .textYear2023 {
-  @apply absolute left-38 top-637;
+  position: absolute;
+  left: 38px;
+  top: 637px;
 }
 
 .current {
-  @apply absolute left-33 top-664 text-xs font-semibold font-sans text-white;
+  position: absolute;
+  left: 33px;
+  top: 664px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  color: #ffffff;
 }
 
 .rectangle198 {
-  @apply w-903 h-185 bg-white shadow-md rounded-lg;
+  width: 903px;
+  height: 185px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
 }
 
 .maskGroup {
-  @apply w-94 h-94 relative;
+  width: 94px;
+  height: 94px;
+  position: relative;
 }
 
 .ellipse44 {
-  @apply absolute w-94 h-94 bg-green-600 rounded-full;
+  width: 94px;
+  height: 94px;
+  position: absolute;
+  background-color: #34d399;
+  border-radius: 9999px;
 }
 
 .image1 {
-  @apply absolute w-94 h-94;
+  width: 94px;
+  height: 94px;
+  position: absolute;
 }
 
 .syedAteeq {
-  @apply text-gray-900 text-2xl font-semibold font-sans;
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
 }
 
 .gdscDsuLead20202021Founder {
-  @apply text-gray-700 text-base font-normal font-sans;
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
 }
 
 .description {
-  @apply w-757 text-justify text-gray-700 text-base font-normal font-sans;
+  width: 757px;
+  text-align: justify;
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
 }
 
 .socials {
-  @apply w-170 h-32 relative;
+  width: 170px;
+  height: 32px;
+  position: relative;
 }
 
 .group719 {
-  @apply w-32 h-32 absolute top-0 left-0 flex flex-col justify-start items-start;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
 }
 
 .rectangle190,
 .rectangle191,
 .rectangle193 {
-  @apply w-32 h-32 rounded-full border-solid border border-gray-700;
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  border: 1px solid #4b5563;
 }
 
 .vector,
 .vector1,
 .vector2,
 .vector3 {
-  @apply w-10 h-18 bg-gray-700;
+  width: 10px;
+  height: 18px;
+  background-color: #4b5563;
 }

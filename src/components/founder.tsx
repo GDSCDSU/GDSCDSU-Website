@@ -1,13 +1,13 @@
 // Founder.js
 
-import styles from './Founder.module.css'; // Import the CSS module
+import styles from '../styles/founder.module.css'; // Import the CSS module
 import Image from 'next/image';
 
 export default function Founder() {
   return (
     <>
     <div className="QuoteDiv">
-    <Image src='/founderquote.svg' alt='' />
+    <Image src='/founderquote.svg' alt='' width={400} height={400}/>
     </div>
       <div className={styles.container}>
         <p>Founder</p>

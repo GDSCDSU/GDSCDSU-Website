@@ -1,7 +1,7 @@
 // Executives.js
 
 import React from 'react';
-import './Executives.css'; // Import the generated CSS file
+import '../styles/teams.module.css'; // Import the generated CSS file
 import Image from 'next/image';
 
 export default function Executives() {
@@ -10,7 +10,7 @@ export default function Executives() {
 
     <>
     <div className="QuoteDiv">
-    <Image src='/executivesquote.svg' alt='' />
+    <Image src='/executivesquote.svg' alt='' width={400} height={400}/>
     </div>
     
     <div className="Rectangle198">

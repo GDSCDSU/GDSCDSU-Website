@@ -1,14 +1,14 @@
 // Operations.js
 
 import React from 'react';
-import './Operations.css'; // Import the CSS file
+import '../styles/teams.module.css'; // Import the CSS file
 import Image from 'next/image';
 
 export default function Operations() {
   return (
     <>
     <div className="QuoteDiv">
-    <Image src='/operatiomnsquote.svg' alt='' />
+    <Image src='/operatiomnsquote.svg' alt='' width={400} height={400} />
     </div>
       <div className="Rectangle198">
         <div className="picheader"></div>

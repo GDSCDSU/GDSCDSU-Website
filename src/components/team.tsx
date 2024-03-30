@@ -52,7 +52,7 @@ export default function Team() {
   return (
     <>
       <section className="TeamsHeader">
-      <Image src='/teams-header.svg' alt='' />
+      <Image src='/teams-header.svg' alt='' width={400} />
       </section>
 
       <div className={styles.TeamNavigation}>
