@@ -3,26 +3,79 @@ import styles from '../styles/teams.module.css'; // Import the generated CSS mod
 import Image from 'next/image';
 
 export default function Marketing() {
+  const marketers = [
+    {
+      name: 'Muhammad Bilal',
+      role: 'Marketing Lead',
+      image1Src: 'https://via.placeholder.com/94x94',
+      imageSrc: 'https://via.placeholder.com/94x94',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Sahil Bachani',
+      role: 'Core Team Member',
+      image1Src: 'https://via.placeholder.com/94x94',
+      imageSrc: 'https://via.placeholder.com/94x94',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Taqwa Muhammad',
+      role: 'Core Team Member',
+      image1Src: 'https://via.placeholder.com/94x94',
+      imageSrc: 'https://via.placeholder.com/94x94',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Radhika Rajwani',
+      role: 'Core Team Member',
+      image1Src: 'https://via.placeholder.com/94x94',
+      imageSrc: 'https://via.placeholder.com/94x94',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Laiba Kamal Khan',
+      role: 'Core Team Member',
+      image1Src: 'https://via.placeholder.com/94x94',
+      imageSrc: 'https://via.placeholder.com/94x94',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Mahnoor Ahmed',
+      role: 'Core Team Member',
+      image1Src: 'https://via.placeholder.com/94x94',
+      imageSrc: 'https://via.placeholder.com/94x94',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Amna Tariq',
+      role: 'Core Team Member',
+      image1Src: 'https://via.placeholder.com/94x94',
+      imageSrc: 'https://via.placeholder.com/94x94',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    }
+  ];
   return (
     <>
     <div className="QuoteDiv">
     <Image src='/marketingquote.svg' alt='' width={400} height={400} />
     </div>
-      <div className={styles.Rectangle198}>
-        <div className={styles.picheader}></div>
-        <div className={styles.MaskGroup}>
-          <div className={styles.Ellipse44}></div>
-          <img className={styles.image1} src="https://via.placeholder.com/94x94" alt="placeholder" />
-          <img className={styles.image} src="https://via.placeholder.com/94x94" alt="placeholder" />
-        </div>  
-        <div className={styles.name}>Muhammad Bilal</div>
-        <div className={styles.role}>Marketing Lead</div>
-        <div className={styles.Group718}>
-          <div className={styles.Rectangle191}></div>
-          <div className={styles.Vector}></div>
-          <div className={styles.LinkedinProfile}>LinkedIn Profile</div>
-        </div>  
-      </div>      
+    {marketers.map((item, index) => (
+        <div className={styles.Rectangle198} key={index}>
+          <div className={styles.picheader}></div>
+          <div className={styles.MaskGroup}>
+            <div className={styles.Ellipse44}></div>
+            <img className={styles.image1} src={item.image1Src} alt="placeholder" />
+            <img className={styles.image} src={item.imageSrc} alt="placeholder" />
+          </div>  
+          <div className={styles.name}>{item.name}</div>
+          <div className={styles.role}>{item.role}</div>
+          <div className={styles.Group718}>
+            <div className={styles.Rectangle191}></div>
+            <div className={styles.Vector}></div>
+            <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
+          </div>  
+        </div>
+      ))}
     </>
   );
 };
