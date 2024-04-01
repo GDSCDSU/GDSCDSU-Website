@@ -52,18 +52,18 @@ export default function Team() {
   return (
     <>
       <section className="TeamsHeader">
-      <Image src='/teams-header.svg' alt='' width={400} height={400} />
+      <Image src='/teams-header.svg' alt='' width={1890} height={300} />
       </section>
 
       <div className={styles.TeamNavigation}>
-        <div className={styles.Rectangle196} />
-        <div className={styles.Rectangle197} />
-        <button className={`${styles.NavButton} ${styles.Founder}`} onClick={() => handleTabClick('Founder')}>Founder</button>
-        <button className={`${styles.NavButton} ${styles.Leads}`} onClick={() => handleTabClick('Leads')}>Leads</button>
-        <button className={`${styles.NavButton} ${styles.MarketingTeam}`} onClick={() => handleTabClick('Marketing')}>Marketing Team</button>
-        <button className={`${styles.NavButton} ${styles.OperationsTeam}`} onClick={() => handleTabClick('Operations')}>Operations Team</button>
-        <button className={`${styles.NavButton} ${styles.DevelopmentTeam}`} onClick={() => handleTabClick('Development')}>Development Team</button>
-        <button className={`${styles.NavButton} ${styles.ExecutiveCoreTeam}`} onClick={() => handleTabClick('Executives')}>Executive Core Team</button>
+        <div className={`${styles.Rectangle196} ${activeTab === 'Founder' ? styles.active : ''}`} />
+        <div className={styles.Rectangle197} style={{ left: `${activeTab === 'Founder' ? '20px' : activeTab === 'Leads' ? '165px' : activeTab === 'Marketing' ? '305px' : activeTab === 'Operations' ? '450px' : activeTab === 'Development' ? '618px' : activeTab === 'Executives' ? '790px'  : '520px'}` }} />
+        <button className={`${styles.NavButton} ${styles.Founder} ${activeTab === 'Founder' ? styles.active : ''}`} onClick={() => handleTabClick('Founder')}>Founder</button>
+        <button className={`${styles.NavButton} ${styles.Leads} ${activeTab === 'Leads' ? styles.active : ''}`} onClick={() => handleTabClick('Leads')}>Leads</button>
+        <button className={`${styles.NavButton} ${styles.MarketingTeam} ${activeTab === 'Marketing' ? styles.active : ''} `} onClick={() => handleTabClick('Marketing')}>Marketing</button>
+        <button className={`${styles.NavButton} ${styles.OperationsTeam} ${activeTab === 'Operations' ? styles.active : ''}`} onClick={() => handleTabClick('Operations')}>Operations</button>
+        <button className={`${styles.NavButton} ${styles.DevelopmentTeam} ${activeTab === 'Development' ? styles.active : ''}`} onClick={() => handleTabClick('Development')}>Development</button>
+        <button className={`${styles.NavButton} ${styles.ExecutiveCoreTeam} ${activeTab === 'Executives' ? styles.active : ''}`} onClick={() => handleTabClick('Executives')}>Executive</button>
       </div>
       <section>
         {renderComponent()}
