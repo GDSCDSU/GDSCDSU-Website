@@ -1,7 +1,5 @@
-// Executives.js
-
 import React from 'react';
-import '../styles/teams.module.css'; // Import the generated CSS file
+import '../styles/executives.module.css'; // Import the generated CSS file
 import Image from 'next/image';
 
 export default function Executives() {
@@ -59,33 +57,28 @@ export default function Executives() {
   ];
 
   return (
-
-
     <>
     <div className="QuoteDiv">
-    <Image src='/executivesquote.svg' alt='' width={400} height={400}/>
+      <Image src='/executivesquote.svg' alt='' width={400} height={400}/>
     </div>
-    
+
     {executives.map((item, index) => (
-        <div className="Rectangle198" key={index}>
-          <div></div>
-
-          <div className="MaskGroup">
-            <div className="Ellipse44"></div>
-            <img className="image1" src={item.imageSrc} alt="placeholder" />
-            <img className="profilepic" src={item.imageSrc} alt="placeholder" />
-          </div>
-
-          <div className="name">{item.name}</div>
-          <div className="role">{item.role}</div>
-          <div className="Description">{item.description}</div>
-          <div className="Group718">
-            <div className="Rectangle191"></div>
-            <div className="Vector"></div>
-            <div className="LinkedinProfile">{item.linkedinProfile}</div>
-          </div>
+      <div className="Rectangle198" key={index}>
+        <div className="MaskGroup">
+          <div className="Ellipse44"></div>
+          <img className="image1" src={item.imageSrc} alt="placeholder" />
+          <img className="profilepic" src={item.imageSrc} alt="placeholder" />
         </div>
-      ))}
+        <div className="name">{item.name}</div>
+        <div className="role">{item.role}</div>
+        <div className="Description">{item.description}</div>
+        <div className="Group718">
+          <div className="Rectangle191"></div>
+          <div className="Vector"></div>
+          <div className="LinkedinProfile">{item.linkedinProfile}</div>
+        </div>
+      </div>
+    ))}
     </>
   );
 }

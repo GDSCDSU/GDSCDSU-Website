@@ -1,7 +1,5 @@
-// Development.js
-
 import React from 'react';
-import '../styles/teams.module.css'; // Import the generated CSS file
+import styles from '../styles/teams.module.css'; // Import the generated CSS file correctly using `styles`
 import Image from 'next/image';
 
 export default function Development() {
@@ -45,27 +43,26 @@ export default function Development() {
   ];
   return (
     <>
-
-            <div className="QuoteDiv">
-            <Image src='/developmentquote.svg' alt='' width={400} height={400}/>
-            </div>
-            {developers.map((item, index) => (
-        <div className="Rectangle198" key={index}>
-          <div className="picheader"></div>
-          <div className="MaskGroup">
-            <div className="Ellipse44"></div>
-            <img className="image1" src={item.imageSrc} alt="placeholder" />
-            <img className="profilepic" src={item.imageSrc} alt="placeholder" />
+      <div className={styles.QuoteDiv}>
+        <Image src='/developmentquote.svg' alt='' width={400} height={400} />
+      </div>
+      {developers.map((item, index) => (
+        <div className={styles.Rectangle198} key={index}>
+          <div className={styles.picheader}></div>
+          <div className={styles.MaskGroup}>
+            <div className={styles.Ellipse44}></div>
+            <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
+            <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
           </div>  
-          <div className="name">{item.name}</div>
-          <div className="role">{item.role}</div>
-          <div className="Group718">
-            <div className="Rectangle191"></div>
-            <div className="Vector"></div>
-            <div className="LinkedinProfile">{item.linkedinProfile}</div>
+          <div className={styles.name}>{item.name}</div>
+          <div className={styles.role}>{item.role}</div>
+          <div className={styles.Group718}>
+            <div className={styles.Rectangle191}></div>
+            <div className={styles.Vector}></div>
+            <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
           </div>  
         </div>
-      ))}      
+      ))}
     </>
   );
 };

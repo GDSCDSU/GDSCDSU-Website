@@ -1,5 +1,3 @@
-// Leads.js
-
 import React from 'react';
 import styles from '../styles/leads.module.css'; // Import the generated CSS module
 import Image from 'next/image';
@@ -34,36 +32,34 @@ export default function Leads() {
   ];
   
   return (
-
     <>
-
-    <div className="QuoteDiv">
-    <Image src='/leadsquote.svg' alt='' width={400} height={400}/>
-    </div>
-    
-    <div className={styles.Group827}>
-      <div className={styles.Vector1}></div>
-      <div className={styles.textYear} style={{ left: '35.53px', top: 0 }}>2020</div>
-      <div className={styles.textYear} style={{ left: '38.86px', top: '218px' }}>2021</div>
-      <div className={styles.textYear} style={{ left: '37.70px', top: '436px' }}>2022</div>
-      <div className={styles.Ellipse86}></div>
-      <div className={styles.textYear} style={{ left: '38px', top: '637px' }}>2023</div>
-      <div className={styles.Current}>CURRENT</div>
-      <div className={styles.Vector2}></div>
-      <div className={styles.Vector3}></div>
-     
-      {leads.map((item, index) => (
-        <div className={styles.Rectangle198} key={index}>
-          <div className={styles.MaskGroup}>
-            <div className={styles.Ellipse44}></div>
-            <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
+      <div className={styles.QuoteDiv}>
+        <Image src='/leadsquote.svg' alt='' width={400} height={400} />
+      </div>
+      
+      <div className={styles.Group827}>
+        <div className={styles.Vector1}></div>
+        <div className={styles.textYear} style={{ left: '35.53px', top: 0 }}>2020</div>
+        <div className={styles.textYear} style={{ left: '38.86px', top: '218px' }}>2021</div>
+        <div className={styles.textYear} style={{ left: '37.70px', top: '436px' }}>2022</div>
+        <div className={styles.Ellipse86}></div>
+        <div className={styles.textYear} style={{ left: '38px', top: '637px' }}>2023</div>
+        <div className={styles.Current}>CURRENT</div>
+        <div className={styles.Vector2}></div>
+        <div className={styles.Vector3}></div>
+       
+        {leads.map((item, index) => (
+          <div className={styles.Rectangle198} key={index}>
+            <div className={styles.MaskGroup}>
+              <div className={styles.Ellipse44}></div>
+              <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
+            </div>
+            <div className={styles.SyedAteeq}>{item.name}</div>
+            <div className={styles.GdscDsuLead20202021Founder}>{item.designation}</div>
+            <div className={styles.description}>{item.description}</div>
           </div>
-          <div className={styles.SyedAteeq}>{item.name}</div>
-          <div className={styles.GdscDsuLead20202021Founder}>{item.designation}</div>
-          <div className={styles.description}>{item.description}</div>
-        </div>
-      ))}
-        
+        ))}
+          
         <div className={styles.Socials}>
           <div className={styles.Group719}>
             <div className={styles.Rectangle190}></div>
