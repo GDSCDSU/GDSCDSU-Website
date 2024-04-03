@@ -53,11 +53,7 @@ export default function OurStory(){
     return (
         <>
         <div data-aos="fade-up" >
-            <div className="row" >
-                <div className="col-md-12" >
-                    <img className="img-fluid" src="/OurStory.svg" alt=""/>
-                </div>
-            </div>       
+            <img className="img-fluid" src="/OurStory.svg" alt=""/>     
         </div>
         <div className="m-5" data-aos="fade-up" >
             <div className="d-flex flex-column align-items-center" >
@@ -430,11 +426,7 @@ export default function OurStory(){
             </div>
         </div>
         <div>
-            <div className="row" >
-                <div className="col-md-12" >
-                    <img className="img-fluid" src="/TheEnd.svg" alt=""/>
-                </div>
-            </div>       
+            <img className="img-fluid" src="/TheEnd.svg" alt=""/>      
         </div>
         <div>
             <div className="shadow-sm p-3 rounded-lg">

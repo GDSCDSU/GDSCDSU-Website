@@ -53,7 +53,7 @@ export default function HomePage() {
         <>
         <Navbar rounded>
             <Navbar.Brand as={Link} href="/">
-                <img src='/LOGO.svg' alt='' className='img-fluid'/>
+                <Image src='/LOGO.svg' alt='' width={275} height={0}/>
             </Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse>

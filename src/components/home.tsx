@@ -51,11 +51,7 @@ export default function Home(){
         
     <>
     <div data-aos="fade-up" >
-        <div className="row"  >
-            <div className="col-md-12" >
-                <img className="img-fluid" src="/Header.svg" alt=""/>
-            </div>
-        </div>       
+        <img className="img-fluid" src="/Header.svg" alt=""/>
     </div>
     <br/>
     {showToast && (
