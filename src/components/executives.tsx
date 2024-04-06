@@ -1,6 +1,6 @@
 import React from 'react';
-import '../styles/executives.module.css'; // Import the generated CSS file
 import Image from 'next/image';
+import styles from '../styles/executives.module.css'; // Import the generated CSS module
 
 export default function Executives() {
 
@@ -58,24 +58,24 @@ export default function Executives() {
 
   return (
     <>
-    <div className="QuoteDiv">
+    <div className={styles.QuoteDiv}>
       <Image src='/executivesquote.svg' alt='' width={400} height={400}/>
     </div>
 
     {executives.map((item, index) => (
-      <div className="Rectangle198" key={index}>
-        <div className="MaskGroup">
-          <div className="Ellipse44"></div>
-          <img className="image1" src={item.imageSrc} alt="placeholder" />
-          <img className="profilepic" src={item.imageSrc} alt="placeholder" />
+      <div className={styles.Rectangle198} key={index}>
+        <div className={styles.MaskGroup}>
+          <div className={styles.Ellipse44}></div>
+          <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
+          <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
         </div>
-        <div className="name">{item.name}</div>
-        <div className="role">{item.role}</div>
-        <div className="Description">{item.description}</div>
-        <div className="Group718">
-          <div className="Rectangle191"></div>
-          <div className="Vector"></div>
-          <div className="LinkedinProfile">{item.linkedinProfile}</div>
+        <div className={styles.name}>{item.name}</div>
+        <div className={styles.role}>{item.role}</div>
+        <div className={styles.Description}>{item.description}</div>
+        <div className={styles.Group718}>
+          <div className={styles.Rectangle191}></div>
+          <div className={styles.Vector}></div>
+          <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
         </div>
       </div>
     ))}

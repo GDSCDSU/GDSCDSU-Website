@@ -47,11 +47,12 @@
 }
 
 .rectangle198 {
-  width: 903px;
-  height: 185px;
+  width: 780px;
+  height: 250px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
+  margin: 15px;
 }
 
 .maskGroup {

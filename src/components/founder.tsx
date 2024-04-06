@@ -120,12 +120,12 @@ export default function Founder() {
   return (
     <>
     <div className="QuoteDiv">
-    <Image className='Quote' src='/founderquote.svg' alt='' width={400} height={400}/>
+    <Image className='Quote' src='/founderquote.svg' alt='' width={400} height={400} />
     </div>
 
     {founders.map((founder, index) => (
   <div key={index}>
-    <div className="header" style={{ width: 504, height: 58, background: index === 1 ? '#34D399' : '#4285F4', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
+    <div className="header" style={{ width: 545, height: 58, background: index === 1 ? '#34D399' : '#4285F4', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
       <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
     </div>
 

@@ -33,45 +33,46 @@ export default function Leads() {
   
   return (
     <>
-      <div className={styles.QuoteDiv}>
+      <div className={styles.container}>
         <Image src='/leadsquote.svg' alt='' width={400} height={400} />
       </div>
       
       <div className={styles.Group827}>
       <Image className='tenure' src='/timelinebar.svg' alt='' width={120} height={400}/> 
         {leads.map((item, index) => (
-          <div className={styles.Rectangle198} key={index}>
-            <div className={styles.MaskGroup}>
-              <div className={styles.Ellipse44}></div>
+          <div className={styles.rectangle198} key={index}>
+            <div className={styles.maskGroup}>
+              <div className={styles.ellipse44}></div>
               <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
             </div>
-            <div className={styles.SyedAteeq}>{item.name}</div>
-            <div className={styles.GdscDsuLead20202021Founder}>{item.designation}</div>
+            <div className={styles.syedAteeq}>{item.name}</div>
+            <div className={styles.gdscDsuLead20202021Founder}>{item.designation}</div>
             <div className={styles.description}>{item.description}</div>
+            <div className={styles.socials}>
+          <div className={styles.group719}>
+            <div className={styles.rectangle190}></div>
+            <div className={styles.vector}></div>
+          </div>
+          <div className={styles.group718}>
+            <div className={styles.rectangle191}></div>
+            <div className={styles.vector}></div>
+          </div>
+          <div className={styles.email}>
+            <div className={styles.rectangle190}></div>
+            <div className={styles.group775}>
+              <div className={styles.vector}></div>
+              <div className={styles.vector}></div>
+            </div>
+          </div>
+          <div className={styles.group716}>
+            <div className={styles.rectangle193}></div>
+            <div className={styles.vector}></div>
+          </div>
+        </div>
           </div>
         ))}
           
-        <div className={styles.Socials}>
-          <div className={styles.Group719}>
-            <div className={styles.Rectangle190}></div>
-            <div className={styles.Vector}></div>
-          </div>
-          <div className={styles.Group718}>
-            <div className={styles.Rectangle191}></div>
-            <div className={styles.Vector}></div>
-          </div>
-          <div className={styles.Email}>
-            <div className={styles.Rectangle190}></div>
-            <div className={styles.Group775}>
-              <div className={styles.Vector}></div>
-              <div className={styles.Vector}></div>
-            </div>
-          </div>
-          <div className={styles.Group716}>
-            <div className={styles.Rectangle193}></div>
-            <div className={styles.Vector}></div>
-          </div>
-        </div>
+        
       </div>
     </>
   );
