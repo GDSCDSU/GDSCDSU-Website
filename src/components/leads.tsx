@@ -38,16 +38,7 @@ export default function Leads() {
       </div>
       
       <div className={styles.Group827}>
-        <div className={styles.Vector1}></div>
-        <div className={styles.textYear} style={{ left: '35.53px', top: 0 }}>2020</div>
-        <div className={styles.textYear} style={{ left: '38.86px', top: '218px' }}>2021</div>
-        <div className={styles.textYear} style={{ left: '37.70px', top: '436px' }}>2022</div>
-        <div className={styles.Ellipse86}></div>
-        <div className={styles.textYear} style={{ left: '38px', top: '637px' }}>2023</div>
-        <div className={styles.Current}>CURRENT</div>
-        <div className={styles.Vector2}></div>
-        <div className={styles.Vector3}></div>
-       
+      <Image className='tenure' src='/timelinebar.svg' alt='' width={120} height={400}/> 
         {leads.map((item, index) => (
           <div className={styles.Rectangle198} key={index}>
             <div className={styles.MaskGroup}>

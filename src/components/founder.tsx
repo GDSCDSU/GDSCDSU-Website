@@ -5,6 +5,31 @@ import Image from 'next/image';
 
 export default function Founder() {
 
+  const founders = [
+    {
+      name: 'Syed Ateeq',
+      designation: 'GDSC@DSU Lead 2020-2021 & Founder',
+      description: 'As a founder, he led over 100 students in coding bootcamps, tech conferences, and workshops. He also conducted more than 200 interviews each year to build a top-notch team of 10, whose talents have flourished at DSU. Moreover, he successfully secured sponsorship from the NYC-based startup Datacamp. His collaboration with Google injected a profound sense of excellence into these initiatives, paving the way for exponential career growth for those under his mentorship.',
+      imageSrc: 'https://via.placeholder.com/238x238',
+      socials: [
+        { type: 'Rectangle' },
+        { type: 'Rectangle' },
+        { type: 'Email' },
+        { type: 'Rectangle' }
+      ]
+    },
+    {
+      name: 'Dr. Ahmed Saeed Minhas',
+      designation: 'GDSC@DSU Lead 2020-2021 & Founder',
+      description: "Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.",
+      imageSrc: 'https://via.placeholder.com/238x238',
+      socials: [
+        { type: 'Rectangle' },
+        { type: 'Rectangle' },
+      ]
+    },
+  ];
+
   const foundingmembers = [
     {
       name: 'tarun kumar',
@@ -98,74 +123,42 @@ export default function Founder() {
     <Image className='Quote' src='/founderquote.svg' alt='' width={400} height={400}/>
     </div>
 
-    <div className="Rectangle200" style={{width: 504, height: 58, background: '#4285F4', borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
-      <h1>Founder</h1>
+    {founders.map((founder, index) => (
+  <div key={index}>
+    <div className="header" style={{ width: 504, height: 58, background: index === 1 ? '#34D399' : '#4285F4', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
+      <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
     </div>
-    
-      <div className={styles.card}>
-        <Image  src='/dotbackground.svg' alt='' width={400} height={400}/>
-          
-          <img className="1" style={{width: 238, height: 238, left: 0, top: 0, position: 'absolute'}} src="https://via.placeholder.com/238x238" />
-        <h2>Syed Ateeq</h2>
-        <p>GDSC@DSU Lead 2020-2021 & Founder</p>
-        <p>As a founder, he led over 100 students in coding bootcamps, tech conferences, and workshops. He also conducted more than 200 interviews each year to build a top-notch team of 10, whose talents have flourished at DSU. Moreover, he successfully secured sponsorship from the NYC-based startup Datacamp. His collaboration with Google injected a profound sense of excellence into these initiatives, paving the way for exponential career growth for those under his mentorship.</p>
-      
-      
-        <div className={styles.group}>
-        <div className={styles.icon}>
-          <div className={styles.Rectangle} />
-          <div className={styles.Vector} />
-        </div>
-        <div className={styles.icon}>
-          <div className={styles.Rectangle} />
-          <div className={styles.Vector} />
-        </div>
-        <div className={styles.icon}>
-          <div className={styles.Email}>
-            <div className={styles.Vector} />
-            <div className={styles.Vector} />
-          </div>
-        </div>
-        <div className={styles.icon}>
-          <div className={styles.Rectangle} />
-          <div className={styles.Vector} />
-        </div>
-      </div>
 
-      </div>
+    <div className={styles.card}>
+      <Image src='/dotbackground.svg' alt='' width={400} height={400} />
 
-      
-
-      <div className="Rectangle200" style={{width: 504, height: 58, background: '#34A853', borderTopLeftRadius: 20, borderTopRightRadius: 20}}>
-        <h1>Faculty Advisor</h1>
-      </div>
-
-      <div className={styles.card}>
-      <Image  src='/dotbackground.svg' alt='' width={400} height={400}/>
-      <img className="1" style={{width: 238, height: 238, left: 0, top: 0, position: 'absolute'}} src="https://via.placeholder.com/238x238" />
-      
-        <h2>Dr. Ahmed Saeed Minhas</h2>
-        <p>Brigadier, Professor and Pro Vice Chancellor @ DSU</p>
-        <p>Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.</p>
-      </div>
+      <img className="1" style={{ width: 238, height: 238, left: 0, top: 0, position: 'absolute' }} src={founder.imageSrc} />
+      <h2>{founder.name}</h2>
+      <p>{founder.designation}</p>
+      <p>{founder.description}</p>
 
       <div className={styles.group}>
-        <div className={`${styles.group} ${styles.Rectangle}`}>
-          <div className={styles.Vector} />
-        </div>
-        <div className={`${styles.group} ${styles.Rectangle}`}>
-          <div className={styles.Vector} />
-        </div>
-        <div className={styles.group}>
-          <div className={`${styles.Rectangle} ${styles.Vector}`} />
-          <div className={`${styles.Rectangle} ${styles.Vector}`} />
-        </div>
-        <div className={`${styles.group} ${styles.Rectangle}`}>
-          <div className={styles.Vector} />
-        </div>
+        {founder.socials.map((social, index) => (
+          <div className={styles.icon} key={index}>
+            {social.type === 'Email' ? (
+              <div className={styles.Email}>
+                <div className={styles.Vector} />
+                <div className={styles.Vector} />
+              </div>
+            ) : (
+              <>
+                <div className={styles[social.type]} />
+                <div className={styles.Vector} />
+              </>
+            )}
+          </div>
+        ))}
       </div>
+    </div>
+  </div>
+))}
 
-  
+   
 
       {foundingmembers.map((item, index) => (
         <div className={styles.container} key={index}>
