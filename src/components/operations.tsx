@@ -36,7 +36,7 @@ export default function Operations() {
   return (
     <>
     <div className={styles.QuoteDiv}>
-      <Image src='/operatiomnsquote.svg' alt='' width={400} height={400} />
+      <img className={styles.Quoteimg} src='/operationsquote.svg' alt=''  />
     </div>
     <div>
       {operators.map((item, index) => (

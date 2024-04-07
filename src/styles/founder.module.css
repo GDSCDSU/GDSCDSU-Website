@@ -10,6 +10,12 @@
   padding: 1.25rem;
 }
 
+.Quoteimg{
+  width: 700px;
+  height: 400px;
+  margin-left: 600px;
+}
+
 .card h2 {
   color: #3b82f6;
   font-size: 2rem;
@@ -133,4 +139,3 @@
   font-weight: 400;
   font-family: sans-serif;
 }
-

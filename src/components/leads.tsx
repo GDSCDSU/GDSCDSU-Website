@@ -34,11 +34,14 @@ export default function Leads() {
   return (
     <>
       <div className={styles.container}>
-        <Image src='/leadsquote.svg' alt='' width={400} height={400} />
+        <img className={styles.Quoteimg} src='/leadsquote.svg' alt='' />
       </div>
-      
+
+      <div>
+      <img className={styles.tenure} src='/timelinebar.svg' alt=''/> 
+      </div>
+
       <div className={styles.Group827}>
-      <Image className='tenure' src='/timelinebar.svg' alt='' width={120} height={400}/> 
         {leads.map((item, index) => (
           <div className={styles.rectangle198} key={index}>
             <div className={styles.maskGroup}>

@@ -43,9 +43,11 @@ export default function Development() {
   ];
   return (
     <>
-      <div className={styles.QuoteDiv}>
-        <Image src='/developmentquote.svg' alt='' width={400} height={400} />
+      
+      <div className='QuoteDiv'>
+        <img className={styles.Quoteimg} src='/developmentquote.svg' alt='' />
       </div>
+
       {developers.map((item, index) => (
         <div className={styles.Rectangle198} key={index}>
           <div className={styles.picheader}></div>

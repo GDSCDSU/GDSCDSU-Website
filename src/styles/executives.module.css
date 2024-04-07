@@ -1,6 +1,6 @@
 .Rectangle198 {
   width: 336px;
-  height: 260px;
+  height: 310px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin: 5px;
@@ -75,6 +75,13 @@
   border: 1px solid #4b5563;
   border-radius: 9999px;
 }
+
+.Quoteimg{
+  width: 700px;
+  height: 400px;
+  margin-left: 600px;
+}
+
 
 .Vector {
   width: 14px;

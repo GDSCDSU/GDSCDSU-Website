@@ -57,7 +57,7 @@ export default function Marketing() {
   return (
     <>
     <div className="QuoteDiv">
-    <Image src='/marketingquote.svg' alt='' width={400} height={400} />
+    <img className={styles.Quoteimg} src='/marketingquote.svg' alt='' />
     </div>
     {marketers.map((item, index) => (
         <div className={styles.Rectangle198} key={index}>

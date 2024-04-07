@@ -59,7 +59,7 @@ export default function Executives() {
   return (
     <>
     <div className={styles.QuoteDiv}>
-      <Image src='/executivesquote.svg' alt='' width={400} height={400}/>
+      <img className={styles.Quoteimg} src='/executivesquote.svg' alt=''/>
     </div>
 
     {executives.map((item, index) => (
