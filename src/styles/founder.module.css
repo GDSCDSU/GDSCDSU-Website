@@ -1,18 +1,18 @@
 
 .card {
   width: 504px;
-  height: 716px;
+  height: 600px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 0.5rem 0.5rem;
   margin-top: -1px;
-  left: 150px;
+  margin-left: 400px;
   padding: 1.25rem;
 }
 
 .Quoteimg{
   width: 700px;
-  height: 400px;
+  height: 300px;
   margin-left: 600px;
 }
 
@@ -80,12 +80,13 @@
 }
 
 .container {
-  width: 400px;
-  height: 350px;
+  width: 500px;
+  height: 300px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
-  margin: 5px;
+  margin-top: 10px;
+  margin-left: 100px;
 }
 
 .imageContainer {
@@ -139,3 +140,27 @@
   font-weight: 400;
   font-family: sans-serif;
 }
+
+
+.header {
+  width: 505px;
+  height: 58px;
+  background: #4285F4;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-left: 400px;
+}
+
+.facultyHeader {
+  background: #34D399;
+}
+
+.dotimg{
+  width: 109%;
+  height: auto;
+  position: relative;
+  left: -20px;
+  top: -40px;
+
+}
+

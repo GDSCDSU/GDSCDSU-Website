@@ -1,6 +1,7 @@
 // Founder.js
 
 import styles from '../styles/founder.module.css'; // Import the CSS module
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'next/image';
 
 export default function Founder() {
@@ -125,58 +126,63 @@ export default function Founder() {
     
     
     
-    {founders.map((founder, index) => (
-      
-  <div key={index}>
-    <div className="header" style={{ width: 545, height: 58, background: index === 1 ? '#34D399' : '#4285F4', borderTopLeftRadius: 20, borderTopRightRadius: 20 }}>
-      <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
-    </div>
+    <div className="row">
+  {founders.map((founder, index) => (
+    <div key={index} className="col-lg-4">
+      <div className={`${styles.header} ${index === 1 ? styles.facultyHeader : ''}`}>
+          <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
+      </div>
 
-    <div className={styles.card}>
-      <Image src='/dotbackground.svg' alt='' width={400} height={400} />
+      <div className={styles.card}>
+        <img className={styles.dotimg} src='/dotbackground.svg' alt='' />
 
-      <img className="1" style={{ width: 238, height: 238, left: 0, top: 0, position: 'absolute' }} src={founder.imageSrc} />
-      <h2>{founder.name}</h2>
-      <p>{founder.designation}</p>
-      <p>{founder.description}</p>
+        <img className="1" style={{ width: 238, height: 238, left: 0, top: 0, position: 'absolute' }} src={founder.imageSrc} />
+        <h2>{founder.name}</h2>
+        <p>{founder.designation}</p>
+        <p>{founder.description}</p>
 
-      <div className={styles.group}>
-        {founder.socials.map((social, index) => (
-          <div className={styles.icon} key={index}>
-            {social.type === 'Email' ? (
-              <div className={styles.Email}>
-                <div className={styles.Vector} />
-                <div className={styles.Vector} />
-              </div>
-            ) : (
-              <>
-                <div className={styles[social.type]} />
-                <div className={styles.Vector} />
-              </>
-            )}
-          </div>
-        ))}
+        <div className={styles.group}>
+          {founder.socials.map((social, index) => (
+            <div className={styles.icon} key={index}>
+              {social.type === 'Email' ? (
+                <div className={styles.Email}>
+                  <div className={styles.Vector} />
+                  <div className={styles.Vector} />
+                </div>
+              ) : (
+                <>
+                  <div className={styles[social.type]} />
+                  <div className={styles.Vector} />
+                </>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  </div>
-))}
+  ))}
+</div>
+
 
    
 
+<div className="row">
       {foundingmembers.map((item, index) => (
-        <div className={styles.container} key={index}>
-          <div className={styles.imageContainer}>
-            <div className={styles.Ellipse} />
-            <img className="1" src={item.image1Src} />
-            <img className={styles.Img92921} src={item.image2Src} />
-          </div>
+        <div className="col-md-4" key={index}>
+          <div className={styles.container}>
+            <div className={styles.imageContainer}>
+              <div className={styles.Ellipse} />
+              <img className="1" src={item.image1Src} />
+              <img className={styles.Img92921} src={item.image2Src} />
+            </div>
 
-          <div className={styles.name}>{item.name}</div>
-          <div className={styles.designation}>{item.designation}</div>
-          <div className={styles.description}>{item.description}</div>
+            <div className={styles.name}>{item.name}</div>
+            <div className={styles.designation}>{item.designation}</div>
+            <div className={styles.description}>{item.description}</div>
+          </div>
         </div>
       ))}
-
+    </div>
     </>
   );
 }

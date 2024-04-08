@@ -12,7 +12,7 @@
   border-radius: 9999px;
   margin-left: 500px;
   padding: 5px;
-  top: 0;
+  top: 6px;
   left: 0;
   transition: border 0.3s ease;
 }
@@ -25,7 +25,7 @@
   border-radius: 9999px;
   padding: 5px;
   margin-left: 500px;
-  top: 7px;
+  top: 10px;
   left: 4px;
   transition: left 0.3s ease;
 }
