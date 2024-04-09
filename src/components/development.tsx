@@ -56,6 +56,7 @@ export default function Development() {
           <div className={styles.Rectangle198}>
             <div className={styles.picheader}></div>
             <div className={styles.MaskGroup}>
+            <img className={styles.dotimg} src='/dotbackground.svg' alt='' />
               <div className={styles.Ellipse44}></div>
               <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
               <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />

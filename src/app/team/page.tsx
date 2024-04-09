@@ -57,7 +57,7 @@ export default function Team() {
 
       <div className={styles.TeamNavigation}>
         <div className={`${styles.Rectangle196} ${activeTab === 'Founder' ? styles.active : ''}`} />
-        <div className={styles.Rectangle197} style={{ left: `${activeTab === 'Founder' ? '20px' : activeTab === 'Leads' ? '165px' : activeTab === 'Marketing' ? '305px' : activeTab === 'Operations' ? '450px' : activeTab === 'Development' ? '618px' : activeTab === 'Executives' ? '790px'  : '520px'}` }} />
+        <div className={styles.Rectangle197} style={{ left: `${activeTab === 'Founder' ? '30px' : activeTab === 'Leads' ? '175px' : activeTab === 'Marketing' ? '315px' : activeTab === 'Operations' ? '460px' : activeTab === 'Development' ? '623px' : activeTab === 'Executives' ? '790px'  : '520px'}` }} />
         <button className={`${styles.NavButton} ${styles.Founder} ${activeTab === 'Founder' ? styles.active : ''}`} onClick={() => handleTabClick('Founder')}>Founder</button>
         <button className={`${styles.NavButton} ${styles.Leads} ${activeTab === 'Leads' ? styles.active : ''}`} onClick={() => handleTabClick('Leads')}>Leads</button>
         <button className={`${styles.NavButton} ${styles.MarketingTeam} ${activeTab === 'Marketing' ? styles.active : ''} `} onClick={() => handleTabClick('Marketing')}>Marketing</button>

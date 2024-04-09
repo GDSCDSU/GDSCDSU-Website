@@ -170,6 +170,7 @@ export default function Founder() {
       {foundingmembers.map((item, index) => (
         <div className="col-md-4" key={index}>
           <div className={styles.container}>
+          <img className='' src='/dotimgvertical.svg' alt='' style={{position:'absolute' , height : '300px'}} />
             <div className={styles.imageContainer}>
               <div className={styles.Ellipse} />
               <img className="1" src={item.image1Src} />

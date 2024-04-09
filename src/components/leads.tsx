@@ -44,6 +44,7 @@ export default function Leads() {
       <div className={styles.Group827}>
         {leads.map((item, index) => (
           <div className={styles.rectangle198} key={index}>
+            <img className='' src='/dotimgverticalred.svg' alt='' style={{position:'absolute' , height : '250px'}} />
             <div className={styles.maskGroup}>
               <div className={styles.ellipse44}></div>
               <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
