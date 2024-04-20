@@ -1,7 +1,9 @@
+import React from 'react';
 import { useState } from "react";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 import styles from '';
+import Eventsslider from './eventsslider';
 export default function Events(){
     const AllEvents = dynamic(() => import('./allevents'), {
         ssr: false,
@@ -31,6 +33,10 @@ export default function Events(){
         <>
         <section className="TeamsHeader">
           <Image src='/events-header.svg' alt='' width={1890} height={300} />
+        </section>
+
+        <section>
+            <Eventsslider/>
         </section>
 
             <div className={styles.EventsNavigation}>
