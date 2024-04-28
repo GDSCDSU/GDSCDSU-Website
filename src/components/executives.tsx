@@ -79,7 +79,7 @@ export default function Executives() {
             <div className={styles.Description}>{item.description}</div>
             <div className={styles.Group718}>
               <div className={styles.Rectangle191}></div>
-              <div className={styles.Vector}></div>
+              <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
               <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
             </div>
           </div>
