@@ -8,10 +8,6 @@
   margin-left: 100px;
 }
 
-.picheader {
-  /* Styles for picheader */
-}
-
 .MaskGroup {
   width: 94px;
   height: 94px;
@@ -51,6 +47,9 @@
   font-weight: 600;
   font-family: sans-serif;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .role {
@@ -65,6 +64,8 @@
   width: 137px;
   height: 32px;
   position: relative;
+  top: 10px;
+  left: 120px;
 }
 
 .Rectangle191 {
@@ -75,6 +76,7 @@
   left: 0;
   border: 1px solid #4b5563;
   border-radius: 9999px;
+  
 }
 
 .Quoteimg{
@@ -90,6 +92,7 @@
   position: absolute;
   top: 7px;
   left: 4px;
+  
 }
 
 .LinkedinProfile {
@@ -101,11 +104,13 @@
   font-size: 0.875rem;
   font-weight: 400;
   font-family: sans-serif;
+  
 }
 
 .dotimg{
-  max-width: 400px;
-  max-height: 400px;
+  position: relative;
+  width: 432px;
+  height: 80px;
     
   }
   

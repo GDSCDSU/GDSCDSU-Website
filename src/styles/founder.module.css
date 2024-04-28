@@ -21,20 +21,29 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .card p {
   color: #4b5563;
   font-size: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .group {
   width: 170px;
   height: 32px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   margin-top: 1.25rem;
+  margin-left: 130px;
 }
 
 .group .icon {
@@ -43,56 +52,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 20px;
 }
 
-.group .icon .Rectangle {
-  width: 32px;
-  height: 32px;
-  border-radius: 9999px;
-  border: 1px solid #4b5563;
-}
-
-.group .icon .Vector {
-  width: 16px;
-  height: 16px;
-  background-color: #4b5563;
-}
-
-.group .icon .Email {
-  width: 32px;
-  height: 32px;
-  border-radius: 9999px;
-  border: 1px solid #4b5563;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.group .icon .Email .Vector {
-  width: 18px;
-  height: 13px;
-  background-color: #4b5563;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .container {
   width: 500px;
-  height: 300px;
+  height: 330px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   margin-top: 20px;
   margin-left: 100px;
+  
 }
 
 .imageContainer {
   width: 94px;
   height: 94px;
-  position: relative;
+  position: absolute;
 }
 
 .imageContainer .Ellipse {
@@ -122,6 +100,8 @@
   font-weight: 600;
   font-family: sans-serif;
   text-transform: capitalize;
+  margin-left: 120px;
+
 }
 
 .designation {
@@ -130,15 +110,19 @@
   font-weight: 400;
   font-family: sans-serif;
   text-transform: capitalize;
+  margin-left: 120px;
 }
 
 .description {
   width: 353px;
   text-align: justify;
   color: #4b5563;
+  word-wrap: break-word;
   font-size: 1rem;
   font-weight: 400;
   font-family: sans-serif;
+  margin-top: 5px;
+  margin-left: 120px;
 }
 
 
@@ -149,6 +133,12 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   margin-left: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 .facultyHeader {
@@ -162,5 +152,14 @@
   left: -20px;
   top: -40px;
 
+}
+
+
+.Vector {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 7px;
+  left: 4px;
 }
 

@@ -42,6 +42,7 @@
   position: absolute;
   top: 0.49px;
   left: 0.49px;
+  margin-left: 145px;
 }
 
 .profilepic {
@@ -73,6 +74,7 @@
   width: 137px;
   height: 32px;
   position: relative;
+  margin-left: 125px;
 }
 
 .Rectangle191 {
@@ -106,8 +108,9 @@
 
 
 .dotimg{
-max-width: 400px;
-max-height: 400px;
-  
-}
+  position: absolute;
+  width: 432px;
+  height: 80px;
+    
+  }
 
