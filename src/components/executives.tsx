@@ -70,9 +70,9 @@ export default function Executives() {
           <div className={styles.Rectangle198}>
             <div className={styles.MaskGroup}>
             <img className={styles.dotimg} src='/blueverticalbar.svg' alt='' />
-              <div className={styles.Ellipse44}></div>
-              <img className={styles.image1} src={item.imageSrc} alt="placeholder" />
+              <div className={styles.Ellipse44}>
               <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
+              </div>
             </div>
             <div className={styles.name}>{item.name}</div>
             <div className={styles.role}>{item.role}</div>

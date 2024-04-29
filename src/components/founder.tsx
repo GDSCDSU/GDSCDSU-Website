@@ -162,9 +162,9 @@ export default function Founder() {
           <div className={styles.container}>
           <img className='' src='/dotimgvertical.svg' alt='' style={{position:'absolute' , height : '330px'}} />
             <div className={styles.imageContainer}>
-              <div className={styles.Ellipse} />
-              <img className="1" src={item.image1Src} />
-              <img className={styles.Img92921} src={item.image2Src} />
+            <div className={styles.Ellipse44}>
+                <img className={styles.profilepic} src={item.image1Src} alt="placeholder" />
+            </div>
             </div>
 
             <div className={styles.name}>{item.name}</div>

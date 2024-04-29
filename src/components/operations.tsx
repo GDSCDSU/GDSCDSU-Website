@@ -45,11 +45,11 @@ export default function Operations() {
         <div className="col-md-4" key={index}>
           <div className={styles.Rectangle198}>
             <div className={styles.picheader}></div>
-            <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
             <div className={styles.MaskGroup}>
-              <div className={styles.Ellipse44}></div>
-              <img className={styles.image1} src={item.image1Src} alt="placeholder" />
+            <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
+            <div className={styles.Ellipse44}>
               <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
+              </div>
             </div>
             <div className={styles.name}>{item.name}</div>
             <div className={styles.role}>{item.role}</div>
