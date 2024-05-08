@@ -1,0 +1,97 @@
+.card_container {
+    width: 450px;
+    height: 300px;
+    background: white;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.20);
+    border-radius: 20px;
+    margin-left: 280px;
+    margin-top: 75px;
+    margin-bottom: 25px;
+  }
+
+  
+  .image {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+    border-radius: 100px;  
+    margin-left: 125px;
+    margin-top: -50px;
+  }
+
+  
+  .name {
+    text-align: center;
+    color: #2A2E3A;
+    font-size: 24px;
+    font-family: sans-serif;
+    font-weight: 700;
+  }
+  
+  .position {
+    text-align: center;
+    color: #656C73;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+  
+  .event {
+    text-align: center;
+    color: #656C73;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+  
+  .eventTitle {
+    text-align: center;
+    color: #656C73;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-decoration: underline;
+    
+  }
+  
+  
+  
+  
+  .Vector {
+      width: 17px;
+      height: 17px;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background-color: #4b5563;
+    }
+    
+    .LinkedinProfile {
+      position: absolute;
+      top: 7px;
+      left: 30px;
+      text-align: center;
+      color: #4b5563;
+      font-size: 0.875rem;
+      font-weight: 400;
+      font-family: sans-serif;
+    }
+    
+    .Group718 {
+      width: 137px;
+      height: 32px;
+      position: relative;
+      left: 150px;
+      top: 10px;
+    }
+    
+    .Rectangle191 {
+      width: 137px;
+      height: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #4b5563;
+      border-radius: 9999px;
+    }
+    
