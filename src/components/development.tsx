@@ -63,11 +63,13 @@ export default function Development() {
             </div>
             <div className={styles.name}>{item.name}</div>
             <div className={styles.role}>{item.role}</div>
-            <div className={styles.Group718}>
-              <div className={styles.Rectangle191}></div>
-              <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-              <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
-            </div>
+            <a href={item.linkedinProfile} target="_blank" rel="noopener noreferrer">
+              <div className={styles.Group718}>
+                <div className={styles.Rectangle191}></div>
+                <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
+                <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
+              </div>
+            </a>
           </div>
         </div>
       ))}

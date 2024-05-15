@@ -13,10 +13,10 @@ export default function Founder() {
       description: 'As a founder, he led over 100 students in coding bootcamps, tech conferences, and workshops. He also conducted more than 200 interviews each year to build a top-notch team of 10, whose talents have flourished at DSU. Moreover, he successfully secured sponsorship from the NYC-based startup Datacamp. His collaboration with Google injected a profound sense of excellence into these initiatives, paving the way for exponential career growth for those under his mentorship.',
       imageSrc: 'https://via.placeholder.com/238x238',
       socials: [
-        { type: 'Facebook', image: 'FbIcon1.svg' },
-        { type: 'LinkedIn', image: 'LinkedInIcon1.svg' },
-        { type: 'Email', image: 'EmailIcon1.svg' },
-        { type: 'Instagram', image: 'InstaIcon1.svg' }
+        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/example' },
+        { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/example' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' }, 
+        { type: 'Instagram', image: 'InstaIcon1.svg', link: 'https://www.instagram.com/example' }
       ]
     },
     {
@@ -25,12 +25,12 @@ export default function Founder() {
       description: "Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.",
       imageSrc: 'https://via.placeholder.com/238x238',
       socials: [
-        { type: 'Facebook', image: 'FbIcon1.svg' },
-        { type: 'Email', image: 'EmailIcon1.svg' },
+        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/example' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' }, 
       ]
     },
   ];
-  
+    
   const foundingmembers = [
     {
       name: 'tarun kumar',
@@ -130,7 +130,7 @@ export default function Founder() {
   {founders.map((founder, index) => (
     <div key={index} className="col-lg-4">
       <div className={`${styles.header} ${index === 1 ? styles.facultyHeader : ''}`}>
-          <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
+        <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
       </div>
 
       <div className={styles.card}>
@@ -143,9 +143,9 @@ export default function Founder() {
 
         <div className={styles.group}>
           {founder.socials.map((social, index) => (
-            <div className={styles.icon} key={index}>
+            <a href={social.type === 'Email' ? `mailto:${social.link}` : social.link} key={index} className={styles.icon}>
               <img src={social.image} alt="Social Media Icon" />
-            </div>
+            </a>
           ))}
         </div>
       </div>

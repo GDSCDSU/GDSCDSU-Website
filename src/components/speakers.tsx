@@ -67,11 +67,13 @@ export default function Speakers() {
                 <div className={styles.group718}>
                 <div className={styles.rectangle191}></div>
                 <div className={styles.vector}></div>
-                <div className={styles.Group718}>
-              <div className={styles.Rectangle191}></div>
-              <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-              <div className={styles.LinkedinProfile}>{speaker.linkedinProfile}</div>
-            </div>
+                <a href={item.linkedinProfile} target="_blank" rel="noopener noreferrer">
+                  <div className={styles.Group718}>
+                    <div className={styles.Rectangle191}></div>
+                    <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
+                    <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
+                  </div>
+                </a>
                 </div>
             </div>
             </div>
