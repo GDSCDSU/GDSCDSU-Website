@@ -43,9 +43,12 @@ const eventData = [
 
 export default function AllEvents() {
   return (
+    <>
+    <img className={styles.vectorimg1} src='/orngcircle.svg' alt='' />
+    <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
     <div className="row">
-        {eventData.map(event => (
-            <div key={event.id} className="col-lg-4">
+      {eventData.map(event => (
+            <div key={event.id} className="col-lg-5">
             <div className={styles.card_container}>
                 <img className={styles.image} src={event.imageUrl} alt="Event" />
                 <div className={styles.name}>{event.title}</div>
@@ -54,5 +57,6 @@ export default function AllEvents() {
             </div>
         ))}
     </div>
+    </>
   );
 }

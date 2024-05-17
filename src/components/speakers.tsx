@@ -55,9 +55,12 @@ const speakersData = [
 
 export default function Speakers() {
   return (
+    <>
+    <img className={styles.vectorimg1} src='/shapes.svg' alt='' />
+    <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
     <div className="row">
         {speakersData.map(speaker => (
-            <div key={speaker.id} className="col-lg-6">
+            <div key={speaker.id} className="col-lg-5">
             <div className={styles.card_container}>
                 <img className={styles.image} src="https://via.placeholder.com/200x200" alt="Profile" />
                 <div className={styles.name}>{speaker.name}</div>
@@ -67,11 +70,11 @@ export default function Speakers() {
                 <div className={styles.group718}>
                 <div className={styles.rectangle191}></div>
                 <div className={styles.vector}></div>
-                <a href={item.linkedinProfile} target="_blank" rel="noopener noreferrer">
+                <a href={speaker.linkedinProfile} target="_blank" rel="noopener noreferrer">
                   <div className={styles.Group718}>
                     <div className={styles.Rectangle191}></div>
                     <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                    <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
+                    <div className={styles.LinkedinProfile}>{speaker.linkedinProfile}</div>
                   </div>
                 </a>
                 </div>
@@ -79,5 +82,6 @@ export default function Speakers() {
             </div>
         ))}
     </div>
+    </>
   );
 }

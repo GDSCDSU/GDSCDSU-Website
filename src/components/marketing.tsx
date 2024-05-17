@@ -62,7 +62,7 @@ export default function Marketing() {
     <img className={styles.Quoteimg} src='/marketingquote.svg' alt='' />
     </div>
 
-      <div className="row">
+    <div className="row">
       {marketers.map((item, index) => (
         <div className="col-md-4" key={index}>
           <div className={styles.Rectangle198}>
@@ -76,12 +76,13 @@ export default function Marketing() {
             <div className={styles.name}>{item.name}</div>
             <div className={styles.role}>{item.role}</div>
             <a href={item.linkedinProfile} target="_blank" rel="noopener noreferrer">
-            <div className={styles.Group718}>
-              <div className={styles.Rectangle191}></div>
-              <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-              <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
-            </div>
-          </a>
+              <div className={styles.Group718}>
+                <div className={styles.Rectangle191}></div>
+                <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
+                <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
+              </div>
+            </a>
+          </div>
         </div>
       ))}
     </div>

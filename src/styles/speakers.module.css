@@ -4,7 +4,7 @@
     background: white;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.20);
     border-radius: 20px;
-    margin-left: 280px;
+    margin-left: 400px;
     margin-top: 75px;
     margin-bottom: 25px;
   }
@@ -95,3 +95,14 @@
       border-radius: 9999px;
     }
     
+    .vectorimg1{
+      position:absolute;
+      margin-left: 1600px;
+      margin-top: 550px;
+    }
+  
+    .vectorimg2{
+      position: absolute;
+      margin-left: -20px;
+    }
+  
