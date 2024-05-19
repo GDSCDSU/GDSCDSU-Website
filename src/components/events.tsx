@@ -32,7 +32,7 @@ export default function Events(){
     return(
         <>
         <section className="TeamsHeader">
-          <Image src='/events-header.svg' alt='' width={1890} height={300} />
+          <Image src='/events-header.svg' alt='' width={1890} height={250} />
         </section>
 
         <section>

@@ -125,6 +125,17 @@
   margin-left: 120px;
 }
 
+.profilepic{
+  margin-left: 10px;
+}
+
+.founderimg{
+  width: 200px;
+  margin-top: -200px;
+  margin-left: 130px;
+  position: relative;
+}
+
 
 .header {
   width: 505px;
@@ -142,7 +153,7 @@
 }
 
 .facultyHeader {
-  background: #34D399;
+  background: green;
 }
 
 .dotimg{

@@ -45,10 +45,11 @@
   border-radius: 9999px;
 }
 
-.image1 {
+.profileimage {
   width: 94px;
   height: 94px;
   position: absolute;
+  margin-left: 10px;
 }
 
 .syedAteeq {
@@ -99,7 +100,7 @@
   width: 32px;
   height: 32px;
   border-radius: 9999px;
-  margin-left: 10px;
+  margin-left: -10px;
   border: 1px solid #4b5563;
 }
 
@@ -116,3 +117,17 @@
   height: 300px;
   width: 200px;
 }
+
+.socials img {
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.d-flex .flex-row {
+  gap: 8px; 
+  display: inline-block;
+}
+
+

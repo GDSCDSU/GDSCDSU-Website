@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from "react";
 import dynamic from 'next/dynamic';
-import Image from "next/image";
+
 import styles from '../../styles/eventnav.module.css';
 import Eventsslider from '../../components/eventsslider';
 export default function Events(){
@@ -35,7 +35,9 @@ export default function Events(){
         <section className={styles.TeamsHeader}>
         </section>
 
-
+        <section>
+            <Eventsslider/>
+        </section>
         
             <div className={styles.EventsNavigation}>
             <div className={`${styles.Rectangle196} ${activeTab === 'Founder' ? styles.active : ''}`} />

@@ -7,39 +7,33 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Development() {
   const developers = [
     {
-      name: 'Muhammad Arbaz Sohail',
-      role: 'Executive Core Team Member',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      name: 'Muhammad Amish Toor',
+      role: 'Web Lead',
+      imageSrc: 'Development/amish_toor.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Ali Osaid',
       role: 'Core Team Member',
-      imageSrc: 'https://via.placeholder.com/94x94',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-    {
-      name: 'Muhammad Amish Toor',
-      role: 'Core Team Member',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'Development/ali_osaid.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Haris Muhammad Imran',
       role: 'Core Team Member',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'Development/muhammad_haris.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Bisharat Ali',
       role: 'Core Team Member',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'Development/bisharat_ali.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Qirrat Azam',
       role: 'Core Team Member',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'Development/qirrat_azam.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
   ];

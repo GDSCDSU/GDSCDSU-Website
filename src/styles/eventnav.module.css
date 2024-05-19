@@ -66,7 +66,7 @@
 
 
   .TeamsHeader {
-    height: 300px; /* Adjust the height as needed */
+    height: 200px; /* Adjust the height as needed */
     background-image: url('/events-header.svg');
     background-size: cover;
     background-position: center;

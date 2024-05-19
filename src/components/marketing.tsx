@@ -7,52 +7,39 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Marketing() {
   const marketers = [
     {
-      name: 'Muhammad Bilal',
-      role: 'Marketing Lead',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-    {
       name: 'Sahil Bachani',
-      role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      role: 'Graphics and Marketing Lead',
+      imageSrc: 'marketing/sahil.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Taqwa Muhammad',
       role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'marketing/taqwa.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Radhika Rajwani',
       role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'marketing/radhika.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Laiba Kamal Khan',
       role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'marketing/laiba.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Mahnoor Ahmed',
       role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'marketing/mahnoor.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Amna Tariq',
       role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'marketing/amna.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     }
   ];

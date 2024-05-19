@@ -9,29 +9,25 @@ export default function Operations() {
     {
       name: 'Muhammad Ateeb',
       role: 'Operations Lead',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'executives/muhammad_ateeb.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Khizar Saqib',
-      role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      role: 'Event Management Lead',
+      imageSrc: 'operations/khizar_saqib.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Mirza Hamza Baig',
       role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'operations/hamza_baig.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
       name: 'Gireesh Sachdev',
       role: 'Core Team Member',
-      image1Src: 'https://via.placeholder.com/94x94',
-      imageSrc: 'https://via.placeholder.com/94x94',
+      imageSrc: 'operations/gireesh.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
   ];
