@@ -85,9 +85,9 @@ export default function Team() {
           ? '175px'
           : activeTab === 'Marketing'
           ? '315px'
-          : activeTab === 'Operations'
-          ? '460px'
           : activeTab === 'Development'
+          ? '460px'
+          : activeTab === 'Operations'
           ? '623px'
           : activeTab === 'Executives'
           ? '790px'
@@ -132,20 +132,20 @@ export default function Team() {
     Marketing
   </button>
   <button
-    className={`${styles.NavButton} ${styles.OperationsTeam} ${
-      activeTab === 'Operations' ? styles.active : ''
-    }`}
-    onClick={() => handleTabClick('Operations')}
-  >
-    Operations
-  </button>
-  <button
     className={`${styles.NavButton} ${styles.DevelopmentTeam} ${
       activeTab === 'Development' ? styles.active : ''
     }`}
     onClick={() => handleTabClick('Development')}
   >
     Development
+  </button>
+  <button
+    className={`${styles.NavButton} ${styles.OperationsTeam} ${
+      activeTab === 'Operations' ? styles.active : ''
+    }`}
+    onClick={() => handleTabClick('Operations')}
+  >
+    Operations
   </button>
   <button
     className={`${styles.NavButton} ${styles.ExecutiveCoreTeam} ${

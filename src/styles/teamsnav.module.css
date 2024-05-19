@@ -65,20 +65,22 @@
   
 }
 
-.OperationsTeam {
-  left: 480px;
-  top: 17px;
-  font-weight: 700;
-  padding-top: 5px;
-}
-
 .DevelopmentTeam {
-  left: 640px;
+  left: 475px;
   top: 17px;
   font-weight: 700;
   padding-top: 5px;
   padding-left: 5px;
 }
+
+
+.OperationsTeam {
+  left: 645px;
+  top: 17px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
 
 .ExecutiveCoreTeam {
   left: 820px;
