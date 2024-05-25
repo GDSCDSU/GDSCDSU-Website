@@ -2,8 +2,8 @@
 /* eslint-disable @next/next/no-img-element */
 'use client';
 import React,{useEffect} from "react";
-import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
-import { AnimatedTooltip } from "../components/ui/animated-tooltip";
+import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { AnimatedTooltip } from "./ui/animated-tooltip";
 import Image from "next/image";
 import { Avatar, Button, FooterDivider, Footer } from "flowbite-react";
 import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin} from "react-icons/bs";
@@ -53,105 +53,101 @@ export default function OurStory(){
     return (
         <>
         <div data-aos="fade-up" >
-            <img className="img-fluid" src="/OurStory.svg" alt=""/>     
+            <img className="img-fluid" src="/OurStory.svg" alt=""/>
         </div>
-        <div className="m-5" data-aos="fade-up" >
-            <div className="d-flex flex-column align-items-center" >
-                <h1><b>The <span className="text-danger" >Journey Begins</span></b></h1>
+        <div className="m-5" data-aos="fade-up">
+        <div className="d-flex flex-column align-items-center">
+            <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
+        </div>
+        <br />
+        <div className="row">
+            <div className="col-md-2"></div>
+            <div className="col-md-4">
+            <div className="card" style={{ borderColor: 'transparent' }}>
+                <div className="card-body">
+                <p className="text-secondary">
+                    This was the best moment of my life. I received an email selecting me as the Google DSC Lead for my university. It felt like a dream come true, especially since I was the first applicant. With all the excitement, I also understood the significant responsibilities that came with the role.
+                </p>
+                <p className="text-secondary">
+                    GDSC addressed the need for structured learning paths for specific technologies. For example, we held an online Flutter bootcamp with guidance from experienced alumni, providing a clear roadmap for those interested in front-end development. We reached out to all engineering departments at our university, emphasizing the value of software development, and are proud to see most of them now actively involved in learning software.
+                </p>
+                <p className="text-secondary">
+                    The first time Google DSC arrived on campus, everything was going well until the COVID-19 outbreak impacted us all. Educational institutions closed, forcing us to shelve plans for tech events, talks, and bootcamps. However, GDSC embraced the challenge and successfully moved all activities online using Google Meet.
+                </p>
+                </div>
             </div>
-            <br/>
-            <div className="row" >
-                <div className="col-md-2" >
+            <br />
+            <FooterDivider />
+            </div>
+            <div className="col-md-6">
+            <CardContainer className="inter-var">
+                <CardBody>
+                <CardItem translateZ="100" className="w-96">
+                    <Image
+                    src="/journeybegins.svg"
+                    height="0"
+                    width="0"
+                    className="img-fluid imgResponsive"
+                    alt="thumbnail"
+                    />
+                </CardItem>
+                </CardBody>
+            </CardContainer>
+            </div>
+        </div>
+        </div>
+        <div className="m-5" data-aos="fade-up">
+        <div className="d-flex flex-column align-items-center">
+            <h1><b>The <span className="text-success">Best Team</span></b></h1>
+        </div>
+        <br />
+        <div className="row">
+            <div className="col-md-2"></div>
+            <div className="col-md-4">
+            <div className="card" style={{ borderColor: 'transparent' }}>
+                <div className="card-body">
+                <p className="text-secondary">
+                    The formation of a team is always the problem, the right talent and team can do wonders for your character. Our Recruitment process was strictly based on merit and the right talent where the talent quota was made to recruit five males and five females to be in the team. The same ratio of gender diversity can make your team more successful as compared to teams with less gender diversity.
+                </p>
+                <p className="text-secondary">
+                    In computer science industry, there is very less amount of women's working and the problem is that they are not encouraged and motivated to work in the tech, we broke that stereotype, made it compulsory for every core team member to attend which resulted in female students discover Flutter and felt in love with the technology, now their vision is more clear and they aim to become Flutter Developers after graduation.
+                </p>
+                </div>
+            </div>
+            <br />
+            <FooterDivider />
+            <div className="flex flex-row items-center justify-center mb-10 w-full">
+                <AnimatedTooltip items={people} />
+                <Button color="blue" className="custom-hover" pill>
+                <RiTeamFill />
+                View Team
+                </Button>
+            </div>
+            </div>
+            <div className="col-md-6">
+                <CardContainer className="inter-var">
+                    <CardBody>
+                    <CardItem translateZ="100" className="w-100">
+                        <Image
+                        src="/theTeam.svg"
+                        layout="responsive"
+                        height="0"
+                        width="0"
+                        className="img-fluid imgpadding"
+                        alt="thumbnail"
+                        />
+                    </CardItem>
+                    </CardBody>
+                </CardContainer>
+            </div>
+        </div>
+        </div>
 
-                </div>
-                <div className="col-md-4" >
-                    <div className="card" style={{borderColor:'transparent'}} >
-                        <div className="card-body">
-                            <p className="text-secondary" >
-                            This was the best moment of my life. I received an email selecting me as the Google DSC Lead for my university. It felt like a dream come true, especially since I was the first applicant. With all the excitement, I also understood the significant responsibilities that came with the role.
-                            </p>
-                            <p className="text-secondary" >
-                            GDSC addressed the need for structured learning paths for specific technologies. For example, we held an online Flutter bootcamp with guidance from experienced alumni, providing a clear roadmap for those interested in front-end development. We reached out to all engineering departments at our university, emphasizing the value of software development, and are proud to see most of them now actively involved in learning software.
-                            </p>
-                            <p className="text-secondary" >
-                            The first time Google DSC arrived on campus, everything was going well until the COVID-19 outbreak impacted us all. Educational institutions closed, forcing us to shelve plans for tech events, talks, and bootcamps. However, GDSC embraced the challenge and successfully moved all activities online using Google Meet.
-                            </p>
-                        </div>   
-                    </div>
-                    <br/>
-                    <FooterDivider/>
-                </div>
-                <div className="col-md-6" >
-                    <CardContainer className="inter-var">
-                        <CardBody >
-                            <CardItem translateZ="100" className="w-full">
-                            <Image
-                                src="/journeybegins.svg"
-                                height="1000"
-                                width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                                alt="thumbnail"
-                            />
-                            </CardItem>
-                        </CardBody>
-                    </CardContainer>
-                </div>
-            </div>
-        </div>
-        <br/>
-        <div className="m-5" data-aos="fade-up" >
-            <div className="d-flex flex-column align-items-center" >
-                <h1><b>The <span className="text-success" >Best Team</span></b></h1>
-            </div>
-            <br/>
-            <div className="row" >
-                <div className="col-md-2" >
-
-                </div>
-                <div className="col-md-4" >
-                    <div className="card" style={{borderColor:'transparent'}} >
-                        <div className="card-body">
-                            <p className="text-secondary" >
-                            The formation of a team is always the problem, the right talent and team can do wonders for your character. Our Recruitment process was strictly based on merit and the right talent where the  talent quota was made to recruit five males and five females to be in the team. The same ratio of gender diversity can make your team more successful as compared to teams with less gender diversity.
-                            </p>
-                            <p className="text-secondary" >
-                            In computer science industry, there is very less amount of women's working and the problem is that they are not encouraged and motivated to work in the tech, we broke that stereotype, made it compulsory for every core team member to attend which resulted in female students discover Flutter and felt in love with the technology, now their vision is more clear and they aim to become Flutter Developers after graduation.
-                            </p>
-                        </div>   
-                    </div>
-                    <br/>
-                    <FooterDivider/>
-                    <div className="flex flex-row  mb-10 w-full">
-                        <AnimatedTooltip items={people} />
-                        <br/>
-                        <Button color="blue" className="custom-hover" pill>
-                        <RiTeamFill />
-                            View Team
-                        </Button>
-                    </div>
-                </div>
-                <div className="col-md-6" >
-                    <CardContainer className="inter-var">
-                        <CardBody >
-                            <CardItem translateZ="100" className="w-96">
-                            <Image
-                                src="/theTeam.svg"
-                                height="1000"
-                                width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                                alt="thumbnail"
-                            />
-                            </CardItem>
-                        </CardBody>
-                    </CardContainer>
-                </div>
-            </div>
-        </div>
         <br/>
         <div className="m-5" data-aos="fade-up" >
             <div className="row" >
                 <div className="col-md-3" >
-
+        
                 </div>
                 <div className="col-md-6" >
                     <div className="d-flex flex-column text-center align-items-center" >
@@ -160,7 +156,7 @@ export default function OurStory(){
                         </b></h5>
                         <br/>
                         <h6 className="text-secondary" >~ Mohammad Ali Jinnah</h6> */}
-                        <img src="/Quote.svg" alt="" className="img-fluid" />
+                        <img src="/Quote.svg" alt="" className="" />
                     </div>
                 </div>
                 <div className="col-md-3" >
@@ -201,7 +197,7 @@ export default function OurStory(){
                                 src="/flutterbootcamps.svg"
                                 height="1000"
                                 width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="imgpadding"
                                 alt="thumbnail"
                             />
                             </CardItem>
@@ -244,7 +240,7 @@ export default function OurStory(){
                                 src="/python1.svg"
                                 height="1000"
                                 width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="imgpadding"
                                 alt="thumbnail"
                             />
                             </CardItem>
@@ -254,7 +250,7 @@ export default function OurStory(){
                                 src="/python2.svg"
                                 height="1000"
                                 width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="imgpadding"
                                 alt="thumbnail"
                             />
                             </CardItem>
@@ -296,7 +292,7 @@ export default function OurStory(){
                                 src="/datacamp1.svg"
                                 height="1000"
                                 width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="imgpadding"
                                 alt="thumbnail"
                             />
                             </CardItem>
@@ -333,7 +329,7 @@ export default function OurStory(){
                                 src="/cyber1.svg"
                                 height="1000"
                                 width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="imgpadding"
                                 alt="thumbnail"
                             />
                             </CardItem>
@@ -370,7 +366,7 @@ export default function OurStory(){
                                 src="/git1.svg"
                                 height="1000"
                                 width="1000"
-                                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                                className="imgpadding"
                                 alt="thumbnail"
                             />
                             </CardItem>
