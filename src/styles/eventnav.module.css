@@ -1,0 +1,76 @@
+.EventsNavigation {
+    width: 1000px;
+    height: 54px;
+    left: 50px;
+    margin: 25px;
+    position: relative;
+  }
+  
+  .Rectangle196 {
+    width: 840px;
+    height: 54px;
+    position: absolute;
+    border: 2px solid #3b82f6;
+    border-radius: 9999px;
+    margin-left: 500px;
+    padding: 5px;
+    top: 6px;
+    left: 0;
+    transition: border 0.3s ease;
+  }
+  
+  .Rectangle197 {
+    width: 350px;
+    height: 46px;
+    position: absolute;
+    background-color: #3b82f6;
+    border-radius: 9999px;
+    padding: 5px;
+    margin-left: 500px;
+    top: 10px;
+    left: 4px;
+    transition: left 0.3s ease;
+  }
+  
+  .NavButton {
+    position: absolute;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: #4b5563;
+    margin-left: 500px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color 0.3s ease;
+  }
+  
+  .Events {
+    left: 150px;
+    top: 17px;
+    font-weight: 700;
+    padding-top: 5px;
+  }
+  
+  .Speakers {
+    left: 600px;
+    top: 17px;
+    font-weight: 700;
+    padding-top: 5px;
+  }
+  
+
+  .NavButton.active {
+    color: white;
+  }
+
+
+  .TeamsHeader {
+    height: 200px; /* Adjust the height as needed */
+    background-image: url('/events-header.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  

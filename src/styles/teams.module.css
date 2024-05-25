@@ -1,0 +1,118 @@
+.Rectangle198 {
+  width: 300px;
+  height: 260px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  margin-left: 500px;
+  margin-bottom: 15px;
+  border-radius: 0.75rem;
+}
+
+.picheader {
+  /* Styles for picheader */
+}
+
+.MaskGroup {
+  width: 94px;
+  height: 94px;
+  position: relative;
+}
+
+.Quoteimg{
+  width: 700px;
+  height: 300px;
+  margin-left: 610px;
+}
+
+
+.Ellipse44 {
+  width: 94px;
+  height: 94px;
+  position: absolute;
+  top: 0;
+  left: 100px;
+  background-color: #34d399;
+  border-radius: 9999px;
+}
+
+.image1 {
+  width: 93.51px;
+  height: 93.51px;
+  position: absolute;
+  top: 0.49px;
+  left: 0.49px;
+  margin-left: 145px;
+}
+
+.profilepic {
+  width: 94px;
+  height: 94px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.name {
+  text-align: center;
+  color: #111827;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.role {
+  text-align: center;
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.Group718 {
+  width: 137px;
+  height: 32px;
+  position: relative;
+  margin-left: 75px;
+  margin-top: 50px;
+}
+
+.Rectangle191 {
+  width: 137px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #4b5563;
+  border-radius: 9999px;
+}
+
+.Vector {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 7px;
+  left: 4px;
+}
+
+.LinkedinProfile {
+  position: absolute;
+  top: 7px;
+  left: 30px;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+
+.dotimg{
+  position: absolute;
+  width: 300px;
+  height: 80px;
+  top: -10px;
+    
+  }
+
