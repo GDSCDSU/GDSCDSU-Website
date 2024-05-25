@@ -1,5 +1,5 @@
 'use client';
-import styles from "../../styles/teamsnav.module.css";
+import styles from "../styles/teamsnav.module.css";
 import { useState } from "react";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
@@ -52,7 +52,7 @@ export default function Team() {
   return (
     <>
       <section className="TeamsHeader">
-      <Image src='/teams-header.svg' alt='' width={1890} height={300} />
+      <Image src='/teams-header.svg' alt='' width={1500} height={300} />
       </section>
 
       <div className={styles.TeamNavigation}>

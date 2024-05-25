@@ -2,7 +2,7 @@
 import React from 'react';
 import { useState } from "react";
 import dynamic from 'next/dynamic';
-import styles from '../../styles/eventnav.module.css';
+import styles from '../styles/events.module.css';
 import Eventsslider from '../components/eventsslider';
 
 export default function Events(){
