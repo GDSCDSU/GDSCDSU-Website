@@ -52,7 +52,7 @@ export default function OurStory(){
       }, []);
     return (
         <>
-        <div data-aos="fade-up" >
+        <div>
             <img className="img-fluid" src="/OurStory.svg" alt=""/>
         </div>
         <div className="m-5" data-aos="fade-up">
