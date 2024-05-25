@@ -52,8 +52,8 @@ export default function OurStory(){
       }, []);
     return (
         <>
-        <div>
-            <img className="img-fluid" src="/OurStory.svg" alt=""/>
+        <div data-aos="fade-up" >
+            <img className="img-fluid" src="/OurStory.png" alt=""/>
         </div>
         <div className="m-5" data-aos="fade-up">
         <div className="d-flex flex-column align-items-center">
