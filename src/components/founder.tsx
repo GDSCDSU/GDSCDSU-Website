@@ -105,7 +105,7 @@ export default function Founder() {
     
     <div className="row">
   {founders.map((founder, index) => (
-    <div key={index} className="col-lg-4">
+    <div key={index} className="col-lg-5">
       <div className={`${styles.header} ${index === 1 ? styles.facultyHeader : ''}`}>
         <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
       </div>
@@ -135,7 +135,7 @@ export default function Founder() {
 
 <div className="row">
       {foundingmembers.map((item, index) => (
-        <div className="col-md-4" key={index}>
+        <div className="col-lg-5" key={index}>
           <div className={styles.container}>
           <img className='' src='/dotimgvertical.svg' alt='' style={{position:'absolute' , height : '330px'}} />
             <div className={styles.imageContainer}>

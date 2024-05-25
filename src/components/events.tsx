@@ -1,14 +1,15 @@
+'use client';
 import React from 'react';
 import { useState } from "react";
 import dynamic from 'next/dynamic';
-import Image from "next/image";
-import styles from '../styles/eventnav.module.css';
-import Eventsslider from './eventsslider';
+
+import styles from '../../styles/eventnav.module.css';
+import Eventsslider from '../components/eventsslider';
 export default function Events(){
-    const AllEvents = dynamic(() => import('./allevents'), {
+    const AllEvents = dynamic(() => import('../components//allevents'), {
         ssr: false,
       });
-      const Speaker = dynamic(() => import('./speakers'), {
+      const Speaker = dynamic(() => import('../components/speakers'), {
         ssr: false,
       });
       
@@ -31,19 +32,18 @@ export default function Events(){
    
     return(
         <>
-        <section className="TeamsHeader">
-          <Image src='/events-header.svg' alt='' width={1890} height={250} />
+        <section className={styles.TeamsHeader}>
         </section>
 
         <section>
             <Eventsslider/>
         </section>
-
+        
             <div className={styles.EventsNavigation}>
             <div className={`${styles.Rectangle196} ${activeTab === 'Founder' ? styles.active : ''}`} />
-            <div className={styles.Rectangle197} style={{ left: `${activeTab === 'All Events' ? '20px' : activeTab === 'Speakers' ? '200px'  : '720px'}` }} />
-            <button className={`${styles.NavButton} ${styles.Events} ${activeTab === 'All Events' ? styles.active : ''}`} onClick={() => handleTabClick('All Events')}>All Events</button>
-            <button className={`${styles.NavButton} ${styles.Speakers} ${activeTab === 'Leads' ? styles.active : ''}`} onClick={() => handleTabClick('Speakers')}>Speakers</button>
+            <div className={styles.Rectangle197} style={{ left: `${activeTab === 'AllEvents' ? '10px' : activeTab === 'Speaker' ? '480px' : '0px'}` }} />
+            <button className={`${styles.NavButton} ${styles.Events} ${activeTab === 'AllEvents' ? styles.active : ''}`} onClick={() => handleTabClick('AllEvents')}>All Events</button>
+            <button className={`${styles.NavButton} ${styles.Speakers} ${activeTab === 'Speaker' ? styles.active : ''}`} onClick={() => handleTabClick('Speaker')}>Speakers</button>
             </div>
 
         <section>

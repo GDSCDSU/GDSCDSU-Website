@@ -138,7 +138,7 @@ export default function AllEvents() {
     <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
     <div className="row">
       {eventData.map(event => (
-            <div key={event.id} className="col-md-5">
+            <div key={event.id} className="col-md-4 offset-md-0">
             <div className={styles.card_container}>
                 <img className={styles.image} src={event.imageUrl} alt="Event" />
                 <div className={styles.name}>{event.title}</div>

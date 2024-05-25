@@ -4,22 +4,22 @@ import { useState } from "react";
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 
-const Founder = dynamic(() => import('./founder'), {
+const Founder = dynamic(() => import('../components/founder'), {
   ssr: false,
 });
-const Leads = dynamic(() => import('./leads'), {
+const Leads = dynamic(() => import('../components/leads'), {
   ssr: false,
 });
-const Operations = dynamic(() => import('./operations'), {
+const Operations = dynamic(() => import('../components/operations'), {
   ssr: false,
 });
-const Executives = dynamic(() => import('./executives'), {
+const Executives = dynamic(() => import('../components/executives'), {
   ssr: false,
 });
-const Marketing = dynamic(() => import('./marketing'), {
+const Marketing = dynamic(() => import('../components/marketing'), {
   ssr: false,
 });
-const Development = dynamic(() => import('./development'), {
+const Development = dynamic(() => import('../components/development'), {
   ssr: false,
 });
 
@@ -56,7 +56,25 @@ export default function Team() {
       </section>
 
       <div className={styles.TeamNavigation}>
-  <div className={`${styles.Rectangle196} ${activeTab === 'Founder' ? styles.active : ''}`} />
+      <div
+  className={styles.Rectangle196}
+  style={{
+    borderColor:
+      activeTab === 'Leads'
+        ? 'red'
+        : activeTab === 'Marketing'
+        ? 'green'
+        : activeTab === 'Operations'
+        ? 'green'
+        : activeTab === 'Development' || activeTab === 'Executives'
+        ? '#3b82f6'
+        : '#3b82f6', 
+    borderWidth: '2px', 
+    borderStyle: 'solid' 
+  }}
+/>
+
+
   <div
     className={styles.Rectangle197}
     style={{
@@ -67,25 +85,26 @@ export default function Team() {
           ? '175px'
           : activeTab === 'Marketing'
           ? '315px'
-          : activeTab === 'Operations'
-          ? '623px'
           : activeTab === 'Development'
           ? '460px'
+          : activeTab === 'Operations'
+          ? '623px'
           : activeTab === 'Executives'
           ? '790px'
           : '520px'
       }`,
       backgroundColor:
         activeTab === 'Leads'
-          ? 'yellow'
+          ? 'red'
           : activeTab === 'Marketing'
           ? 'green'
           : activeTab === 'Operations'
-          ? 'red'
+          ? 'green'
           : activeTab === 'Development'
-          ? 'green'
+          ? '#3b82f6'
           : activeTab === 'Executives'
-          ? 'green'
+          ? '#3b82f6'
+          : ''
     }}
   />
   <button
@@ -113,13 +132,13 @@ export default function Team() {
     Marketing
   </button>
   <button
-  className={`${styles.NavButton} ${styles.DevelopmentTeam} ${
-    activeTab === 'Development' ? styles.active : ''
-  }`}
-  onClick={() => handleTabClick('Development')}
->
-  Development
-</button>
+    className={`${styles.NavButton} ${styles.DevelopmentTeam} ${
+      activeTab === 'Development' ? styles.active : ''
+    }`}
+    onClick={() => handleTabClick('Development')}
+  >
+    Development
+  </button>
   <button
     className={`${styles.NavButton} ${styles.OperationsTeam} ${
       activeTab === 'Operations' ? styles.active : ''
@@ -137,6 +156,7 @@ export default function Team() {
     Executive
   </button>
 </div>
+
 
       <section>
         {renderComponent()}
