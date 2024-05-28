@@ -1,6 +1,6 @@
 .container {
-  width: 122px;
-  height: 319px;
+  width: 178px;
+  height: 250px;
   position: relative;
 }
 
@@ -19,12 +19,12 @@
 }
 
 .Group827{
-  margin-left: 800px;
+  margin-left: 550px;
 }
 
 .rectangle198 {
-  width: 780px;
-  height: 300px;
+  width: 900px;
+  height: 320px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
@@ -46,24 +46,28 @@
 }
 
 .profileimage {
-  width: 94px;
-  height: 94px;
+  width: 120px;
+  height: 100px;
   position: absolute;
-  margin-left: 10px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-.syedAteeq {
+.name {
   color: #111827;
   font-size: 1.5rem;
   font-weight: 600;
   font-family: sans-serif;
+  margin-top: 20px;
+  margin-left: 120px;
 }
 
-.gdscDsuLead20202021Founder {
+.designation {
   color: #4b5563;
   font-size: 1rem;
   font-weight: 400;
   font-family: sans-serif;
+  margin-left: 120px;
 }
 
 .description {
@@ -73,13 +77,15 @@
   font-size: 1rem;
   font-weight: 400;
   font-family: sans-serif;
+  margin-left: 120px;
+  word-wrap: break-word;
 }
 
 .socials {
-  width: 120px;
-  height: 62px;
+  width: 150px;
+  height: 80px;
   position: relative;
-  margin-left: 600px;
+  margin-left: 720px;
   margin-top: -70px;
 }
 
@@ -130,4 +136,104 @@
   display: inline-block;
 }
 
+@media (max-width: 768px) {
+  .rectangle198 {
+    width: 95%;
+    margin: 15px auto;
+  }
 
+  .name, .designation, .description {
+    margin-left: 20px;
+  }
+
+  .profileimage {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .socials {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name, .designation, .description {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+  .profileimage {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .socials {
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+  }
+  
+  .socials img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .description {
+    width: 100%;
+    margin: 10px auto;
+  }
+}@media (max-width: 768px) {
+  .rectangle198 {
+    width: 95%;
+    margin: 15px auto;
+  }
+
+  .name, .designation, .description {
+    margin-left: 20px;
+  }
+
+  .profileimage {
+    width: 80px;
+    height: 80px;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .socials {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .name, .designation, .description {
+    font-size: 1rem;
+    margin-left: 10px;
+  }
+
+  .profileimage {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .socials {
+    width: 100px;
+    height: 60px;
+    margin-top: 10px;
+  }
+  
+  .socials img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .description {
+    width: 100%;
+    margin: 10px auto;
+  }
+}

@@ -137,7 +137,7 @@ export default function Founder() {
       {foundingmembers.map((item, index) => (
         <div className="col-lg-5" key={index}>
           <div className={styles.container}>
-          <img className='' src='/dotimgvertical.svg' alt='' style={{position:'absolute' , height : '330px'}} />
+          <img className={styles.veritcalimg} src='/dotimgvertical.svg' alt='' style={{position:'absolute' , height : '330px'}} />
             <div className={styles.imageContainer}>
             <div className={styles.Ellipse44}>
                 <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />

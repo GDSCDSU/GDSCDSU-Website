@@ -1,5 +1,5 @@
 .TeamNavigation {
-  width: 1114px;
+  width: 1100px;
   height: 54px;
   position: relative;
 }
@@ -83,7 +83,7 @@
 
 
 .ExecutiveCoreTeam {
-  left: 820px;
+  left: 800px;
   top: 17px;
   font-weight: 700;
   padding-top: 5px;
@@ -92,4 +92,44 @@
 
 .NavButton.active {
   color: white; /* Change text color to white for active button */
+}
+
+@media (max-width: 768px) {
+  .Founder,
+  .Leads,
+  .MarketingTeam,
+  .DevelopmentTeam,
+  .OperationsTeam,
+  .ExecutiveCoreTeam {
+    left: auto;
+    top: auto;
+    padding-top: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 0.875rem;
+  }
+
+  .Rectangle196, .Rectangle197 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .NavButton {
+    position: static;
+    display: inline-block;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .Founder,
+  .Leads,
+  .MarketingTeam,
+  .DevelopmentTeam,
+  .OperationsTeam,
+  .ExecutiveCoreTeam {
+    font-size: 0.75rem;
+  }
 }

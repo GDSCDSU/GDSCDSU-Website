@@ -1,13 +1,20 @@
 .card_container {
   width: 450px;
-  height: 190px;
+  height: 290px;
   position: relative;
   background: white;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.20);
   border-radius: 20px;
+  margin-left: 120px;
+  margin-top: 255px;
+  margin-bottom: 350px;
+}
+
+
+.heading{
   margin-left: 100px;
-  margin-top: 75px;
-  margin-bottom: 35px;
+  margin-bottom:200px
+
 }
 
 .image {
@@ -16,7 +23,7 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
   border-radius: 100px;  
   margin-left: 125px;
-  margin-top: -100px;
+  margin-top: -400px;
 }
 
 .name {
@@ -26,7 +33,7 @@
   font-family: sans-serif;
   font-weight: 700;
   margin-left: 5px;
-  margin-top: 20px;
+  margin-top: 30px;
   word-wrap: break-word;
 }
 
@@ -113,4 +120,94 @@
   
   .col-md-4 {
     margin-bottom: 0px; /* Adjust this value to reduce or increase space between columns */
+  }
+
+  @media (max-width: 768px) {
+    .card_container {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .image {
+      width: 60%;
+      margin-top: -80px;
+    }
+  
+    .name {
+      font-size: 20px;
+      margin-top: 100px;
+    }
+  
+    .eventType {
+      font-size: 14px;
+    }
+  
+    .event {
+      font-size: 8px;
+    }
+  
+    .event-title {
+      font-size: 9px;
+    }
+  
+    .Group718 {
+      width: 120px;
+      height: 28px;
+    }
+  
+    .Rectangle191 {
+      height: 28px;
+    }
+  
+    .vectorimg1,
+    .vectorimg2 {
+      width: 70%;
+      max-width: 180px;
+      margin: 20px auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card_container {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .image {
+      width: 70%;
+      margin-top: -60px;
+    }
+  
+    .name {
+      font-size: 18px;
+      margin-top: 80px;
+    }
+  
+    .eventType {
+      font-size: 12px;
+    }
+  
+    .event {
+      font-size: 7px;
+    }
+  
+    .event-title {
+      font-size: 8px;
+    }
+  
+    .Group718 {
+      width: 100px;
+      height: 24px;
+    }
+  
+    .Rectangle191 {
+      height: 24px;
+    }
+  
+    .vectorimg1,
+    .vectorimg2 {
+      width: 80%;
+      max-width: 160px;
+      margin: 10px auto;
+    }
   }

@@ -46,7 +46,7 @@ export default function Leads() {
     },
     {
       name: 'Hira Fatima',
-      year: '2023-2024',
+      year: '2023-2024 Current',
       designation: 'GDSC@DSU Lead 2023-2024',
       description: "Hira Fatima's ascent to the role of Lead without relying on a Google referral speaks volumes about her inherent potential and undeniable talent. With her natural aptitude and determination, she swiftly rose through the ranks, demonstrating her capability to lead effectively. Her ability to excel without external endorsements underscores her intrinsic leadership qualities and innate drive for success. Her journey serves as a testament to her resilience and aptitude, proving that with dedication and hard work, one can ascend to great heights regardless of initial support.",
       imageSrc: 'leads/hira_fatima.png',
@@ -67,7 +67,7 @@ export default function Leads() {
       </div>
 
       <div className={styles.Group827}>
-        <Timeline>
+        <Timeline className='bg-red'>
           {leads.map((lead, index) => (
             <Timeline.Item key={index}>
               <Timeline.Point />
@@ -75,7 +75,7 @@ export default function Leads() {
                 <Timeline.Time>{lead.year}</Timeline.Time>
                 <Timeline.Body>
                   <div className={styles.rectangle198}>
-                    <img className='' src='/dotimgverticalred.svg' alt='' style={{position:'absolute', height: '300px'}} />
+                    <img className='' src='/dotimgverticalred.svg' alt='' style={{position:'absolute', height: '320px'}} />
                     <div className={styles.maskGroup}>
                       <img className={styles.profileimage} src={lead.imageSrc} alt="placeholder" />
                     </div>
@@ -86,8 +86,8 @@ export default function Leads() {
                         </a>
                       ))}
                     </div>
-                    <div className={styles.syedAteeq}>{lead.name}</div>
-                    <div className={styles.gdscDsuLead20202021Founder}>{lead.designation}</div>
+                    <div className={styles.name}>{lead.name}</div>
+                    <div className={styles.designation}>{lead.designation}</div>
                     <div className={styles.description}>{lead.description}</div>
                   </div>
                 </Timeline.Body>

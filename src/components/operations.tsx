@@ -43,7 +43,7 @@ export default function Operations() {
             <div className={styles.Rectangle198}>
               <div className={styles.picheader}></div>
               <div className={styles.MaskGroup}>
-                <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
+                <Image  src='/dotimgreen.svg' alt='' width={700} height={400} style={{position:'absolute'}}/>
                 <div className={styles.Ellipse44}>
                   <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
                 </div>
@@ -67,7 +67,7 @@ export default function Operations() {
           <div className={styles.Rectangle198}>
             <div className={styles.picheader}></div>
             <div className={styles.MaskGroup}>
-              <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
+              <img  src='/dotimgreen.svg' alt='' />
               <div className={styles.Ellipse44}>
                 <img className={styles.profilepic} src={operators[3].imageSrc} alt="placeholder" />
               </div>

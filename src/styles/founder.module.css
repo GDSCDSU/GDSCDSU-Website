@@ -17,7 +17,7 @@
 }
 
 .card h2 {
-  color: #3b82f6;
+  color: black;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
@@ -172,5 +172,111 @@
   position: absolute;
   top: 7px;
   left: 4px;
+}
+
+@media (max-width: 768px) {
+  .Quoteimg {
+    width: 70%;
+    height: auto;
+    margin: 10px auto;
+  }
+
+  .card {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .group {
+    flex-direction: column;
+  }
+
+  .group .icon {
+    margin: 5px 0;
+  }
+
+  .container {
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .name,
+  .designation,
+  .description {
+    margin-left: 10px;
+  }
+
+  .founderimg {
+    width: 150px;
+  }
+
+  .header {
+    width: 95%;
+    margin: 10px auto;
+    height: auto;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Quoteimg {
+    width: 100%;
+    height: auto;
+    margin: 15px auto;
+  }
+
+  .card {
+    width: 70%;
+    height: 90%;
+    margin: 15px auto;
+  }
+
+  .group {
+    flex-direction: row;
+  }
+
+  .group .icon {
+    margin: 5px 0;
+  }
+
+  .container {
+    width: 90%;
+    height: 90%;
+    margin-bottom: 40px;
+    padding: 5px;
+  }
+
+  .name{
+    margin-left: 125px;
+    margin-top: 40px;
+    font-size: 0.875rem;
+  }
+
+  .designation {
+    margin-left: 125px;
+    margin-top: 10px;
+    font-size: 0.875rem;
+  }
+
+  .description {
+    margin-left: -2px;
+    margin-top: 40px;
+    word-break: inherit;
+    word-wrap: break-word;
+    font-size: 0.875rem;
+  }
+
+  .founderimg {
+    width: 100px;
+    margin-top: -120px;
+    margin-left: 80px;
+  }
+
+  .header {
+    width: 70%;
+    margin: 5px auto;
+    height: auto;
+    font-size: 1.25rem;
+  }
 }
 

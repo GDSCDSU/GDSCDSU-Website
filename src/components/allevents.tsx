@@ -134,8 +134,12 @@ const eventData = [
 export default function AllEvents() {
   return (
     <>
+    <h1 className={styles.heading}>
+    <b>All Events</b>
+    </h1>
     <img className={styles.vectorimg1} src='/orngcircle.svg' alt='' />
     <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
+    
     <div className="row">
       {eventData.map(event => (
             <div key={event.id} className="col-md-4 offset-md-0">

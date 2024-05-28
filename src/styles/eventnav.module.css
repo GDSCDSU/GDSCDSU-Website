@@ -1,8 +1,9 @@
 .EventsNavigation {
     width: 1000px;
     height: 54px;
-    left: 50px;
-    margin: 25px;
+    left: 30px;
+    margin: 55px;
+    top: 100px;
     position: relative;
   }
   
@@ -73,4 +74,100 @@
     background-repeat: no-repeat;
   }
   
+
+  @media (max-width: 768px) {
+    .Rectangle196 {
+      width: 90%;
+      left: 5%;
+    }
+  
+    .Rectangle197 {
+      width: 50%;
+      left: 5%;
+    }
+  
+    .Events {
+      left: 10%;
+    }
+  
+    .Speakers {
+      left: 55%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .EventsNavigation {
+      width: 95%;
+      top: 50px;
+    }
+  
+    .Rectangle196 {
+      width: 100%;
+      left: 0;
+    }
+  
+    .Rectangle197 {
+      width: 60%;
+      left: 0;
+    }
+  
+    .Events {
+      left: 5%;
+    }
+  
+    .Speakers {
+      left: 60%;
+    }
+  
+    .NavButton {
+      font-size: 0.875rem;
+    }
+  }@media (max-width: 768px) {
+    .Rectangle196 {
+      width: 90%;
+      left: 5%;
+    }
+  
+    .Rectangle197 {
+      width: 50%;
+      left: 5%;
+    }
+  
+    .Events {
+      left: 10%;
+    }
+  
+    .Speakers {
+      left: 55%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .EventsNavigation {
+      width: 95%;
+      top: 50px;
+    }
+  
+    .Rectangle196 {
+      width: 100%;
+      left: 0;
+    }
+  
+    .Rectangle197 {
+      width: 60%;
+      left: 0;
+    }
+  
+    .Events {
+      left: 5%;
+    }
+  
+    .Speakers {
+      left: 60%;
+    }
+  
+    .NavButton {
+      font-size: 0.875rem;
+    }
+  }
   

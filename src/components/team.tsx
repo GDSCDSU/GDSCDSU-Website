@@ -51,9 +51,9 @@ export default function Team() {
 
   return (
     <>
-      <section className="TeamsHeader">
-      <Image src='/teams-header.svg' alt='' width={1500} height={300} />
-      </section>
+      <div data-aos="fade-up" >
+            <img className="img-fluid" src="/teams-header.svg" alt=""/>
+        </div>
 
       <div className={styles.TeamNavigation}>
       <div
@@ -80,17 +80,17 @@ export default function Team() {
     style={{
       left: `${
         activeTab === 'Founder'
-          ? '30px'
+          ? '20px'
           : activeTab === 'Leads'
-          ? '175px'
+          ? '165px'
           : activeTab === 'Marketing'
-          ? '315px'
+          ? '305px'
           : activeTab === 'Development'
           ? '460px'
           : activeTab === 'Operations'
           ? '623px'
           : activeTab === 'Executives'
-          ? '790px'
+          ? '775px'
           : '520px'
       }`,
       backgroundColor:
