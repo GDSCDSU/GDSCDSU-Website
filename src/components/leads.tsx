@@ -14,7 +14,7 @@ export default function Leads() {
       socials: [
         { platform: 'Email', url: 'https://linkedin.com/in/syedateeq', icon: 'EmailIcon1.svg' },
         { platform: 'Facebook', url: 'https://twitter.com/syedateeq', icon: 'FbIcon1.svg' },
-        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.svg' },
+        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.png' },
         { platform: 'Linkedin', url: 'mailto:syedateeq@example.com', icon: 'LinkedInIcon1.svg' },
       ]
     },
@@ -27,7 +27,7 @@ export default function Leads() {
       socials: [
         { platform: 'Email', url: 'https://linkedin.com/in/syedateeq', icon: 'EmailIcon1.svg' },
         { platform: 'Facebook', url: 'https://twitter.com/syedateeq', icon: 'FbIcon1.svg' },
-        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.svg' },
+        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.png' },
         { platform: 'Linkedin', url: 'mailto:syedateeq@example.com', icon: 'LinkedInIcon1.svg' },
       ]
     },
@@ -40,7 +40,7 @@ export default function Leads() {
       socials: [
         { platform: 'Email', url: 'https://linkedin.com/in/syedateeq', icon: 'EmailIcon1.svg' },
         { platform: 'Facebook', url: 'https://twitter.com/syedateeq', icon: 'FbIcon1.svg' },
-        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.svg' },
+        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.png' },
         { platform: 'Linkedin', url: 'mailto:syedateeq@example.com', icon: 'LinkedInIcon1.svg' },
       ]
     },
@@ -53,7 +53,7 @@ export default function Leads() {
       socials: [
         { platform: 'Email', url: 'https://linkedin.com/in/syedateeq', icon: 'EmailIcon1.svg' },
         { platform: 'Facebook', url: 'https://twitter.com/syedateeq', icon: 'FbIcon1.svg' },
-        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.svg' },
+        { platform: 'Instagram', url: 'https://github.com/syedateeq', icon: 'InstaIcon1.png' },
         { platform: 'Linkedin', url: 'mailto:syedateeq@example.com', icon: 'LinkedInIcon1.svg' },
       ]
     },
@@ -62,11 +62,11 @@ export default function Leads() {
   
   return (
     <>
-      <div className="QuoteDiv">
+      <div data-aos="fade-up" className="QuoteDiv">
         <img className={styles.Quoteimg} src='/leadsquote.svg' alt='' />
       </div>
 
-      <div className={styles.Group827}>
+      <div data-aos="fade-up" className={styles.Group827}>
         <Timeline className='bg-red'>
           {leads.map((lead, index) => (
             <Timeline.Item key={index}>

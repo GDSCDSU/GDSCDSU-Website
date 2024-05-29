@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from '../styles/teams.module.css'; // Import the generated CSS file correctly using `styles`
-import Image from 'next/image';
+import { Footer } from "flowbite-react";
+import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin} from "react-icons/bs";
+import { IoMdMail } from "react-icons/io";
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Development() {
@@ -39,11 +42,11 @@ export default function Development() {
 
   return (
     <>
-      <div className="QuoteDiv">
+      <div data-aos="fade-up" className="QuoteDiv">
         <img className={styles.Quoteimg} src='/developmentquote.svg' alt='' />
       </div>
 
-      <div className="row">
+      <div data-aos="fade-up" className="row">
         {developers.slice(0, 3).map((item, index) => (
           <div className="col-md-2" key={index}>
             <div className={styles.Rectangle198}>
@@ -68,7 +71,7 @@ export default function Development() {
         ))}
       </div>
 
-      <div className="row">
+      <div data-aos="fade-up" className="row">
         <div className="col-md-2 offset-md-1">
           <div className={styles.Rectangle198}>
             <div className={styles.picheader}></div>
@@ -89,7 +92,7 @@ export default function Development() {
             </a>
           </div>
         </div>
-        <div className="col-md-3">
+        <div data-aos="fade-up" className="col-md-3">
           <div className={styles.Rectangle198}>
             <div className={styles.picheader}></div>
             <div className={styles.MaskGroup}>
@@ -110,6 +113,38 @@ export default function Development() {
           </div>
         </div>
       </div>
+
+      <div className="" >
+    <img src="/ColorBoxes.svg" className="img-fluid" alt="" />
+</div>
+<div>
+    <div className="shadow-sm p-3 rounded-lg">
+        <div className="d-flex flex-column align-items-center text-center">
+            <img src="LOGO.svg" alt="" className="img-fluid mb-3" />
+            <div className="text-secondary mb-3"><b>Connect With Us</b></div>
+            <div className="d-flex justify-content-center flex-wrap">
+                <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
+                <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
+                <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
+                <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
+                <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
+                <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
+            </div>
+            <Footer.Divider />         
+        </div>
+        <div>
+            <div className="row">
+                <div className="col-md-10 col-12 text-secondary">
+                    ©2024 GDSC@DSU
+                </div>
+                <div className="col-md-2 col-12 text-end text-secondary">
+                    <a href="https://www.dsu.edu.pk/">DHA Suffa University</a>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+
     </>
   );
 };

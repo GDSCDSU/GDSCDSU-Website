@@ -6,7 +6,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 0.5rem 0.5rem;
   margin-top: -1px;
-  margin-left: 350px;
+  margin-left: 320px;
   padding: 1.25rem;
 }
 
@@ -37,13 +37,13 @@
 }
 
 .group {
-  width: 170px;
+  width: 200px;
   height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1.25rem;
-  margin-left: 130px;
+  margin-left: 120px;
 }
 
 .group .icon {
@@ -63,7 +63,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   margin-top: 20px;
-  margin-left: 350px;
+  margin-left: 320px;
   
 }
 
@@ -131,7 +131,7 @@
 
 .founderimg{
   width: 200px;
-  margin-top: -200px;
+  margin-top: -210px;
   margin-left: 130px;
   position: relative;
 }
@@ -143,7 +143,7 @@
   background: #4285F4;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin-left: 350px;
+  margin-left: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,8 +157,8 @@
 }
 
 .dotimg{
-  width: 109%;
-  height: auto;
+  max-width: 700px;
+  max-height: 400px;
   position: relative;
   left: -20px;
   top: -40px;
@@ -182,45 +182,58 @@
   }
 
   .card {
-    width: 95%;
-    margin: 10px auto;
+    width: 60%;
+    margin-left: 150px;
+    margin-bottom: 10px;
+  }
+
+  .dotimg{
+    max-width: 460px;
+  }
+
+  .header {
+    width: 60%;
+    margin-left: 150px;
+    height: auto;
+    font-size: 1.5rem;
   }
 
   .group {
-    flex-direction: column;
+    margin-left: 100px;
+    flex-direction: row;
   }
 
   .group .icon {
-    margin: 5px 0;
+    margin-left: 10px;
   }
 
   .container {
-    width: 95%;
+    width: 65%;
+    height: 95%;
     margin: 10px auto;
-    padding: 10px;
+    padding: 0px;
   }
 
   .name,
   .designation,
   .description {
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 120px;
+    word-wrap: break-word;
   }
 
   .founderimg {
+    margin-top: -170px;
+    margin-bottom: 20px;
     width: 150px;
   }
 
-  .header {
-    width: 95%;
-    margin: 10px auto;
-    height: auto;
-    font-size: 1.5rem;
-  }
+  
 }
 
 @media (max-width: 480px) {
   .Quoteimg {
-    width: 100%;
+    width: 90%;
     height: auto;
     margin: 15px auto;
   }
@@ -230,13 +243,19 @@
     height: 90%;
     margin: 15px auto;
   }
+  
+
+  .dotimg{
+    max-width: 282px;
+  }
 
   .group {
+    margin-left: 20px;
     flex-direction: row;
   }
 
   .group .icon {
-    margin: 5px 0;
+    margin-left: 10px;
   }
 
   .container {
@@ -268,8 +287,8 @@
 
   .founderimg {
     width: 100px;
-    margin-top: -120px;
-    margin-left: 80px;
+    margin-top: -130px;
+    margin-left: 70px;
   }
 
   .header {

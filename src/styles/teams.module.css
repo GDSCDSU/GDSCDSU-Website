@@ -104,13 +104,17 @@
   font-family: sans-serif;
 }
 
+.dotimg{
+  max-width: 300px;
+}
+
 @media (max-width: 768px) {
   .Rectangle198 {
     margin: 20px auto;
   }
 
   .Quoteimg {
-    width: 95%;
+    width: 70%;
     margin: 10px auto;
   }
 
@@ -147,13 +151,20 @@
 
 @media (max-width: 480px) {
   .Rectangle198 {
-    width: 95%;
+    width: 65%;
     margin: 10px auto;
   }
 
-  .Ellipse44, .image1, .profilepic {
-    width: 70px;
-    height: 70px;
+  .Ellipse44 {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: -5px;
+  }
+
+  .profilepic {
+    width: 80px;
+    height: 80px;
   }
 
   .name {
@@ -167,7 +178,9 @@
   }
 
   .Group718 {
-    max-width: 100px;
+    margin-top: 25px;
+    max-width: 120px;
+    margin-left: 65px;
   }
 
   .Rectangle191 {
@@ -177,9 +190,17 @@
   .Vector {
     width: 16px;
     height: 16px;
+    margin-left: 5px;
+    margin-top: -3px;
   }
 
   .LinkedinProfile {
+    margin-top: -3px;
     font-size: 0.675rem;
+    margin-left: 5px;
+  }
+
+  .dotimg{
+    max-width: 260px;
   }
 }

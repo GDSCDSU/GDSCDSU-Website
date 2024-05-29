@@ -59,16 +59,16 @@ export default function Executives() {
 
   return (
     <>
-      <div className={styles.QuoteDiv}>
+      <div data-aos="fade-up" className={styles.QuoteDiv}>
         <img className={styles.Quoteimg} src='/executivesquote.svg' alt=''/>
       </div>
 
-      <div className="row" style={{marginLeft:'400px'}}>
+      <div data-aos="fade-up" className="row" style={{marginLeft:'400px'}}>
         {executives.slice(0, 3).map((item, index) => (
           <div className="col-md-7" key={index}>
             <div className={styles.Rectangle198}>
               <div className={styles.MaskGroup}>
-                <img className={styles.dotimg} src='/blueverticalbar.svg' alt='' />
+                <img className={styles.dotimg} src='/dotimgexecutive.svg' alt='' />
                 <div className={styles.Ellipse44}>
                   <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
                 </div>
@@ -88,12 +88,12 @@ export default function Executives() {
         ))}
       </div>
 
-      <div className="row" style={{marginLeft:'830px',marginTop:'-1380px'}}>
+      <div data-aos="fade-up" className="row" style={{marginLeft:'830px',marginTop:'-1380px'}}>
         {executives.slice(3, 6).map((item, index) => (
           <div className="col-md-7" key={index}>
             <div className={styles.Rectangle198}>
               <div className={styles.MaskGroup}>
-                <img className={styles.dotimg} src='/blueverticalbar.svg' alt='' />
+                <img className={styles.dotimg} src='/dotimgexecutive.svg' alt='' />
                 <div className={styles.Ellipse44}>
                   <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
                 </div>
@@ -113,11 +113,11 @@ export default function Executives() {
         ))}
       </div>
 
-      <div className="row justify-content-center">
+      <div data-aos="fade-up" className="row justify-content-center">
         <div className="col-md-4">
           <div className={styles.Rectangle198}>
             <div className={styles.MaskGroup}>
-              <img className={styles.dotimg} src='/blueverticalbar.svg' alt='' />
+              <img className={styles.dotimg} src='/dotimgexecutive.svg' alt='' />
               <div className={styles.Ellipse44}>
                 <img className={styles.profilepic} src={executives[6].imageSrc} alt="placeholder" />
               </div>

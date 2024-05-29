@@ -7,8 +7,20 @@ export default function Marketing() {
   const marketers = [
     {
       name: 'Sahil Bachani',
-      role: 'Graphics and Marketing Lead',
+      role: 'Graphics and Design Lead',
       imageSrc: 'marketing/sahil.png',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Mahnoor Ahmed',
+      role: 'Data Camp Lead',
+      imageSrc: 'marketing/mahnoor.png',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
+      name: 'Amna Tariq',
+      role: 'Content Lead',
+      imageSrc: 'marketing/amna.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
@@ -30,12 +42,6 @@ export default function Marketing() {
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
-      name: 'Mahnoor Ahmed',
-      role: 'Core Team Member',
-      imageSrc: 'marketing/mahnoor.png',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-    {
       name: 'Amna Tariq',
       role: 'Core Team Member',
       imageSrc: 'marketing/amna.png',
@@ -45,11 +51,11 @@ export default function Marketing() {
 
   return (
     <>
-      <div className="QuoteDiv">
+      <div data-aos="fade-up" className="QuoteDiv">
         <img className={styles.Quoteimg} src='/marketingquote.svg' alt='' />
       </div>
 
-      <div className="row">
+      <div data-aos="fade-up" className="row">
         {marketers.slice(0, 3).map((item, index) => (
           <div className="col-md-2" key={index}>
             <div className={styles.Rectangle198}>
@@ -74,7 +80,7 @@ export default function Marketing() {
         ))}
       </div>
 
-      <div className="row">
+      <div data-aos="fade-up" className="row">
         {marketers.slice(3, 6).map((item, index) => (
           <div className="col-md-2" key={index}>
             <div className={styles.Rectangle198}>

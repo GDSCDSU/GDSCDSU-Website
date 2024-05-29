@@ -53,9 +53,9 @@ const speakersData = [
 export default function Speakers() {
   return (
     <>
-    <img className={styles.vectorimg1} src='/shapes.svg' alt='' />
+    <img  className={styles.vectorimg1} src='/shapes.svg' alt='' />
     <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
-    <div className="row">
+    <div data-aos="fade-up" className="row">
         {speakersData.map(speaker => (
             <div key={speaker.id} className="col-lg-5">
             <div className={styles.card_container}>

@@ -12,6 +12,12 @@ export default function Operations() {
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
     {
+      name: 'Gireesh Sachdev',
+      role: 'Outreach Lead',
+      imageSrc: 'operations/gireesh.png',
+      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
+    },
+    {
       name: 'Khizar Saqib',
       role: 'Event Management Lead',
       imageSrc: 'operations/khizar_saqib.png',
@@ -23,27 +29,21 @@ export default function Operations() {
       imageSrc: 'operations/hamza_baig.png',
       linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
     },
-    {
-      name: 'Gireesh Sachdev',
-      role: 'Core Team Member',
-      imageSrc: 'operations/gireesh.png',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
   ];
 
   return (
     <>
-      <div className={styles.QuoteDiv}>
+      <div data-aos="fade-up" className={styles.QuoteDiv}>
         <img className={styles.Quoteimg} src='/operationsquote.svg' alt='' />
       </div>
 
-      <div className="row">
+      <div data-aos="fade-up" className="row">
         {operators.slice(0, 3).map((item, index) => (
           <div className="col-md-2" key={index}>
             <div className={styles.Rectangle198}>
               <div className={styles.picheader}></div>
               <div className={styles.MaskGroup}>
-                <Image  src='/dotimgreen.svg' alt='' width={700} height={400} style={{position:'absolute'}}/>
+              <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
                 <div className={styles.Ellipse44}>
                   <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
                 </div>
@@ -62,12 +62,12 @@ export default function Operations() {
         ))}
       </div>
 
-      <div className="row justify-content-center">
+      <div data-aos="fade-up" className="row justify-content-center">
         <div style={{marginLeft:'650px'}}>
           <div className={styles.Rectangle198}>
             <div className={styles.picheader}></div>
             <div className={styles.MaskGroup}>
-              <img  src='/dotimgreen.svg' alt='' />
+            <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
               <div className={styles.Ellipse44}>
                 <img className={styles.profilepic} src={operators[3].imageSrc} alt="placeholder" />
               </div>

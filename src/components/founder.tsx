@@ -15,7 +15,8 @@ export default function Founder() {
       socials: [
         { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/example' },
         { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/example' },
-        { type: 'Instagram', image: 'InstaIcon1.svg', link: 'https://www.instagram.com/example' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' }, 
+        { type: 'Instagram', image: 'InstaIcon1.png', link: 'https://www.instagram.com/example' },
       
       ]
     },
@@ -97,17 +98,17 @@ export default function Founder() {
   ];
   return (
     <>
-    <div className='QuoteDiv'>
+    <div data-aos="fade-up" className='QuoteDiv'>
     <img className={styles.Quoteimg} src='/founderquote.svg' alt='' />
     </div>
     
     
     
-    <div className="row">
+    <div data-aos="fade-up" className="row">
   {founders.map((founder, index) => (
     <div key={index} className="col-lg-5">
       <div className={`${styles.header} ${index === 1 ? styles.facultyHeader : ''}`}>
-        <h1>{index === 1 ? 'Faculty Advisor' : 'Founder'}</h1>
+        <h1>{index === 1 ? 'FACULTY ADVISOR' : 'FOUNDER'}</h1>
       </div>
 
       <div className={styles.card}>
@@ -133,7 +134,7 @@ export default function Founder() {
 
    
 
-<div className="row">
+<div data-aos="fade-up" className="row">
       {foundingmembers.map((item, index) => (
         <div className="col-lg-5" key={index}>
           <div className={styles.container}>

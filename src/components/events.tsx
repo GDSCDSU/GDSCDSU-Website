@@ -39,14 +39,14 @@ const Events = () => {
 
       
 
-      <div className={styles.EventsNavigation}>
+      <div data-aos="fade-up" className={styles.EventsNavigation}>
         <div className={`${styles.Rectangle196} ${activeTab === 'Founder' ? styles.active : ''}`} />
         <div className={styles.Rectangle197} style={{ left: `${activeTab === 'AllEvents' ? '10px' : activeTab === 'Speaker' ? '480px' : '0px'}` }} />
         <button className={`${styles.NavButton} ${styles.Events} ${activeTab === 'AllEvents' ? styles.active : ''}`} onClick={() => handleTabClick('AllEvents')}>All Events</button>
         <button className={`${styles.NavButton} ${styles.Speakers} ${activeTab === 'Speaker' ? styles.active : ''}`} onClick={() => handleTabClick('Speaker')}>Speakers</button>
       </div>
       
-      <div className="full-page-content">
+      <div data-aos="fade-up" className="full-page-content">
         <div className="d-flex flex-column align-items-center">
           <h1>
             <b>Our Top Events</b>

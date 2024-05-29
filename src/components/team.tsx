@@ -55,7 +55,7 @@ export default function Team() {
             <img className="img-fluid" src="/teams-header.svg" alt=""/>
         </div>
 
-      <div className={styles.TeamNavigation}>
+      <div  data-aos="fade-up" className={styles.TeamNavigation}>
       <div
   className={styles.Rectangle196}
   style={{
