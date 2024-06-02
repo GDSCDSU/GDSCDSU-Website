@@ -16,6 +16,11 @@
   margin-left: 600px;
 }
 
+.verticalimg{
+  position: absolute;
+  height: 330px;
+}
+
 .card h2 {
   color: black;
   font-size: 2rem;
@@ -175,16 +180,21 @@
 }
 
 @media (max-width: 768px) {
-  .Quoteimg {
-    width: 70%;
-    height: auto;
-    margin: 10px auto;
+  .Quoteimg{
+    max-width: 100%;
+    margin-left: 50px;
+    margin-bottom: -50px;
+  }
+
+  .verticalimg{
+    max-width: 250px;
+    max-height: 380px;
   }
 
   .card {
     width: 60%;
     margin-left: 150px;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 
   .dotimg{
@@ -208,18 +218,35 @@
   }
 
   .container {
-    width: 65%;
-    height: 95%;
-    margin: 10px auto;
+    width: 500px;
+    height: 330px;
+    margin-left: 130px;
+    margin-top: 50px; 
     padding: 0px;
   }
 
   .name,
   .designation,
   .description {
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 120px;
     word-wrap: break-word;
+
+  }
+
+  .designation {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+
+  }
+
+  .description {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+    word-wrap: break-word;
+
   }
 
   .founderimg {
@@ -233,9 +260,12 @@
 
 @media (max-width: 480px) {
   .Quoteimg {
-    width: 90%;
+    width: 100%;
     height: auto;
-    margin: 15px auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block;
   }
 
   .card {
@@ -246,7 +276,7 @@
   
 
   .dotimg{
-    max-width: 282px;
+    max-width: 335px;
   }
 
   .group {
@@ -259,10 +289,16 @@
   }
 
   .container {
-    width: 90%;
-    height: 90%;
+    width: 400px;
+    height: 330px;
+    margin-left: 40px;
     margin-bottom: 40px;
-    padding: 5px;
+  }
+
+  .verticalimg{
+    
+    max-width: 300px;
+    max-height: 350px;
   }
 
   .name{
@@ -278,16 +314,16 @@
   }
 
   .description {
-    margin-left: -2px;
+    width: 300px;
+    margin-left: 90px;
     margin-top: 40px;
-    word-break: inherit;
-    word-wrap: break-word;
     font-size: 0.875rem;
   }
 
   .founderimg {
-    width: 100px;
-    margin-top: -130px;
+    width: 150px;
+    height: 150px;
+    margin-top: -150px;
     margin-left: 70px;
   }
 

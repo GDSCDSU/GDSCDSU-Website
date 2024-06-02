@@ -53,8 +53,15 @@ const speakersData = [
 export default function Speakers() {
   return (
     <>
+    <h1 className={styles.heading} data-aos="fade-up">
+    <b>Speakers</b>
+    </h1>
+    {/* Colour Boxes Image */}
     <img  className={styles.vectorimg1} src='/shapes.svg' alt='' />
+    {/* Golden Ring Image */}
     <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
+
+    {/* Speakers */}
     <div data-aos="fade-up" className="row">
         {speakersData.map(speaker => (
             <div key={speaker.id} className="col-lg-5">
@@ -65,8 +72,6 @@ export default function Speakers() {
                 <div className={styles.event}>{speaker.event}</div>
                 <div className={styles.eventTitle}>{speaker.eventTitle}</div>
                 <div className={styles.group718}>
-                <div className={styles.rectangle191}></div>
-                <div className={styles.vector}></div>
                 <a href={speaker.linkedinProfile} target="_blank" rel="noopener noreferrer">
                   <div className={styles.Group718}>
                     <div className={styles.Rectangle191}></div>

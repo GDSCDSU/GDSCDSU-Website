@@ -12,6 +12,7 @@ import { MdStars } from "react-icons/md";
 
 export default function Home(){
     
+    {/* Resources for home pages and their handlers defined here: */}
     const [showToast, setShowToast] = useState(false);
 
     useEffect(() => {
@@ -101,10 +102,12 @@ export default function Home(){
     return (
         
     <>
+    {/* Header Image: */}
     <div data-aos="fade-up" >
         <img className="img-fluid" src="/Header.svg" alt=""/>
     </div>
     <br/>
+    {/* Upcoming Event Card:*/}
     {showToast && (
         <div className="scrollable-content" >
         <Toast className="m-2 toast-relative">
@@ -122,6 +125,7 @@ export default function Home(){
         </div>
       )}
     <br/>
+    {/* What is GDSC Portion: */}
     <div className="d-flex justify-content-center align-items-center full-page-content" data-aos='fade-up'>
         <div className="container" >
             <div className="row">
@@ -139,48 +143,49 @@ export default function Home(){
             </div>
         </div>
     </div>
-
-<div className="bg-image" data-aos="fade-up">
-    <div className="d-flex justify-content-center align-items-center full-page-content" style={{height:'110%'}}  >
-        <div className="container">
-            <div className="row">
-                <div className="col-md-6 mb-5">
-                    <Image
-                        src="/dhaSuffa.svg"
-                        height={600}
-                        width={400}
-                        alt=""
-                    />
-                </div>
-                <div className="col-md-6 mb-5">
-                    <Image src="About.svg" alt="" height={1000} width={1000}/>
+    {/* About Section: */}
+    <div className="bg-image" data-aos="fade-up">
+        <div className="d-flex justify-content-center align-items-center full-page-content" style={{height:'110%'}}  >
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6 mb-5">
+                        <Image
+                            src="/dhaSuffa.svg"
+                            height={600}
+                            width={400}
+                            alt=""
+                        />
+                    </div>
+                    <div className="col-md-6 mb-5">
+                        <Image src="About.svg" alt="" height={1000} width={1000}/>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
     
-
-<br/>
-<div className="m-5" >
-    <div className="d-flex flex-column align-items-center" >
-        <h2><b>Our Partners</b></h2>
-    </div>
+    {/* Partners */}
     <br/>
-    <div className="logo-container">
-        <div className="logo-slider">
-            {allLogos.map((logo, index) => (
-            <a className="logo-item" href={allHrefs[index]} key={index} target="_blank" rel="noopener noreferrer">
-                <img src={logo} alt="" className="img-fluid" />
-            </a>
-            ))}
+    <div className="m-5" >
+        <div className="d-flex flex-column align-items-center" >
+            <h2><b>Our Partners</b></h2>
+        </div>
+        <br/>
+        <div className="logo-container">
+            <div className="logo-slider">
+                {allLogos.map((logo, index) => (
+                <a className="logo-item" href={allHrefs[index]} key={index} target="_blank" rel="noopener noreferrer">
+                    <img src={logo} alt="" className="img-fluid" />
+                </a>
+                ))}
+            </div>
         </div>
     </div>
-</div>
 
 
 <br/>
-<div className="m-5" >
+    {/* What GDSC Does Portion: */}
+    <div className="m-5" >
     <div className="d-flex flex-column align-items-center" >
         <h2><b>What we do</b></h2>
         <p>Our professional and smart team work together to deliver you</p>
@@ -338,6 +343,7 @@ export default function Home(){
         </div>
     </div>
 </div>
+    {/* Community Counter: */}
     <div ref={countingRef}>
         <div className="full-page-content" data-aos="fade-up">
             <div className="d-flex flex-column align-items-center" >
@@ -390,6 +396,7 @@ export default function Home(){
             </div>
         </div>
     </div>
+    {/* Highlights Carousel: */}
     <div className="full-page-content" >
         <div className="d-flex flex-column align-items-center" >
             <h1><b>Highlights</b></h1>
@@ -406,6 +413,7 @@ export default function Home(){
             </Carousel>
         </div>
     </div>
+    {/* Sponsor Form: */}
 <div className="full-page-content" data-aos='fade-up' >
     <div className="shadow-sm p-5 rounded-lg" style={{backgroundColor:'#FEECEC'}} >
         <div className="row align-items-center">
@@ -428,6 +436,7 @@ export default function Home(){
 </div>
 
 
+{/* Footer: */}
 <div className="" >
     <img src="/ColorBoxes.svg" className="img-fluid" alt="" />
 </div>

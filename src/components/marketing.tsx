@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from '../styles/teams.module.css'; // Import the generated CSS module
-import Image from 'next/image';
+import teams from '../styles/teams.module.css'; // Import the generated CSS module
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Marketing() {
@@ -51,28 +50,30 @@ export default function Marketing() {
 
   return (
     <>
+      {/* Quote Image */}
       <div data-aos="fade-up" className="QuoteDiv">
-        <img className={styles.Quoteimg} src='/marketingquote.svg' alt='' />
+        <img className={teams.Quoteimg} src='/marketingquote.svg' alt='' />
       </div>
 
-      <div data-aos="fade-up" className="row">
+      {/* Members Div 1 */}
+      <div data-aos="fade-up" className={`row ${teams.customRow}`}>
         {marketers.slice(0, 3).map((item, index) => (
-          <div className="col-md-2" key={index}>
-            <div className={styles.Rectangle198}>
-              <div className={styles.picheader}></div>
-              <div className={styles.MaskGroup}>
-                <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
-                <div className={styles.Ellipse44}>
-                  <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
+          <div className={`col-md-2 ${teams.customCol}`} key={index}>
+            <div className={teams.member_card}>
+              <div className={teams.picheader}></div>
+              <div className={teams.card_content}>
+                <img className={teams.dotimg} src='/dotimgreen.svg' alt='' />
+                <div className={teams.image_div}>
+                  <img className={teams.profilepic} src={item.imageSrc} alt="placeholder" />
                 </div>
               </div>
-              <div className={styles.name}>{item.name}</div>
-              <div className={styles.role}>{item.role}</div>
+              <div className={teams.name}>{item.name}</div>
+              <div className={teams.role}>{item.role}</div>
               <a href={item.linkedinProfile} target="_blank" rel="noopener noreferrer">
-                <div className={styles.Group718}>
-                  <div className={styles.Rectangle191}></div>
-                  <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                  <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
+                <div className={teams.member_button}>
+                  <div className={teams.btn_border}></div>
+                  <img className={teams.icon} src='/LinkedINfilled.svg' alt='' />
+                  <div className={teams.btn_text}>{item.linkedinProfile}</div>
                 </div>
               </a>
             </div>
@@ -80,24 +81,25 @@ export default function Marketing() {
         ))}
       </div>
 
-      <div data-aos="fade-up" className="row">
+      {/* Members Div 2 */}
+      <div data-aos="fade-up" className={`row ${teams.customRow}`}>
         {marketers.slice(3, 6).map((item, index) => (
-          <div className="col-md-2" key={index}>
-            <div className={styles.Rectangle198}>
-              <div className={styles.picheader}></div>
-              <div className={styles.MaskGroup}>
-                <img className={styles.dotimg} src='/dotimgreen.svg' alt='' />
-                <div className={styles.Ellipse44}>
-                  <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
+          <div className={`col-md-2 ${teams.customCol}`} key={index}>
+            <div className={teams.member_card}>
+              <div className={teams.picheader}></div>
+              <div className={teams.card_content}>
+                <img className={teams.dotimg} src='/dotimgreen.svg' alt='' />
+                <div className={teams.image_div}>
+                  <img className={teams.profilepic} src={item.imageSrc} alt="placeholder" />
                 </div>
               </div>
-              <div className={styles.name}>{item.name}</div>
-              <div className={styles.role}>{item.role}</div>
+              <div className={teams.name}>{item.name}</div>
+              <div className={teams.role}>{item.role}</div>
               <a href={item.linkedinProfile} target="_blank" rel="noopener noreferrer">
-                <div className={styles.Group718}>
-                  <div className={styles.Rectangle191}></div>
-                  <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                  <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
+                <div className={teams.member_button}>
+                  <div className={teams.btn_border}></div>
+                  <img className={teams.icon} src='/LinkedINfilled.svg' alt='' />
+                  <div className={teams.btn_text}>{item.linkedinProfile}</div>
                 </div>
               </a>
             </div>

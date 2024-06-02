@@ -1,4 +1,4 @@
-.card_container {
+.event_card {
   width: 450px;
   height: 290px;
   position: relative;
@@ -6,14 +6,15 @@
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.20);
   border-radius: 20px;
   margin-left: 120px;
-  margin-top: 255px;
+  margin-top: 125px;
   margin-bottom: 350px;
 }
 
 
 .heading{
   margin-left: 100px;
-  margin-bottom:200px
+  margin-top: -200px;
+  margin-bottom:400px
 
 }
 
@@ -37,7 +38,7 @@
   word-wrap: break-word;
 }
 
-.eventType {
+.event_type {
   text-align: center;
   color: #656C73;
   font-size: 16px;
@@ -46,28 +47,6 @@
   margin-left: 10px;
   margin-top: -10px;
 }
-
-.event {
-  text-align: center;
-  color: #656C73;
-  font-size: 9px;
-  font-family: sans-serif;
-  font-weight: 400;
-  margin-left: 5px;
-  
-}
-
-.event-title {
-  color: #656C73;
-  font-size: 10px;
-  font-family: sans-serif;
-  font-weight: 200;
-  text-decoration: underline;
-  margin-left: 70px;
-  
-}
-
-
 
 
 .Vector {
@@ -90,22 +69,6 @@
     font-family: sans-serif;
   }
   
-  .Group718 {
-    width: 137px;
-    height: 32px;
-    position: relative;
-  }
-  
-  .Rectangle191 {
-    width: 137px;
-    height: 32px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid #4b5563;
-    border-radius: 9999px;
-  }
-
   .vectorimg1{
     position:absolute;
     margin-left: 1700px;
@@ -123,68 +86,76 @@
   }
 
   @media (max-width: 768px) {
-    .card_container {
-      width: 95%;
-      padding: 15px;
+    .event_card {
+      width: 220px;
+      height: 240px;
+      margin-top: 400px;
+      margin-bottom: 50px;
+      margin-left: 10px;
     }
   
     .image {
-      width: 60%;
-      margin-top: -80px;
+      width: 120px;
+      height: auto;
+      margin-left: 50px;
     }
-  
+    
+    .heading{
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+
     .name {
       font-size: 20px;
-      margin-top: 100px;
+      margin-top: 0px;
     }
   
-    .eventType {
+    .event_type {
       font-size: 14px;
+      margin-top: 10px;
     }
-  
-    .event {
-      font-size: 8px;
-    }
-  
-    .event-title {
-      font-size: 9px;
-    }
-  
-    .Group718 {
-      width: 120px;
-      height: 28px;
-    }
-  
-    .Rectangle191 {
-      height: 28px;
-    }
-  
-    .vectorimg1,
-    .vectorimg2 {
+    
+    .vectorimg1 {
       width: 70%;
+      margin-top: 250px;
       max-width: 180px;
-      margin: 20px auto;
+      margin-left: 590px;
+    }
+
+    .vectorimg2 {
+      max-width: 160px;
+      margin-left: 0px;
     }
   }
   
   @media (max-width: 480px) {
-    .card_container {
-      width: 100%;
-      padding: 10px;
+
+    .heading{
+      margin-top: 100px;
+      margin-bottom: 50px;
+    }
+
+    .event_card {
+      width: 250px;
+      margin-top: 400px;
+      margin-left: 120px;
+      margin-bottom: 50px
     }
   
     .image {
-      width: 70%;
-      margin-top: -60px;
+      width: 120px;
+      margin-left: 65px;
     }
   
     .name {
       font-size: 18px;
-      margin-top: 80px;
+      margin-top: 20px;
+      margin-left: 5px;
     }
   
     .eventType {
       font-size: 12px;
+      margin-left: 0px;
     }
   
     .event {
@@ -195,19 +166,16 @@
       font-size: 8px;
     }
   
-    .Group718 {
-      width: 100px;
-      height: 24px;
-    }
-  
-    .Rectangle191 {
-      height: 24px;
-    }
-  
-    .vectorimg1,
-    .vectorimg2 {
+    .vectorimg1 {
       width: 80%;
       max-width: 160px;
-      margin: 10px auto;
+      margin-left: 320px;
     }
+
+    .vectorimg2 {
+      max-width: 160px;
+      margin-left: 0px;
+    }
+
+   
   }

@@ -134,19 +134,20 @@ const eventData = [
 export default function AllEvents() {
   return (
     <>
-    <h1 className={styles.heading}>
+    <h1 className={styles.heading} data-aos="fade-up">
     <b>All Events</b>
     </h1>
     <img className={styles.vectorimg1} src='/orngcircle.svg' alt='' />
     <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
     
-    <div className="row">
+    {/* Events Div */}
+    <div className="row" data-aos="fade-up">
       {eventData.map(event => (
             <div key={event.id} className="col-md-4 offset-md-0">
-            <div className={styles.card_container}>
+            <div className={styles.event_card}>
                 <img className={styles.image} src={event.imageUrl} alt="Event" />
                 <div className={styles.name}>{event.title}</div>
-                <div className={styles.eventType}>{event.type}</div>
+                <div className={styles.event_type}>{event.type}</div>
             </div>
             </div>
         ))}

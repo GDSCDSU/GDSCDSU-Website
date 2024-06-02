@@ -19,6 +19,14 @@
     margin-top: -350px;
   }
 
+  .heading{
+    margin-left: 200px;
+    margin-top: -200px;
+    margin-bottom:300px
+  
+  }
+  
+  
   
   .name {
     text-align: center;
@@ -107,30 +115,66 @@
     }
 
     @media (max-width: 768px) {
+
+      
       .card_container {
-          margin: 100px auto 150px auto;
+          margin-top: 100px;
+          margin-left: 220px;
+          margin-bottom: 50px;
+          width: 350px;
+          height: 430px;
       }
   
       .image {
           width: 60%;
           margin-top: -80px;
+          margin-left: 75px;
+      }
+
+      .heading{
+        margin-left: 90px;
+        margin-top: 100px; 
+        margin-bottom: -70px;     
       }
   
       .name, .position, .event, .eventTitle {
           font-size: 1rem;
           margin-top: 10px;
       }
+
+      .Rectangle191{
+        margin-left: -50px;
+      }
+
+      .Vector{
+        margin-left: -50px;
+      }
+
+      .LinkedinProfile{
+        margin-left: -50px;
+      }
+
+      .vectorimg1 {
+        width: 80%;
+        max-width: 160px;
+        margin-left: 620px;
+      }
+  
+      .vectorimg2 {
+        max-width: 160px;
+        margin-left: 0px;
+      }
   }
   
   @media (max-width: 480px) {
       .card_container {
-          margin: 50px auto 100px auto;
-          padding: 10px;
+          margin-left: 60px;
       }
   
       .image {
-          width: 70%;
-          margin-top: -50px;
+          width: 60%;
+          margin-top: 10px;
+          margin-left: 67px;
       }
   
       .name, .position, .event, .eventTitle {
@@ -138,19 +182,28 @@
           margin-top: 5px;
       }
   
-      .Group718 {
-          width: 100px;
-          height: 25px;
+      .Rectangle191{
+        margin-left: -40px;
+      }
+
+      .Vector{
+        margin-left: -40px;
+      }
+
+      .LinkedinProfile{
+        margin-left: -40px;
+      }
+
+  
+      .vectorimg1 {
+        width: 80%;
+        max-width: 160px;
+        margin-left: 320px;
       }
   
-      .Rectangle191 {
-          width: 100%;
-          height: 25px;
-      }
-  
-      .vectorimg1, .vectorimg2 {
-          width: 50%;
-          height: auto;
+      .vectorimg2 {
+        max-width: 160px;
+        margin-left: 0px;
       }
   }
    

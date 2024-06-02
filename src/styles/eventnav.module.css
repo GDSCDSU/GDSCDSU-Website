@@ -1,175 +1,154 @@
 .EventsNavigation {
-    width: 1000px;
-    height: 54px;
-    left: 30px;
-    margin: 55px;
-    top: 100px;
-    position: relative;
-  }
-  
-  .Rectangle196 {
-    width: 840px;
-    height: 54px;
-    position: absolute;
-    border: 2px solid #3b82f6;
-    border-radius: 9999px;
-    margin-left: 500px;
-    padding: 5px;
-    top: 6px;
-    left: 0;
-    transition: border 0.3s ease;
-  }
-  
-  .Rectangle197 {
-    width: 350px;
-    height: 46px;
-    position: absolute;
-    background-color: #3b82f6;
-    border-radius: 9999px;
-    padding: 5px;
-    margin-left: 500px;
-    top: 10px;
-    left: 4px;
-    transition: left 0.3s ease;
-  }
-  
-  .NavButton {
-    position: absolute;
-    font-size: 1rem;
-    font-family: sans-serif;
-    font-weight: 400;
-    color: #4b5563;
-    margin-left: 500px;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    transition: color 0.3s ease;
+  width: 1000px;
+  height: 54px;
+  margin-left: 35px;
+  top: 30px;
+  position: relative;
+}
+
+.nav_border {
+  width: 840px;
+  height: 54px;
+  position: absolute;
+  border: 2px solid #3b82f6;
+  border-radius: 9999px;
+  margin-left: 500px;
+  padding: 5px;
+  top: 6px;
+  left: 0;
+  transition: border 0.3s ease;
+}
+
+.active_tab {
+  width: 350px;
+  height: 46px;
+  position: absolute;
+  background-color: #3b82f6;
+  border-radius: 9999px;
+  padding: 5px;
+  margin-left: 500px;
+  top: 10px;
+  left: 4px;
+  transition: left 0.3s ease;
+}
+
+.nav_button {
+  position: absolute;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #4b5563;
+  margin-left: 500px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  transition: color 0.3s ease;
+}
+
+.Events {
+  left: 150px;
+  top: 17px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.Speakers {
+  left: 600px;
+  top: 17px;
+  font-weight: 700;
+  padding-top: 5px;
+}
+
+.nav_button.active {
+  color: white;
+}
+
+.TeamsHeader {
+  height: 200px; /* Adjust the height as needed */
+  background-image: url('/events-header.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Additional classes for left positioning */
+.leftAllEvents {
+  left: 10px !important;
+}
+
+.leftSpeaker {
+  left: 480px !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .EventsNavigation {
+    width: 100%;
+    margin-left: -480px;
   }
 
-  
-  
+  .nav_border {
+    width: 90%;
+  }
+
+  .active_tab {
+    width: 40%;
+    left: 5%;
+  }
+
   .Events {
-    left: 150px;
-    top: 17px;
-    font-weight: 700;
-    padding-top: 5px;
+    left: 15%;
+    top: 15px;
   }
-  
+
   .Speakers {
-    left: 600px;
-    top: 17px;
-    font-weight: 700;
-    padding-top: 5px;
-  }
-  
-
-  .NavButton.active {
-    color: white;
+    left: 65%;
   }
 
+  .leftAllEvents {
+    left: 1% !important;
+  }
 
-  .TeamsHeader {
-    height: 200px; /* Adjust the height as needed */
-    background-image: url('/events-header.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  .leftSpeaker {
+    left: 49% !important;
   }
-  
+}
 
-  @media (max-width: 768px) {
-    .Rectangle196 {
-      width: 90%;
-      left: 5%;
-    }
-  
-    .Rectangle197 {
-      width: 50%;
-      left: 5%;
-    }
-  
-    .Events {
-      left: 10%;
-    }
-  
-    .Speakers {
-      left: 55%;
-    }
+@media (max-width: 480px) {
+  .EventsNavigation {
+    width: 95%;
+    top: 50px;
   }
-  
-  @media (max-width: 480px) {
-    .EventsNavigation {
-      width: 95%;
-      top: 50px;
-    }
-  
-    .Rectangle196 {
-      width: 100%;
-      left: 0;
-    }
-  
-    .Rectangle197 {
-      width: 60%;
-      left: 0;
-    }
-  
-    .Events {
-      left: 5%;
-    }
-  
-    .Speakers {
-      left: 60%;
-    }
-  
-    .NavButton {
-      font-size: 0.875rem;
-    }
-  }@media (max-width: 768px) {
-    .Rectangle196 {
-      width: 90%;
-      left: 5%;
-    }
-  
-    .Rectangle197 {
-      width: 50%;
-      left: 5%;
-    }
-  
-    .Events {
-      left: 10%;
-    }
-  
-    .Speakers {
-      left: 55%;
-    }
+
+  .nav_border {
+    width: 86.5%;
+    left: 20px;
   }
-  
-  @media (max-width: 480px) {
-    .EventsNavigation {
-      width: 95%;
-      top: 50px;
-    }
-  
-    .Rectangle196 {
-      width: 100%;
-      left: 0;
-    }
-  
-    .Rectangle197 {
-      width: 60%;
-      left: 0;
-    }
-  
-    .Events {
-      left: 5%;
-    }
-  
-    .Speakers {
-      left: 60%;
-    }
-  
-    .NavButton {
-      font-size: 0.875rem;
-    }
+
+  .active_tab {
+    width: 40%;
+    left: 0;
   }
-  
+
+  .Events {
+    width: 100px;
+    top: 35%;
+    left: 15%;
+  }
+
+  .Speakers {
+    left: 60%;
+  }
+
+  .nav_button {
+    font-size: 0.875rem;
+  }
+
+  .leftAllEvents {
+    left: 5% !important;
+  }
+
+  .leftSpeaker {
+    left: 50% !important;
+  }
+}

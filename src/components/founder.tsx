@@ -1,8 +1,7 @@
 // Founder.js
 
-import styles from '../styles/founder.module.css'; // Import the CSS module
+import founder from '../styles/founder.module.css'; // Import the CSS module
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from 'next/image';
 
 export default function Founder() {
 
@@ -15,9 +14,8 @@ export default function Founder() {
       socials: [
         { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/example' },
         { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/example' },
-        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' }, 
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' },
         { type: 'Instagram', image: 'InstaIcon1.png', link: 'https://www.instagram.com/example' },
-      
       ]
     },
     {
@@ -27,11 +25,11 @@ export default function Founder() {
       imageSrc: 'founders/dr_minhas.png',
       socials: [
         { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/example' },
-        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' }, 
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' },
       ]
     },
   ];
-    
+
   const foundingmembers = [
     {
       name: 'tarun kumar',
@@ -92,66 +90,63 @@ export default function Founder() {
       designation: 'DATOS DALI',
       description: "As a core team member, DSC has provided me with an excellent opportunity to meet other students, share ideas, skills, and experience in managing and speaking at workshops. The entire program helped me grow tremendously, both personally and technically. I have learned a lot and achieved a lot of things throughout GDSC tenure 2020. I would highly encourage students at DSU to join GDSC and improve themselves in a productive and positive learning environment.",
       imageSrc: 'founders/nimra_ali.png',
-
     },
-
   ];
+
   return (
     <>
-    <div data-aos="fade-up" className='QuoteDiv'>
-    <img className={styles.Quoteimg} src='/founderquote.svg' alt='' />
-    </div>
-    
-    
-    
-    <div data-aos="fade-up" className="row">
-  {founders.map((founder, index) => (
-    <div key={index} className="col-lg-5">
-      <div className={`${styles.header} ${index === 1 ? styles.facultyHeader : ''}`}>
-        <h1>{index === 1 ? 'FACULTY ADVISOR' : 'FOUNDER'}</h1>
+      {/* Quote Image */}
+      <div data-aos="fade-up" className='QuoteDiv'>
+        <img className={founder.Quoteimg} src='/founderquote.svg' alt='' />
       </div>
 
-      <div className={styles.card}>
-        <img className={styles.dotimg} src='/dotbackground.svg' alt='' />
-
-        <img className={styles.founderimg}  src={founder.imageSrc} />
-        <h2>{founder.name}</h2>
-        <p>{founder.designation}</p>
-        <p>{founder.description}</p>
-
-        <div className={styles.group}>
-          {founder.socials.map((social, index) => (
-            <a href={social.type === 'Email' ? `mailto:${social.link}` : social.link} key={index} className={styles.icon}>
-              <img src={social.image} alt="Social Media Icon" />
-            </a>
-          ))}
-        </div>
-      </div>
-    </div>
-  ))}
-</div>
-
-
-   
-
-<div data-aos="fade-up" className="row">
-      {foundingmembers.map((item, index) => (
-        <div className="col-lg-5" key={index}>
-          <div className={styles.container}>
-          <img className={styles.veritcalimg} src='/dotimgvertical.svg' alt='' style={{position:'absolute' , height : '330px'}} />
-            <div className={styles.imageContainer}>
-            <div className={styles.Ellipse44}>
-                <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
-            </div>
+      {/* Div to Display Founder and Faculty Advisor */}
+      <div data-aos="fade-up" className="row">
+        {founders.map((founderData, index) => (
+          <div key={index} className="col-lg-5">
+            <div className={`${founder.header} ${index === 1 ? founder.facultyHeader : ''}`}>
+              <h1>{index === 1 ? 'FACULTY ADVISOR' : 'FOUNDER'}</h1>
             </div>
 
-            <div className={styles.name}>{item.name}</div>
-            <div className={styles.designation}>{item.designation}</div>
-            <div className={styles.description}>{item.description}</div>
+            <div className={founder.card}>
+              <img className={founder.dotimg} src='/dotbackground.svg' alt='' />
+
+              <img className={founder.founderimg} src={founderData.imageSrc} />
+              <h2>{founderData.name}</h2>
+              <p>{founderData.designation}</p>
+              <p>{founderData.description}</p>
+
+              <div className={founder.group}>
+                {founderData.socials.map((social, index) => (
+                  <a href={social.type === 'Email' ? `mailto:${social.link}` : social.link} key={index} className={founder.icon}>
+                    <img src={social.image} alt="Social Media Icon" />
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+
+      {/* Founding Team Members Div */}
+      <div data-aos="fade-up" className="row">
+        {foundingmembers.map((item, index) => (
+          <div className="col-lg-5" key={index}>
+            <div className={founder.container}>
+              <img className={founder.verticalimg} src='/dotimgvertical.svg' alt='' />
+              <div className={founder.imageContainer}>
+                <div className={founder.image_div}>
+                  <img className={founder.profilepic} src={item.imageSrc} alt="placeholder" />
+                </div>
+              </div>
+
+              <div className={founder.name}>{item.name}</div>
+              <div className={founder.designation}>{item.designation}</div>
+              <div className={founder.description}>{item.description}</div>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }

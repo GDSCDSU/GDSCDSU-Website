@@ -62,12 +62,14 @@ export default function Leads() {
   
   return (
     <>
+    {/* Quote Image */}
       <div data-aos="fade-up" className="QuoteDiv">
         <img className={styles.Quoteimg} src='/leadsquote.svg' alt='' />
       </div>
 
-      <div data-aos="fade-up" className={styles.Group827}>
-        <Timeline className='bg-red'>
+      {/* Leads Div */}
+      <div data-aos="fade-up" className={styles.Leads}>
+        <Timeline>
           {leads.map((lead, index) => (
             <Timeline.Item key={index}>
               <Timeline.Point />
@@ -75,7 +77,7 @@ export default function Leads() {
                 <Timeline.Time>{lead.year}</Timeline.Time>
                 <Timeline.Body>
                   <div className={styles.rectangle198}>
-                    <img className='' src='/dotimgverticalred.svg' alt='' style={{position:'absolute', height: '320px'}} />
+                    <img className={styles.verticalimg} src='/dotimgverticalred.svg' alt=''  />
                     <div className={styles.maskGroup}>
                       <img className={styles.profileimage} src={lead.imageSrc} alt="placeholder" />
                     </div>

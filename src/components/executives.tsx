@@ -4,7 +4,6 @@ import styles from '../styles/executives.module.css'; // Import the generated CS
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Executives() {
-
   const executives = [
     {
       name: 'Asaad Mahmood',
@@ -59,13 +58,15 @@ export default function Executives() {
 
   return (
     <>
+    {/* Quote Image */}
       <div data-aos="fade-up" className={styles.QuoteDiv}>
         <img className={styles.Quoteimg} src='/executivesquote.svg' alt=''/>
       </div>
 
-      <div data-aos="fade-up" className="row" style={{marginLeft:'400px'}}>
-        {executives.slice(0, 3).map((item, index) => (
-          <div className="col-md-7" key={index}>
+      {/* Members Div 1 */}
+      <div data-aos="fade-up" className={`row ${styles.customRow}`} style={{ marginLeft: '250px' }}>
+        {executives.slice(0, 6).map((item, index) => (
+          <div className={`col-md-5 ${styles.customCol}`} key={index}>
             <div className={styles.Rectangle198}>
               <div className={styles.MaskGroup}>
                 <img className={styles.dotimg} src='/dotimgexecutive.svg' alt='' />
@@ -88,9 +89,10 @@ export default function Executives() {
         ))}
       </div>
 
-      <div data-aos="fade-up" className="row" style={{marginLeft:'830px',marginTop:'-1380px'}}>
-        {executives.slice(3, 6).map((item, index) => (
-          <div className="col-md-7" key={index}>
+        {/* Members Div 2 */}
+      <div data-aos="fade-up" className={`row justify-content-center ${styles.customRow2}`}>
+        {executives.slice(6, 7).map((item, index) => (
+          <div className={`col-md-4 ${styles.customCol2}`} key={index}>
             <div className={styles.Rectangle198}>
               <div className={styles.MaskGroup}>
                 <img className={styles.dotimg} src='/dotimgexecutive.svg' alt='' />
@@ -111,29 +113,6 @@ export default function Executives() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div data-aos="fade-up" className="row justify-content-center">
-        <div className="col-md-4">
-          <div className={styles.Rectangle198}>
-            <div className={styles.MaskGroup}>
-              <img className={styles.dotimg} src='/dotimgexecutive.svg' alt='' />
-              <div className={styles.Ellipse44}>
-                <img className={styles.profilepic} src={executives[6].imageSrc} alt="placeholder" />
-              </div>
-            </div>
-            <div className={styles.name}>{executives[6].name}</div>
-            <div className={styles.role}>{executives[6].role}</div>
-            <div className={styles.Description}>{executives[6].description}</div>
-            <a href={executives[6].linkedinProfile} target="_blank" rel="noopener noreferrer">
-              <div className={styles.Group718}>
-                <div className={styles.Rectangle191}></div>
-                <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                <div className={styles.LinkedinProfile}>{executives[6].linkedinProfile}</div>
-              </div>
-            </a>
-          </div>
-        </div>
       </div>
     </>
   );
