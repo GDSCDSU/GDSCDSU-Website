@@ -1,12 +1,18 @@
+/* eslint-disable @next/next/no-img-element */
 'use client'
-import { SetStateAction, useState } from 'react';
+import { SetStateAction, useState, useEffect } from 'react';
 import './globals.css';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-    const Home = dynamic(() => import('../components/home'), {
+import 'flowbite/dist/flowbite.css';
+import Link from "next/link";
+import { Navbar } from "flowbite-react";
+import { Progress } from "flowbite-react";
+
+  const Home = dynamic(() => import('../components/home'), {
     ssr: false,
   });
-  const OurStory = dynamic(() => import('../components/ourstory'), {
+  const OurStory = dynamic(() => import('../components/our story'), {
     ssr: false,
   });
   const Events = dynamic(() => import('../components/events'), {
@@ -21,23 +27,32 @@ import dynamic from 'next/dynamic';
 
 export default function HomePage() {
     const [activeTab, setActiveTab] = useState('Home');
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const handleTabClick = (tab: SetStateAction<string>) => {
+    const [openModal, setOpenModal] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+    const handleTabClick = async (tab) => {
         setActiveTab(tab);
-        setIsMenuOpen(false);
+        setIsLoading(true);
+        setOpenModal(tab === 'Contact'); 
+        await new Promise((resolve) => setTimeout(resolve, 0)); 
+        setIsLoading(false);
+    };
+
+    const handleCloseModal = () => {
+        setOpenModal(false);
+        setActiveTab('Home');
     };
     const renderComponent = () => {
         switch (activeTab) {
             case 'Home':
                 return <Home />;
-            case 'OurStory':
+            case 'Our Story':
                 return <OurStory />;
             case 'Events':
                 return <Events />;
             case 'Team':
                 return <Team />;
             case 'Contact':
-                return <Contact />;
+                return <Contact openModal={openModal} onCloseModal={handleCloseModal} />; 
             default:
                 return <Home />;
         }
@@ -45,50 +60,58 @@ export default function HomePage() {
 
     return (
         <>
-            <nav className="bg-white border-gray-200 dark:bg-gray-900">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                    <a href="#" className="flex items-center space-x-5 rtl:space-x-reverse mx-5">
-                        <Image src='/LOGO.svg' alt='' width={300} height={0} />
-                    </a>
-                    <div className="md:hidden flex items-center">
-                        <button
-                            type="button"
-                            className="text-gray-500 hover:text-gray-600 dark:hover:text-white"
-                            onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div className={`${
-                        isMenuOpen ? 'flex' : 'hidden'
-                    } md:flex md:items-center w-full md:w-auto`}>
-                        <ul className="flex flex-row md:flex-row space-x-4 mt-4 md:mt-0 text-sm font-medium">
-                            {['Home', 'OurStory', 'Events', 'Team', 'Contact'].map((tab) => (
-                                <li key={tab} className="md:me-2" role="presentation">
-                                    <button
-                                        className={`inline-block p-2 md:p-5 border-b-2 md:border-b-0 rounded-t-lg transition-colors duration-300 ease-in-out ${
-                                            activeTab === tab
-                                            ? 'text-blue-500 hover:text-blue-500 dark:text-blue-500 dark:hover:text-blue-500 border-blue-500 dark:border-blue-500'
-                                            : 'dark:border-transparent text-gray-500 hover:text-blue-500 hover:border-blue-300  dark:hover:text-blue-300'
-                                        }`}
-                                        onClick={() => handleTabClick(tab)}
-                                        type="button"
-                                        role="tab"
-                                        >
-                                        {tab}
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+        {/* {isLoading && (
+            <div style={{ position: 'fixed', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 9999 }}>
+                <Image src='/Loading.gif' width={100} height={100} alt='' />
+            </div>
+        )} */}
+        <Navbar rounded>
+            <Navbar.Brand as={Link} href="/">
+                <Image src='/LOGO.svg' alt='' width={275} height={0}/>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse>
+                <ul className="nav nav-underline">
+                    {['Home', 'Our Story', 'Events', 'Team', 'Contact'].map((tab) => (
+                        <li key={tab} className="nav-item">
+                            <button
+                                className='nav-link'
+                                onClick={() => handleTabClick(tab)}
+                                type="button"
+                                role="tab"
+                                >
+                                {tab}
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            </Navbar.Collapse>
+        </Navbar>
             <div>
                 {renderComponent()}
             </div>
+                {/* <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Launch demo modal
+                </button>
+
+
+                <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog">
+                    <div className="modal-content">
+                    <div className="modal-header">
+                        <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div className="modal-body">
+                        ...
+                    </div>
+                    <div className="modal-footer">
+                        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" className="btn btn-primary">Save changes</button>
+                    </div>
+                    </div>
+                </div>
+                </div> */}
         </>
     );
     
