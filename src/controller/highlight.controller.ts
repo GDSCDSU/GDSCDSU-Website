@@ -1,4 +1,4 @@
-import { generateResponse } from "../util/method";
+import { formDataToJson, generateResponse } from "../util/method";
 import { STATUS_CODES } from "../util/helper";
 import {
   createHighlight,
@@ -30,7 +30,8 @@ class highlight {
     try {
       // get the form data
       const body = await request.formData();
-    
+      const data = await formDataToJson(body);
+      console.log(data);
       this.validate(body);
       const picture = body.get("picture") as File;
       
