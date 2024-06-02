@@ -31,7 +31,7 @@ export default function HomePage() {
     useEffect(() => {
         const timeout = setTimeout(() => {
             setIsLoading(false);
-        }, 1000);
+        }, 500);
 
         return () => clearTimeout(timeout);
     }, [activeTab]);
@@ -82,10 +82,7 @@ export default function HomePage() {
                     <div>
                         {renderComponent()}
                     </div>
-                    <button id="exampleModalBtn" hidden={true} type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Launch demo modal
-                    </button>
-
+                    <button id="exampleModalBtn" hidden={true} type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
                     <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div className="modal-dialog modal-dialog-centered modal-lg">
                             <div className="modal-content">
