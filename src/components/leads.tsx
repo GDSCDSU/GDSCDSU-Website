@@ -5,6 +5,7 @@ import axios from 'axios';
 
 export default function Leads() {
   const [leads, setLeads] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios.get('http://localhost:3000/api/teams?role=lead')
@@ -20,9 +21,21 @@ export default function Leads() {
         } else {
           console.error('Unexpected response format:', responseData);
         }
+
+        setLoading(false); // Set loading to false after data is fetched
       })
       .catch(error => console.error('Error fetching leads:', error));
   }, []);
+
+  // Function to generate tenures
+  const generateTenures = () => {
+    const tenures = [];
+    for (let year = 2020; year <= 3000; year++) {
+      tenures.push(year);
+    }
+    tenures.push('Current'); // Add 'Current' for the last tenure
+    return tenures;
+  };
 
   return (
     <>
@@ -33,42 +46,45 @@ export default function Leads() {
 
       {/* Leads Div */}
       <div data-aos="fade-up" className={styles.Leads}>
-        <Timeline>
-          {leads[1].map((lead, index) => (
-            <Timeline.Item key={index}>
-              <Timeline.Point />
-              <Timeline.Content>
-                <Timeline.Time>{lead.year}</Timeline.Time>
-                <Timeline.Body>
-                  <div className={styles.rectangle198}>
-                    <img className={styles.verticalimg} src='/dotimgverticalred.svg' alt=''  />
-                    <div className={styles.maskGroup}>
-                      <img className={styles.profileimage} src={lead.picture} alt="placeholder" />
+        {loading ? (
+          <p></p>
+        ) : (
+          <Timeline>
+            {leads[1].map((lead, index) => (
+              <Timeline.Item key={index}>
+                <Timeline.Point />
+                <Timeline.Content>
+                  <Timeline.Time>{generateTenures()[index]}</Timeline.Time>
+                  <Timeline.Body>
+                    <div className={styles.rectangle198}>
+                      <img className={styles.verticalimg} src='/dotimgverticalred.svg' alt=''  />
+                      <div className={styles.maskGroup}>
+                        <img className={styles.profileimage} src={lead.picture} alt="placeholder" />
+                      </div>
+                      <div className={`d-flex flex-row ${styles.socials}`}>
+                          <a href={lead.email} target="_blank" rel="noopener noreferrer" className="me-2">
+                            <img className={styles.icon} src="./EmailIcon1.svg" alt="Email icon" />
+                          </a>
+                          <a href={lead.facebook} target="_blank" rel="noopener noreferrer" className="me-2">
+                            <img className={styles.icon} src="./FbIcon1.svg" alt="Facebook icon" />
+                          </a>
+                          <a href={lead.instagram} target="_blank" rel="noopener noreferrer" className="me-2">
+                            <img className={styles.icon} src="./InstaIcon1.png" alt="Instagram icon" />
+                          </a>
+                          <a href={lead.linkedin} target="_blank" rel="noopener noreferrer" className="me-2">
+                            <img className={styles.icon} src="./LinkedInIcon1.svg" alt="LinkedIn icon" />
+                          </a>
+                      </div>
+                      <div className={styles.name}>{lead.fullname}</div>
+                      <div className={styles.designation}>{lead.tagline}</div>
+                      <div className={styles.description}>{lead.bio}</div>
                     </div>
-                    <div className={`d-flex flex-row ${styles.socials}`}>
-                        <a href={lead.email} target="_blank" rel="noopener noreferrer" className="me-2">
-                          <img className={styles.icon} src="./EmailIcon1.svg" alt="Email icon" />
-                        </a>
-                        <a href={lead.facebook} target="_blank" rel="noopener noreferrer" className="me-2">
-                          <img className={styles.icon} src="./FbIcon1.svg" alt="Facebook icon" />
-                        </a>
-                        <a href={lead.instagram} target="_blank" rel="noopener noreferrer" className="me-2">
-                          <img className={styles.icon} src="./InstaIcon1.png" alt="Instagram icon" />
-                        </a>
-                        <a href={lead.linkedin} target="_blank" rel="noopener noreferrer" className="me-2">
-                          <img className={styles.icon} src="./LinkedInIcon1.svg" alt="LinkedIn icon" />
-                        </a>
-                  </div>
-
-                    <div className={styles.name}>{lead.fullname}</div>
-                    <div className={styles.designation}>{lead.tagline}</div>
-                    <div className={styles.description}>{lead.bio}</div>
-                  </div>
-                </Timeline.Body>
-              </Timeline.Content>
-            </Timeline.Item>
-          ))}
-        </Timeline>
+                  </Timeline.Body>
+                </Timeline.Content>
+              </Timeline.Item>
+            ))}
+          </Timeline>
+        )}
       </div>
     </>
   );
