@@ -1,4 +1,4 @@
-import { partner } from "@/controller";
+import { partner } from '../.././../../controller/index'
 import { NextRequest } from "next/server";
 
 

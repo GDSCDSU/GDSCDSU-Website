@@ -1,12 +1,12 @@
-import { generateResponse } from "@/util/method";
-import { STATUS_CODES } from "@/util/helper";
+import { formDataToJson, generateResponse } from "../util/method";
+import { STATUS_CODES } from "../util/helper";
 import {
   createHighlight,
   deleteHighlight,
   fetchHighlight,
-} from "@/model";
+} from "../model";
 import { connectDB } from "../../config/database.config";
-import uploadToCloudinary from "@/util/cloudinary";
+import uploadToCloudinary from "../util/cloudinary";
 
 class highlight {
 
@@ -30,7 +30,8 @@ class highlight {
     try {
       // get the form data
       const body = await request.formData();
-    
+      const data = await formDataToJson(body);
+      console.log(data);
       this.validate(body);
       const picture = body.get("picture") as File;
       

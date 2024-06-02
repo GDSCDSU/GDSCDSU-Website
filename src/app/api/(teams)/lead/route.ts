@@ -1,4 +1,4 @@
-import { team } from "@/controller";
+import { team } from '../../../../controller/index'
 import { NextRequest } from "next/server";
 
 

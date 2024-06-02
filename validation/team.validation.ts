@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { ROLES,TEAM } from "@/util/helper";
+import { ROLES,TEAM } from "../src/util/helper";
 
 export const leadValidator = Joi.object({
     fullname: Joi.string().required(),
