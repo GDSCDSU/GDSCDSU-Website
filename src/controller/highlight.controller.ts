@@ -1,12 +1,12 @@
-import { generateResponse } from "@/util/method";
-import { STATUS_CODES } from "@/util/helper";
+import { generateResponse } from "../util/method";
+import { STATUS_CODES } from "../util/helper";
 import {
   createHighlight,
   deleteHighlight,
   fetchHighlight,
-} from "@/model";
+} from "../model";
 import { connectDB } from "../../config/database.config";
-import uploadToCloudinary from "@/util/cloudinary";
+import uploadToCloudinary from "../util/cloudinary";
 
 class highlight {
 

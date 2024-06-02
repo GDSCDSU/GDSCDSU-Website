@@ -1,7 +1,7 @@
-import { generateRandomOTP, generateResponse } from "@/util/method";
+import { generateRandomOTP, generateResponse } from "../util/method";
 import { userLoginValidator } from "../../validation";
-import { STATUS_CODES } from "@/util/helper";
-import { createUser, findUser } from "@/model";
+import { STATUS_CODES } from "../util/helper";
+import { createUser, findUser } from "../model";
 import { connectDB } from "../../config/database.config";
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';

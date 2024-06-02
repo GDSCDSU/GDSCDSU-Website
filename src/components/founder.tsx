@@ -12,10 +12,10 @@ export default function Founder() {
       description: 'As a founder, he led over 100 students in coding bootcamps, tech conferences, and workshops. He also conducted more than 200 interviews each year to build a top-notch team of 10, whose talents have flourished at DSU. Moreover, he successfully secured sponsorship from the NYC-based startup Datacamp. His collaboration with Google injected a profound sense of excellence into these initiatives, paving the way for exponential career growth for those under his mentorship.',
       imageSrc: 'founders/syed_ateeq.png',
       socials: [
-        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/example' },
-        { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/example' },
-        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' },
-        { type: 'Instagram', image: 'InstaIcon1.png', link: 'https://www.instagram.com/example' },
+        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/profile.php?id=100004870847670&mibextid=ibOpuV' },
+        { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/syedateeq160/' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=syedateeq1000@gmail.com' },
+        { type: 'Instagram', image: 'InstaIcon1.png', link: 'https://www.instagram.com/thesoftwarebatman/' },
       ]
     },
     {
@@ -24,8 +24,8 @@ export default function Founder() {
       description: "Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.",
       imageSrc: 'founders/dr_minhas.png',
       socials: [
-        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/example' },
-        { type: 'Email', image: 'EmailIcon1.svg', link: 'example@example.com' },
+        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/saeedminhas.ahmed?mibextid=ibOpuV' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'https://www.linkedin.com/in/dr-ahmed-saeed-minhas-220240196/' },
       ]
     },
   ];
