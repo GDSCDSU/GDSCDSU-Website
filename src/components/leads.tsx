@@ -52,7 +52,6 @@ export default function Leads() {
           <Timeline>
             {leads[1].map((lead, index) => (
               <Timeline.Item key={index}>
-                <Timeline.Point />
                 <Timeline.Content>
                   <Timeline.Time>{generateTenures()[index]}</Timeline.Time>
                   <Timeline.Body>
