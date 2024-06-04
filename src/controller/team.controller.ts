@@ -1,8 +1,8 @@
-import { generateResponse } from "@/util/method";
-import { STATUS_CODES } from "@/util/helper";
+import { generateResponse } from "../util/method";
+import { STATUS_CODES } from "../util/helper";
 import { connectDB } from "../../config/database.config";
-import { createUser, deleteTeam, findTeam } from "@/model";
-import uploadToCloudinary from "@/util/cloudinary";
+import { createUser, deleteTeam, findTeam } from "../model";
+import uploadToCloudinary from "../util/cloudinary";
 import {  validationLeads, validationTeam } from "../../validation";
 
 class Team {
