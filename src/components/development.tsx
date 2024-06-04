@@ -1,115 +1,94 @@
-import React from 'react';
-import styles from '../styles/teams.module.css'; // Import the generated CSS file correctly using `styles`
-import Image from 'next/image';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import teams from '../styles/teams.module.css'; // Import the CSS module
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Development() {
-  const developers = [
-    {
-      name: 'Muhammad Amish Toor',
-      role: 'Web Lead',
-      imageSrc: 'Development/amish_toor.png',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-    {
-      name: 'Ali Osaid',
-      role: 'Core Team Member',
-      imageSrc: 'Development/ali_osaid.png',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-    {
-      name: 'Haris Muhammad Imran',
-      role: 'Core Team Member',
-      imageSrc: 'Development/muhammad_haris.png',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-    {
-      name: 'Bisharat Ali',
-      role: 'Core Team Member',
-      imageSrc: 'Development/bisharat_ali.png',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-    {
-      name: 'Qirrat Azam',
-      role: 'Core Team Member',
-      imageSrc: 'Development/qirrat_azam.png',
-      linkedinProfile: 'LinkedIn Profile' // Assuming this link will be redirected somewhere
-    },
-  ];
+  const [developers, setDevelopers] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3000/api/teams?team=development')
+      .then(response => {
+        const responseData = response.data;
+  
+        if (Array.isArray(responseData)) {
+          setDevelopers(responseData);
+        } else if (typeof responseData === 'object') {
+          // Convert the object to an array
+          const developersArray = Object.values(responseData);
+          setDevelopers(developersArray);
+        } else {
+          console.error('Unexpected response format:', responseData);
+        }
+      })
+      .catch(error => console.error('Error fetching development team:', error));
+  }, []);
+
+  // Log the developers array for debugging purposes
+  console.log(developers);
 
   return (
     <>
-      <div className="QuoteDiv">
-        <img className={styles.Quoteimg} src='/developmentquote.svg' alt='' />
+      <div data-aos="fade-up" className="QuoteDiv">
+        <img className={teams.Quoteimg} src='/developmentquote.svg' alt='' />
       </div>
 
-      <div className="row">
-        {developers.slice(0, 3).map((item, index) => (
-          <div className="col-md-2" key={index}>
-            <div className={styles.Rectangle198}>
-              <div className={styles.picheader}></div>
-              <div className={styles.MaskGroup}>
-                <img className={styles.dotimg} src='/blueverticalbar.svg' alt='' />
-                <div className={styles.Ellipse44}>
-                  <img className={styles.profilepic} src={item.imageSrc} alt="placeholder" />
+      {/* Ensure developers[1] exists before rendering */}
+      {developers[1] && (
+        <>
+          {/* Members Div 1 */}
+          <div data-aos="fade-up" className={`row ${teams.customRow}`}>
+            {developers[1].slice(0, 3).map((item, index) => (
+              <div className={`col-md-2 ${teams.customCol}`} key={index}>
+                <div className={teams.member_card}>
+                  <div className={teams.picheader}></div>
+                  <div className={teams.card_content}>
+                    <img className={teams.dotimg} src='/blueverticalbar.svg' alt='' />
+                    <div className={teams.image_div}>
+                      <img className={teams.profilepic} src={item.picture} alt={item.fullname} />
+                    </div>
+                  </div>
+                  <div className={teams.name}>{item.fullname}</div>
+                  <div className={teams.role}>{item.tagline}</div>
+                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
+                    <div className={teams.member_button}>
+                      <div className={teams.btn_border}></div>
+                      <img className={teams.icon} src='/LinkedINfilled.svg' alt='' />
+                      <div className={teams.btn_text}>LinkedIn Profile</div>
+                    </div>
+                  </a>
                 </div>
               </div>
-              <div className={styles.name}>{item.name}</div>
-              <div className={styles.role}>{item.role}</div>
-              <a href={item.linkedinProfile} target="_blank" rel="noopener noreferrer">
-                <div className={styles.Group718}>
-                  <div className={styles.Rectangle191}></div>
-                  <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                  <div className={styles.LinkedinProfile}>{item.linkedinProfile}</div>
-                </div>
-              </a>
-            </div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <div className="row">
-        <div className="col-md-2 offset-md-1">
-          <div className={styles.Rectangle198}>
-            <div className={styles.picheader}></div>
-            <div className={styles.MaskGroup}>
-              <img className={styles.dotimg} src='/blueverticalbar.svg' alt='' />
-              <div className={styles.Ellipse44}>
-                <img className={styles.profilepic} src={developers[3].imageSrc} alt="placeholder" />
+          {/* Members Div 2 */}
+          <div data-aos="fade-up" className={`row ${teams.customrowDev}`}>
+            {developers[1].slice(3, 5).map((item, index) => (
+              <div className={`col-md-2 offset-md-0 ${teams.customcolDev}`} key={index}>
+                <div className={teams.member_card}>
+                  <div className={teams.picheader}></div>
+                  <div className={teams.card_content}>
+                    <img className={teams.dotimg} src='/blueverticalbar.svg' alt='' />
+                    <div className={teams.image_div}>
+                      <img className={teams.profilepic} src={item.picture} alt={item.fullname} />
+                    </div>
+                  </div>
+                  <div className={teams.name}>{item.fullname}</div>
+                  <div className={teams.role}>{item.tagline}</div>
+                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
+                    <div className={teams.member_button}>
+                      <div className={teams.btn_border}></div>
+                      <img className={teams.icon} src='/LinkedINfilled.svg' alt='' />
+                      <div className={teams.btn_text}>LinkedIn Profile</div>
+                    </div>
+                  </a>
+                </div>
               </div>
-            </div>
-            <div className={styles.name}>{developers[3].name}</div>
-            <div className={styles.role}>{developers[3].role}</div>
-            <a href={developers[3].linkedinProfile} target="_blank" rel="noopener noreferrer">
-              <div className={styles.Group718}>
-                <div className={styles.Rectangle191}></div>
-                <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                <div className={styles.LinkedinProfile}>{developers[3].linkedinProfile}</div>
-              </div>
-            </a>
+            ))}
           </div>
-        </div>
-        <div className="col-md-3">
-          <div className={styles.Rectangle198}>
-            <div className={styles.picheader}></div>
-            <div className={styles.MaskGroup}>
-              <img className={styles.dotimg} src='/blueverticalbar.svg' alt='' />
-              <div className={styles.Ellipse44}>
-                <img className={styles.profilepic} src={developers[4].imageSrc} alt="placeholder" />
-              </div>
-            </div>
-            <div className={styles.name}>{developers[4].name}</div>
-            <div className={styles.role}>{developers[4].role}</div>
-            <a href={developers[4].linkedinProfile} target="_blank" rel="noopener noreferrer">
-              <div className={styles.Group718}>
-                <div className={styles.Rectangle191}></div>
-                <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                <div className={styles.LinkedinProfile}>{developers[4].linkedinProfile}</div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
+        </>
+      )}
     </>
   );
-};
+}

@@ -6,7 +6,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 0.5rem 0.5rem;
   margin-top: -1px;
-  margin-left: 350px;
+  margin-left: 320px;
   padding: 1.25rem;
 }
 
@@ -16,8 +16,13 @@
   margin-left: 600px;
 }
 
+.verticalimg{
+  position: absolute;
+  height: 330px;
+}
+
 .card h2 {
-  color: #3b82f6;
+  color: black;
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
@@ -37,13 +42,13 @@
 }
 
 .group {
-  width: 170px;
+  width: 200px;
   height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1.25rem;
-  margin-left: 130px;
+  margin-left: 120px;
 }
 
 .group .icon {
@@ -63,7 +68,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   margin-top: 20px;
-  margin-left: 350px;
+  margin-left: 320px;
   
 }
 
@@ -131,7 +136,7 @@
 
 .founderimg{
   width: 200px;
-  margin-top: -200px;
+  margin-top: -210px;
   margin-left: 130px;
   position: relative;
 }
@@ -143,7 +148,7 @@
   background: #4285F4;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin-left: 350px;
+  margin-left: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -157,8 +162,8 @@
 }
 
 .dotimg{
-  width: 109%;
-  height: auto;
+  max-width: 700px;
+  max-height: 400px;
   position: relative;
   left: -20px;
   top: -40px;
@@ -172,5 +177,161 @@
   position: absolute;
   top: 7px;
   left: 4px;
+}
+
+@media (max-width: 768px) {
+  .Quoteimg{
+    max-width: 100%;
+    margin-left: 50px;
+    margin-bottom: -50px;
+  }
+
+  .verticalimg{
+    max-width: 250px;
+    max-height: 380px;
+  }
+
+  .card {
+    width: 60%;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
+  .dotimg{
+    max-width: 460px;
+  }
+
+  .header {
+    width: 60%;
+    margin-left: 150px;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  .group {
+    margin-left: 100px;
+    flex-direction: row;
+  }
+
+  .group .icon {
+    margin-left: 10px;
+  }
+
+  .container {
+    width: 500px;
+    height: 330px;
+    margin-left: 130px;
+    margin-top: 50px; 
+    padding: 0px;
+  }
+
+  .name,
+  .designation,
+  .description {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+
+  }
+
+  .designation {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+
+  }
+
+  .description {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+    word-wrap: break-word;
+
+  }
+
+  .founderimg {
+    margin-top: -170px;
+    margin-bottom: 20px;
+    width: 150px;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .Quoteimg {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block;
+  }
+
+  .card {
+    width: 70%;
+    height: 90%;
+    margin: 15px auto;
+  }
+  
+
+  .dotimg{
+    max-width: 335px;
+  }
+
+  .group {
+    margin-left: 20px;
+    flex-direction: row;
+  }
+
+  .group .icon {
+    margin-left: 10px;
+  }
+
+  .container {
+    width: 400px;
+    height: 330px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+  }
+
+  .verticalimg{
+    
+    max-width: 300px;
+    max-height: 350px;
+  }
+
+  .name{
+    margin-left: 125px;
+    margin-top: 40px;
+    font-size: 0.875rem;
+  }
+
+  .designation {
+    margin-left: 125px;
+    margin-top: 10px;
+    font-size: 0.875rem;
+  }
+
+  .description {
+    width: 300px;
+    margin-left: 90px;
+    margin-top: 40px;
+    font-size: 0.875rem;
+  }
+
+  .founderimg {
+    width: 150px;
+    height: 150px;
+    margin-top: -150px;
+    margin-left: 70px;
+  }
+
+  .header {
+    width: 70%;
+    margin: 5px auto;
+    height: auto;
+    font-size: 1.25rem;
+  }
 }
 

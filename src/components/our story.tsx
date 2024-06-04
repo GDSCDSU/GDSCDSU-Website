@@ -52,9 +52,11 @@ export default function OurStory(){
       }, []);
     return (
         <>
+        {/* Header Image */}
         <div data-aos="fade-up" >
             <img className="img-fluid" src="/OurStory.png" alt=""/>
         </div>
+        {/* Story Landing Page Starts */}
         <div className="m-5" data-aos="fade-up">
         <div className="d-flex flex-column align-items-center">
             <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
@@ -424,6 +426,7 @@ export default function OurStory(){
         <div>
             <img className="img-fluid" src="/TheEnd.svg" alt=""/>      
         </div>
+        {/* Story Landing Page Ends */}
         <div>
             <div className="shadow-sm p-3 rounded-lg">
                 <div className="d-flex flex-column align-items-center text-center">

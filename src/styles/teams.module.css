@@ -1,4 +1,4 @@
-.Rectangle198 {
+.member_card {
   width: 300px;
   height: 260px;
   background-color: #ffffff;
@@ -9,30 +9,33 @@
   border-radius: 0.75rem;
 }
 
-.picheader {
-  /* Styles for picheader */
-}
-
-.MaskGroup {
+.card_content {
   width: 94px;
   height: 94px;
   position: relative;
 }
 
-.Quoteimg{
+.customrowDev{
+  margin-left: 110px;
+}
+
+.customcolDev{
+  margin-left: 20px;
+}
+
+
+.Quoteimg {
   width: 700px;
   height: 300px;
   margin-left: 610px;
 }
 
-
-.Ellipse44 {
+.image_div {
   width: 94px;
   height: 94px;
   position: absolute;
   top: 0;
   left: 100px;
-  background-color: #34d399;
   border-radius: 9999px;
 }
 
@@ -70,7 +73,7 @@
   font-family: sans-serif;
 }
 
-.Group718 {
+.member_button {
   width: 137px;
   height: 32px;
   position: relative;
@@ -78,7 +81,7 @@
   margin-top: 50px;
 }
 
-.Rectangle191 {
+.btn_border {
   width: 137px;
   height: 32px;
   position: absolute;
@@ -88,7 +91,7 @@
   border-radius: 9999px;
 }
 
-.Vector {
+.icon {
   width: 20px;
   height: 20px;
   position: absolute;
@@ -96,7 +99,7 @@
   left: 4px;
 }
 
-.LinkedinProfile {
+.btn_text {
   position: absolute;
   top: 7px;
   left: 30px;
@@ -107,12 +110,144 @@
   font-family: sans-serif;
 }
 
+.dotimg {
+  max-width: 300px;
+}
 
-.dotimg{
-  position: absolute;
-  width: 300px;
-  height: 80px;
-  top: -10px;
-    
+.customCol2 .member_card {
+  margin-left: -305px;
+}
+
+@media (max-width: 768px) {
+  .dotimg {
+    max-width: 200px;
+  }
+  
+  .customRow {
+    justify-content: space-around;
   }
 
+  .customCol {
+    margin-bottom: 10px;
+  }
+
+  .member_card {
+    width: 200px;
+    margin-left: -50px;
+  }
+
+  .Quoteimg {
+    margin-left: 50px;
+    margin-bottom: -80px;
+  }
+
+  .image_div {
+    width: 120px;
+    height: 100px;
+    margin-left: -50px;
+  }
+
+  .name {
+    margin-left: 10px;
+    font-size: 1.25rem;
+  }
+
+  .role {
+    font-size: 0.875rem;
+    margin-left: 10px;
+  }
+
+  .member_button {
+    max-width: 120px;
+    margin-left: 30px;
+  }
+
+  .btn_border {
+    height: 28px;
+    top: 2px;
+  }
+
+  .icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .btn_text {
+    font-size: 0.75rem;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .customCol2 .member_card {
+    margin-left: -220px;
+  }
+
+  .Quoteimg {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block;
+  }
+
+  .member_card {
+    width: 54%;
+    margin: 10px auto;
+  }
+
+  .image_div {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    margin-left: -5px;
+  }
+
+  .profilepic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .name {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+
+  .role {
+    font-size: 0.75rem;
+    margin-top: 5px;
+  }
+
+  .member_button {
+    width: 60px;
+    height: 24px;
+  }
+
+  .btn_border {
+    width: 130px;
+    height: 35px;
+    margin-top: -19px;
+    margin-left: 40px;
+  }
+
+  .icon {
+    max-width: 70px;
+    max-height: 60px;
+    margin-top: -16px;
+    margin-left: 40px;
+  }
+
+  .btn_text {
+    width: 105px;
+    top: -10px;
+    margin-left: 30px;
+  }
+
+  .dotimg {
+    max-width: 260px;
+  }
+}
