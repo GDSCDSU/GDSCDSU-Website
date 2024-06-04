@@ -32,7 +32,7 @@ const EventSchema: Schema = new Schema({
 // Create the event model
 const EventModel = mongoose.models.Event || mongoose.model<IEvent>('Event', EventSchema);
 
-export const createEvent = (event: any): Promise<any> => EventModel.create(event);
+export const createEvent =  (event: any) => EventModel.create(event);
 export const fetchEvent = (pipeline:any) => EventModel.aggregate([pipeline]);
 export const fetchEventById = (id: string) => EventModel.findById(id);
 export const deleteEvent = (id: string) => EventModel.findByIdAndDelete(id);
