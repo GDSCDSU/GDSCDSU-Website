@@ -14,15 +14,15 @@ export default function SignInForm({ onSubmit, showAlert, alertMessage, inputCol
         <div className="mb-2 block">
           <Label htmlFor="email" className="text-blue-600 text-lg" value="Email Address" />
         </div>
-        <TextInput color={inputColor} id="email" type="email" placeholder="name@gdsc.com" required />
+        <TextInput color={inputColor} icon={HiMail} id="email" type="email" placeholder="name@gdsc.com" required />
       </div>
       
       <div>
         <div className="mb-2 block">
           <Label htmlFor="password" className="text-blue-600 text-lg" value="Password" />
-          <Link href='#' className="forP text-blue-600 text-md" onClick={onForgotPassword}>Forget Password?</Link>
+          <Link href='#' style={{display:'flex',justifyContent:'end',marginTop:'-6%',}} className="forP text-blue-600 text-md" onClick={onForgotPassword}>Forget Password?</Link>
         </div>
-        <TextInput color={inputColor} id="password" type="password" placeholder="Enter Password Here" required />
+        <TextInput color={inputColor} icon={HiLockClosed} id="password" type="password" placeholder="Enter Password Here" required />
       </div>
       {showAlert && (
         <Alert color="failure" icon={HiInformationCircle}>

@@ -13,7 +13,7 @@ export default function ForgotPasswordForm({ onSubmit, showAlert, alertMessage, 
         <div className="mb-2 block">
           <Label htmlFor="email" className="text-blue-600 text-lg" value="Email Address" />
         </div>
-        <TextInput color={inputColor} id="email" type="email" placeholder="name@gdsc.com" required />
+        <TextInput color={inputColor} id="email" icon={HiMail} type="email" placeholder="name@gdsc.com" required />
       </div>
       {showAlert && (
         <Alert color="failure" icon={HiInformationCircle}>

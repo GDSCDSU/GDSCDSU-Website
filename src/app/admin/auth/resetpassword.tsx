@@ -12,13 +12,13 @@ export default function ResetPasswordForm({ onSubmit, showAlert, alertMessage, i
         <div className="mb-2 block">
           <Label htmlFor="new-password" className="text-blue-600 text-lg" value="New Password" />
         </div>
-        <TextInput color={inputColor} id="new-password" type="password" placeholder="Enter New Password Here" required onChange={onPasswordChange} />
+        <TextInput color={inputColor} id="new-password" icon={HiLockClosed} type="password" placeholder="Enter New Password Here" required onChange={onPasswordChange} />
       </div>
       <div>
         <div className="mb-2 block">
           <Label htmlFor="confirm-password" className="text-blue-600 text-lg" value="Confirm Password" />
         </div>
-        <TextInput color={inputColor} id="confirm-password" type="password" placeholder="Confirm New Password Here" required onChange={onConfirmPasswordChange} />
+        <TextInput color={inputColor} id="confirm-password" icon={HiLockClosed} type="password" placeholder="Confirm New Password Here" required onChange={onConfirmPasswordChange} />
       </div>
       {showAlert && (
         <Alert color="failure" icon={HiInformationCircle}>
