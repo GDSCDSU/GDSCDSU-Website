@@ -1,4 +1,4 @@
-import { Highlight } from "@/controller";
+import { Highlight } from '../.././../../controller/index'
 import { NextRequest } from "next/server";
 
 export async function GET() {

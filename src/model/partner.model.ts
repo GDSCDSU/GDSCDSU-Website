@@ -11,7 +11,7 @@ const partnerSchema: Schema = new Schema({
     }
 });
 
-const Partner = mongoose.models.Partner || mongoose.model<IPartner>('Partner', partnerSchema);
+const Partner: mongoose.Model<IPartner> = mongoose.models.Partner || mongoose.model<IPartner>('Partner', partnerSchema);
 
 
 export const createPartner = (obj:any) => Partner.create(obj);

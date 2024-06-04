@@ -54,7 +54,7 @@ export default function OurStory(){
         <>
         {/* Header Image */}
         <div data-aos="fade-up" >
-            <img className="img-fluid" src="/OurStory.svg" alt=""/>
+            <img className="img-fluid" src="/OurStory.png" alt=""/>
         </div>
         {/* Story Landing Page Starts */}
         <div className="m-5" data-aos="fade-up">

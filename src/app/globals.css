@@ -361,3 +361,13 @@
       padding: 40px;
     }
   }
+
+  .fullPage{
+    margin: 13%;
+  }
+
+  .forP{
+    display: flex;
+    justify-content: end;
+    margin-top: -6%;
+  }

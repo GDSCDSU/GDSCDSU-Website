@@ -9,11 +9,15 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Button, Toast } from "flowbite-react";
 import { MdStars } from "react-icons/md";
+import axios from 'axios';
 
 export default function Home(){
     
     {/* Resources for home pages and their handlers defined here: */}
     const [showToast, setShowToast] = useState(false);
+    const [partners, setPartners] = useState([]);
+    const [highlights, setHighlights] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -28,24 +32,52 @@ export default function Home(){
         const audio = new Audio('/message.mp3');
         audio.play().catch(error => console.error("Audio play failed:", error));
     };
-    
-    const logos = [
-    "/Maskgroup.svg",
-    "/datacamp.svg",
-    "/zapdas.svg",
-    "/geeks.svg",
-    "/vivids.svg",
-    ];
-    const hrefs =[
-    "https://bitrupt.co/",
-    "https://www.datacamp.com/",
-    "https://zapdas.co/",
-    "https://geeksofkolachi.com/",
-    "https://www.facebook.com/vividlabpk?_rdc=1&_rdr",
-    ];
-    const allLogos = [...logos, ...logos];
-    const allHrefs = [...hrefs, ...hrefs];
 
+        const logos = [
+        "/Maskgroup.svg",
+        "/datacamp.svg",
+        "/zapdas.svg",
+        "/geeks.svg",
+        "/vivids.svg",
+        ];
+        const hrefs =[
+            "https://bitrupt.co/",
+            "https://www.datacamp.com/",
+            "https://zapdas.co/",
+            "https://geeksofkolachi.com/",
+            "https://www.facebook.com/vividlabpk?_rdc=1&_rdr",
+            ];
+        const allHrefs = [...hrefs, ...hrefs];        
+        const allLogos = [...logos, ...logos];
+       
+    
+    
+    useEffect(() => {
+        const fetchHighlights = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/api/highlight');
+                const responseData = response.data;
+    
+                // Check if responseData is an array or object
+                if (Array.isArray(responseData)) {
+                    setHighlights(responseData);
+                } else if (typeof responseData === 'object') {
+                    // Convert the object to an array
+                    const highlightsArray = Object.values(responseData);
+                    setHighlights(highlightsArray);
+                } else {
+                    console.error('Unexpected response format:', responseData);
+                }
+            } catch (error) {
+                console.error('Error fetching highlights:', error);
+            }
+        };
+    
+        fetchHighlights();
+    }, []);
+     
+    
+   
     useEffect(() => {
         AOS.init();
     }, []);
@@ -63,7 +95,7 @@ export default function Home(){
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          startCounting();
+          startCounting(1);
           observer.unobserve(entry.target);
         }
       });
@@ -76,28 +108,27 @@ export default function Home(){
     };
   }, []);
 
-  const startCounting = () => {
-    const counters = document.querySelectorAll(".count");
-    const speed = 400;
+  const startCounting = (speed: number): void => {
+  const counters: NodeListOf<HTMLElement> = document.querySelectorAll('.counter');
 
-    counters.forEach((counter) => {
-      const updateCount = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
+  counters.forEach((counter: HTMLElement) => {
+    const updateCount = (): void => {
+      const target: number = +counter.getAttribute('data-target');
+      const count: number = +counter.innerText;
 
-        const increment = target / speed;
+      const increment: number = target / speed;
 
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 1);
-        } else {
-          counter.innerText = target;
-        }
-      };
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment).toString();
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target.toString();
+      }
+    };
 
-      updateCount();
-    });
-  };
+    updateCount();
+  });
+};
 
     return (
         
@@ -165,6 +196,7 @@ export default function Home(){
     </div>
     
     {/* Partners */}
+    
     <br/>
     <div className="m-5" >
         <div className="d-flex flex-column align-items-center" >
@@ -181,6 +213,8 @@ export default function Home(){
             </div>
         </div>
     </div>
+
+
 
 
 <br/>
@@ -397,22 +431,24 @@ export default function Home(){
         </div>
     </div>
     {/* Highlights Carousel: */}
-    <div className="full-page-content" >
-        <div className="d-flex flex-column align-items-center" >
-            <h1><b>Highlights</b></h1>
-        </div>
-        <br/>
-        <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-            <Carousel>
-                <img src="/carousel1.svg" alt="..." />
-                <img src="/carousel2.svg" alt="..." />
-                <img src="/carousel3.svg" alt="..." />
-                <img src="/carousel4.svg" alt="..." />
-                <img src="/carousel5.svg" alt="..." />
-                <img src="/carousel6.svg" alt="..." />
-            </Carousel>
-        </div>
+    <div className="full-page-content">
+    <div className="d-flex flex-column align-items-center">
+        <h1><b>Highlights</b></h1>
     </div>
+    <br />
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+        {highlights.length > 0 ? (
+            <Carousel>
+                {highlights[1].map((highlight, index) => (
+                    <img src={highlight.picture} alt={`Highlight ${index + 1}`} key={index} />
+                ))}
+            </Carousel>
+        ) : (
+            <p>No highlights available.</p>
+        )}
+    </div>
+</div>
+
     {/* Sponsor Form: */}
 <div className="full-page-content" data-aos='fade-up' >
     <div className="shadow-sm p-5 rounded-lg" style={{backgroundColor:'#FEECEC'}} >

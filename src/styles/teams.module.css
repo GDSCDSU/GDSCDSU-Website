@@ -15,6 +15,15 @@
   position: relative;
 }
 
+.customrowDev{
+  margin-left: 110px;
+}
+
+.customcolDev{
+  margin-left: 20px;
+}
+
+
 .Quoteimg {
   width: 700px;
   height: 300px;

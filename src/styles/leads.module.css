@@ -66,7 +66,7 @@
   font-size: 1.5rem;
   font-weight: 600;
   font-family: sans-serif;
-  margin-top: 20px;
+  margin-top: -40px;
   margin-left: 150px;
 }
 
@@ -76,6 +76,7 @@
   font-weight: 400;
   font-family: sans-serif;
   margin-left: 150px;
+  margin-bottom: 20px;
 }
 
 .description {
