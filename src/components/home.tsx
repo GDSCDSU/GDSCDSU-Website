@@ -95,7 +95,7 @@ export default function Home(){
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          startCounting();
+          startCounting(1);
           observer.unobserve(entry.target);
         }
       });
@@ -108,28 +108,27 @@ export default function Home(){
     };
   }, []);
 
-  const startCounting = () => {
-    const counters = document.querySelectorAll(".count");
-    const speed = 400;
+  const startCounting = (speed: number): void => {
+  const counters: NodeListOf<HTMLElement> = document.querySelectorAll('.counter');
 
-    counters.forEach((counter) => {
-      const updateCount = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
+  counters.forEach((counter: HTMLElement) => {
+    const updateCount = (): void => {
+      const target: number = +counter.getAttribute('data-target');
+      const count: number = +counter.innerText;
 
-        const increment = target / speed;
+      const increment: number = target / speed;
 
-        if (count < target) {
-          counter.innerText = Math.ceil(count + increment);
-          setTimeout(updateCount, 1);
-        } else {
-          counter.innerText = target;
-        }
-      };
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment).toString();
+        setTimeout(updateCount, 1);
+      } else {
+        counter.innerText = target.toString();
+      }
+    };
 
-      updateCount();
-    });
-  };
+    updateCount();
+  });
+};
 
     return (
         
