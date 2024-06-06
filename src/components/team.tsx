@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { Footer } from "flowbite-react";
 import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin} from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 
 
 const Founder = dynamic(() => import('../components/founder'), {
@@ -54,10 +55,12 @@ export default function Team() {
 
   return (
     <>
+     
       <div data-aos="fade-up">
         <img className="img-fluid" src="/teams-header.svg" alt="" />
       </div>
-
+    
+      <div className="container">
       <div data-aos="fade-up" className={styles.TeamNavigation}>
         <div
           className={`${styles.Rectangle196} ${
@@ -139,6 +142,7 @@ export default function Team() {
         >
           Executive
         </button>
+      </div>
       </div>
 
       <section>{renderComponent()}</section>
