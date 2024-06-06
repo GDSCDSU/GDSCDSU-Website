@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Button, Label, TextInput } from "flowbite-react";
+import { Button, Label, TextInput, Select } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import Image from "next/image";
@@ -9,10 +9,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 export default function Events() {
   const [showForm, setShowForm] = useState(false);
   const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetchSpeakers();
-  }, []);
+  const [filter, setFilter] = useState('speakers');
 
   const handleShowForm = () => {
     setShowForm(true);
@@ -22,16 +19,27 @@ export default function Events() {
     setShowForm(false);
   };
 
-  const fetchSpeakers = async () => {
-    const { data } = await axios.get('http://localhost:3000/api/event?topEvent=false');
+  useEffect(() => {
+    fetchFilteredData();
+  }, [filter]);
+
+  const fetchFilteredData = async () => {
+    const endpoint = filter === 'speakers' 
+      ? 'http://localhost:3000/api/event?topEvent=true&speaker=true'
+      : 'http://localhost:3000/api/event?topEvent=true';
+    const { data } = await axios.get(endpoint);
     setData(data.data);
+  };
+
+  const handleFilterChange = (event) => {
+    setFilter(event.target.value);
   };
 
   return (
     <>
-      <div className="flex justify-end mb-4">
+      <div className="flex justify-end mb-4 space-x-2">
         <Button color="blue" onClick={handleShowForm}>Add New</Button>
-        <Button color="blue" className="mr-4" onClick={handleShowList}>Records</Button>
+        <Button color="blue" onClick={handleShowList}>Records</Button>
       </div>
       {showForm ? (
         // Form Component
@@ -82,9 +90,61 @@ export default function Events() {
           </div>
         </form>
       ) : (
-        // List Component
-        <Image width={1000} height={100} src='/Highlights1.svg' alt="" />
+        <>
+          <div className="flex justify-between mb-4">
+            <div>
+              <Select id="filter" onChange={handleFilterChange} value={filter}>
+                <option value="speakers">Speakers</option>
+                <option value="events">Top Events</option>
+              </Select>
+            </div>
+          </div>
+          <div className="flex gap-5 flex-wrap">
+            {filter === 'speakers' ? (
+              data.map((speaker, index) => (
+                <SpeakerCard key={index} content={speaker.content} image={speaker.speakerImage} name={speaker.speakerName}/>
+              ))
+            ) : (
+              data.map((item, index) => (
+                <Image 
+                  key={index}
+                  width={500} 
+                  height={100} 
+                  src={item.picture} 
+                  alt={`Image ${index + 1}`} 
+                />
+              ))
+            )}
+          </div>
+        </>
       )}
     </>
+  );
+}
+
+const SpeakerCard = ({ image, name, content }) => {
+  return (
+    <div className="p-4 shadow-lg w-64 h-64 mb-4">
+      <div className="flex justify-center">
+        <div className="h-24 w-24 relative">
+          <Image
+            src={image}
+            alt="Image of the speaker"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-full"
+          />
+        </div>
+      </div>
+      <div className="text-center">
+        <h2 className="text-xl font-bold text-gray-800">{name}</h2>
+        <p className="text-gray-600 text-sm">{content}</p>
+      </div>
+      <div className="mt-4 flex justify-center space-x-4">
+        <a href="#" className="text-gray-500 hover:text-gray-700">
+          <BsLinkedin size={24} />
+        </a>
+      </div>
+    </div>
   );
 }

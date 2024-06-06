@@ -135,24 +135,26 @@ export default function Team() {
         </form>
       ) : (
         <div>
-          <div className="mb-4">
-            <Label htmlFor="team-records" value="Team" />
+          <div className="flex justify-between mb-4">
+            <div>
             <Select id="team-records" onChange={handleTeamRecordsChange} required>
               <option value="">Select Team</option>
               <option value="Team Lead">Team Lead</option>
               <option value="Core Team Member">Core Team Member</option>
               <option value="Executive-Core-Team-Member">Executive-Core-Team-Member</option>
             </Select>
+            </div>
           </div>
           {selectedTeamRecords === "Core Team Member" && (
-            <div className="mb-4">
-              <Label htmlFor="role-records" value="Team Role" />
-              <Select id="role-records" onChange={handleRoleRecordsChange} required>
-                <option value="">Select Role</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Operation">Operation</option>
-                <option value="Development">Development</option>
-              </Select>
+            <div className="flex justify-between mb-4">
+                <div>
+                <Select id="role-records" onChange={handleRoleRecordsChange} required>
+                    <option value="">Select Role</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Operation">Operation</option>
+                    <option value="Development">Development</option>
+                </Select>
+                </div>
             </div>
           )}
           <div className="w-full flex flex-wrap">
