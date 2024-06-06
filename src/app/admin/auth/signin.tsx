@@ -30,7 +30,7 @@ export default function SignInForm({ onSubmit, showAlert, alertMessage, inputCol
     }
   }
   return (
- <form className="flex max-w-md flex-col gap-4" style={{ margin: '8%' }} >
+ <form className="flex max-w-md flex-col gap-4" style={{ margin: '15%' }} >
       <h4 className='text-blue-600'>Sign in to manage</h4>
       <span className='text-blue-600' style={{ marginTop: '-5%' }}>Enter your details Below</span>
       

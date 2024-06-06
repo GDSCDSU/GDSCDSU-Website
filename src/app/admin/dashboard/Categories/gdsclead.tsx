@@ -93,8 +93,8 @@ export default function GDSCLeads() {
             {leads.map((lead,index)=>{
               return(
                 <Card
-               bio={lead.bio}
-               email={lead.email}
+                bio={lead.bio}
+                email={lead.email}
                 facebook={lead.facebook}
                 fullname={lead.fullname}
                 instagram={lead.instagram}
