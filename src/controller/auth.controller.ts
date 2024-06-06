@@ -6,7 +6,7 @@ import { connectDB } from "../../config/database.config";
 import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
 import { cookies } from "next/headers";
-
+import { ValidationError } from "joi";
 class Auth {
 
   constructor() {
@@ -19,25 +19,20 @@ class Auth {
   
   // Validate the request body
   private validate = async (body: any) => {
-    const { error } = await userLoginValidator.validateAsync(body);
-
-    if (error)
-      return generateResponse(
-        null,
-        error.message,
-        STATUS_CODES.UNPROCESSABLE_ENTITY
-      );
+    const { error } = userLoginValidator.validate(body);
+    return {error};
   };
   // check is user valid
   private isUserValid = async (body: LoginCredentials) => {
       const user = await this.isUserExist(body.email);
 
-      if (!user)  throw new Error("User not found")
+     if(!user) return null;
       // Validate the password of the user
     
       const checkPassword =  await this.isPasswordCorrect(body.password, user.password)
-
-      if(!checkPassword) throw new Error("Password does not match");
+    if(!checkPassword){
+      return generateResponse(null, "Invalid Password", STATUS_CODES.BAD_REQUEST);
+  }
       return user;
   };
 
@@ -67,17 +62,18 @@ class Auth {
       const body = await request.json();
       
       // validate the body
-      await this.validate(body);
-
+     const {error} = await this.validate(body);
+      if(error) return generateResponse(null, error.message, STATUS_CODES.BAD_REQUEST);
       // is user exist in database
      const user = await this.isUserValid(body);
-   
+      if(!user) return generateResponse(null, "Invalid Credentials", STATUS_CODES.BAD_REQUEST);
       // create a jwt token for admin dashboard
       const token =   this.generateAccessToken(user);
       cookies().set('session', token, { maxAge: 60 * 60 * 24, });
 
       return generateResponse({  user,token }, "Login Successful", STATUS_CODES.SUCCESS);
     } catch (error: any) {
+      console.log(error);
       return generateResponse(null, error.message, STATUS_CODES.INTERNAL_SERVER_ERROR);
     }
   };
