@@ -1,19 +1,19 @@
+/* Base styles */
 .TeamNavigation {
-
-  max-width: 1100px;
+  max-width: 100%;
   height: 60px;
   position: relative;
-  margin-top: 120px;
-  margin-left: 55px;
+  margin-top: 20px;
+  margin-left: 5%;
   top: 5px;
 }
 
 .Rectangle196 {
-  max-width: 820px;
+  max-width: 100%;
   height: 54px;
   border: 2px solid #3b82f6;
   border-radius: 9999px;
-  margin-left: 185px;
+  margin: 0 auto;
   padding: 3px;
   top: 15px;
   transition: border 0.3s ease;
@@ -21,7 +21,7 @@
 }
 
 .Rectangle197 {
-  width: 120px;
+  width: 15%;
   height: 46px;
   background-color: #3b82f6;
   border-radius: 9999px;
@@ -66,43 +66,68 @@
   transition: color 0.3s ease;
 }
 
+.leftFounder {
+  left: 5.2% !important;
+}
+
+.leftLeads {
+  left: 22.5% !important;
+}
+
+.leftMarketing {
+  left: 37.5% !important;
+}
+
+.leftDevelopment {
+  left: 54% !important;
+}
+
+.leftOperations {
+  left: 69% !important;
+}
+
+.leftExecutives {
+  left: 82% !important;
+}
+
+
 .Founder {
-  left: 220px;
+  left: 12%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .Leads {
-  left: 360px;
+  left: 30%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .MarketingTeam {
-  left: 470px;
+  left: 45%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .DevelopmentTeam {
-  left: 610px;
+  left: 60%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .OperationsTeam {
-  left: 770px;
+  left: 75%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .ExecutiveCoreTeam {
-  left: 905px;
+  left: 90%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
@@ -112,217 +137,157 @@
   color: white; /* Change text color to white for active button */
 }
 
-/* Additional classes for left positioning */
-.leftFounder {
-  left: 190px !important;
-}
-
-.leftLeads {
-  left: 320px !important;
-}
-
-.leftMarketing {
-  left: 445px !important;
-}
-
-.leftDevelopment {
-  left: 600px !important;
-}
-
-.leftOperations {
-  left: 750px !important;
-}
-
-.leftExecutives {
-  left: 880px !important;
-}
-
-
+/* Responsive styles */
 @media (max-width: 768px) {
   .TeamNavigation {
-    width: 100%;
-    height: auto;
-    margin-left: -155px;
+    margin-left: 2%;
   }
-
+  
   .Rectangle196 {
-    width: 95%;
-    height: 60px;
+    max-width: 95%;
+    padding: 3px;
+    top: 10px;
   }
 
   .Rectangle197 {
-    width: 120px;
-    height: 50px;
+    width: 25%;
+    height: 40px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 14px;
+    top: 10px;
   }
 
   .leftFounder {
-    left: 190px !important;
+    left: 5.2% !important;
   }
-
+  
   .leftLeads {
-    left: 290px !important;
+    left: 22.5% !important;
   }
-
+  
   .leftMarketing {
-    left: 410px !important;
+    left: 37.5% !important;
   }
-
+  
   .leftDevelopment {
-    left: 540px !important;
+    left: 54% !important;
   }
-
+  
   .leftOperations {
-    left: 670px !important;
+    left: 69% !important;
   }
-
+  
   .leftExecutives {
-    left: 790px !important;
+    left: 82% !important;
   }
-
+  
+  
+  .Founder, .Leads, .MarketingTeam, .DevelopmentTeam, .OperationsTeam, .ExecutiveCoreTeam {
+    top: 10px;
+  }
+  
   .Founder {
-    left: 215px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
+    left: 10%;
   }
-  
+
   .Leads {
-    left: 330px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
+    left: 25%;
   }
-  
+
   .MarketingTeam {
-    left: 430px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
-    
+    left: 40%;
   }
-  
+
   .DevelopmentTeam {
-    left: 550px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
+    left: 55%;
   }
-  
-  
+
   .OperationsTeam {
-    left: 690px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px; 
-   }
-  
-  
-  .ExecutiveCoreTeam {
-    left: 810px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
-    padding-left: 5px;
+    left: 70%;
   }
 
-
+  .ExecutiveCoreTeam {
+    left: 85%;
+  }
 }
 
 @media (max-width: 480px) {
   .TeamNavigation {
-    width: 100%;
-    margin-top: 40px;
-    height: 20px;
-    margin-left: -10px;
+    height: auto;
+    margin-top: 10px;
   }
-
+  
   .Rectangle196 {
-    width: 90%;
-    height: 30px;
-    margin-left:40px ;
-  }
-
-  .Rectangle197 {
-    width: 60px;
-    height: 20px;
+    max-width: 100%;
+    height: auto;
+    padding: 3px;
     top: 5px;
   }
 
+  .Rectangle197 {
+    width: 35%;
+    height: 35px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 12px;
+    top: 8px;
+  }
+  
+  .Founder, .Leads, .MarketingTeam, .DevelopmentTeam, .OperationsTeam, .ExecutiveCoreTeam {
+    top: 8px;
+  }
+
   .leftFounder {
-    left: 10% !important;
+    left: 5.2% !important;
   }
-
+  
   .leftLeads {
-    left: 23% !important;
+    left: 22.5% !important;
   }
-
+  
   .leftMarketing {
-    left: 36% !important;
+    left: 37.5% !important;
   }
-
+  
   .leftDevelopment {
-    left: 52% !important;
+    left: 54% !important;
   }
-
+  
   .leftOperations {
-    left: 68% !important;
+    left: 69% !important;
   }
-
+  
   .leftExecutives {
-    left: 83% !important;
+    left: 82% !important;
   }
-
+  
+  
   .Founder {
-    left: 60px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-  }
-  
-  .Leads {
-    left: 125px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-  }
-  
-  .MarketingTeam {
-    left: 180px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-    
-  }
-  
-  .DevelopmentTeam {
-    left: 250px;
-    top: 4px;
-    font-size: 9.2px;
-    font-weight: 700;
-    padding-top: 5px;
-  }
-  
-  
-  .OperationsTeam {
-    left: 330px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px; 
-   }
-  
-  
-  .ExecutiveCoreTeam {
-    left: 400px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-    padding-left: 5px;
+    left: 5%;
   }
 
-  
+  .Leads {
+    left: 20%;
+  }
+
+  .MarketingTeam {
+    left: 35%;
+  }
+
+  .DevelopmentTeam {
+    left: 50%;
+  }
+
+  .OperationsTeam {
+    left: 65%;
+  }
+
+  .ExecutiveCoreTeam {
+    left: 80%;
+  }
 }
