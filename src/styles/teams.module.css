@@ -1,3 +1,4 @@
+/* Base styles */
 .member_card {
   width: 300px;
   height: 260px;
@@ -15,14 +16,13 @@
   position: relative;
 }
 
-.customrowDev{
+.customrowDev {
   margin-left: 110px;
 }
 
-.customcolDev{
+.customcolDev {
   margin-left: 20px;
 }
-
 
 .Quoteimg {
   width: 700px;
@@ -118,6 +118,7 @@
   margin-left: -305px;
 }
 
+/* Responsive styles for small screens */
 @media (max-width: 768px) {
   .dotimg {
     max-width: 200px;
@@ -181,6 +182,7 @@
   }
 }
 
+/* Responsive styles for extra small screens */
 @media (max-width: 480px) {
   .customCol2 .member_card {
     margin-left: -220px;
@@ -249,5 +251,127 @@
 
   .dotimg {
     max-width: 260px;
+  }
+}
+
+/* Responsive styles for large screens */
+@media (min-width: 1024px) {
+  .member_card {
+    width: 350px;
+    height: 280px;
+    margin-left: 600px;
+  }
+
+  .Quoteimg {
+    width: 800px;
+    height: 350px;
+    margin-left: 700px;
+  }
+
+  .image_div {
+    width: 100px;
+    height: 100px;
+    left: 120px;
+  }
+
+  .name {
+    font-size: 1.75rem;
+  }
+
+  .role {
+    font-size: 1.125rem;
+  }
+
+  .member_button {
+    width: 150px;
+    height: 36px;
+    margin-left: 85px;
+  }
+
+  .btn_border {
+    width: 150px;
+    height: 36px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    top: 7px;
+    left: 6px;
+  }
+
+  .btn_text {
+    font-size: 1rem;
+    top: 7px;
+    left: 34px;
+  }
+
+  .dotimg {
+    max-width: 350px;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -400px;
+  }
+}
+
+/* Responsive styles for extra large screens */
+@media (min-width: 1280px) {
+  .member_card {
+    width: 400px;
+    height: 300px;
+    margin-left: 700px;
+  }
+
+  .Quoteimg {
+    width: 900px;
+    height: 400px;
+    margin-left: 800px;
+  }
+
+  .image_div {
+    width: 120px;
+    height: 120px;
+    left: 140px;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .role {
+    font-size: 1.25rem;
+  }
+
+  .member_button {
+    width: 160px;
+    height: 40px;
+    margin-left: 95px;
+  }
+
+  .btn_border {
+    width: 160px;
+    height: 40px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    left: 8px;
+  }
+
+  .btn_text {
+    font-size: 1.125rem;
+    top: 8px;
+    left: 36px;
+  }
+
+  .dotimg {
+    max-width: 400px;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -450px;
   }
 }

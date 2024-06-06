@@ -1,3 +1,4 @@
+/* Base styles */
 .Leads {
   margin-left: 520px;
 }
@@ -14,12 +15,11 @@
   margin-left: 600px;
 }
 
-.verticalimg{
+.verticalimg {
   position: absolute;
   margin-left: -5px;
   height: 320px;
 }
-
 
 .ellipse {
   width: 122px;
@@ -143,18 +143,18 @@
   display: inline-block;
 }
 
+/* Responsive styles */
 
-@media (max-width: 768px) {
-  .Quoteimg{
+@media (max-width: 1280px) {
+  .Quoteimg {
     margin-left: 50px;
     margin-bottom: -80px;
   }
 
-  .verticalimg{
+  .verticalimg {
     max-width: 150px;
     max-height: 380px;
   }
-
 
   .Leads {
     margin-left: 20px;
@@ -185,7 +185,7 @@
   }
 
   .description {
-    margin-left: 120px ;
+    margin-left: 120px;
   }
 
   .socials {
@@ -198,12 +198,87 @@
     width: 25px;
     height: 25px;
   }
+}
 
-  
+@media (max-width: 1024px) {
+  .Leads {
+    margin-left: 320px;
+  }
+
+  .rectangle198 {
+    width: 600px;
+    margin-left: -100px;
+  }
+
+  .socials {
+    width: 150px;
+    height: 150px;
+    margin-left: 320px;
+    margin-top: -120px;
+  }
+
+  .socials img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Quoteimg {
+    margin-left: 50px;
+    margin-bottom: -80px;
+  }
+
+  .verticalimg {
+    max-width: 150px;
+    max-height: 380px;
+  }
+
+  .Leads {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+
+  .rectangle198 {
+    width: 650px;
+    height: 320px;
+    margin-left: -10px;
+  }
+
+  .profileimage {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+
+  .name {
+    margin-top: -120px;
+    margin-left: 150px;
+  }
+
+  .designation {
+    margin-top: 0px;
+    margin-left: 150px;
+  }
+
+  .description {
+    margin-left: 120px;
+  }
+
+  .socials {
+    width: 150px;
+    height: 150px;
+    margin-left: 470px;
+  }
+
+  .socials img {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media (max-width: 480px) {
-  
   .Quoteimg {
     width: 100%;
     height: auto;
@@ -213,11 +288,10 @@
     display: block;
   }
 
-  .verticalimg{
+  .verticalimg {
     max-width: 0px;
     max-height: 0px;
   }
-
 
   .Leads {
     margin-top: 10px;
@@ -249,14 +323,11 @@
   }
 
   .description {
-    margin-left: 120px ;
+    margin-left: 120px;
     width: 250px;
-    
     word-wrap: break-word;
     word-break: keep-all;
   }
-
- 
 
   .socials {
     width: 120px;
@@ -269,5 +340,4 @@
     width: 20px;
     height: 20px;
   }
-
 }

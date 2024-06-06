@@ -1,4 +1,4 @@
-
+/* Base styles */
 .card {
   width: 504px;
   height: 600px;
@@ -10,13 +10,13 @@
   padding: 1.25rem;
 }
 
-.Quoteimg{
+.Quoteimg {
   width: 700px;
   height: 300px;
   margin-left: 600px;
 }
 
-.verticalimg{
+.verticalimg {
   position: absolute;
   height: 330px;
 }
@@ -29,7 +29,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .card p {
@@ -60,7 +59,6 @@
   margin-left: 20px;
 }
 
-
 .container {
   width: 500px;
   height: 330px;
@@ -69,7 +67,6 @@
   border-radius: 0.75rem;
   margin-top: 20px;
   margin-left: 320px;
-  
 }
 
 .imageContainer {
@@ -106,7 +103,6 @@
   font-family: sans-serif;
   text-transform: capitalize;
   margin-left: 120px;
-
 }
 
 .designation {
@@ -130,17 +126,16 @@
   margin-left: 120px;
 }
 
-.profilepic{
+.profilepic {
   margin-left: 10px;
 }
 
-.founderimg{
+.founderimg {
   width: 200px;
   margin-top: -210px;
   margin-left: 130px;
   position: relative;
 }
-
 
 .header {
   width: 505px;
@@ -161,15 +156,13 @@
   background: green;
 }
 
-.dotimg{
+.dotimg {
   max-width: 700px;
   max-height: 400px;
   position: relative;
   left: -20px;
   top: -40px;
-
 }
-
 
 .Vector {
   width: 20px;
@@ -179,14 +172,14 @@
   left: 4px;
 }
 
-@media (max-width: 768px) {
-  .Quoteimg{
+@media (max-width: 1280px) {
+  .Quoteimg {
     max-width: 100%;
     margin-left: 50px;
     margin-bottom: -50px;
   }
 
-  .verticalimg{
+  .verticalimg {
     max-width: 250px;
     max-height: 380px;
   }
@@ -197,7 +190,7 @@
     margin-top: 10px;
   }
 
-  .dotimg{
+  .dotimg {
     max-width: 460px;
   }
 
@@ -221,7 +214,7 @@
     width: 500px;
     height: 330px;
     margin-left: 130px;
-    margin-top: 50px; 
+    margin-top: 50px;
     padding: 0px;
   }
 
@@ -231,22 +224,18 @@
     margin-top: 5px;
     margin-left: 120px;
     word-wrap: break-word;
-
   }
 
   .designation {
     margin-top: 5px;
     margin-left: 120px;
     word-wrap: break-word;
-
   }
 
   .description {
     margin-top: 5px;
     margin-left: 120px;
     word-wrap: break-word;
-    word-wrap: break-word;
-
   }
 
   .founderimg {
@@ -254,8 +243,155 @@
     margin-bottom: 20px;
     width: 150px;
   }
+}
 
-  
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .Quoteimg {
+    max-width: 100%;
+    margin-left: 50px;
+    margin-bottom: -50px;
+  }
+
+  .verticalimg {
+    max-width: 250px;
+    max-height: 380px;
+  }
+
+  .card {
+    width: 60%;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
+  .dotimg {
+    max-width: 460px;
+  }
+
+  .header {
+    width: 60%;
+    margin-left: 150px;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  .group {
+    margin-left: 100px;
+    flex-direction: row;
+  }
+
+  .group .icon {
+    margin-left: 10px;
+  }
+
+  .container {
+    width: 500px;
+    height: 330px;
+    margin-left: 130px;
+    margin-top: 50px;
+    padding: 0px;
+  }
+
+  .name,
+  .designation,
+  .description {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+  }
+
+  .designation {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+  }
+
+  .description {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+  }
+
+  .founderimg {
+    margin-top: -170px;
+    margin-bottom: 20px;
+    width: 150px;
+  }
+}
+
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .Quoteimg {
+    max-width: 100%;
+    margin-left: 50px;
+    margin-bottom: -50px;
+  }
+
+  .verticalimg {
+    max-width: 250px;
+    max-height: 380px;
+  }
+
+  .card {
+    width: 60%;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
+  .dotimg {
+    max-width: 460px;
+  }
+
+  .header {
+    width: 60%;
+    margin-left: 150px;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  .group {
+    margin-left: 100px;
+    flex-direction: row;
+  }
+
+  .group .icon {
+    margin-left: 10px;
+  }
+
+  .container {
+    width: 500px;
+    height: 330px;
+    margin-left: 130px;
+    margin-top: 50px;
+    padding: 0px;
+  }
+
+  .name,
+  .designation,
+  .description {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+  }
+
+  .designation {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+  }
+
+  .description {
+    margin-top: 5px;
+    margin-left: 120px;
+    word-wrap: break-word;
+  }
+
+  .founderimg {
+    margin-top: -170px;
+    margin-bottom: 20px;
+    width: 150px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -270,12 +406,11 @@
 
   .card {
     width: 70%;
-    height: 90%;
+    height: auto;
     margin: 15px auto;
   }
-  
 
-  .dotimg{
+  .dotimg {
     max-width: 335px;
   }
 
@@ -295,13 +430,12 @@
     margin-bottom: 40px;
   }
 
-  .verticalimg{
-    
+  .verticalimg {
     max-width: 300px;
     max-height: 350px;
   }
 
-  .name{
+  .name {
     margin-left: 125px;
     margin-top: 40px;
     font-size: 0.875rem;
@@ -334,4 +468,3 @@
     font-size: 1.25rem;
   }
 }
-
