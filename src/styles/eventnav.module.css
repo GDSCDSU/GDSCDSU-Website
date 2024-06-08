@@ -107,19 +107,19 @@
   }
   
   .Events {
-    left: 10%;
+    left: 15%;
   }
 
   .Speakers {
-    left: 50%;
+    left: 70%;
   }
 
   .leftAllEvents {
-    left: 10px !important;
+    left: 5.5% !important;
   }
   
   .leftSpeaker {
-    left: 480px !important;
+    left: 49.5% !important;
   }
 }
 

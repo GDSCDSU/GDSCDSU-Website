@@ -15,12 +15,12 @@
   position: relative;
 }
 
-.customCol{
+.customCol {
   margin-left: 100px;
 }
 
 .customrowDev {
- margin-left: 40px;
+  margin-left: 40px;
 }
 
 .customcolDev {
@@ -115,13 +115,184 @@
 }
 
 /* Responsive styles for small screens */
-@media (max-width: 767px) {
+@media (max-width: 1280px) {
+  .Quoteimg {
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  .Quoteimg{
+  .member_card {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .image_div {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .member_button {
+    width: 160px;
+    height: 40px;
+  }
+
+  .btn_border {
+    width: 100%;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .btn_text {
+    font-size: 0.875rem;
+  }
+
+  .dotimg {
+    max-width: 500px;
+  }
+
+  .customCol2 .member_card {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .Quoteimg {
+    width: 80%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .member_card {
+    width: 250px;
+    margin: 20px auto;
+    margin-left: 10px;
+  }
+
+  .image_div {
+    width: 120px;
+    height: 120px;
+    margin-left: 70px;
+    margin-right: auto;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .member_button {
+    width: 150px;
+    height: 40px;
+  }
+
+  .btn_border {
+    width: 100%;
+  }
+
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .btn_text {
+    font-size: 0.875rem;
+  }
+
+  .dotimg {
+    max-width: 250px;
+  }
+
+  .customCol2 .member_card {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 990px) {
+  .Quoteimg {
+    width: 80%;
+    height: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .member_card {
+    width: 250px;
+    margin: 20px auto;
+  }
+
+  .image_div {
+    width: 120px;
+    height: 120px;
+    margin-left: 75px;
+    margin-right: auto;
+  }
+
+  .name {
+    font-size: 1.25rem;
+  }
+
+  .role {
+    font-size: 1rem;
+  }
+
+  .member_button {
+    width: 140px;
+    height: 40px;
+  }
+
+  .btn_border {
+    width: 100%;
+    height: 40px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .btn_text {
+    width: 120px;
+    font-size: 0.875rem;
+    margin-left: -17px;
+  }
+
+  .dotimg {
+    max-width: 250px;
+  }
+
+  .customCol2 .member_card {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .Quoteimg {
     max-width: 80%;
-    margin-top: -150px;
+    margin-top: 10px;
     margin-left: 80px;
-    margin-bottom: -150px;
+    margin-bottom: 10px;
   }
 
   .dotimg {
@@ -136,7 +307,7 @@
     margin-bottom: 10px;
   }
 
-  .dotimg{
+  .dotimg {
     max-width: 300px;
   }
 
@@ -144,7 +315,6 @@
     width: 300px;
     margin-left: 120px;
   }
-
 
   .image_div {
     width: 120px;
@@ -164,18 +334,20 @@
   }
 
   .member_button {
-    max-width: 120px;
-    margin-left: 60px;
+    max-width: 140px;
+    margin-left: 70px;
   }
 
   .btn_border {
     height: 28px;
     top: 2px;
+    left: 10px;
   }
 
   .icon {
     width: 18px;
     height: 18px;
+    left: 16px;
   }
 
   .btn_text {
@@ -204,7 +376,7 @@
   }
 
   .member_card {
-    max-width: 200px; 
+    max-width: 200px;
     height: auto;
     margin: 0 auto;
     margin-left: 130px; /* Center the card */
@@ -233,7 +405,7 @@
   .role {
     font-size: 0.75rem;
     margin-bottom: 40px;
-    text-align:center; /* Center the role text */
+    text-align: center; /* Center the role text */
   }
 
   .member_button {
@@ -269,17 +441,10 @@
   }
 
   .dotimg {
-    display:block;
+    display: block;
     width: 200px;
   }
-
-  
-  
 }
-
-
-
-  
 
 @media (max-width: 400px) {
   .customCol2 .member_card {
@@ -296,7 +461,7 @@
   }
 
   .member_card {
-    max-width: 200px; 
+    max-width: 200px;
     height: auto;
     margin: 0 auto;
     margin-left: 105px; /* Center the card */
@@ -325,7 +490,7 @@
   .role {
     font-size: 0.75rem;
     margin-bottom: 40px;
-    text-align:center; /* Center the role text */
+    text-align: center; /* Center the role text */
   }
 
   .member_button {
@@ -361,8 +526,7 @@
   }
 
   .dotimg {
-    display:block;
+    display: block;
     width: 200px;
   }
-
 }
