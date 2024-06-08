@@ -1,12 +1,11 @@
 /* Base styles */
 .member_card {
-  width: 300px;
-  height: 260px;
+  width: 337px;
+  height: 360px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin: 20px;
-  margin-left: 500px;
-  margin-bottom: 15px;
+  margin: 20px auto; /* Center the card */
+  margin-left: 250px;
   border-radius: 0.75rem;
 }
 
@@ -16,41 +15,36 @@
   position: relative;
 }
 
+.customCol{
+  margin-left: 100px;
+}
+
 .customrowDev {
-  margin-left: 110px;
+ margin-left: 40px;
 }
 
 .customcolDev {
-  margin-left: 20px;
+  margin-left: 170px;
 }
 
 .Quoteimg {
-  width: 700px;
-  height: 300px;
-  margin-left: 610px;
+  width: 900px;
+  height: 400px;
+  margin-left: 490px;
 }
 
 .image_div {
-  width: 94px;
-  height: 94px;
+  width: 120px;
+  height: 120px;
   position: absolute;
   top: 0;
-  left: 100px;
+  margin-left: 110px; /* Center the image */
   border-radius: 9999px;
 }
 
-.image1 {
-  width: 93.51px;
-  height: 93.51px;
-  position: absolute;
-  top: 0.49px;
-  left: 0.49px;
-  margin-left: 145px;
-}
-
 .profilepic {
-  width: 94px;
-  height: 94px;
+  width: 120px;
+  height: 120px;
   position: absolute;
   top: 0;
   left: 0;
@@ -58,6 +52,8 @@
 
 .name {
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
   color: #111827;
   font-size: 1.5rem;
   font-weight: 600;
@@ -68,22 +64,22 @@
 .role {
   text-align: center;
   color: #4b5563;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   font-family: sans-serif;
 }
 
 .member_button {
-  width: 137px;
-  height: 32px;
+  width: 180px;
+  height: 40px;
   position: relative;
-  margin-left: 75px;
+  margin: 50px auto 0;
   margin-top: 50px;
 }
 
 .btn_border {
-  width: 137px;
-  height: 32px;
+  width: 180px;
+  height: 40px;
   position: absolute;
   top: 0;
   left: 0;
@@ -92,38 +88,46 @@
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 26px;
+  height: 26px;
   position: absolute;
   top: 7px;
-  left: 4px;
+  left: 8px;
 }
 
 .btn_text {
   position: absolute;
-  top: 7px;
-  left: 30px;
+  top: 8px;
+  left: 45px;
   text-align: center;
   color: #4b5563;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: sans-serif;
 }
 
 .dotimg {
-  max-width: 300px;
+  max-width: 600px;
 }
 
 .customCol2 .member_card {
-  margin-left: -305px;
+  margin-left: -360px;
 }
 
 /* Responsive styles for small screens */
-@media (max-width: 768px) {
+@media (max-width: 767px) {
+
+  .Quoteimg{
+    max-width: 80%;
+    margin-top: -150px;
+    margin-left: 80px;
+    margin-bottom: -150px;
+  }
+
   .dotimg {
     max-width: 200px;
   }
-  
+
   .customRow {
     justify-content: space-around;
   }
@@ -132,35 +136,36 @@
     margin-bottom: 10px;
   }
 
-  .member_card {
-    width: 200px;
-    margin-left: -50px;
+  .dotimg{
+    max-width: 300px;
   }
 
-  .Quoteimg {
-    margin-left: 50px;
-    margin-bottom: -80px;
+  .member_card {
+    width: 300px;
+    margin-left: 120px;
   }
+
 
   .image_div {
     width: 120px;
     height: 100px;
-    margin-left: -50px;
+    margin-left: 95px;
   }
 
   .name {
     margin-left: 10px;
     font-size: 1.25rem;
+    margin-bottom: 10px;
   }
 
   .role {
-    font-size: 0.875rem;
+    font-size: 0.975rem;
     margin-left: 10px;
   }
 
   .member_button {
     max-width: 120px;
-    margin-left: 30px;
+    margin-left: 60px;
   }
 
   .btn_border {
@@ -174,7 +179,8 @@
   }
 
   .btn_text {
-    font-size: 0.75rem;
+    width: 100px;
+    font-size: 0.85rem;
   }
 
   .customCol2 .member_card {
@@ -185,7 +191,7 @@
 /* Responsive styles for extra small screens */
 @media (max-width: 480px) {
   .customCol2 .member_card {
-    margin-left: -220px;
+    margin-left: -85px;
   }
 
   .Quoteimg {
@@ -193,20 +199,23 @@
     height: auto;
     margin-top: 60px;
     margin-bottom: 20px;
-    margin-left: auto;
+    margin-left: 9%;
     display: block;
   }
 
   .member_card {
-    width: 54%;
-    margin: 10px auto;
+    max-width: 200px; 
+    height: auto;
+    margin: 0 auto;
+    margin-left: 130px; /* Center the card */
+    transform: translateX(-65%);
   }
 
   .image_div {
     width: 80px;
     height: 80px;
-    margin-top: 20px;
-    margin-left: -5px;
+    left: 20%; /* Center the image */
+    transform: translateX(-70%);
   }
 
   .profilepic {
@@ -216,162 +225,144 @@
 
   .name {
     font-size: 1rem;
-    margin-top: 15px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-align: center; /* Center the name text */
   }
 
   .role {
     font-size: 0.75rem;
-    margin-top: 5px;
+    margin-bottom: 40px;
+    text-align:center; /* Center the role text */
   }
 
   .member_button {
-    width: 60px;
-    height: 24px;
+    width: 350px; /* Adjusted width to fit better on small screens */
+    height: 30px; /* Adjusted height to fit better on small screens */
+    margin: 10px auto; /* Center the button */
+    left: -7px;
   }
 
   .btn_border {
-    width: 130px;
-    height: 35px;
-    margin-top: -19px;
-    margin-left: 40px;
+    width: 115%; /* Make border width 100% of the button */
+    height: 100%; /* Make border height 100% of the button */
+    border: 1px solid #4b5563;
+    border-radius: 9999px;
+    top: -5px;
+    position: relative;
   }
 
   .icon {
-    max-width: 70px;
-    max-height: 60px;
-    margin-top: -16px;
-    margin-left: 40px;
+    width: 24px; /* Adjusted width to fit better on small screens */
+    height: 24px; /* Adjusted height to fit better on small screens */
+    top: -2px;
+    left: 3px;
+    position: absolute;
   }
 
   .btn_text {
-    width: 105px;
-    top: -10px;
-    margin-left: 30px;
-  }
-
-  .dotimg {
-    max-width: 260px;
-  }
-}
-
-/* Responsive styles for large screens */
-@media (min-width: 1024px) {
-  .member_card {
-    width: 350px;
-    height: 280px;
-    margin-left: 600px;
-  }
-
-  .Quoteimg {
-    width: 800px;
-    height: 350px;
-    margin-left: 700px;
-  }
-
-  .image_div {
     width: 100px;
-    height: 100px;
-    left: 120px;
-  }
-
-  .name {
-    font-size: 1.75rem;
-  }
-
-  .role {
-    font-size: 1.125rem;
-  }
-
-  .member_button {
-    width: 150px;
-    height: 36px;
-    margin-left: 85px;
-  }
-
-  .btn_border {
-    width: 150px;
-    height: 36px;
-  }
-
-  .icon {
-    width: 22px;
-    height: 22px;
-    top: 7px;
-    left: 6px;
-  }
-
-  .btn_text {
-    font-size: 1rem;
-    top: 7px;
-    left: 34px;
+    font-size: 0.875rem;
+    top: 0px;
+    left: 32px;
+    position: absolute;
   }
 
   .dotimg {
-    max-width: 350px;
+    display:block;
+    width: 200px;
   }
 
-  .customCol2 .member_card {
-    margin-left: -400px;
-  }
+  
+  
 }
 
-/* Responsive styles for extra large screens */
-@media (min-width: 1280px) {
-  .member_card {
-    width: 400px;
-    height: 300px;
-    margin-left: 700px;
+
+
+  
+
+@media (max-width: 400px) {
+  .customCol2 .member_card {
+    margin-left: -85px;
   }
 
   .Quoteimg {
-    width: 900px;
-    height: 400px;
-    margin-left: 800px;
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: 9%;
+    display: block;
+  }
+
+  .member_card {
+    max-width: 200px; 
+    height: auto;
+    margin: 0 auto;
+    margin-left: 105px; /* Center the card */
+    transform: translateX(-65%);
   }
 
   .image_div {
-    width: 120px;
-    height: 120px;
-    left: 140px;
+    width: 80px;
+    height: 80px;
+    left: 20%; /* Center the image */
+    transform: translateX(-70%);
+  }
+
+  .profilepic {
+    width: 80px;
+    height: 80px;
   }
 
   .name {
-    font-size: 2rem;
+    font-size: 1rem;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    text-align: center; /* Center the name text */
   }
 
   .role {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
+    margin-bottom: 40px;
+    text-align:center; /* Center the role text */
   }
 
   .member_button {
-    width: 160px;
-    height: 40px;
-    margin-left: 95px;
+    width: 350px; /* Adjusted width to fit better on small screens */
+    height: 30px; /* Adjusted height to fit better on small screens */
+    margin: 10px auto; /* Center the button */
+    left: -7px;
   }
 
   .btn_border {
-    width: 160px;
-    height: 40px;
+    width: 115%; /* Make border width 100% of the button */
+    height: 100%; /* Make border height 100% of the button */
+    border: 1px solid #4b5563;
+    border-radius: 9999px;
+    top: -5px;
+    position: relative;
   }
 
   .icon {
-    width: 24px;
-    height: 24px;
-    top: 8px;
-    left: 8px;
+    width: 24px; /* Adjusted width to fit better on small screens */
+    height: 24px; /* Adjusted height to fit better on small screens */
+    top: -2px;
+    left: 3px;
+    position: absolute;
   }
 
   .btn_text {
-    font-size: 1.125rem;
-    top: 8px;
-    left: 36px;
+    width: 100px;
+    font-size: 0.875rem;
+    top: 0px;
+    left: 32px;
+    position: absolute;
   }
 
   .dotimg {
-    max-width: 400px;
+    display:block;
+    width: 200px;
   }
 
-  .customCol2 .member_card {
-    margin-left: -450px;
-  }
 }

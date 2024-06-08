@@ -108,80 +108,6 @@
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
-  .card_container {
-    margin-top: 100px;
-    margin-left: 220px;
-    margin-bottom: 50px;
-    width: 350px;
-    height: 430px;
-  }
-
-  .image {
-    width: 60%;
-    margin-top: -80px;
-    margin-left: 75px;
-  }
-
-  .heading {
-    margin-left: 90px;
-    margin-top: 100px; 
-    margin-bottom: -70px;     
-  }
-
-  .name, .position, .event, .eventTitle {
-    font-size: 1rem;
-    margin-top: 10px;
-  }
-
-  .Rectangle191, .Vector, .LinkedinProfile {
-    margin-left: -50px;
-  }
-
-  .vectorimg1 {
-    width: 80%;
-    max-width: 160px;
-    margin-left: 620px;
-  }
-
-  .vectorimg2 {
-    max-width: 160px;
-    margin-left: 0px;
-  }
-}
-
-@media (max-width: 480px) {
-  .card_container {
-    margin-left: 60px;
-  }
-
-  .image {
-    width: 60%;
-    margin-top: 10px;
-    margin-left: 67px;
-  }
-
-  .name, .position, .event, .eventTitle {
-    font-size: 0.875rem;
-    margin-top: 5px;
-  }
-
-  .Rectangle191, .Vector, .LinkedinProfile {
-    margin-left: -40px;
-  }
-
-  .vectorimg1 {
-    width: 80%;
-    max-width: 160px;
-    margin-left: 320px;
-  }
-
-  .vectorimg2 {
-    max-width: 160px;
-    margin-left: 0px;
-  }
-}
-
 @media (max-width: 1280px) {
   .card_container {
     margin-left: 250px;
@@ -261,5 +187,147 @@
   .vectorimg2 {
     max-width: 160px;
     margin-left: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card_container {
+    margin-top: 100px;
+    margin-left: 120px;
+    margin-bottom: 50px;
+    width: 350px;
+    height: 430px;
+  }
+
+  .image {
+    width: 60%;
+    margin-top: -80px;
+    margin-left: 75px;
+  }
+
+  .heading {
+    margin-left: 90px;
+    margin-top: 100px; 
+    margin-bottom: -70px;     
+  }
+
+  .name, .position, .event, .eventTitle {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .Rectangle191, .Vector, .LinkedinProfile {
+    margin-left: -50px;
+  }
+
+  .vectorimg1 {
+    width: 80%;
+    max-width: 160px;
+    margin-left: 620px;
+  }
+
+  .vectorimg2 {
+    max-width: 160px;
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card_container {
+    margin-bottom: auto;
+    width: 70%; /* Ensure it takes the full width of the viewport */
+    margin-left: 60px;
+    height: 350px; /* Center align the container */
+  }
+
+  .image {
+    width: 50%;
+    height: 150px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    text-align: center; /* Center align heading */
+    margin-top: 20px;
+  }
+
+  .name, .position, .event, .eventTitle {
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+
+  .Rectangle191, .Vector, .LinkedinProfile {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Group718{
+    margin-left: -70px;
+  }
+  
+
+  .vectorimg1 {
+    width: 80%;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg2 {
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .card_container {
+    margin-bottom: auto;
+    width: 70%; /* Ensure it takes the full width of the viewport */
+    margin-left: 60px;
+    height: 300px; /* Center align the container */
+  }
+
+  .image {
+    width: 60%;
+    height: 150px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    text-align: center; /* Center align heading */
+    margin-top: 20px;
+  }
+
+  .name, .position, .event, .eventTitle {
+    font-size: 0.875rem;
+    margin-top: 5px;
+  }
+
+  .Rectangle191, .Vector, .LinkedinProfile {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Group718{
+    margin-left: -90px;
+  }
+  
+
+  .vectorimg1 {
+    width: 80%;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg2 {
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

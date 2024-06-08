@@ -338,7 +338,7 @@
   }
 
   .customRow2 .Rectangle198 {
-    margin-left: 80px;
+    margin-left: 60px;
     padding: 0px;
     height: auto;
   }
@@ -363,7 +363,7 @@
   .Rectangle198 {
     width: 300px;
     height: auto;
-    margin-left: -220px;
+    margin-left: -240px;
     padding: 10px;
   }
 
@@ -390,6 +390,7 @@
   .Description {
     margin: 10px;
     font-size: 0.875rem;
+    margin-bottom: 30px;
   }
 
   .dotimg {
@@ -411,6 +412,102 @@
 
   .Vector {
     margin-top: -19px;
+    margin-left: 30px;
+  }
+
+  .LinkedinProfile {
+    width: 105px;
+    top: -13px;
+    margin-left: 20px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .Quoteimg {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block;
+  }
+
+  .customRow2 .Rectangle198 {
+    margin-left: 35px;
+    padding: 0px;
+    height: auto;
+  }
+
+  .customRow2 .dotimg {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+
+  .customRow2 .Rectangle191 {
+    margin-left: 40px;
+  }
+
+  .customRow2 .Vector {
+    margin-left: 40px;
+  }
+
+  .customRow2 .LinkedinProfile {
+    margin-left: 30px;
+  }
+
+  .Rectangle198 {
+    width: 300px;
+    height: auto;
+    margin-left: -265px;
+    padding: 10px;
+  }
+
+  .Ellipse44 {
+    width: 120px;
+    height: 120px;
+    margin-left: -50px;
+  }
+
+  .image1,
+  .profilepic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .role {
+    font-size: 0.75rem;
+  }
+
+  .Description {
+    margin: 10px;
+    font-size: 0.875rem;
+    margin-bottom: 30px;
+  }
+
+  .dotimg {
+    max-width: 302px;
+    margin-top: -27px;
+    margin-left: -11px;
+  }
+
+  .Group718 {
+    width: 100px;
+    height: 24px;
+  }
+
+  .Rectangle191 {
+    height: 30px;
+    margin-top: -19px;
+    margin-left: 30px;
+  }
+
+  .Vector {
+    margin-top: -20px;
     margin-left: 30px;
   }
 

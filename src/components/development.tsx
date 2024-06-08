@@ -63,9 +63,9 @@ export default function Development() {
           </div>
 
           {/* Members Div 2 */}
-          <div data-aos="fade-up" className={`row ${teams.customrowDev}`}>
+          <div data-aos="fade-up" className={`row ${teams.customRow}`} style={{marginLeft:'220px'}}>
             {developers[1].slice(3, 5).map((item, index) => (
-              <div className={`col-md-2 offset-md-0 ${teams.customcolDev}`} key={index}>
+              <div className={`col-md-2 offset-md-1 ${teams.customCol}`} style={{marginLeft:'100px'}} key={index}>
                 <div className={teams.member_card}>
                   <div className={teams.picheader}></div>
                   <div className={teams.card_content}>

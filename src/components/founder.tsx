@@ -112,9 +112,9 @@ export default function Founder() {
               <img className={founder.dotimg} src='/dotbackground.svg' alt='' />
 
               <img className={founder.founderimg} src={founderData.imageSrc} />
-              <h2>{founderData.name}</h2>
-              <p>{founderData.designation}</p>
-              <p>{founderData.description}</p>
+              <h2 className={founder.foundername}>{founderData.name}</h2>
+              <p className={founder.founderdesignation}>{founderData.designation}</p>
+              <p className={founder.founderdescription}>{founderData.description}</p>
 
               <div className={founder.group}>
                 {founderData.socials.map((social, index) => (

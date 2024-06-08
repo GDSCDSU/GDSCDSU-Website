@@ -201,25 +201,33 @@
 }
 
 @media (max-width: 1024px) {
+  .Quoteimg{
+    margin-left: 170px;
+  }
   .Leads {
-    margin-left: 320px;
+    margin-left: 180px;
   }
 
   .rectangle198 {
     width: 600px;
-    margin-left: -100px;
+    margin-left: 10px;
   }
 
   .socials {
     width: 150px;
     height: 150px;
-    margin-left: 320px;
-    margin-top: -120px;
+    margin-left: 430px;
+    margin-top: -80px;
   }
 
   .socials img {
     width: 25px;
     height: 25px;
+  }
+
+  .description{
+    width: 400px;
+    font: 1em sans-serif;
   }
 }
 
@@ -253,7 +261,7 @@
   }
 
   .name {
-    margin-top: -120px;
+    margin-top: -70px;
     margin-left: 150px;
   }
 
@@ -263,13 +271,16 @@
   }
 
   .description {
+    width: 500px;
+    font: 1em sans-serif;
     margin-left: 120px;
   }
 
   .socials {
     width: 150px;
     height: 150px;
-    margin-left: 470px;
+    top: 30px;
+    margin-left: 480px;
   }
 
   .socials img {
@@ -289,8 +300,7 @@
   }
 
   .verticalimg {
-    max-width: 0px;
-    max-height: 0px;
+    height: 1500px;
   }
 
   .Leads {
@@ -300,9 +310,9 @@
   }
 
   .rectangle198 {
-    width: 400px;
-    height: 560px;
-    margin-left: -30px;
+    width: 370px;
+    height: 390px;
+    margin-left: -40px;
   }
 
   .profileimage {
@@ -320,24 +330,94 @@
   .designation {
     margin-top: 0px;
     margin-left: 150px;
+    margin-bottom: 10px;
   }
 
   .description {
-    margin-left: 120px;
-    width: 250px;
-    word-wrap: break-word;
-    word-break: keep-all;
+    margin-left: 140px;
+    width: 200px;
+    font-size: 0.65rem;
+    font-weight: 300;
   }
 
   .socials {
     width: 120px;
     height: 100px;
-    margin-left: 270px;
-    margin-top: -80px;
+    margin-left: 240px;
+    margin-top: -120px;
+    margin-bottom: 60px;
   }
 
   .socials img {
     width: 20px;
     height: 20px;
   }
+ 
 }
+
+@media (max-width: 400px) {
+  .Quoteimg {
+    width: 100%;
+    height: auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    display: block;
+  }
+
+  .verticalimg {
+    display: none;
+  }
+
+  .Leads {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: auto;
+  }
+
+  .rectangle198 {
+    width: 320px;
+    height: 410px;
+    margin-left: -40px;
+  }
+
+  .profileimage {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .name {
+    margin-top: -70px;
+    margin-left: 150px;
+  }
+
+  .designation {
+    margin-top: 0px;
+    margin-left: 150px;
+    margin-bottom: 0px;
+  }
+
+  .description {
+    margin-left: 0px;
+    width: 310px;
+    font-size: 0.75rem;
+    
+  }
+
+  .socials {
+    width: 120px;
+    height: 100px;
+    margin-left: 180px;
+    margin-top: -120px;
+  }
+
+  .socials img {
+    width: 20px;
+    height: 20px;
+  }
+ 
+}
+
+

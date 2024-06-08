@@ -55,8 +55,8 @@ export default function Speakers() {
                     <img className={styles.image} src={speaker.speakerImage} alt="Profile" />
                     <div className={styles.name}>{speaker.speaker}</div>
                     <div className={styles.position}>{speaker.SpeakerBio}</div>
-                    <div className={styles.event}>{speaker.name}</div>
-                    <div className={styles.eventTitle}>{speaker.title}</div>
+                    <div className={styles.event}>Event Name:{speaker.name}</div>
+                    <div className={styles.eventTitle}>Event Type:{speaker.title}</div>
                     <div className={styles.group718}>
                       <a href={speaker.speakerLinkedln} target="_blank" rel="noopener noreferrer">
                         <div className={styles.Group718}>
