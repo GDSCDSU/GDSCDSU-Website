@@ -84,7 +84,48 @@
 
 /* Responsive styles */
 /* Responsive styles for 1280px and 1024px */
-@media (max-width: 1280px), (max-width: 1024px) {
+@media (max-width: 1280px) {
+  .EventsNavigation {
+    margin-left: 2%;
+    top: 20px;
+  }
+  
+  .nav_border {
+    width: 90%;
+    left: 5%;
+    top: 6px;
+  }
+
+  .active_tab {
+    width: 45%;
+    left: 5%;
+    top: 10px;
+  }
+
+  .nav_button {
+    font-size: 0.9rem;
+  }
+  
+  .Events {
+    left: 15%;
+  }
+
+  .Speakers {
+    left: 70%;
+  }
+
+  .leftAllEvents {
+    left: 5.5% !important;
+  }
+  
+  .leftSpeaker {
+    left: 49.5% !important;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
   .EventsNavigation {
     margin-left: 2%;
     top: 20px;

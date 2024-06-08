@@ -84,22 +84,24 @@
 }
 
 /* Responsive styles for 1280px */
-@media (max-width: 1280px) {
+@media (max-width: 1340px) {
   .event_card {
     width: 80%;
-    margin-left: 10%;
+    height: 190px;
+    margin-left: 15%;
     margin-top: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 170px;
   }
 
   .image {
     width: 100px;
+    height: 100px;
     margin-left: calc(50% - 50px);
     margin-top: -200px;
   }
 
   .heading {
-    margin-left: 50%;
+    margin-left: 10%;
     transform: translateX(-50%);
     margin-top: -150px;
     margin-bottom: 200px;

@@ -108,23 +108,24 @@
 }
 
 /* Responsive styles */
-@media (max-width: 1280px) {
+@media (max-width: 1340px) {
   .card_container {
-    margin-left: 250px;
-    margin-top: 95px;
-    margin-bottom: 200px;
+    margin-left: 170px;
+    margin-top: 160px;
+    margin-bottom: 70px;
   }
 
   .image {
-    width: 60%;
-    margin-top: -80px;
-    margin-left: 75px;
+    width: 150px;
+    height: 150px;
+    margin-top: -70px;
+    margin-left: 155px;
   }
 
   .heading {
     margin-left: 90px;
     margin-top: 100px; 
-    margin-bottom: -70px;     
+    margin-bottom: 10px;     
   }
 
   .name, .position, .event, .eventTitle {
@@ -133,7 +134,7 @@
   }
 
   .Rectangle191, .Vector, .LinkedinProfile {
-    margin-left: -50px;
+    margin-left: 5px;
   }
 
   .vectorimg1 {
