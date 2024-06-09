@@ -6,7 +6,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 0.5rem 0.5rem;
   margin-top: -1px;
-  margin-left: 320px;
+  margin-left: 150px;
   padding: 1.25rem;
   overflow: hidden;
 }
@@ -14,7 +14,7 @@
 .Quoteimg {
   width: 700px;
   height: 300px;
-  margin-left: 600px;
+  margin-left: 330px;
 }
 
 .verticalimg {
@@ -67,7 +67,7 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
   margin-top: 20px;
-  margin-left: 320px;
+  margin-left: 150px;
   overflow: hidden;
 }
 
@@ -145,7 +145,7 @@
   background: #4285F4;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin-left: 320px;
+  margin-left: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -378,6 +378,42 @@
   }
   
 }
+
+@media (max-width:932px) {
+
+  .Quoteimg{
+    margin-left: 130px;
+  }
+
+  .card {
+    max-width:  450px;
+    margin-bottom: 20px;
+    margin-left: 220px;
+  }
+
+  .header{
+    max-width: 450px;
+    margin-left: 270px;
+  }
+
+  .container{
+    width: 450px;
+    margin-left: 270px;
+  }
+
+  .group {
+    margin-top: 10px;
+    margin-left: 100px;
+    justify-content: baseline;
+    flex-direction: row;
+  }
+
+  .description{
+    margin-left: 120px;
+  }
+  
+}
+
 
 
 /* Responsive styles */
