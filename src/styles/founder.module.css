@@ -174,10 +174,11 @@
   left: 4px;
 }
 
+/* Responsive styles */
 @media (min-width: 1280px) {
   .Quoteimg {
     max-width: 100%;
-    margin-left: 590px;
+    margin-left: 40px;
     margin-bottom: -50px;
   }
 
@@ -213,7 +214,7 @@
   }
 
   .container {
-    width: 450px;
+    width: 300px;
     height: 330px;
     margin-left: 340px;
     margin-top: 50px;
@@ -229,18 +230,9 @@
     word-wrap: break-word;
   }
 
-  .designation {
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
-  }
-
   .description {
     width: 300px;
-    font-size:small;
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
+    font-size: small;
   }
 
   .founderimg {
@@ -250,11 +242,10 @@
   }
 }
 
-/* Responsive styles */
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
   .Quoteimg {
     max-width: 350px;
-    margin-left: 180px;
+    margin-left: 3000px;
     margin-bottom: -50px;
   }
 
@@ -264,21 +255,14 @@
   }
 
   .card {
-    width: 100%;
-    height: auto;
+    max-width: 80%;
+    height: 650px;
     margin-left: 100px;
     margin-top: 10px;
   }
 
   .dotimg {
     max-width: 460px;
-  }
-
-  .header {
-    width: 100%;
-    margin-left: 100px;
-    height: auto;
-    font-size: 1.5rem;
   }
 
   .group {
@@ -293,36 +277,30 @@
     margin-top: 10px;
   }
 
-  .foundername{
+  .foundername {
     margin-top: 20px;
     margin-left: -10px;
     width: 400px;
   }
 
-  .founderdescription{
+  .founderdescription {
     margin-top: 20px;
-    margin-bottom: -10px;
+    width: 250px;
+    margin-bottom: 10px;
     word-wrap: break-word;
     width: 370px;
   }
 
   .container {
-    width: 400px;
+    width: 340px;
     height: 330px;
-    margin-left: 100px;
+    margin-left: 130px;
     margin-top: 50px;
     margin-bottom: 10px;
     padding: 0px;
   }
 
   .name,
-  .designation,
-  .description {
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
-  }
-
   .designation {
     margin-top: 5px;
     margin-left: 120px;
@@ -330,9 +308,7 @@
   }
 
   .description {
-    margin-top: 5px;
     margin-left: 95px;
-    word-wrap: break-word;
     font: 1em sans-serif;
     width: 300px;
   }
@@ -342,28 +318,33 @@
     margin-bottom: 20px;
     width: 150px;
   }
+
+  .header {
+    max-width: 20px;
+  }
 }
 
-@media (max-width:991px) {
-
-  .Quoteimg{
-    margin-left: 130px;
+@media (min-width: 990px) {
+  .Quoteimg {
+    margin-left: 350px;
   }
 
   .card {
-    max-width:  490px;
+    max-width: 460px;
     margin-bottom: 20px;
     margin-left: 270px;
   }
 
-  .header{
-    max-width: 450px;
-    margin-left: 270px;
+  .header {
+    width: 460px;
+    margin-left: 150px;
+    margin-top: -10px;
+    margin-bottom: -10px;
   }
 
-  .container{
-    width: 450px;
-    margin-left: 270px;
+  .container {
+    width: 350px;
+    margin-left: 290px;
   }
 
   .group {
@@ -373,15 +354,13 @@
     flex-direction: row;
   }
 
-  .description{
+  .description {
     margin-left: 120px;
   }
+
   
 }
 
-
-
-/* Responsive styles */
 @media (min-width: 768px) {
   .Quoteimg {
     max-width: 100%;
@@ -405,12 +384,7 @@
     max-width: 460px;
   }
 
-  .header {
-    width: 60%;
-    margin-left: 150px;
-    height: auto;
-    font-size: 1.5rem;
-  }
+  
 
   .group {
     margin-left: 100px;
@@ -431,18 +405,6 @@
 
   .name,
   .designation,
-  .description {
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
-  }
-
-  .designation {
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
-  }
-
   .description {
     margin-top: 5px;
     margin-left: 120px;
@@ -485,7 +447,7 @@
     margin-left: 10px;
   }
 
-  .foundername{
+  .foundername {
     margin-left: 10px;
     font-size: 0.75rem;
     width: 250px;
@@ -537,7 +499,6 @@
     font-size: 1.25rem;
   }
 }
-
 
 @media (max-width: 400px) {
   .Quoteimg {

@@ -183,7 +183,7 @@
 
   .member_card {
     width: 250px;
-    height: 340px;
+    height: 280px;
     margin-top: 50px;
     margin-left: 200px;
     margin-bottom: 10px;
@@ -202,13 +202,17 @@
 
   .role {
     font-size: 0.75rem;
+    margin-top: -30px;
     margin-bottom: 10px;
   }
 
   .member_button {
     width: 150px;
     height: 40px;
+    margin-top: 10px;
   }
+
+
 
   .btn_border {
     width: 100%;
