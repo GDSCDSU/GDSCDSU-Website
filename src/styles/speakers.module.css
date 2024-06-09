@@ -106,9 +106,9 @@
 }
 
 /* Responsive styles */
-@media (max-width: 1340px) {
+@media (min-width: 1280px) {
   .card_container {
-    margin-left: 170px;
+    margin-left: 350px;
     margin-top: 130px;
     margin-bottom: 40px;
   }
@@ -122,7 +122,7 @@
 
   .heading {
     margin-left: 90px;
-    margin-top: 100px;
+    margin-top: 40px;
     margin-bottom: 10px;
   }
 

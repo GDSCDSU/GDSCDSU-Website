@@ -174,10 +174,10 @@
   left: 4px;
 }
 
-@media (max-width: 1340px) {
+@media (min-width: 1280px) {
   .Quoteimg {
     max-width: 100%;
-    margin-left: 330px;
+    margin-left: 590px;
     margin-bottom: -50px;
   }
 
@@ -188,7 +188,7 @@
 
   .card {
     width: 450px;
-    margin-left: 150px;
+    margin-left: 340px;
     margin-top: 10px;
   }
 
@@ -198,7 +198,7 @@
 
   .header {
     width: 450px;
-    margin-left: 150px;
+    margin-left: 340px;
     height: auto;
     font-size: 1.5rem;
   }
@@ -215,7 +215,7 @@
   .container {
     width: 450px;
     height: 330px;
-    margin-left: 150px;
+    margin-left: 340px;
     margin-top: 50px;
     margin-bottom: 10px;
     padding: 0px;

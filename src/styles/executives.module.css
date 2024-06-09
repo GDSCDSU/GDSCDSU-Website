@@ -119,16 +119,16 @@
 }
 
 /* Responsive styles for screens up to 1280px */
-@media (max-width: 1340px) {
+@media (min-width: 1280px) {
 
   .Quoteimg{
-    margin-left: 320px;
+    margin-left: 600px;
   }
 
   .Rectangle198 {
     width: 300px;
     height: auto;
-    margin-left: 40px;
+    margin-left: 170px;
     padding: 10px;
   }
 

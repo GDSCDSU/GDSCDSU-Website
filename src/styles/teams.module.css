@@ -115,18 +115,19 @@
 }
 
 /* Responsive styles for small screens */
-@media (max-width: 1340px) {
+@media (min-width: 1280px) {
   .Quoteimg {
-    width: 80%;
+    width: 40%;
     height: auto;
     margin-top: 40px;
-    margin-left: 150px;
+    margin-left: 520px;
     margin-right: auto;
   }
 
   .member_card {
     width: 300px;
-    margin-left: 130px;
+    height: 330px;
+    margin-left: 290px;
   }
 
   
