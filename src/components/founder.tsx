@@ -20,7 +20,7 @@ export default function Founder() {
     },
     {
       name: 'Dr. Ahmed Saeed Minhas',
-      designation: 'GDSC@DSU Lead 2020-2021 & Founder',
+      designation: 'Pro Vice Chancellor',
       description: "Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.",
       imageSrc: 'founders/dr_minhas.png',
       socials: [
