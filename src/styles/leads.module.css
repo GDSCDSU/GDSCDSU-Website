@@ -182,139 +182,59 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .Leads {
-    margin-left: 0;
-    text-align: center;
+    margin-left: 50px;
   }
 
-  .container, .rectangle198, .Quoteimg, .description, .socials {
+  
+
+  .rectangle198{
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .profileimage {
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
-  .name, .designation, .description {
-    margin-left: 0;
-    text-align: center;
+  .name{
+    text-align: left;
+    margin-left: 120px;
   }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    width: 75%;
+  }
+  
 
   .socials {
-    margin-top: 20px;
-    text-align: center;
+    margin-top: -60px;
+    margin-left: 220px;
   }
 
   .socials img {
     margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 65px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .Leads {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .container, .rectangle198, .Quoteimg, .description, .socials {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .profileimage {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .name, .designation, .description {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .socials {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .socials img {
-    margin: 0 auto;
-  }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-  .Leads {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .container, .rectangle198, .Quoteimg, .description, .socials {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .profileimage {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .name, .designation, .description {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .socials {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .socials img {
-    margin: 0 auto;
-  }
-}
-
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-  .Leads {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .container, .rectangle198, .Quoteimg, .description, .socials {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .profileimage {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .name, .designation, .description {
-    margin-left: 0;
-    text-align: center;
-  }
-
-  .socials {
-    margin-top: 20px;
-    text-align: center;
-  }
-
-  .socials img {
-    margin: 0 auto;
-  }
-}
-
-/* Extra extra large devices (extra large desktops, 1400px and up) */
-@media (min-width: 1400px) {
-  .Leads {
-    margin-left: -20px;
+    margin-left: 50px;
   }
 
   .container, .rectangle198, .Quoteimg, .description, .socials {
@@ -323,7 +243,172 @@
   }
 
   .rectangle198{
-    width: 48%;
+    width: 80%;
+  }
+
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    width: 77%;
+  }
+  
+
+  .socials {
+    margin-top: -60px;
+    margin-left: 370px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .Leads {
+    margin-left: 100px;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 50%;
+    
+  }
+
+  .rectangle198{
+    width: 80%;
+  }
+
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    padding-right: 5px;
+    width: 80%;
+  }
+  
+
+  .socials {
+    margin-top: -80px;
+    margin-left: 500px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 220px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .Leads {
+    margin-left: 150px;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 50%;
+    
+  }
+
+  .rectangle198{
+    width: 80%;
+  }
+
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    width: 80%;
+  }
+  
+
+  .socials {
+    margin-top: -60px;
+    margin-left: 600px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 40%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 370px;
+  }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .Leads {
+    margin-left: 480px;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 50%;
+    
+  }
+
+  .rectangle198{
+    width: 65%;
   }
 
   .profileimage {
@@ -367,120 +452,159 @@
 
 /* Devices with width 480px to 575.98px */
 @media (min-width: 480px) and (max-width: 575.98px) {
-  .member_card {
-    width: 60%;
-    height: 300px;
-    margin-left: -25px;
-    margin-right: auto;
-    margin-bottom: 10px;
-  }
-
-  .customCol {
-    margin-left: 120px;
-  }
-
-  .Quoteimg {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 60px;
+  .Leads {
     margin-left: 30px;
   }
 
-  .image_div {
-    margin-left: 80px;
-    margin-right: auto;
+  
+
+  .rectangle198{
+    width: 90%;
+    margin-left: -30px;
   }
 
-  .name, .role, .member_button {
-    text-align: center;
-    margin-left: 0;
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
-  .member_button {
-    margin: 20px auto 0;
+  .name{
+    text-align: left;
+    margin-left: 120px;
   }
 
-  .dotimg{
-    width: 290px;
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    width: 75%;
+  }
+  
+
+  .socials {
+    margin-top: -60px;
+    margin-left: 180px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 65px;
   }
 }
 
 /* Devices with width 400px to 479.98px */
 @media (min-width: 400px) and (max-width: 479.98px) {
-  .member_card {
-    width: 60%;
-    height: 300px;
-    margin-left: -45px;
-    margin-right: auto;
-    margin-bottom: 10px;
-  }
-
-  .customCol {
-    margin-left: 120px;
-  }
-
-  .Quoteimg {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 60px;
+  .Leads {
     margin-left: 30px;
   }
 
-  .image_div {
-    margin-left: 60px;
-    margin-right: auto;
+  
+
+  .rectangle198{
+    width: 90%;
+    margin-left: -30px;
   }
 
-  .name, .role, .member_button {
-    text-align: center;
-    margin-left: 0;
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
-  .member_button {
-    margin: 20px auto 0;
+  .name{
+    text-align: left;
+    margin-left: 120px;
   }
 
-  .dotimg{
-    width: 240px;
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    width: 75%;
+  }
+  
+
+  .socials {
+    margin-top: -60px;
+    margin-left: 180px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 65px;
   }
 }
 
 
 @media (min-width: 320px) and (max-width: 399.98px) {
-  .member_card {
-    width: 60%;
-    height: 300px;
-    margin-left: -55px;
-    margin-right: auto;
-    margin-bottom: 10px;
-  }
-
-  .customCol {
-    margin-left: 120px;
-  }
-
-  .Quoteimg {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 60px;
+  .Leads {
     margin-left: 30px;
   }
 
-  .image_div {
-    margin-left: 40px;
-    margin-right: auto;
+  
+
+  .rectangle198{
+    width: 90%;
+    margin-left: -30px;
   }
 
-  .name, .role, .member_button {
-    text-align: center;
-    margin-left: 0;
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
   }
 
-  .member_button {
-    margin: 20px auto 0;
+  .name{
+    text-align: left;
+    margin-left: 120px;
   }
 
-  .dotimg{
-    width: 250%;
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    width: 75%;
+  }
+  
+
+  .socials {
+    margin-top: -60px;
+    margin-left: 180px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 65px;
   }
 }

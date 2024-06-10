@@ -162,28 +162,30 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .Rectangle198 {
-    width: 90%;
-    height: auto;
-    margin-left: auto;
+    width: 67%;
+    height: 90%;
+    margin-left: -60px;
     margin-right: auto;
+    margin-bottom: 40px;
     padding: 10px;
   }
 
   .Ellipse44 {
     position: relative;
-    left: auto;
+    left: 120%;
+    top: -30px;
     margin: 0 auto;
   }
 
   .Description {
     margin-left: 0;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    width: 100%;
   }
 
   .Group718 {
-    width: 100%;
-    left: auto;
+    width: 45%;
+    left: 80px;
     margin-top: 10px;
   }
 
@@ -191,38 +193,48 @@
     width: 100%;
   }
 
+  .dotimg{
+    width: 360%;
+    margin-left: -10px;
+    margin-top: -7px;
+    position: relative;
+  }
+
   .Quoteimg {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
+    width: 60%;
+    margin-top: -90px;
+    margin-bottom: -60px;
+    margin-left: 150px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .Rectangle198 {
-    width: 80%;
-    height: auto;
-    margin-left: auto;
+    width: 90%;
+    height: 90%;
+    margin-left: -60px;
     margin-right: auto;
+    margin-bottom: 40px;
     padding: 10px;
   }
 
   .Ellipse44 {
     position: relative;
-    left: auto;
+    left: 120%;
+    top: -30px;
     margin: 0 auto;
   }
 
   .Description {
     margin-left: 0;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    width: 100%;
   }
 
   .Group718 {
-    width: 100%;
-    left: auto;
+    width: 85%;
+    left: 15px;
     margin-top: 10px;
   }
 
@@ -230,38 +242,48 @@
     width: 100%;
   }
 
+  .dotimg{
+    width: 360%;
+    margin-left: -10px;
+    margin-top: -7px;
+    position: relative;
+  }
+
   .Quoteimg {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
+    width: 60%;
+    margin-top: -90px;
+    margin-bottom: -60px;
+    margin-left: 150px;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .Rectangle198 {
-    width: 70%;
-    height: auto;
-    margin-left: auto;
+    width: 90%;
+    height: 90%;
+    margin-left: -60px;
     margin-right: auto;
+    margin-bottom: 40px;
     padding: 10px;
   }
 
   .Ellipse44 {
     position: relative;
-    left: auto;
+    left: 120%;
+    top: -30px;
     margin: 0 auto;
   }
 
   .Description {
     margin-left: 0;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    width: 100%;
   }
 
   .Group718 {
-    width: 100%;
-    left: auto;
+    width: 65%;
+    left: 35px;
     margin-top: 10px;
   }
 
@@ -269,38 +291,47 @@
     width: 100%;
   }
 
+  .dotimg{
+    width: 360%;
+    margin-left: -10px;
+    margin-top: -7px;
+    position: relative;
+  }
+
   .Quoteimg {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
+    width: 40%;
+    margin-top: -90px;
+    margin-bottom: -60px;
+    margin-left: 340px;
   }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .Rectangle198 {
-    width: 60%;
-    height: auto;
-    margin-left: auto;
+    width: 90%;
+    height: 390px;
+    margin-left: -60px;
     margin-right: auto;
     padding: 10px;
   }
 
   .Ellipse44 {
     position: relative;
-    left: auto;
+    left: 120px;
+    top: -50px;
     margin: 0 auto;
   }
 
   .Description {
     margin-left: 0;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    width: 100%;
   }
 
   .Group718 {
-    width: 100%;
-    left: auto;
+    width: 45%;
+    left: 85px;
     margin-top: 10px;
   }
 
@@ -308,10 +339,17 @@
     width: 100%;
   }
 
+  .dotimg{
+    width: 340px;
+    margin-left: -10px;
+    margin-top: -7px;
+  }
+
   .Quoteimg {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
+    width: 40%;
+    margin-top: -90px;
+    margin-bottom: -60px;
+    margin-left: 340px;
   }
 }
 
@@ -365,120 +403,147 @@
 
 /* Devices with width 480px to 575.98px */
 @media (min-width: 480px) and (max-width: 575.98px) {
-  .member_card {
-    width: 60%;
-    height: 300px;
-    margin-left: -25px;
+  .Rectangle198 {
+    width: 150%;
+    height: 90%;
+    margin-left: -180px;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
   }
 
-  .customCol {
-    margin-left: 120px;
+  .Ellipse44 {
+    position: relative;
+    left: 120%;
+    top: -30px;
+    margin: 0 auto;
   }
 
-  .Quoteimg {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 30px;
-  }
-
-  .image_div {
-    margin-left: 80px;
-    margin-right: auto;
-  }
-
-  .name, .role, .member_button {
-    text-align: center;
+  .Description {
     margin-left: 0;
+    text-align: left;
+    width: 100%;
   }
 
-  .member_button {
-    margin: 20px auto 0;
+  .Group718 {
+    width: 45%;
+    left: 80px;
+    margin-top: 10px;
+  }
+
+  .Rectangle191 {
+    width: 100%;
   }
 
   .dotimg{
-    width: 290px;
+    width: 360%;
+    margin-left: -10px;
+    margin-top: -7px;
+    position: relative;
+  }
+
+  .Quoteimg {
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 90px;
   }
 }
 
 /* Devices with width 400px to 479.98px */
 @media (min-width: 400px) and (max-width: 479.98px) {
-  .member_card {
-    width: 60%;
-    height: 300px;
-    margin-left: -45px;
+  .Rectangle198 {
+    width: 200%;
+    height: 90%;
+    margin-left: -200px;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
   }
 
-  .customCol {
-    margin-left: 120px;
+  .Ellipse44 {
+    position: relative;
+    left: 120%;
+    top: -30px;
+    margin: 0 auto;
+  }
+
+  .Description {
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .Group718 {
+    width: 55%;
+    left: 50px;
+    margin-top: 10px;
+  }
+
+  .Rectangle191 {
+    width: 100%;
+  }
+
+  .dotimg{
+    width: 360%;
+    margin-left: -10px;
+    margin-top: -7px;
+    position: relative;
   }
 
   .Quoteimg {
     width: 90%;
-    margin-top: 40px;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 20px;
     margin-left: 30px;
-  }
-
-  .image_div {
-    margin-left: 60px;
-    margin-right: auto;
-  }
-
-  .name, .role, .member_button {
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .member_button {
-    margin: 20px auto 0;
-  }
-
-  .dotimg{
-    width: 240px;
   }
 }
 
 
 @media (min-width: 320px) and (max-width: 399.98px) {
-  .member_card {
-    width: 60%;
-    height: 300px;
-    margin-left: -55px;
+  .Rectangle198 {
+    width: 250%;
+    height: 90%;
+    margin-left: -230px;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
   }
 
-  .customCol {
-    margin-left: 120px;
+  .Ellipse44 {
+    position: relative;
+    left: 120%;
+    top: -30px;
+    margin: 0 auto;
   }
 
-  .Quoteimg {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 30px;
-  }
-
-  .image_div {
-    margin-left: 40px;
-    margin-right: auto;
-  }
-
-  .name, .role, .member_button {
-    text-align: center;
+  .Description {
     margin-left: 0;
+    text-align: left;
+    width: 70%;
   }
 
-  .member_button {
-    margin: 20px auto 0;
+  .Group718 {
+    width: 55%;
+    left: 90px;
+    margin-top: 10px;
+  }
+
+  .Rectangle191 {
+    width: 80%;
   }
 
   .dotimg{
-    width: 250%;
+    width: 360%;
+    margin-left: -10px;
+    margin-top: -7px;
+    position: relative;
+  }
+
+  .Quoteimg {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 0px;
   }
 }
