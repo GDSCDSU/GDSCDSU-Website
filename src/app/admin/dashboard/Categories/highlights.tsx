@@ -1,8 +1,9 @@
+import axios from "axios";
 import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 export default function Events() {
@@ -15,7 +16,16 @@ export default function Events() {
   const handleShowList = () => {
     setShowForm(false);
   };
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    fetchPartner()
+  },[]);
+
+  const fetchPartner = async () => {
+    const {data} = await axios.get('http://localhost:3000/api/highlight');
+    setData(data.data);
+  }
   return (
     <>
       <div className="flex justify-end mb-4">
@@ -50,7 +60,11 @@ export default function Events() {
         
       ) : (
         // List Component
-        <Image width={1000} height={100} src='/Highlights1.svg' alt=""></Image>
+        <div className="flex gap-5 flex-wrap">
+        {data.map((highlight) => (
+          <Image key={highlight.id} src={highlight.picture} width={1000} height={100} alt="" />
+        ))}
+      </div>
       )}
     </>
   );

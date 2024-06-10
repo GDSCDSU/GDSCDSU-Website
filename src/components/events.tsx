@@ -32,6 +32,7 @@ const Events = () => {
         <button className={`${eventsnav.nav_button} ${eventsnav.Speakers} ${activeTab === 'Speaker' ? eventsnav.active : ''}`} onClick={() => setActiveTab('Speaker')}>Speakers</button>
       </div>
 
+
       <section className={eventsnav.section_container}>
         <div data-aos="fade-up" className="full-page-content">
           <div className="d-flex flex-column align-items-center">

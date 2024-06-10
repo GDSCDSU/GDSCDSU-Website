@@ -26,14 +26,17 @@ class EventAPi{
             pipeline.push({$match: {topEvent: topEvent === 'true' ? true : false}});
 
             const events = await fetchEvent(pipeline);
+
             let data = events;
+            
             if(speaker == 'true'){
                 data = data.map((event: any) => ({
-                    speakerName: event.speakerName,
+                    speakerName: event.speaker,
                     speakerImage: event.speakerImage,
-                    speakerBio: event.speakerBio,
+                    content: event.content,
                     speakerLinkedln: event.speakerLinkedln
                 }));
+            data = data.filter((event)=>event.speakerName !== 'NA')
             }
             return generateResponse(data, "Events fetched successfully", STATUS_CODES.SUCCESS); 
         } catch (error) {

@@ -1,8 +1,9 @@
+import axios from "axios";
 import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 export default function Speakers() {
@@ -15,7 +16,16 @@ export default function Speakers() {
   const handleShowList = () => {
     setShowForm(false);
   };
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    fetchSpeakers()
+  },[]);
+
+  const fetchSpeakers = async () => {
+    const {data} = await axios.get('http://localhost:3000/api/event?topEvent=true&speaker=true');
+    setData(data.data);
+  }
   return (
     <>
       <div className="flex justify-end mb-4">
@@ -63,13 +73,25 @@ export default function Speakers() {
         
       ) : (
         // List Component
-        <div className="max-w-sm mx-auto bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="p-4">
-            <div className="flex justify-center mb-4">
+        <div className="flex  gap-5  flex-wrap">
+         {data.map((speaker, index) => (
+           <SpeakerCard key={index} content={speaker.content} image={speaker.speakerImage} name={speaker.speakerName}/>
+          ))}
+           </div>
+      )}
+    </>
+  );
+}
+
+const SpeakerCard = ({image,name,content}) =>{
+return(
+  <>
+   <div className="p-4 shadow-lg  w-64 h-64 mb-4">
+            <div className="flex justify-center ">
               <div className="h-24 w-24 relative">
                 <Image
-                  src="/michelle.svg"
-                  alt="Syed Ateeq"
+                  src={image}
+                  alt="Image of the speaker"
                   layout="fill"
                   objectFit="cover"
                   className="rounded-full"
@@ -77,11 +99,8 @@ export default function Speakers() {
               </div>
             </div>
             <div className="text-center">
-              <h2 className="text-xl font-bold text-gray-800">Michelle Curry</h2>
-              <p className="text-gray-600 text-sm">CEO at TOQQA Global</p>
-              <p className="mt-2 text-gray-600 text-sm">
-              TECH TALK: THE POWER OF WOMEN ENTREPRENEURSHIP
-              </p>
+              <h2 className="text-xl font-bold text-gray-800">{name}</h2>
+              <p className="text-gray-600 text-sm">{content}</p>
             </div>
             <div className="mt-4 flex justify-center space-x-4">
               <a href="#" className="text-gray-500 hover:text-gray-700">
@@ -89,8 +108,6 @@ export default function Speakers() {
               </a>
             </div>
           </div>
-        </div>
-      )}
-    </>
-  );
+  </>
+)
 }

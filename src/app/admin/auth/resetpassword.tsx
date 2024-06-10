@@ -5,7 +5,7 @@ import { Button, Label, TextInput, Alert } from "flowbite-react";
 import 'flowbite/dist/flowbite.css';
 export default function ResetPasswordForm({ onSubmit, showAlert, alertMessage, inputColor, onBack, onPasswordChange, onConfirmPasswordChange }) {
   return (
-    <form className="flex max-w-md flex-col gap-4" style={{ margin: '8%' }} onSubmit={onSubmit}>
+    <form className="flex max-w-md flex-col gap-4" style={{ margin: '15%' }} onSubmit={onSubmit}>
       <h4 className='text-blue-600'>Reset Password</h4>
       <span className='text-blue-600' style={{ marginTop: '-5%' }}>Enter your details Below</span>
       <div>
