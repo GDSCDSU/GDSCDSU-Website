@@ -1,7 +1,7 @@
 /* Base styles */
 .Rectangle198 {
   width: 400px;
-  height: 400px;
+  height: 500px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   margin: 30px;
@@ -162,9 +162,9 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .Rectangle198 {
-    width: 67%;
+    width: 330px;
     height: 90%;
-    margin-left: -60px;
+    margin-left: -140px;
     margin-right: auto;
     margin-bottom: 40px;
     padding: 10px;
@@ -194,34 +194,38 @@
   }
 
   .dotimg{
-    width: 360%;
+    width: 330px;
     margin-left: -10px;
     margin-top: -7px;
     position: relative;
   }
 
   .Quoteimg {
-    width: 60%;
+    width: 80%;
     margin-top: -90px;
     margin-bottom: -60px;
-    margin-left: 150px;
+    margin-left: 50px;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .Rectangle198 {
-    width: 90%;
+    width: 250px;
     height: 90%;
-    margin-left: -60px;
+    margin-left: -170px;
     margin-right: auto;
     margin-bottom: 40px;
     padding: 10px;
   }
 
+  .customCol {
+    margin-left: 40px;
+  }
+
   .Ellipse44 {
     position: relative;
-    left: 120%;
+    left: 80px;
     top: -30px;
     margin: 0 auto;
   }
@@ -234,16 +238,16 @@
 
   .Group718 {
     width: 85%;
-    left: 15px;
+    left: 55px;
     margin-top: 10px;
   }
 
   .Rectangle191 {
-    width: 100%;
+    width: 70%;
   }
 
   .dotimg{
-    width: 360%;
+    width: 250px;
     margin-left: -10px;
     margin-top: -7px;
     position: relative;
@@ -253,24 +257,35 @@
     width: 60%;
     margin-top: -90px;
     margin-bottom: -60px;
-    margin-left: 150px;
+    margin-left: 190px;
   }
+
+  
+
+  .customRow2 .Rectangle198 {
+    margin-left: -15px;
+  }
+
+  
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .Rectangle198 {
-    width: 90%;
+    width: 340px;
     height: 90%;
-    margin-left: -60px;
+    margin-left: -180px;
     margin-right: auto;
     margin-bottom: 40px;
     padding: 10px;
   }
 
+  .customCol {
+    margin-left: 50px;
+  }
   .Ellipse44 {
     position: relative;
-    left: 120%;
+    left: 110px;
     top: -30px;
     margin: 0 auto;
   }
@@ -283,16 +298,16 @@
 
   .Group718 {
     width: 65%;
-    left: 35px;
+    left: 80px;
     margin-top: 10px;
   }
 
   .Rectangle191 {
-    width: 100%;
+    width: 70%;
   }
 
   .dotimg{
-    width: 360%;
+    width: 340px;
     margin-left: -10px;
     margin-top: -7px;
     position: relative;
@@ -304,6 +319,22 @@
     margin-bottom: -60px;
     margin-left: 340px;
   }
+
+  .customRow2 .Group718 {
+    width: 65%;
+    margin-top: -5px;
+    margin-left: 5px;
+  }
+
+  .customRow2 .Rectangle198 {
+    margin-left: -10px;
+  }
+
+  .customRow2 .dotimg {
+    width: 345px;
+  }
+
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
@@ -351,13 +382,28 @@
     margin-bottom: -60px;
     margin-left: 340px;
   }
+
+  .customRow2 .Group718 {
+    width: 50%;
+    margin-top: -5px;
+    margin-left: -10px;
+  }
+
+  .customRow2 .Rectangle198 {
+    margin-left: -10px;
+  }
+
+  .customRow2 .dotimg {
+    width: 345px;
+  }
+
 }
 
 /* Extra extra large devices (extra large desktops, 1400px and up) */
 @media (min-width: 1400px) {
   .Rectangle198 {
     width: 50%;
-    height: auto;
+    height: 450px;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
@@ -365,8 +411,8 @@
 
   .Ellipse44 {
     position: relative;
-    margin-top: -50px;
-    margin-left: 110px;
+    margin-top: 15px;
+    margin-left: 0px;
   }
 
   .Description {
@@ -376,11 +422,11 @@
   }
 
   .Group718 {
-   margin-left: 70px;
+   margin-left: 0px;
     }
 
   .Rectangle191 {
-    width: 50%;
+    width: 100%;
   }
 
   .LinkedinProfile
@@ -391,7 +437,7 @@
   .Quoteimg {
     width: 40%;
     margin-top: 40px;
-    margin-bottom: 60px;
+    margin-bottom: -30px;
     margin-left: 550px;
   }
 
@@ -399,14 +445,31 @@
     width: 338px;
     margin-left: -10px;
   }
+
+  .customRow2 .Group718 {
+    width: 50%;
+    margin-left: -10px;
+  }
+
+  .customRow2 .Rectangle198{
+    margin-left: 140px;
+  }
+
+  .customRow2 .Ellipse44{
+    margin-left: -20px;
+  }
+
+  .customRow2 .dotimg {
+    width: 310px;
+  }
 }
 
 /* Devices with width 480px to 575.98px */
 @media (min-width: 480px) and (max-width: 575.98px) {
   .Rectangle198 {
-    width: 150%;
+    width: 340px;
     height: 90%;
-    margin-left: -180px;
+    margin-left: -190px;
     margin-right: auto;
     margin-bottom: 40px;
     padding: 10px;
@@ -436,26 +499,30 @@
   }
 
   .dotimg{
-    width: 360%;
+    width: 340px;
     margin-left: -10px;
     margin-top: -7px;
     position: relative;
   }
 
   .Quoteimg {
-    width: 70%;
+    width: 80%;
     margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 90px;
+    margin-left: 50px;
+  }
+
+  .customRow2 .Rectangle198 {
+    margin-left: 65px;
   }
 }
 
 /* Devices with width 400px to 479.98px */
 @media (min-width: 400px) and (max-width: 479.98px) {
   .Rectangle198 {
-    width: 200%;
+    width: 340px;
     height: 90%;
-    margin-left: -200px;
+    margin-left: -215px;
     margin-right: auto;
     margin-bottom: 40px;
     padding: 10px;
@@ -475,8 +542,8 @@
   }
 
   .Group718 {
-    width: 55%;
-    left: 50px;
+    width: 45%;
+    left: 80px;
     margin-top: 10px;
   }
 
@@ -485,7 +552,60 @@
   }
 
   .dotimg{
-    width: 360%;
+    width: 340px;
+    margin-left: -10px;
+    margin-top: -7px;
+    position: relative;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+
+  .customRow2 .Rectangle198 {
+    margin-left: 45px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 399.98px) {
+  .Rectangle198 {
+    width: 340px;
+    height: 90%;
+    margin-left: -240px;
+    margin-right: auto;
+    margin-bottom: 40px;
+    padding: 10px;
+  }
+
+  .Ellipse44 {
+    position: relative;
+    left: 120%;
+    top: -30px;
+    margin: 0 auto;
+  }
+
+  .Description {
+    margin-left: 0;
+    text-align: left;
+    width: 100%;
+  }
+
+  .Group718 {
+    width: 45%;
+    left: 80px;
+    margin-top: 10px;
+  }
+
+  .Rectangle191 {
+    width: 100%;
+  }
+
+  .dotimg{
+    width: 340px;
     margin-left: -10px;
     margin-top: -7px;
     position: relative;
@@ -495,55 +615,10 @@
     width: 90%;
     margin-top: 30px;
     margin-bottom: 20px;
+    margin-left: 20px;
+  }
+
+  .customRow2 .Rectangle198 {
     margin-left: 30px;
-  }
-}
-
-
-@media (min-width: 320px) and (max-width: 399.98px) {
-  .Rectangle198 {
-    width: 250%;
-    height: 90%;
-    margin-left: -230px;
-    margin-right: auto;
-    margin-bottom: 40px;
-    padding: 10px;
-  }
-
-  .Ellipse44 {
-    position: relative;
-    left: 120%;
-    top: -30px;
-    margin: 0 auto;
-  }
-
-  .Description {
-    margin-left: 0;
-    text-align: left;
-    width: 70%;
-  }
-
-  .Group718 {
-    width: 55%;
-    left: 90px;
-    margin-top: 10px;
-  }
-
-  .Rectangle191 {
-    width: 80%;
-  }
-
-  .dotimg{
-    width: 360%;
-    margin-left: -10px;
-    margin-top: -7px;
-    position: relative;
-  }
-
-  .Quoteimg {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-left: 0px;
   }
 }

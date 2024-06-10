@@ -182,23 +182,28 @@
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .Leads {
-    margin-left: 50px;
+    margin-left: 20px;
   }
 
-  
-
   .rectangle198{
-    width: 90%;
+    width: 105%;
+    margin-left: -30px;
+    height: 300px;
   }
 
   .profileimage {
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
   }
 
   .name{
     text-align: left;
-    margin-left: 120px;
+    margin-top: -35px;
+    margin-left: 110px;
+  }
+
+  .verticalimg{
+    height: 295px;
   }
 
   .designation{
@@ -208,15 +213,16 @@
 
   .description{
     text-align: left;
-    margin-left: 120px;
-    font-size: 0.65rem;
+    margin-top: 20px;
+    margin-left: 110px;
+    font-size: 0.60rem;
     width: 75%;
   }
   
 
   .socials {
-    margin-top: -60px;
-    margin-left: 220px;
+    margin-top: -80px;
+    margin-left: 330px;
   }
 
   .socials img {
@@ -225,8 +231,8 @@
 
   .Quoteimg {
     width: 80%;
-    margin-top: -10px;
-    margin-bottom: 10px;
+    margin-top: -100px;
+    margin-bottom: -70px;
     margin-left: 65px;
   }
 }
@@ -453,24 +459,28 @@
 /* Devices with width 480px to 575.98px */
 @media (min-width: 480px) and (max-width: 575.98px) {
   .Leads {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
-  
-
   .rectangle198{
-    width: 90%;
+    width: 105%;
     margin-left: -30px;
+    height: 300px;
   }
 
   .profileimage {
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
   }
 
   .name{
     text-align: left;
-    margin-left: 120px;
+    margin-top: -35px;
+    margin-left: 110px;
+  }
+
+  .verticalimg{
+    height: 295px;
   }
 
   .designation{
@@ -480,15 +490,16 @@
 
   .description{
     text-align: left;
-    margin-left: 120px;
-    font-size: 0.65rem;
+    margin-top: 20px;
+    margin-left: 110px;
+    font-size: 0.50rem;
     width: 75%;
   }
   
 
   .socials {
-    margin-top: -60px;
-    margin-left: 180px;
+    margin-top: -80px;
+    margin-left: 250px;
   }
 
   .socials img {
@@ -497,8 +508,8 @@
 
   .Quoteimg {
     width: 80%;
-    margin-top: -10px;
-    margin-bottom: 10px;
+    margin-top: -100px;
+    margin-bottom: -70px;
     margin-left: 65px;
   }
 }
@@ -506,24 +517,28 @@
 /* Devices with width 400px to 479.98px */
 @media (min-width: 400px) and (max-width: 479.98px) {
   .Leads {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
-  
-
   .rectangle198{
-    width: 90%;
+    width: 105%;
     margin-left: -30px;
+    height: 300px;
   }
 
   .profileimage {
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
   }
 
   .name{
     text-align: left;
-    margin-left: 120px;
+    margin-top: -35px;
+    margin-left: 110px;
+  }
+
+  .verticalimg{
+    display: none;
   }
 
   .designation{
@@ -533,14 +548,15 @@
 
   .description{
     text-align: left;
-    margin-left: 120px;
-    font-size: 0.65rem;
-    width: 75%;
+    margin-top: -5px;
+    margin-left: 5px;
+    font-size: 0.45rem;
+    width: 100%;
   }
   
 
   .socials {
-    margin-top: -60px;
+    margin-top: -80px;
     margin-left: 180px;
   }
 
@@ -550,33 +566,37 @@
 
   .Quoteimg {
     width: 80%;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    margin-left: 65px;
+    margin-top: -100px;
+    margin-bottom: -70px;
+    margin-left: 35px;
   }
 }
 
 
 @media (min-width: 320px) and (max-width: 399.98px) {
   .Leads {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 
-  
-
   .rectangle198{
-    width: 90%;
+    width: 105%;
     margin-left: -30px;
+    height: 300px;
   }
 
   .profileimage {
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 5px;
+    margin-top: 10px;
   }
 
   .name{
     text-align: left;
-    margin-left: 120px;
+    margin-top: -35px;
+    margin-left: 110px;
+  }
+
+  .verticalimg{
+    display: none;
   }
 
   .designation{
@@ -586,15 +606,16 @@
 
   .description{
     text-align: left;
-    margin-left: 120px;
-    font-size: 0.65rem;
-    width: 75%;
+    margin-top: -5px;
+    margin-left: 5px;
+    font-size: 0.45rem;
+    width: 100%;
   }
   
 
   .socials {
-    margin-top: -60px;
-    margin-left: 180px;
+    margin-top: -80px;
+    margin-left: 160px;
   }
 
   .socials img {
@@ -603,8 +624,8 @@
 
   .Quoteimg {
     width: 80%;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    margin-left: 65px;
+    margin-top: -100px;
+    margin-bottom: -70px;
+    margin-left: 35px;
   }
 }

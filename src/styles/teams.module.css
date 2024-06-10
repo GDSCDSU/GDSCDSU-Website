@@ -109,7 +109,8 @@
 }
 
 .dotimg {
-  max-width: 600px;
+  max-width: 320%;
+  height: auto;
 }
 
 .customCol2 .member_card {
@@ -146,109 +147,193 @@
   .member_button {
     margin: 20px auto 0;
   }
+
+  .customCol {
+    margin-left: 0 !important;
+  }
+
+  .customrowDev {
+    margin-left: 0 !important;
+  }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
   .member_card {
-    width: 60%;
+    width: 300px;
     height: 300px;
-    margin-left: -15px;
+    margin-left: -20px;
     margin-right: auto;
     margin-bottom: 10px;
   }
 
   .customCol {
-    margin-left: 120px;
+    margin-left: 150px !important;
   }
 
   .Quoteimg {
-    width: 90%;
+    width: 70%;
     margin-top: -90px;
     margin-bottom: -60px;
-    margin-left: 30px;
+    margin-left: 100px;
   }
 
+  .customrowDev .dotimg {
+    width: 300px;
+  }
+  
+
+  .customcolDev {
+    margin-top: 20px;
+    margin-left: 35px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -400px;
+  }
+
+
   .image_div {
-    margin-left: 120px;
+    margin-left: 100px;
     margin-right: auto;
   }
 
-  .name, .role, .member_button {
+  .name, .role {
     text-align: center;
     margin-left: 0;
   }
 
-  .member_button {
-    margin: 20px auto 0;
+  .name {
+    font-size: 1rem;
   }
 
-  .dotimg{
-    width: 350px;
+  .member_button {
+    justify-content: baseline;
+    max-width: 200px;
+    margin-left: 60px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+
+  .dotimg {
+    width: 300px;
+  }
+
+  .customrowDev {
+    margin-left: 100px !important;
   }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
   .member_card {
-    width: 170%;
-    height: 300px;
-    margin-left: -75px;
+    width: 240px;
+    height: 280px;
+    margin-left: -120px;
     margin-right: auto;
     margin-bottom: 10px;
   }
 
   .customCol {
-    margin-left: 120px;
+    margin-left: 130px !important;
   }
 
+  .customCol {
+    margin-left: 120px !important;
+  }
+
+  .customrowDev {
+    margin-left: 70px 
+  }
+
+  .customrowDev .dotimg {
+    width: 240px;
+  }
+
+  .customcolDev {
+    margin-top: 20px;
+    margin-left: 140px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -400px;
+  }
+
+
   .Quoteimg {
-    width: 40%;
+    width: 70%;
     margin-top: -90px;
     margin-bottom: -60px;
-    margin-left: 230px;
+    margin-left: 150px;
   }
 
   .image_div {
-    margin-left: 30px;
+    margin-left: 60px;
     margin-right: auto;
   }
 
-  .name, .role, .member_button {
+  .name, .role {
     text-align: center;
     margin-left: 0;
   }
 
-  
-
-  .member_button {
-    margin: 20px auto 0;
+  .name {
+    font-size: 1rem;
   }
 
-  .dotimg{
-    width: 185px;
+  .member_button {
+    justify-content: baseline;
+    max-width: 200px;
+    margin-left: 30px;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+
+  .dotimg {
+    width: 240px;
+  }
+
+  .customrowDev {
+    margin-left: 130px !important;
   }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .member_card {
-    width: 170%;
+    width: 280px;
     height: 300px;
-    margin-left: -45px;
+    margin-left: -35px;
     margin-right: auto;
     margin-bottom: 10px;
   }
 
   .customCol {
-    margin-left: 120px;
+    margin-left: 120px !important;
+  }
+
+  .customrowDev {
+    margin-left: 50px !important;
+  }
+
+  .customrowDev .dotimg {
+    width: 285px;
+  }
+
+  .customcolDev {
+    margin-top: 20px;
+    margin-left: 140px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -370px;
   }
 
   .Quoteimg {
     width: 40%;
     margin-top: -90px;
     margin-bottom: -60px;
-    margin-left: 300px;
+    margin-left: 350px;
   }
 
   .image_div {
@@ -256,19 +341,29 @@
     margin-right: auto;
   }
 
-  .name, .role, .member_button {
-    text-align: center;
-    margin-left: 0;
+  .name {
+    font-size: 1.2rem;
   }
 
-  
+  .role {
+    font-size: 0.8rem;
+  }
 
   .member_button {
-    margin: 20px auto 0;
+    width: 200px;
+    margin-left: 50px;
   }
 
-  .dotimg{
-    width: 250px;
+  .btn_border {
+    max-width: 170px;
+  }
+
+  .dotimg {
+    max-width: 300%;
+  }
+
+  .customrowDev {
+    margin-left: 100px !important;
   }
 }
 
@@ -283,9 +378,8 @@
   }
 
   .customCol {
-    margin-left: 120px;
+    margin-left: 120px !important;
   }
-  
 
   .Quoteimg {
     width: 40%;
@@ -299,16 +393,37 @@
     margin-right: auto;
   }
 
-  .name, .role, .member_button {
-    text-align: center;
-    margin-left: 0;
+  .customrowDev {
+    margin-left: 50px !important;
+  }
+
+  .customrowDev .dotimg {
+    width: 285px;
+  }
+
+  .customcolDev {
+    margin-top: 20px;
+    margin-left: 180px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -380px;
+  }
+  
+
+  .name {
+    font-size: 1.2rem;
+  }
+
+  .role {
+    font-size: 0.8rem;
   }
 
   .member_button {
     margin: 20px auto 0;
   }
 
-  .dotimg{
+  .dotimg {
     width: 300px;
   }
 }
@@ -329,6 +444,22 @@
     margin-left: 550px;
   }
 
+  .customrowDev {
+    margin-left: 100px !important;
+  }
+
+  .customrowDev .dotimg {
+    width: 280px;
+  }
+
+  .customcolDev {
+    margin-left: 200px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -370px;
+  }
+
   .image_div {
     margin-left: 90px;
     margin-right: auto;
@@ -343,16 +474,15 @@
     margin: 20px auto 0;
   }
 
-  .dotimg{
+  .dotimg {
     width: 300px;
   }
-  
 }
 
 /* Devices with width 480px to 575.98px */
 @media (min-width: 480px) and (max-width: 575.98px) {
   .member_card {
-    width: 60%;
+    width: 300px;
     height: 300px;
     margin-left: -25px;
     margin-right: auto;
@@ -360,8 +490,23 @@
   }
 
   .customCol {
-    margin-left: 120px;
+    margin-left: 120px !important;
   }
+
+  .customrowDev .dotimg {
+    width: 300px;
+  }
+  
+
+  .customcolDev {
+    margin-top: 20px;
+    margin-left: -15px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -230px;
+  }
+
 
   .Quoteimg {
     width: 90%;
@@ -384,55 +529,19 @@
     margin: 20px auto 0;
   }
 
-  .dotimg{
-    width: 290px;
+  .dotimg {
+    width: 300px;
+  }
+
+  .customrowDev {
+    margin-left: 120px !important;
   }
 }
 
 /* Devices with width 400px to 479.98px */
 @media (min-width: 400px) and (max-width: 479.98px) {
   .member_card {
-    width: 60%;
-    height: 300px;
-    margin-left: -45px;
-    margin-right: auto;
-    margin-bottom: 10px;
-  }
-
-  .customCol {
-    margin-left: 120px;
-  }
-
-  .Quoteimg {
-    width: 90%;
-    margin-top: 40px;
-    margin-bottom: 60px;
-    margin-left: 30px;
-  }
-
-  .image_div {
-    margin-left: 60px;
-    margin-right: auto;
-  }
-
-  .name, .role, .member_button {
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .member_button {
-    margin: 20px auto 0;
-  }
-
-  .dotimg{
-    width: 240px;
-  }
-}
-
-
-@media (min-width: 320px) and (max-width: 399.98px) {
-  .member_card {
-    width: 60%;
+    width: 300px;
     height: 300px;
     margin-left: -55px;
     margin-right: auto;
@@ -440,8 +549,27 @@
   }
 
   .customCol {
-    margin-left: 120px;
+    margin-left: 120px !important;
   }
+
+  .customCol {
+    margin-left: 120px !important;
+  }
+
+  .customrowDev .dotimg {
+    width: 300px;
+  }
+  
+
+  .customcolDev {
+    margin-top: 20px;
+    margin-left: -15px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -260px;
+  }
+
 
   .Quoteimg {
     width: 90%;
@@ -451,7 +579,7 @@
   }
 
   .image_div {
-    margin-left: 40px;
+    margin-left: 90px;
     margin-right: auto;
   }
 
@@ -464,7 +592,70 @@
     margin: 20px auto 0;
   }
 
-  .dotimg{
-    width: 250%;
+  .dotimg {
+    width: 300px;
+  }
+
+  .customrowDev {
+    margin-left: 120px !important;
+  }
+}
+
+/* Devices with width 320px to 399.98px */
+@media (min-width: 320px) and (max-width: 399.98px) {
+  .member_card {
+    width: 300px;
+    height: 300px;
+    margin-left: -75px;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  .customCol {
+    margin-left: 120px !important;
+  }
+
+  .customrowDev .dotimg {
+    width: 300px;
+  }
+  
+
+  .customcolDev {
+    margin-top: 20px;
+    margin-left: -15px !important;
+  }
+
+  .customCol2 .member_card {
+    margin-left: -280px;
+  }
+
+
+  .Quoteimg {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-left: 30px;
+  }
+
+  .image_div {
+    margin-left: 90px;
+    margin-right: auto;
+  }
+
+  .name, .role, .member_button {
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .member_button {
+    margin: 20px auto 0;
+  }
+
+  .dotimg {
+    width: 300px;
+  }
+
+  .customrowDev {
+    margin-left: 120px !important;
   }
 }
