@@ -1,11 +1,12 @@
 /* Base styles */
 .member_card {
   width: 337px;
-  height: 360px;
+  height: 340px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  margin-left: 20px;
+  margin-left: 350px;
   border-radius: 0.75rem;
+  margin-bottom: 10px;
 }
 
 .card_content {
@@ -19,17 +20,17 @@
 }
 
 .customrowDev {
-  margin-left: 40px;
+  margin-left: 100px;
 }
 
 .customcolDev {
-  margin-left: 170px;
+  margin-left: 100px;
 }
 
 .Quoteimg {
-  width: 500px;
-  height: 400px;
-  margin-left: 430px;
+  width: 700px;
+  height: 300px;
+  margin-left: 600px;
 }
 
 .image_div {
@@ -51,19 +52,21 @@
 
 .name {
   text-align: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
   color: #111827;
   font-size: 1.5rem;
   font-weight: 600;
   font-family: sans-serif;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px
 }
 
 .role {
   text-align: center;
   color: #4b5563;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 400;
   font-family: sans-serif;
 }
@@ -110,401 +113,6 @@
 }
 
 .customCol2 .member_card {
-  margin-left: -360px;
+  margin-left: -340px;
 }
 
-/* Responsive styles for large screens (min-width: 1280px) */
-@media (min-width: 1280px) {
-  .Quoteimg {
-    width: 40%;
-    height: auto;
-    margin-top: 40px;
-    margin-left: 520px;
-    margin-right: auto;
-  }
-
-  .member_card {
-    width: 300px;
-    height: 330px;
-    margin-left: 290px;
-  }
-
-  .image_div {
-    width: 110px;
-    height: 100px;
-    margin-left: 100px;
-    margin-right: auto;
-  }
-
-  .name {
-    font-size: 1.25rem;
-  }
-
-  .role {
-    font-size: 1rem;
-  }
-
-  .member_button {
-    width: 160px;
-    height: 40px;
-  }
-
-  .btn_border {
-    width: 100%;
-  }
-
-  .icon {
-    width: 20px;
-    height: 20px;
-  }
-
-  .btn_text {
-    font-size: 0.875rem;
-  }
-
-  .dotimg {
-    max-width: 300px;
-  }
-
-  .customCol2 .member_card {
-    margin-left: 0;
-  }
-}
-
-/* Responsive styles for large screens (min-width: 1024px) */
-@media (min-width: 1024px) {
-  .Quoteimg {
-    width: 60%;
-    height: auto;
-    margin-top: 40px;
-    margin-left: 250px;
-    margin-right: auto;
-  }
-
-  .member_card {
-    width: 250px;
-    height: 280px;
-    margin-top: 50px;
-    margin-left: 200px;
-    margin-bottom: 10px;
-  }
-
-  .image_div {
-    width: 120px;
-    height: 120px;
-    margin-left: 70px;
-    margin-right: auto;
-  }
-
-  .name {
-    font-size: 1.25rem;
-  }
-
-  .role {
-    font-size: 0.75rem;
-    margin-top: -30px;
-    margin-bottom: 10px;
-  }
-
-  .member_button {
-    width: 150px;
-    height: 40px;
-    margin-top: 10px;
-  }
-
-
-
-  .btn_border {
-    width: 100%;
-  }
-
-  .icon {
-    width: 25px;
-    height: 25px;
-  }
-
-  .btn_text {
-    font-size: 0.875rem;
-  }
-
-  .dotimg {
-    max-width: 250px;
-  }
-
-  .customCol2 .member_card {
-    margin-left: 0;
-  }
-}
-
-/* Responsive styles for medium screens (max-width: 990px) */
-@media (max-width: 990px) {
-  .Quoteimg {
-    width: 80%;
-    height: auto;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .member_card {
-    width: 250px;
-    margin: 20px auto;
-  }
-
-  .image_div {
-    width: 120px;
-    height: 120px;
-    margin-left: 75px;
-    margin-right: auto;
-  }
-
-  .name {
-    font-size: 1.25rem;
-  }
-
-  .role {
-    font-size: 1rem;
-  }
-
-  .member_button {
-    width: 140px;
-    height: 40px;
-  }
-
-  .btn_border {
-    width: 100%;
-    height: 40px;
-  }
-
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .btn_text {
-    width: 120px;
-    font-size: 0.875rem;
-    margin-left: -17px;
-  }
-
-  .dotimg {
-    max-width: 250px;
-  }
-
-  .customCol2 .member_card {
-    margin-left: 0;
-  }
-}
-
-/* Responsive styles for small screens (max-width: 767px) */
-@media (max-width: 767px) {
-  .Quoteimg {
-    max-width: 80%;
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-  }
-
-  .dotimg {
-    max-width: 200px;
-  }
-
-  .customRow {
-    justify-content: space-around;
-  }
-
-  .customCol {
-    margin-bottom: 10px;
-  }
-
-  .member_card {
-    width: 300px;
-    margin: 20px auto;
-  }
-
-  .image_div {
-    width: 120px;
-    height: 120px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .name {
-    font-size: 1.25rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .role {
-    font-size: 0.975rem;
-    margin-bottom: 10px;
-  }
-
-  .member_button {
-    width: 140px;
-    margin: 20px auto;
-  }
-
-  .btn_border {
-    height: 28px;
-  }
-
-  .icon {
-    width: 18px;
-    height: 18px;
-  }
-
-  .btn_text {
-    width: 100px;
-    font-size: 0.85rem;
-  }
-
-  .customCol2 .member_card {
-    margin-left: 0;
-  }
-}
-
-/* Responsive styles for extra small screens (max-width: 480px) */
-@media (max-width: 480px) {
-  .Quoteimg {
-    width: 100%;
-    height: auto;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .member_card {
-    max-width: 200px;
-    margin: 0 auto;
-    height: auto;
-  }
-
-  .image_div {
-    width: 80px;
-    height: 80px;
-    margin-left: 120px;
-    margin-right: auto;
-  }
-
-  .profilepic {
-    width: 80px;
-    height: 80px;
-  }
-
-  .name {
-    font-size: 1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .role {
-    font-size: 0.75rem;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .member_button {
-    width: 140px;
-    height: 30px;
-    margin: 10px auto;
-  }
-
-  .btn_border {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #4b5563;
-    border-radius: 9999px;
-  }
-
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .btn_text {
-    width: 100px;
-    font-size: 0.875rem;
-    left: 32px;
-  }
-
-  .dotimg {
-    display: block;
-    width: 200px;
-  }
-}
-
-/* Responsive styles for extra small screens (max-width: 400px) */
-@media (max-width: 400px) {
-  .Quoteimg {
-    width: 100%;
-    height: auto;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .member_card {
-    max-width: 200px;
-    margin: 0 auto;
-    height: auto;
-  }
-
-  .image_div {
-    width: 80px;
-    height: 80px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .profilepic {
-    width: 80px;
-    height: 80px;
-  }
-
-  .name {
-    font-size: 1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .role {
-    font-size: 0.75rem;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .member_button {
-    width: 140px;
-    height: 30px;
-    margin: 10px auto;
-  }
-
-  .btn_border {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #4b5563;
-    border-radius: 9999px;
-  }
-
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
-
-  .btn_text {
-    width: 100px;
-    font-size: 0.875rem;
-    left: 32px;
-  }
-
-  .dotimg {
-    display: block;
-    width: 200px;
-  }
-}
