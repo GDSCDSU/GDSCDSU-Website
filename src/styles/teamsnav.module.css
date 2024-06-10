@@ -1,19 +1,29 @@
-.TeamNavigation {
+/* Base styles */
 
-  max-width: 1100px;
+
+
+.TeamNavigation {
+  max-width: 100%;
   height: 60px;
   position: relative;
-  margin-top: 120px;
-  margin-left: 365px;
+  margin-top: 20px;
+  margin-left: 0%;
   top: 5px;
 }
 
+.section_container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 .Rectangle196 {
-  max-width: 820px;
-  height: 54px;
+  max-width: 100%;
+  height: 56px;
   border: 2px solid #3b82f6;
   border-radius: 9999px;
-  margin-left: 185px;
+  margin: 0 auto;
   padding: 3px;
   top: 15px;
   transition: border 0.3s ease;
@@ -21,13 +31,13 @@
 }
 
 .Rectangle197 {
-  width: 120px;
+  width: 15%;
   height: 46px;
   background-color: #3b82f6;
   border-radius: 9999px;
   padding: 5px;
   position: absolute;
-  top: 4px;
+  top: 5px;
   transition: left 0.3s ease;
 }
 
@@ -66,43 +76,67 @@
   transition: color 0.3s ease;
 }
 
+.leftFounder {
+  left: 5.2% !important;
+}
+
+.leftLeads {
+  left: 22.5% !important;
+}
+
+.leftMarketing {
+  left: 37.5% !important;
+}
+
+.leftDevelopment {
+  left: 54% !important;
+}
+
+.leftOperations {
+  left: 69% !important;
+}
+
+.leftExecutives {
+  left: 82% !important;
+}
+
 .Founder {
-  left: 220px;
+  left: 12%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .Leads {
-  left: 360px;
+  left: 30%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .MarketingTeam {
-  left: 470px;
+  left: 45%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .DevelopmentTeam {
-  left: 610px;
+  left: 60%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .OperationsTeam {
-  left: 770px;
+  left: 75%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .ExecutiveCoreTeam {
-  left: 905px;
+  left: 90%;
   top: 12px;
   font-weight: 700;
   padding-top: 5px;
@@ -112,217 +146,547 @@
   color: white; /* Change text color to white for active button */
 }
 
-/* Additional classes for left positioning */
-.leftFounder {
-  left: 190px !important;
-}
-
-.leftLeads {
-  left: 320px !important;
-}
-
-.leftMarketing {
-  left: 445px !important;
-}
-
-.leftDevelopment {
-  left: 600px !important;
-}
-
-.leftOperations {
-  left: 750px !important;
-}
-
-.leftExecutives {
-  left: 880px !important;
-}
-
-
-@media (max-width: 768px) {
+/* Responsive styles */
+@media (max-width: 920px) {
   .TeamNavigation {
-    width: 100%;
-    height: auto;
-    margin-left: -155px;
+    margin-left: 2%;
   }
-
+  
   .Rectangle196 {
-    width: 95%;
-    height: 60px;
+    max-width: 100%;
+    padding: 3px;
+    height: 45px;
+    top: 10px;
   }
 
   .Rectangle197 {
-    width: 120px;
-    height: 50px;
+    width: 15%;
+    height: 35px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 14px;
+    top: 10px;
   }
 
   .leftFounder {
-    left: 190px !important;
+    left: 0.5% !important;
   }
-
+  
   .leftLeads {
-    left: 290px !important;
+    left: 15.5% !important;
   }
-
+  
   .leftMarketing {
-    left: 410px !important;
+    left: 30.5% !important;
   }
-
+  
   .leftDevelopment {
-    left: 540px !important;
+    left: 49% !important;
   }
-
+  
   .leftOperations {
-    left: 670px !important;
+    left: 67% !important;
   }
-
+  
   .leftExecutives {
-    left: 790px !important;
+    left: 84.5% !important;
   }
-
+  
+  
+  .Founder, .Leads, .MarketingTeam, .DevelopmentTeam, .OperationsTeam, .ExecutiveCoreTeam {
+    top: 7px;
+  }
+  
   .Founder {
-    left: 215px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
+    left: 3.5%;
   }
-  
+
   .Leads {
-    left: 330px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
+    left: 20%;
   }
-  
+
   .MarketingTeam {
-    left: 430px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
-    
+    left: 33%;
   }
-  
+
   .DevelopmentTeam {
-    left: 550px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
+    left: 50%;
   }
-  
-  
+
   .OperationsTeam {
-    left: 690px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px; 
-   }
-  
-  
-  .ExecutiveCoreTeam {
-    left: 810px;
-    top: 12px;
-    font-weight: 700;
-    padding-top: 5px;
-    padding-left: 5px;
+    left: 69%;
   }
 
+  .ExecutiveCoreTeam {
+    left: 87.5%;
+  }
+}
 
+@media (max-width: 767px) {
+  .TeamNavigation {
+    margin-left: 2%;
+  }
+  
+  .Rectangle196 {
+    max-width: 100%;
+    padding: 3px;
+    height: 44px;
+    top: 10px;
+  }
+
+  .Rectangle197 {
+    width: 17%;
+    height: 35px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 14px;
+    top: 10px;
+  }
+
+  .leftFounder {
+    left: 0.8% !important;
+  }
+  
+  .leftLeads {
+    left: 16% !important;
+  }
+  
+  .leftMarketing {
+    left: 33% !important;
+  }
+  
+  .leftDevelopment {
+    left: 50.5% !important;
+  }
+  
+  .leftOperations {
+    left: 67.5% !important;
+  }
+  
+  .leftExecutives {
+    left: 82.5% !important;
+  }
+  
+  .NavButton {
+    font-size: 10px;
+    top: 6px;
+  }
+  
+  .Founder, .Leads, .MarketingTeam, .DevelopmentTeam, .OperationsTeam, .ExecutiveCoreTeam {
+    top: 9px;
+  }
+  
+  .Founder {
+    left: 5%;
+  }
+
+  .Leads {
+    left: 21.5%;
+  }
+
+  .MarketingTeam {
+    left: 37%;
+  }
+
+  .DevelopmentTeam {
+    left: 53%;
+  }
+
+  .OperationsTeam {
+    left: 70.5%;
+  }
+
+  .ExecutiveCoreTeam {
+    left: 87%;
+  }
 }
 
 @media (max-width: 480px) {
   .TeamNavigation {
-    width: 100%;
-    margin-top: 40px;
-    height: 20px;
-    margin-left: -10px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 0px;
   }
-
+  
   .Rectangle196 {
-    width: 90%;
-    height: 30px;
-    margin-left:40px ;
+    max-width: 100%;
+    height: 35px;
+    padding: 3px;
+    top: 7px;
   }
 
   .Rectangle197 {
-    width: 60px;
+    width: 15%;
+    height: 25px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 9px;
+    top: 6px;
+  }
+  
+  .Founder, .Leads, .MarketingTeam, .DevelopmentTeam, .OperationsTeam, .ExecutiveCoreTeam {
+    top: 6px;
+  }
+
+  .DevelopmentTeam{
+    font-size: 8px;
+    top: 7px;
+  }
+
+  
+  .leftFounder {
+    left: 1.2% !important;
+  }
+  
+  .leftLeads {
+    left: 16.5% !important;
+  }
+  
+  .leftMarketing {
+    left: 32.5% !important;
+  }
+  
+  .leftDevelopment {
+    left: 50% !important;
+  }
+  
+  .leftOperations {
+    left: 68.5% !important;
+  }
+  
+  .leftExecutives {
+    left: 84% !important;
+  }
+  
+  
+  .Founder {
+    left: 4%;
+  }
+
+  .Leads {
+    left: 21%;
+  }
+
+  .MarketingTeam {
+    left: 35%;
+  }
+
+  .DevelopmentTeam {
+    left: 51.2%;
+  }
+
+  .OperationsTeam {
+    left: 70.5%;
+  }
+
+  .ExecutiveCoreTeam {
+    left: 86.5%;
+  }
+}
+
+@media (max-width: 400px) {
+  .TeamNavigation {
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  .Rectangle196 {
+    max-width: 100%;
+    height: 30px;
+    padding: 3px;
+    top: 7px;
+  }
+
+  .Rectangle197 {
+    width: 15%;
     height: 20px;
     top: 5px;
   }
 
+  .NavButton {
+    font-size: 7px;
+    top: 6px;
+  }
+  
+  .Founder, .Leads, .MarketingTeam, .DevelopmentTeam, .OperationsTeam, .ExecutiveCoreTeam {
+    top: 5px;
+  }
+
+  
   .leftFounder {
-    left: 10% !important;
+    left: 1.2% !important;
   }
-
+  
   .leftLeads {
-    left: 23% !important;
+    left: 16.5% !important;
   }
-
+  
   .leftMarketing {
-    left: 36% !important;
+    left: 32.5% !important;
   }
-
+  
   .leftDevelopment {
-    left: 52% !important;
+    left: 50.5% !important;
   }
-
+  
   .leftOperations {
-    left: 68% !important;
+    left: 68.5% !important;
   }
-
+  
   .leftExecutives {
-    left: 83% !important;
+    left: 84% !important;
   }
-
+  
+  
   .Founder {
-    left: 60px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-  }
-  
-  .Leads {
-    left: 125px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-  }
-  
-  .MarketingTeam {
-    left: 180px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-    
-  }
-  
-  .DevelopmentTeam {
-    left: 250px;
-    top: 4px;
-    font-size: 9.2px;
-    font-weight: 700;
-    padding-top: 5px;
-  }
-  
-  
-  .OperationsTeam {
-    left: 330px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px; 
-   }
-  
-  
-  .ExecutiveCoreTeam {
-    left: 400px;
-    top: 2px;
-    font-size: 10px;
-    font-weight: 700;
-    padding-top: 5px;
-    padding-left: 5px;
+    left: 4%;
   }
 
+  .Leads {
+    left: 21%;
+  }
+
+  .MarketingTeam {
+    left: 35%;
+  }
+
+  .DevelopmentTeam {
+    left: 51.2%;
+  }
+
+  .OperationsTeam {
+    left: 70.5%;
+  }
+
+  .ExecutiveCoreTeam {
+    left: 86.5%;
+  }
+}
+
+@media (min-width: 920px) and (max-width: 1023px) {
+  .TeamNavigation {
+    margin-left: 2%;
+  }
   
+  .Rectangle196 {
+    max-width: 100%;
+    padding: 3px;
+    height: 45px;
+    top: 10px;
+  }
+
+  .Rectangle197 {
+    width: 15%;
+    height: 35px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 14px;
+    top: 10px;
+  }
+
+  .leftFounder {
+    left: 0.5% !important;
+  }
+  
+  .leftLeads {
+    left: 15.5% !important;
+  }
+  
+  .leftMarketing {
+    left: 30.5% !important;
+  }
+  
+  .leftDevelopment {
+    left: 49% !important;
+  }
+  
+  .leftOperations {
+    left: 67% !important;
+  }
+  
+  .leftExecutives {
+    left: 84.5% !important;
+  }
+  
+  
+  .Founder, .Leads, .MarketingTeam, .DevelopmentTeam, .OperationsTeam, .ExecutiveCoreTeam {
+    top: 7px;
+  }
+  
+  .Founder {
+    left: 4.5%;
+  }
+
+  .Leads {
+    left: 20%;
+  }
+
+  .MarketingTeam {
+    left: 34%;
+  }
+
+  .DevelopmentTeam {
+    left: 52%;
+  }
+
+  .OperationsTeam {
+    left: 70%;
+  }
+
+  .ExecutiveCoreTeam {
+    left: 88.5%;
+  }
+}
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .TeamNavigation {
+    margin-left: 5%;
+  }
+  
+  .Rectangle196 {
+    max-width: 100%;
+    height: 50px;
+    padding: 4px;
+    top: 20px;
+  }
+
+  .Rectangle197 {
+    width: 18%;
+    height: 40px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 16px;
+    top: 10px;
+  }
+
+  .leftFounder {
+    left: 0.5% !important;
+  }
+  
+  .leftLeads {
+    left: 17% !important;
+  }
+  
+  .leftMarketing {
+    left: 32.5% !important;
+  }
+  
+  .leftDevelopment {
+    left: 50% !important;
+  }
+  
+  .leftOperations {
+    left: 67% !important;
+  }
+  
+  .leftExecutives {
+    left: 81.5% !important;
+  }
+  
+  .Founder {
+    left: 5.5%;
+  }
+
+  .Leads {
+    left: 22.5%;
+  }
+
+  .MarketingTeam {
+    left: 37%;
+  }
+
+  .DevelopmentTeam {
+    left: 53%;
+  }
+
+  .OperationsTeam {
+    left: 71%;
+  }
+
+  .ExecutiveCoreTeam {
+    left: 87%;
+  }
+}
+/* Responsive styles for extra-large screens */
+@media (min-width: 1280px) {
+  .TeamNavigation {
+    margin-left: 3%;
+  }
+  
+  .Rectangle196 {
+    max-width: 100%;
+    height: 55px;
+    padding: 5px;
+    top: 25px;
+  }
+
+  .Rectangle197 {
+    width: 17%;
+    height: 45px;
+    top: 5px;
+  }
+
+  .NavButton {
+    font-size: 18px;
+    top: 10px;
+  }
+
+  .leftFounder {
+    left: 0.3% !important;
+  }
+  
+  .leftLeads {
+    left: 17% !important;
+  }
+  
+  .leftMarketing {
+    left: 33% !important;
+  }
+  
+  .leftDevelopment {
+    left: 50% !important;
+  }
+  
+  .leftOperations {
+    left: 66.5% !important;
+  }
+  
+  .leftExecutives {
+    left: 82.5% !important;
+  }
+  
+  .Founder {
+    left: 6%;
+  }
+
+  .Leads {
+    left: 23%;
+  }
+
+  .MarketingTeam {
+    left: 38%;
+  }
+
+  .DevelopmentTeam {
+    left: 54%;
+  }
+
+  .OperationsTeam {
+    left: 71%;
+  }
+
+  .ExecutiveCoreTeam {
+    left: 88%;
+  }
 }
