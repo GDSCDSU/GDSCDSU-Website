@@ -1,30 +1,41 @@
+/* Base styles */
 .EventsNavigation {
+  width: 100%;
   height: 54px;
+  margin-left: 2%;
+  top: 30px;
+  position: relative;
 }
 
+.section_container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
 .nav_border {
-  width: 840px;
+  width: 80%;
   height: 54px;
   position: absolute;
   border: 2px solid #3b82f6;
   border-radius: 9999px;
-  margin-left: 500px;
   padding: 5px;
   top: 6px;
-  left: 0;
+  left: 10%;
   transition: border 0.3s ease;
 }
 
 .active_tab {
-  width: 350px;
+  width: 40%;
   height: 46px;
   position: absolute;
   background-color: #3b82f6;
   border-radius: 9999px;
   padding: 5px;
-  margin-left: 500px;
   top: 10px;
-  left: 4px;
+  left: 10%;
   transition: left 0.3s ease;
 }
 
@@ -34,7 +45,6 @@
   font-family: sans-serif;
   font-weight: 400;
   color: #4b5563;
-  margin-left: 500px;
   border: none;
   cursor: pointer;
   background-color: transparent;
@@ -42,14 +52,14 @@
 }
 
 .Events {
-  left: 150px;
+  left: 25%;
   top: 17px;
   font-weight: 700;
   padding-top: 5px;
 }
 
 .Speakers {
-  left: 600px;
+  left: 70%;
   top: 17px;
   font-weight: 700;
   padding-top: 5px;
@@ -59,42 +69,146 @@
   color: white;
 }
 
-.TeamsHeader {
-  height: 200px; /* Adjust the height as needed */
-  background-image: url('/events-header.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* eventnav.module.css */
+
+.section_container {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-/* Additional classes for left positioning */
+.full-page-content {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px; /* Optional: Add some padding for better visual layout */
+}
+
+/* Additional styles for other elements if needed */
+
+
 .leftAllEvents {
-  left: 10px !important;
+  left: 10.2% !important;
 }
 
 .leftSpeaker {
-  left: 480px !important;
+  left: 49.8% !important;
+}
+
+.section_container {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* Responsive styles */
-@media (max-width: 768px) {
+/* Responsive styles for 1280px and 1024px */
+@media (max-width: 1280px) {
   .EventsNavigation {
-    width: 100%;
-    margin-left: -480px;
+    margin-left: 2%;
+    top: 20px;
   }
-
+  
   .nav_border {
     width: 90%;
+    left: 5%;
+    top: 6px;
   }
 
   .active_tab {
-    width: 40%;
+    width: 45%;
     left: 5%;
+    top: 10px;
   }
 
+  .nav_button {
+    font-size: 0.9rem;
+  }
+  
   .Events {
     left: 15%;
-    top: 15px;
+  }
+
+  .Speakers {
+    left: 70%;
+  }
+
+  .leftAllEvents {
+    left: 5.5% !important;
+  }
+  
+  .leftSpeaker {
+    left: 49.5% !important;
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .EventsNavigation {
+    margin-left: 2%;
+    top: 20px;
+  }
+  
+  .nav_border {
+    width: 90%;
+    left: 5%;
+    top: 6px;
+  }
+
+  .active_tab {
+    width: 45%;
+    left: 5%;
+    top: 10px;
+  }
+
+  .nav_button {
+    font-size: 0.9rem;
+  }
+  
+  .Events {
+    left: 15%;
+  }
+
+  .Speakers {
+    left: 70%;
+  }
+
+  .leftAllEvents {
+    left: 5.5% !important;
+  }
+  
+  .leftSpeaker {
+    left: 49.5% !important;
+  }
+}
+
+/* Responsive styles for 768px */
+@media (max-width: 768px) {
+  .EventsNavigation {
+    margin-left: 2%;
+    top: 20px;
+  }
+  
+  .nav_border {
+    width: 90%;
+    left: 5%;
+    top: 6px;
+  }
+
+  .active_tab {
+    width: 45%;
+    left: 5%;
+    top: 10px;
+  }
+
+  .nav_button {
+    font-size: 0.9rem;
+  }
+  
+  .Events {
+    left: 20%;
   }
 
   .Speakers {
@@ -102,33 +216,47 @@
   }
 
   .leftAllEvents {
-    left: 1% !important;
+    left: 5.5% !important;
   }
-
+  
   .leftSpeaker {
-    left: 49% !important;
+    left: 49.5% !important;
   }
 }
 
+/* Responsive styles for 480px */
 @media (max-width: 480px) {
   .EventsNavigation {
-    width: 95%;
-    top: 50px;
+    height: auto;
+    margin-left: 2%;
+    top: 10px;
   }
-
+  
   .nav_border {
-    width: 86.5%;
+    width: 87%;
+    height: 39px;
+    padding: 3px;
+    top: 3px;
     left: 20px;
   }
 
   .active_tab {
     width: 40%;
+    height: 30px;
+    top: 7px;
     left: 0;
   }
 
+  .nav_button {
+    font-size: 0.8rem;
+    top: 8px;
+  }
+  
+  .Events, .Speakers {
+    top: 8px;
+  }
+  
   .Events {
-    width: 100px;
-    top: 35%;
     left: 15%;
   }
 
@@ -136,15 +264,11 @@
     left: 60%;
   }
 
-  .nav_button {
-    font-size: 0.875rem;
-  }
-
   .leftAllEvents {
     left: 5% !important;
   }
-
+  
   .leftSpeaker {
-    left: 50% !important;
+    left: 50% !important; /* Correct the left position to fit within the viewport */
   }
 }

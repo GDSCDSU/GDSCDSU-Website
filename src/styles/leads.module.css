@@ -1,5 +1,6 @@
+/* Base styles */
 .Leads {
-  margin-left: 520px;
+  margin-left: 450px;
 }
 
 .container {
@@ -14,12 +15,11 @@
   margin-left: 600px;
 }
 
-.verticalimg{
+.verticalimg {
   position: absolute;
   margin-left: -5px;
   height: 320px;
 }
-
 
 .ellipse {
   width: 122px;
@@ -84,8 +84,9 @@
   color: #4b5563;
   font-size: 1rem;
   font-weight: 400;
+  width: 700px;
   font-family: sans-serif;
-  margin-left: 120px;
+  margin-left: 140px;
   word-wrap: break-word;
 }
 
@@ -143,131 +144,488 @@
   display: inline-block;
 }
 
+/* Media queries for responsiveness */
 
-@media (max-width: 768px) {
-  .Quoteimg{
-    margin-left: 50px;
-    margin-bottom: -80px;
-  }
-
-  .verticalimg{
-    max-width: 150px;
-    max-height: 380px;
-  }
-
-
+/* Extra small devices (phones, 0px and up) */
+@media (max-width: 575.98px) {
   .Leads {
-    margin-left: 20px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 90%;
+    margin-left: auto;
     margin-right: auto;
   }
 
-  .rectangle198 {
-    width: 650px;
-    height: 320px;
-    margin-left: -10px;
-  }
-
   .profileimage {
-    width: 100px;
-    height: 100px;
-    margin-top: 10px;
-    margin-left: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .name {
-    margin-top: -120px;
-    margin-left: 150px;
-  }
-
-  .designation {
-    margin-top: 0px;
-    margin-left: 150px;
-  }
-
-  .description {
-    margin-left: 120px ;
+  .name, .designation, .description {
+    margin-left: 0;
+    text-align: center;
   }
 
   .socials {
-    width: 150px;
-    height: 150px;
-    margin-left: 470px;
+    margin-top: 20px;
+    text-align: center;
   }
 
   .socials img {
-    width: 25px;
-    height: 25px;
+    margin: 0 auto;
   }
-
-  
 }
 
-@media (max-width: 480px) {
-  
-  .Quoteimg {
-    width: 100%;
-    height: auto;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    display: block;
-  }
-
-  .verticalimg{
-    max-width: 0px;
-    max-height: 0px;
-  }
-
-
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
   .Leads {
-    margin-top: 10px;
     margin-left: 20px;
-    margin-right: auto;
   }
 
-  .rectangle198 {
-    width: 400px;
-    height: 560px;
+  .rectangle198{
+    width: 105%;
     margin-left: -30px;
+    height: 300px;
   }
 
   .profileimage {
-    width: 100px;
-    height: 100px;
+    margin-left: 5px;
     margin-top: 10px;
-    margin-left: 10px;
   }
 
-  .name {
-    margin-top: -70px;
-    margin-left: 150px;
+  .name{
+    text-align: left;
+    margin-top: -35px;
+    margin-left: 110px;
   }
 
-  .designation {
-    margin-top: 0px;
-    margin-left: 150px;
+  .verticalimg{
+    height: 295px;
   }
 
-  .description {
-    margin-left: 120px ;
-    width: 250px;
-    
-    word-wrap: break-word;
-    word-break: keep-all;
+  .designation{
+    text-align: left;
+    margin-left:120px;
   }
 
- 
+  .description{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 110px;
+    font-size: 0.60rem;
+    width: 75%;
+  }
+  
 
   .socials {
-    width: 120px;
-    height: 100px;
-    margin-left: 270px;
     margin-top: -80px;
+    margin-left: 330px;
   }
 
   .socials img {
-    width: 20px;
-    height: 20px;
+    margin: 0 auto;
   }
 
+  .Quoteimg {
+    width: 80%;
+    margin-top: -100px;
+    margin-bottom: -70px;
+    margin-left: 65px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .Leads {
+    margin-left: 50px;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 50%;
+    
+  }
+
+  .rectangle198{
+    width: 80%;
+  }
+
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    width: 77%;
+  }
+  
+
+  .socials {
+    margin-top: -60px;
+    margin-left: 370px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 150px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .Leads {
+    margin-left: 100px;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 50%;
+    
+  }
+
+  .rectangle198{
+    width: 80%;
+  }
+
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    font-size: 0.65rem;
+    padding-right: 5px;
+    width: 80%;
+  }
+  
+
+  .socials {
+    margin-top: -80px;
+    margin-left: 500px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 220px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .Leads {
+    margin-left: 150px;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 50%;
+    
+  }
+
+  .rectangle198{
+    width: 80%;
+  }
+
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    width: 80%;
+  }
+  
+
+  .socials {
+    margin-top: -60px;
+    margin-left: 600px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 40%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 370px;
+  }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .Leads {
+    margin-left: 480px;
+  }
+
+  .container, .rectangle198, .Quoteimg, .description, .socials {
+    width: 50%;
+    
+  }
+
+  .rectangle198{
+    width: 65%;
+  }
+
+  .profileimage {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-left: 120px;
+    width: 700px;
+  }
+  
+
+  .socials {
+    margin-top: -80px;
+    margin-left: 700px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 40%;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    margin-left: 550px;
+  }
+}
+
+/* Devices with width 480px to 575.98px */
+@media (min-width: 480px) and (max-width: 575.98px) {
+  .Leads {
+    margin-left: 20px;
+  }
+
+  .rectangle198{
+    width: 105%;
+    margin-left: -30px;
+    height: 300px;
+  }
+
+  .profileimage {
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
+  .name{
+    text-align: left;
+    margin-top: -35px;
+    margin-left: 110px;
+  }
+
+  .verticalimg{
+    height: 295px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 110px;
+    font-size: 0.50rem;
+    width: 75%;
+  }
+  
+
+  .socials {
+    margin-top: -80px;
+    margin-left: 250px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: -100px;
+    margin-bottom: -70px;
+    margin-left: 65px;
+  }
+}
+
+/* Devices with width 400px to 479.98px */
+@media (min-width: 400px) and (max-width: 479.98px) {
+  .Leads {
+    margin-left: 20px;
+  }
+
+  .rectangle198{
+    width: 105%;
+    margin-left: -30px;
+    height: 300px;
+  }
+
+  .profileimage {
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
+  .name{
+    text-align: left;
+    margin-top: -35px;
+    margin-left: 110px;
+  }
+
+  .verticalimg{
+    display: none;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-top: -5px;
+    margin-left: 5px;
+    font-size: 0.45rem;
+    width: 100%;
+  }
+  
+
+  .socials {
+    margin-top: -80px;
+    margin-left: 180px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: -100px;
+    margin-bottom: -70px;
+    margin-left: 35px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 399.98px) {
+  .Leads {
+    margin-left: 20px;
+  }
+
+  .rectangle198{
+    width: 105%;
+    margin-left: -30px;
+    height: 300px;
+  }
+
+  .profileimage {
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+
+  .name{
+    text-align: left;
+    margin-top: -35px;
+    margin-left: 110px;
+  }
+
+  .verticalimg{
+    display: none;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left:120px;
+  }
+
+  .description{
+    text-align: left;
+    margin-top: -5px;
+    margin-left: 5px;
+    font-size: 0.45rem;
+    width: 100%;
+  }
+  
+
+  .socials {
+    margin-top: -80px;
+    margin-left: 160px;
+  }
+
+  .socials img {
+    margin: 0 auto;
+  }
+
+  .Quoteimg {
+    width: 80%;
+    margin-top: -100px;
+    margin-bottom: -70px;
+    margin-left: 35px;
+  }
 }

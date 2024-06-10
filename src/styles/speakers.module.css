@@ -1,209 +1,582 @@
+/* Base styles */
 .card_container {
-    width: 450px;
-    height: 350px;
-    background: white;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.20);
-    border-radius: 20px;
-    margin-left: 350px;
-    margin-top: 145px;
-    margin-bottom: 320px;
+  width: 450px;
+  height: 350px;
+  background: white;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.20);
+  border-radius: 20px;
+  margin-left: 300px;
+  margin-top: 145px;
+  margin-bottom: 320px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  margin-left: 125px;
+  margin-top: -350px;
+}
+
+.heading {
+  margin-left: 200px;
+  margin-top: -200px;
+  margin-bottom: 300px;
+}
+
+.name {
+  text-align: center;
+  color: #2A2E3A;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.position {
+  text-align: center;
+  color: #656C73;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.event {
+  text-align: center;
+  color: #656C73;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.eventTitle {
+  text-align: center;
+  color: #656C73;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.Vector {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background-color: #4b5563;
+}
+
+.LinkedinProfile {
+  position: absolute;
+  top: 7px;
+  left: 30px;
+  text-align: center;
+  color: #4b5563;
+  font-size: 0.875rem;
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.Group718 {
+  width: 137px;
+  height: 32px;
+  position: relative;
+  left: 150px;
+  top: 10px;
+}
+
+.Rectangle191 {
+  width: 137px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #4b5563;
+  border-radius: 9999px;
+}
+
+.vectorimg1 {
+  position: absolute;
+  margin-left: 1600px;
+  margin-top: 550px;
+}
+
+.vectorimg2 {
+  position: absolute;
+  margin-left: -20px;
+}
+
+/* Media queries for responsiveness */
+
+/* Extra small devices (phones, 0px and up) */
+@media (max-width: 575.98px) {
+  .card_container {
+    width: 90%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
-  
   .image {
-    width: 200px;
-    height: 200px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
-    border-radius: 100px;  
-    margin-left: 125px;
-    margin-top: -350px;
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -50px;
   }
 
-  .heading{
-    margin-left: 200px;
-    margin-top: -200px;
-    margin-bottom:300px
-  
-  }
-  
-  
-  
-  .name {
+  .heading {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     text-align: center;
-    color: #2A2E3A;
-    font-size: 24px;
-    font-family: sans-serif;
-    font-weight: 700;
   }
-  
-  .position {
-    text-align: center;
-    color: #656C73;
-    font-size: 16px;
-    font-family: sans-serif;
-    font-weight: 400;
-  }
-  
-  .event {
-    text-align: center;
-    color: #656C73;
-    font-size: 12px;
-    font-family: sans-serif;
-    font-weight: 400;
-  }
-  
+
+  .name,
+  .position,
+  .event,
   .eventTitle {
     text-align: center;
-    color: #656C73;
-    font-size: 14px;
-    font-family: sans-serif;
-    font-weight: 500;
-    text-decoration: underline;
-    
+    margin-left: auto;
+    margin-right: auto;
   }
-  
-  
-  
-  
-  .Vector {
-      width: 17px;
-      height: 17px;
-      position: absolute;
-      top: 8px;
-      left: 8px;
-      background-color: #4b5563;
-    }
-    
-    .LinkedinProfile {
-      position: absolute;
-      top: 7px;
-      left: 30px;
-      text-align: center;
-      color: #4b5563;
-      font-size: 0.875rem;
-      font-weight: 400;
-      font-family: sans-serif;
-    }
-    
-    .Group718 {
-      width: 137px;
-      height: 32px;
-      position: relative;
-      left: 150px;
-      top: 10px;
-    }
-    
-    .Rectangle191 {
-      width: 137px;
-      height: 32px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      border: 1px solid #4b5563;
-      border-radius: 9999px;
-    }
-    
-    .vectorimg1{
-      position:absolute;
-      margin-left: 1600px;
-      margin-top: 550px;
-    }
-  
-    .vectorimg2{
-      position: absolute;
-      margin-left: -20px;
-    }
 
-    @media (max-width: 768px) {
-
-      
-      .card_container {
-          margin-top: 100px;
-          margin-left: 220px;
-          margin-bottom: 50px;
-          width: 350px;
-          height: 430px;
-      }
-  
-      .image {
-          width: 60%;
-          margin-top: -80px;
-          margin-left: 75px;
-      }
-
-      .heading{
-        margin-left: 90px;
-        margin-top: 100px; 
-        margin-bottom: -70px;     
-      }
-  
-      .name, .position, .event, .eventTitle {
-          font-size: 1rem;
-          margin-top: 10px;
-      }
-
-      .Rectangle191{
-        margin-left: -50px;
-      }
-
-      .Vector{
-        margin-left: -50px;
-      }
-
-      .LinkedinProfile{
-        margin-left: -50px;
-      }
-
-      .vectorimg1 {
-        width: 80%;
-        max-width: 160px;
-        margin-left: 620px;
-      }
-  
-      .vectorimg2 {
-        max-width: 160px;
-        margin-left: 0px;
-      }
+  .vectorimg1 {
+    position: relative;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 100px;
   }
-  
-  @media (max-width: 480px) {
-      .card_container {
-          margin-left: 60px;
-      }
-  
-      .image {
-          width: 60%;
-          margin-top: 10px;
-          margin-left: 67px;
-      }
-  
-      .name, .position, .event, .eventTitle {
-          font-size: 0.875rem;
-          margin-top: 5px;
-      }
-  
-      .Rectangle191{
-        margin-left: -40px;
-      }
 
-      .Vector{
-        margin-left: -40px;
-      }
-
-      .LinkedinProfile{
-        margin-left: -40px;
-      }
-
-  
-      .vectorimg1 {
-        width: 80%;
-        max-width: 160px;
-        margin-left: 320px;
-      }
-  
-      .vectorimg2 {
-        max-width: 160px;
-        margin-left: 0px;
-      }
+  .vectorimg2 {
+    position: relative;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 100px;
   }
-   
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .card_container {
+    width: 60%;
+    height: 330px;
+    margin-left: 120px;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom:320px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Group718{
+    width: 70%;
+    margin-left: -50px;
+  }
+
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card_container {
+    width: 60%;
+    height: 330px;
+    margin-left: 150px;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom:320px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Group718{
+    width: 70%;
+    margin-left: 10px;
+  }
+
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .card_container {
+    width: 90%;
+    height: 330px;
+    margin-left: 110px;
+    margin-right: auto;
+    margin-top: 180px;
+    margin-bottom:200px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Group718{
+    width: 70%;
+    margin-left: -50px;
+  }
+
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card_container {
+    width: 80%;
+    height: 330px;
+    margin-left: 170px;
+    margin-right: auto;
+    margin-top: 180px;
+    margin-bottom:200px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Group718{
+    width: 70%;
+    margin-left: -30px;
+  }
+
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .card_container {
+    width: 60%;
+    height: 350px;
+    margin-left: 350px;
+    margin-right: auto;
+    margin-top: 250px;
+    margin-bottom:250px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: -150px;
+    margin-bottom: 150px;
+    text-align: center;
+  }
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .Group718{
+    margin-left: 20px;
+  }
+}
+
+/* Devices with width 480px to 575.98px */
+@media (min-width: 480px) and (max-width: 575.98px) {
+  .card_container {
+    width: 60%;
+    height: 330px;
+    margin-left: 90px;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom:60px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Group718{
+    width: 70%;
+    margin-left: -80px;
+  }
+
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}
+
+/* Devices with width 400px to 479.98px */
+@media (min-width: 400px) and (max-width: 479.98px) {
+  .card_container {
+    width: 60%;
+    height: 330px;
+    margin-left: 80px;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom:60px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Group718{
+    width: 70%;
+    margin-left: -100px;
+  }
+
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 399.98px) {
+  .card_container {
+    width: 60%;
+    height: 330px;
+    margin-left: 80px;
+    margin-right: auto;
+    margin-top: 70px;
+    margin-bottom:60px;
+  }
+
+  .image {
+    width: 180px;
+    height: 180px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading {
+    margin-left: auto;
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  .Group718{
+    width: 70%;
+    margin-left: -100px;
+  }
+
+  .name,
+  .position,
+  .event,
+  .eventTitle {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vectorimg1 {
+    position: absolute;
+    margin-left: 1750px;
+    margin-top: 20px;
+    width: 150px;
+  }
+
+  .vectorimg2 {
+    position: absolute;
+    margin-left: auto;
+    margin-top: 20px;
+    width: 150px;
+  }
+}

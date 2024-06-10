@@ -1,3 +1,4 @@
+/* Base styles */
 
 .card {
   width: 504px;
@@ -5,18 +6,18 @@
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 0.5rem 0.5rem;
-  margin-top: -1px;
-  margin-left: 320px;
+  margin: -1px auto;
   padding: 1.25rem;
+  overflow: hidden;
 }
 
-.Quoteimg{
+.Quoteimg {
   width: 700px;
   height: 300px;
-  margin-left: 600px;
+  margin: 0 auto;
 }
 
-.verticalimg{
+.verticalimg {
   position: absolute;
   height: 330px;
 }
@@ -29,16 +30,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-}
-
-.card p {
-  color: #4b5563;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
 }
 
 .group {
@@ -47,8 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.25rem;
-  margin-left: 120px;
+  margin: 1.25rem auto;
 }
 
 .group .icon {
@@ -60,16 +51,14 @@
   margin-left: 20px;
 }
 
-
 .container {
   width: 500px;
   height: 330px;
   background-color: #ffffff;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 0.75rem;
-  margin-top: 20px;
-  margin-left: 320px;
-  
+  margin: 20px auto;
+  overflow: hidden;
 }
 
 .imageContainer {
@@ -99,48 +88,42 @@
   left: 0;
 }
 
+.name, .designation, .description {
+  color: #4b5563;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: sans-serif;
+  text-transform: capitalize;
+  margin: 5px auto;
+}
+
 .name {
   color: #111827;
   font-size: 1.5rem;
   font-weight: 600;
-  font-family: sans-serif;
-  text-transform: capitalize;
-  margin-left: 120px;
-
+  margin-left: 110px;
 }
 
 .designation {
-  color: #4b5563;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: sans-serif;
-  text-transform: capitalize;
-  margin-left: 120px;
+  margin-left: 110px;
 }
 
 .description {
-  width: 353px;
+  width: 380px;
   text-align: justify;
-  color: #4b5563;
   word-wrap: break-word;
-  font-size: 1rem;
-  font-weight: 400;
-  font-family: sans-serif;
-  margin-top: 5px;
-  margin-left: 120px;
+  margin-left: 110px;
 }
 
-.profilepic{
-  margin-left: 10px;
+.profilepic {
+  margin: 0 auto;
 }
 
-.founderimg{
+.founderimg {
   width: 200px;
-  margin-top: -210px;
-  margin-left: 130px;
+  margin: -210px auto 20px auto;
   position: relative;
 }
-
 
 .header {
   width: 505px;
@@ -148,7 +131,7 @@
   background: #4285F4;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  margin-left: 320px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,15 +144,13 @@
   background: green;
 }
 
-.dotimg{
+.dotimg {
   max-width: 700px;
   max-height: 400px;
   position: relative;
   left: -20px;
   top: -40px;
-
 }
-
 
 .Vector {
   width: 20px;
@@ -179,159 +160,491 @@
   left: 4px;
 }
 
-@media (max-width: 768px) {
-  .Quoteimg{
-    max-width: 100%;
-    margin-left: 50px;
-    margin-bottom: -50px;
-  }
+/* Media queries for responsiveness */
 
-  .verticalimg{
-    max-width: 250px;
-    max-height: 380px;
-  }
-
+/* Extra small devices (phones, 0px and up) */
+@media (max-width: 575.98px) {
   .card {
-    width: 60%;
-    margin-left: 150px;
-    margin-top: 10px;
+    width: 90%;
+    margin-left: 100px;
+    height: auto;
+    padding: 1rem;
   }
 
-  .dotimg{
-    max-width: 460px;
+  .container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
   }
 
   .header {
-    width: 60%;
-    margin-left: 150px;
-    height: auto;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.5rem;
   }
 
-  .group {
-    margin-left: 100px;
-    flex-direction: row;
-  }
-
-  .group .icon {
-    margin-left: 10px;
-  }
-
-  .container {
-    width: 500px;
-    height: 330px;
-    margin-left: 130px;
-    margin-top: 50px; 
-    padding: 0px;
-  }
-
-  .name,
-  .designation,
-  .description {
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
-
-  }
-
-  .designation {
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
-
+  .name, .designation, .description {
+    margin-left: 0;
+    text-align: center;
   }
 
   .description {
-    margin-top: 5px;
-    margin-left: 120px;
-    word-wrap: break-word;
-    word-wrap: break-word;
-
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .founderimg {
-    margin-top: -170px;
-    margin-bottom: 20px;
-    width: 150px;
+    width: 100px;
+    margin-top: 20px;
   }
 
-  
-}
-
-@media (max-width: 480px) {
   .Quoteimg {
     width: 100%;
     height: auto;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    margin-left: auto;
-    display: block;
   }
+}
 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
   .card {
-    width: 70%;
+    width: 50%;
+    margin-left: 150px;
     height: 90%;
-    margin: 15px auto;
-  }
-  
-
-  .dotimg{
-    max-width: 335px;
-  }
-
-  .group {
-    margin-left: 20px;
-    flex-direction: row;
-  }
-
-  .group .icon {
-    margin-left: 10px;
   }
 
   .container {
-    width: 400px;
+    width: 50%;
     height: 330px;
-    margin-left: 40px;
-    margin-bottom: 40px;
+    margin-left: 150px;
   }
 
-  .verticalimg{
-    
-    max-width: 300px;
-    max-height: 350px;
+  .founderdescription {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    width: 100%;
+    margin-left: 0px;
   }
 
-  .name{
-    margin-left: 125px;
-    margin-top: 40px;
-    font-size: 0.875rem;
+  .header {
+    width: 50%;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
+  .name {
+    margin-left: 100px;
   }
 
   .designation {
-    margin-left: 125px;
-    margin-top: 10px;
-    font-size: 0.875rem;
+    margin-left: 100px;
   }
 
   .description {
-    width: 300px;
+    width: 75%;
+    font-size: 0.700rem;
+    word-wrap: break-word;
     margin-left: 90px;
+  }
+
+  .founderimg {
+    width: 200px;
+    margin-top: -190px;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: -100px;
+    margin-bottom: -100px;
+    margin-left: 120px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .card {
+    width: 50%;
+    margin-left: 220px;
+    height: 90%;
+  }
+
+  .container {
+    width: 50%;
+    height: 330px;
+    margin-left: 220px;
+  }
+
+  .founderdescription {
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .header {
+    width: 50%;
+    margin-left: 220px;
+    margin-top: 10px;
+  }
+
+  .name {
+    margin-left: 100px;
+  }
+
+  .designation {
+    margin-left: 100px;
+  }
+
+  .description {
+    width: 80%;
+    font-size: 0.770rem;
+    word-wrap: break-word;
+    margin-left: 90px;
+  }
+
+  .founderimg {
+    width: 200px;
+    margin-top: -190px;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: -100px;
+    margin-bottom: -100px;
+    margin-left: 190px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .card {
+    width: 80%;
+    margin-left: 150px;
+    height: 90%;
+  }
+
+  .container {
+    width: 80%;
+    height: 330px;
+    margin-left: 150px;
+  }
+
+  .founderdescription {
+    word-wrap: break-word;
+    width: 100%;
+  }
+
+  .header {
+    width: 80%;
+    margin-left: 150px;
+    margin-top: 10px;
+  }
+
+  .name {
+    margin-left: 100px;
+  }
+
+  .designation {
+    margin-left: 100px;
+  }
+
+  .description {
+    width: 70%;
+    font-size: 0.675rem;
+    word-wrap: break-word;
+    margin-left: 90px;
+  }
+
+  .founderimg {
+    width: 200px;
+    margin-top: -190px;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: 260px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card {
+    width: 80%;
+    margin-left: 150px;
+    height: auto;
+  }
+
+  .container {
+    width: 80%;
+    height: 330px;
+    margin-left: 150px;
+  }
+
+  .header {
+    width: 80%;
+    margin-left: 150px;
+    margin-top: 10px;
+    font-size: small;
+  }
+
+  .name {
+    margin-left: 100px;
+  }
+
+  .designation {
+    margin-left: 100px;
+  }
+
+  .description {
+    text-align: left;
+    width: 280px;
+    font-size: small;
+    word-wrap: break-word;
+    margin-left: 90px;
+  }
+
+  .founderimg {
+    width: 200px;
+    margin-top: -190px;
+  }
+
+  .Quoteimg {
+    width: 60%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-left: 260px;
+  }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .card {
+    width: 60%;
+    margin-left: 280px;
+    height: auto;
+  }
+
+  .container {
+    width: 60%;
+    height: 330px;
+    margin-left: 280px;
+  }
+
+  .header {
+    width: 60%;
+    margin-left: 280px;
+    margin-top: 10px;
+  }
+
+  .name {
+    margin-left: 100px;
+  }
+
+  .designation {
+    margin-left: 110px;
+  }
+
+  .description {
+    padding-right: 5px;
+    text-align: left;
+    width: 370px;
+    font-size: medium;
+    word-wrap: break-word;
+    margin-left: 90px;
+  }
+
+  .founderimg {
+    width: 200px;
+    margin-top: -190px;
+  }
+
+  .Quoteimg {
+    width: 40%;
     margin-top: 40px;
-    font-size: 0.875rem;
+    margin-bottom: 60px;
+    margin-left: 550px;
+  }
+}
+
+/* New media queries */
+
+/* Devices with width 480px to 575.98px */
+@media (min-width: 400px) and (max-width: 575.98px) {
+  .card {
+    width: 80%;
+    margin-left: 50px;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 330px;
+  }
+
+  .header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left: 110px;
+  }
+
+  .description {
+    width: 75%;
+    text-align: left;
+    margin-left: 90px;
+    font-size: 0.775rem;
+    margin-right: auto;
   }
 
   .founderimg {
     width: 150px;
-    height: 150px;
-    margin-top: -150px;
-    margin-left: 70px;
+    margin-top: -210px;
   }
 
-  .header {
-    width: 70%;
-    margin: 5px auto;
-    height: auto;
-    font-size: 1.25rem;
+  .profilepic{
+    width: 40%;
+    height: 40%;
+  }
+
+  .Quoteimg {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 60px;
   }
 }
 
+/* Devices with width 400px to 479.98px */
+@media (min-width: 400px) and (max-width: 479.98px) {
+  .card {
+    width: 80%;
+    margin-left: 40px;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 330px;
+  }
+
+  .header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left: 110px;
+  }
+
+  .description {
+    width: 65%;
+    text-align: left;
+    margin-left: 90px;
+    font-size: 0.675rem;
+    margin-right: auto;
+  }
+
+  .founderimg {
+    width: 150px;
+    margin-top: -210px;
+  }
+
+  .profilepic{
+    width: 40%;
+    height: 40%;
+  }
+
+  .Quoteimg {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 399.98px) {
+  .card {
+    width: 80%;
+    margin-left: 40px;
+    height: auto;
+    padding: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 330px;
+  }
+
+  .header {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.5rem;
+  }
+
+  .name{
+    text-align: left;
+    margin-left: 120px;
+  }
+
+  .designation{
+    text-align: left;
+    margin-left: 110px;
+  }
+
+  .description {
+    width: 65%;
+    text-align: left;
+    margin-left: 90px;
+    font-size: 0.675rem;
+    margin-right: auto;
+  }
+
+  .founderimg {
+    width: 150px;
+    margin-top: -210px;
+  }
+
+  .profilepic{
+    width: 40%;
+    height: 40%;
+  }
+
+  .Quoteimg {
+    width: 90%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
