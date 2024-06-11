@@ -351,7 +351,7 @@
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .Leads {
-    margin-left: 150px;
+    margin-left: 270px;
   }
 
   .container, .rectangle198, .Quoteimg, .description, .socials {
@@ -360,7 +360,7 @@
   }
 
   .rectangle198{
-    width: 80%;
+    width: 75%;
   }
 
   .profileimage {
@@ -395,10 +395,10 @@
   }
 
   .Quoteimg {
-    width: 40%;
-    margin-top: -10px;
-    margin-bottom: 10px;
-    margin-left: 370px;
+    width: 50%;
+    margin-top: -80px;
+    margin-bottom: -60px;
+    margin-left: 340px;
   }
 }
 
