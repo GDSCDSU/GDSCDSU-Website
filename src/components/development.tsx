@@ -7,7 +7,7 @@ export default function Development() {
   const [developers, setDevelopers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/teams?team=development')
+    axios.get('https://gdscdsu-website.vercel.app/api/teams?team=development')
       .then(response => {
         const responseData = response.data;
   

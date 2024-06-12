@@ -25,6 +25,8 @@ export default function Leads() {
         setLoading(false); // Set loading to false after data is fetched
       })
       .catch(error => console.error('Error fetching leads:', error));
+      console.log("ENV CHECK" + process.env.BASE_URL_API);
+      
   }, []);
 
   // Function to generate tenures

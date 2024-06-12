@@ -8,7 +8,7 @@ export default function AllEvents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(process.env.BASE_URL_API+'/event?topEvent=true')
+    axios.get('https://gdscdsu-website.vercel.app/api/event?topEvent=true')
       .then(response => {
         const responseData = response.data;
 

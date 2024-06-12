@@ -7,7 +7,7 @@ export default function Executives() {
   const [executives, setExecutives] = useState([]);
 
   useEffect(() => {
-    axios.get(process.env.BASE_URL_API+'/teams?role=Executive-core-team-member')
+    axios.get('https://gdscdsu-website.vercel.app/api/teams?role=Executive-core-team-member')
       .then(response => {
         const responseData = response.data;
 

@@ -7,7 +7,7 @@ export default function Operations() {
   const [operators, setOperators] = useState([]);
 
   useEffect(() => {
-    axios.get(process.env.BASE_URL_API+'/teams?team=operation')
+    axios.get('https://gdscdsu-website.vercel.app/api/teams?team=operation')
       .then(response => {
         const responseData = response.data;
 
