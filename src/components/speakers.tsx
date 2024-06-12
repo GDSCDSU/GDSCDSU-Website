@@ -8,7 +8,7 @@ export default function Speakers() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/event?topEvent=true')
+    axios.get(process.env.BASE_URL_API+'/event?topEvent=true')
       .then(response => {
         const responseData = response.data;
 

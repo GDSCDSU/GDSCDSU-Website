@@ -7,7 +7,7 @@ export default function Operations() {
   const [operators, setOperators] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/teams?team=operation')
+    axios.get(process.env.BASE_URL_API+'/teams?team=operation')
       .then(response => {
         const responseData = response.data;
 

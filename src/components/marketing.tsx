@@ -7,7 +7,7 @@ export default function Marketing() {
   const [marketers, setMarketers] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/teams?team=marketing')
+    axios.get(process.env.BASE_URL_API+'/teams?team=marketing')
       .then(response => {
         const responseData = response.data;
 

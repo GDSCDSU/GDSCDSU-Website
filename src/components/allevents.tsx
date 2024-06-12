@@ -8,7 +8,7 @@ export default function AllEvents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/event?topEvent=true')
+    axios.get(process.env.BASE_URL_API+'/event?topEvent=true')
       .then(response => {
         const responseData = response.data;
 
@@ -27,8 +27,10 @@ export default function AllEvents() {
       .catch(error => {
         console.error('Error fetching events:', error);
         setLoading(false);
-      });
-  }, []);
+      }
+      );
+      console.log(process.env.BASE_URL_API)}, []);
+  
 
   console.log(eventData);
   return (

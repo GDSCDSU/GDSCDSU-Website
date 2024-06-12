@@ -8,7 +8,7 @@ export default function Leads() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/teams?role=lead')
+    axios.get(process.env.BASE_URL_API+'/teams?role=lead')
       .then(response => {
         const responseData = response.data;
 

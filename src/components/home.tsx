@@ -56,7 +56,7 @@ export default function Home(){
     useEffect(() => {
         const fetchHighlights = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/highlight');
+                const response = await axios.get(process.env.BASE_URL_API+'/highlight');
                 const responseData = response.data;
     
                 // Check if responseData is an array or object
