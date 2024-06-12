@@ -68,7 +68,6 @@ class EventAPi{
                 location: body.get('location') as string,
                 speaker: body.get('speaker') as string,
                 speakerImage: speakerImage.secure_url as string,
-                speakerName: body.get('speakerName') as string,
             });
             
           
