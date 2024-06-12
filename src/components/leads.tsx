@@ -8,7 +8,7 @@ export default function Leads() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(process.env.BASE_URL_API+'/teams?role=lead')
+    axios.get(`https://gdscdsu-website.vercel.app/api/teams?role=lead`)
       .then(response => {
         const responseData = response.data;
 
