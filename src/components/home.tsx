@@ -1,7 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import React,{useState,useEffect,useRef} from "react";
 import Image from "next/image";
-import { Carousel } from "flowbite-react";
 import { Footer } from "flowbite-react";
 import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin} from "react-icons/bs";
 import { IoMdMail } from "react-icons/io";
@@ -10,10 +10,11 @@ import 'aos/dist/aos.css';
 import { Button, Toast } from "flowbite-react";
 import { MdStars } from "react-icons/md";
 import axios from 'axios';
+import { Carousel } from 'react-bootstrap';
+import CountUp from 'react-countup';
 
 export default function Home(){
     
-    {/* Resources for home pages and their handlers defined here: */}
     const [showToast, setShowToast] = useState(false);
     const [partners, setPartners] = useState([]);
     const [highlights, setHighlights] = useState([]);
@@ -75,61 +76,46 @@ export default function Home(){
     
         fetchHighlights();
     }, []);
-     
     
-   
+    const [counters, setCounters] = useState([
+        { target: 5, current: 0 },
+        { target: 2000, current: 0 },
+        { target: 80, current: 0 }
+    ]);
+    const [countersVisible, setCountersVisible] = useState(false);
+    const countersRef = useRef(null);
+
     useEffect(() => {
-        AOS.init();
+        const handleScroll = () => {
+            if (
+                countersRef.current &&
+                window.innerHeight + window.scrollY >= countersRef.current.offsetTop
+            ) {
+                setCountersVisible(true);
+                window.removeEventListener("scroll", handleScroll);
+            }
+        };
+    
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
+    
+    useEffect(() => {
+        if (countersVisible) {
+            setCounters(prevCounters =>
+                prevCounters.map(counter => ({ ...counter, current: counter.target }))
+            );
+        }
+    }, [countersVisible]);
+    
 
-    const countingRef = useRef(null);
-
+    
     useEffect(() => {
         AOS.init();
-        const options = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.5,
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          startCounting(1);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, options);
-
-    observer.observe(countingRef.current);
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-
-  const startCounting = (speed: number): void => {
-  const counters: NodeListOf<HTMLElement> = document.querySelectorAll('.counter');
-
-  counters.forEach((counter: HTMLElement) => {
-    const updateCount = (): void => {
-      const target: number = +counter.getAttribute('data-target');
-      const count: number = +counter.innerText;
-
-      const increment: number = target / speed;
-
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment).toString();
-        setTimeout(updateCount, 1);
-      } else {
-        counter.innerText = target.toString();
-      }
-    };
-
-    updateCount();
-  });
-};
-
+      }, []);
+    
     return (
         
     <>
@@ -195,8 +181,7 @@ export default function Home(){
         </div>
     </div>
     
-    {/* Partners */}
-    
+    {/* Partners */} 
     <br/>
     <div className="m-5" >
         <div className="d-flex flex-column align-items-center" >
@@ -213,11 +198,7 @@ export default function Home(){
             </div>
         </div>
     </div>
-
-
-
-
-<br/>
+    <br/>
     {/* What GDSC Does Portion: */}
     <div className="m-5" >
     <div className="d-flex flex-column align-items-center" >
@@ -378,76 +359,64 @@ export default function Home(){
     </div>
 </div>
     {/* Community Counter: */}
-    <div ref={countingRef}>
-        <div className="full-page-content" data-aos="fade-up">
-            <div className="d-flex flex-column align-items-center" >
-                <h1><b> The Community is Growing Everyday</b></h1>
-            </div>
-            <br/>
-            <div className="row d-flex justify-content-center text-center">
-                <div className="col-md-4">
-                    <div className="d-flex flex-column align-items-center">
-                    <img src="/Years.svg" alt="" className="img-fluid mb-3" />
-                    <h1>
-                        <b>
-                        <span className="count" data-target="5">
-                            0
-                        </span>
-                        +
-                        </b>
-                    </h1>
-                    <p className="text-secondary">YEARS</p>
-                    </div>
+    
+    <div id="counters-section" ref={countersRef}>
+            <div className="full-page-content" data-aos="fade-up" data-aos-once="true">
+                <div className="d-flex flex-column align-items-center">
+                    <h1><b>The Community is Growing Everyday</b></h1>
                 </div>
-                <div className="col-md-4">
-                    <div className="d-flex flex-column align-items-center">
-                    <img src="/Attendees.svg" alt="" className="img-fluid mb-3" />
-                    <h1>
-                        <b>
-                        <span className="count" data-target="2000">
-                            0
-                        </span>
-                        +
-                        </b>
-                    </h1>
-                    <p className="text-secondary">Attendees</p>
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <div className="d-flex flex-column align-items-center">
-                    <img src="/events.svg" alt="" className="img-fluid mb-3" />
-                    <h1>
-                        <b>
-                        <span className="count" data-target="80">
-                            0
-                        </span>
-                        +
-                        </b>
-                    </h1>
-                    <p className="text-secondary">Events</p>
-                    </div>
+                <br />
+                <div className="row d-flex justify-content-center text-center">
+                    {counters.map((counter, index) => (
+                        <div key={index} className="col-md-4" data-aos="fade-up" data-aos-delay={`${index * 200}`}>
+                            <div className="d-flex flex-column align-items-center">
+                                <img
+                                    src={index === 0 ? '/Years.svg' : index === 1 ? '/Attendees.svg' : '/events.svg'}
+                                    alt=""
+                                    className="img-fluid mb-3"
+                                />
+                                <h1>
+                                    <b>
+                                        <CountUp start={0} end={counter.target} duration={2} />
+                                        +
+                                    </b>
+                                </h1>
+                                <p className="text-secondary">
+                                    {index === 0 ? 'YEARS' : index === 1 ? 'Attendees' : 'Events'}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </div>
-    </div>
+
+
+
     {/* Highlights Carousel: */}
     <div className="full-page-content">
-    <div className="d-flex flex-column align-items-center">
+      <div className="d-flex flex-column align-items-center">
         <h1><b>Highlights</b></h1>
-    </div>
-    <br />
-    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+      </div>
+      <br />
+      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
         {highlights.length > 0 ? (
-            <Carousel>
-                {highlights[1].map((highlight, index) => (
-                    <img src={highlight.picture} alt={`Highlight ${index + 1}`} key={index} />
-                ))}
-            </Carousel>
+          <Carousel>
+            {highlights[1].map((highlight, index) => (
+              <Carousel.Item key={index}>
+                <img
+                  className="d-block w-100"
+                  src={highlight.picture}
+                  alt={`Highlight ${index + 1}`}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
         ) : (
-            <p>No highlights available.</p>
+          <p>No highlights available.</p>
         )}
+      </div>
     </div>
-</div>
 
     {/* Sponsor Form: */}
 <div className="full-page-content" data-aos='fade-up' >

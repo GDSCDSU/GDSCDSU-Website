@@ -342,7 +342,7 @@
   .Rectangle198 {
     width: 90%;
     height: 390px;
-    margin-left: -60px;
+    margin-left: -20px;
     margin-right: auto;
     padding: 10px;
   }
@@ -367,34 +367,34 @@
   }
 
   .Rectangle191 {
-    width: 100%;
+    width: 80%;
   }
 
   .dotimg{
-    width: 340px;
+    width: 399px;
     margin-left: -10px;
     margin-top: -7px;
   }
 
   .Quoteimg {
-    width: 40%;
+    width: 50%;
     margin-top: -90px;
     margin-bottom: -60px;
     margin-left: 340px;
   }
 
   .customRow2 .Group718 {
-    width: 50%;
+    width: 47%;
     margin-top: -5px;
-    margin-left: -10px;
+    margin-left: 0px;
   }
 
   .customRow2 .Rectangle198 {
-    margin-left: -10px;
+    margin-left: 5px;
   }
 
   .customRow2 .dotimg {
-    width: 345px;
+    width: 392px;
   }
 
 }
@@ -412,7 +412,7 @@
   .Ellipse44 {
     position: relative;
     margin-top: 15px;
-    margin-left: 0px;
+    margin-left: -5px;
   }
 
   .Description {
@@ -437,7 +437,7 @@
   .Quoteimg {
     width: 40%;
     margin-top: 40px;
-    margin-bottom: -30px;
+    margin-bottom: 40px;
     margin-left: 550px;
   }
 

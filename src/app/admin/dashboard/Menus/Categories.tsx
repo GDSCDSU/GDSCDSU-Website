@@ -13,93 +13,38 @@ const Community = dynamic(() => import('../Categories/community'), { ssr: false 
 const Partners = dynamic(() => import('../Categories/partners'), { ssr: false });
 const Highlights = dynamic(() => import('../Categories/highlights'), { ssr: false });
 const NewEvent = dynamic(() => import('../Categories/newevent'), { ssr: false });
+const Team = dynamic(() => import('../Categories/Team'), { ssr: false });
 import Image from "next/image";
 import { Button, Drawer, TextInput, Label } from "flowbite-react";
 export default function Categories(){
     const initialCardsData  = [
         {
-          id: 1,
-          name: 'GDSC Leads',
-          date: 'Uploaded last 28 Aug 2023',
-          imageUrl: '/gdscLead.svg',
-          component: <GDSCLead />
-        },
-        {
-          id: 2,
-          name: 'Executive Core Team',
-          date: 'Uploaded last 15 Sep 2023',
-          imageUrl: '/coreTeam.svg',
-          component: <ExecutiveCoreTeam />
-        },
-        {
-            id: 3,
-            name: 'Operations Team',
+            id: 1,
+            name: 'Team',
             date: 'Uploaded last 15 Sep 2023',
-            imageUrl: '/operationTeam.svg',
-            component: <OperationsTeam />
+            imageUrl: '/coreTeam.svg',
+            component: <Team />
         },
         {
-            id: 4,
-            name: 'Development Team',
-            date: 'Uploaded last 15 Sep 2023',
-            imageUrl: '/DevelopmentTeam.svg',
-            component: <DevelopmentTeam />
-        },
-        {
-            id: 5,
-            name: 'Marketing Team',
-            date: 'Uploaded last 15 Sep 2023',
-            imageUrl: '/marketingTeam.svg',
-            component: <MarketingTeam />
-        },
-        {
-            id: 6,
-            name: 'Speakers',
-            date: 'Uploaded last 15 Sep 2023',
-            imageUrl: '/speakerCat.svg',
-            component: <Speakers />
-        },
-        {
-            id: 7,
-            name: 'Events',
+            id: 2,
+            name: 'Speakers/Events',
             date: 'Uploaded last 15 Sep 2023',
             imageUrl: '/eventsCat.svg',
             component: <Events />
         },
         {
-            id: 8,
-            name: 'Our Top Event',
-            date: 'Uploaded last 15 Sep 2023',
-            imageUrl: '/OurTopEvent.svg',
-            component: <OurTopEvent />
-        },
-        {
-            id: 9,
-            name: 'Community',
-            date: 'Uploaded last 15 Sep 2023',
-            imageUrl: '/Community.svg',
-            component: <Community />
-        },
-        {
-            id: 10,
+            id: 3,
             name: 'Partners',
             date: 'Uploaded last 15 Sep 2023',
             imageUrl: '/Partners.svg',
             component: <Partners />
         },
         {
-            id: 11,
+            id: 4,
             name: 'Highlights',
             date: 'Uploaded last 15 Sep 2023',
             imageUrl: '/Highlights.svg',
             component: <Highlights />
-        },
-        {
-            id: 12,
-            name: 'New Event',
-            date: 'Uploaded last 15 Sep 2023',
-            imageUrl: '/NewEvent.svg',
-            component: <NewEvent />
         },
     
         

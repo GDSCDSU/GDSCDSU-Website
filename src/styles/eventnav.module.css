@@ -7,6 +7,14 @@
   position: relative;
 }
 
+.section_container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
 .nav_border {
   width: 80%;
   height: 54px;
@@ -61,13 +69,25 @@
   color: white;
 }
 
-.TeamsHeader {
-  height: 200px; /* Adjust the height as needed */
-  background-image: url('/events-header.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+/* eventnav.module.css */
+
+.section_container {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
+.full-page-content {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 15px; /* Optional: Add some padding for better visual layout */
+}
+
+/* Additional styles for other elements if needed */
+
 
 .leftAllEvents {
   left: 10.2% !important;

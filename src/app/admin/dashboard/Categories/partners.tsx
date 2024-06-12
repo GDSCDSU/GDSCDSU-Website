@@ -1,9 +1,8 @@
+import axios from "axios";
 import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
-import { Textarea } from "flowbite-react";
 import Image from "next/image";
-import { useState } from "react";
-import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { useEffect, useState } from "react";
 
 export default function Partners() {
   const [showForm, setShowForm] = useState(false);
@@ -15,7 +14,16 @@ export default function Partners() {
   const handleShowList = () => {
     setShowForm(false);
   };
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    fetchPartner()
+  },[]);
+
+  const fetchPartner = async () => {
+    const {data} = await axios.get('http://localhost:3000/api/partner');
+    setData(data.data);
+  }
   return (
     <>
       <div className="flex justify-end mb-4">
@@ -39,7 +47,11 @@ export default function Partners() {
         
       ) : (
         // List Component
-        <Image src='/datacamp.svg' width={100} height={100} alt="" ></Image>
+        <div className="flex gap-5 flex-wrap">
+        {data.map((partner) => (
+          <Image key={partner.id} src={partner.picture} width={100} height={100} alt="" />
+        ))}
+      </div>
       )}
     </>
   );

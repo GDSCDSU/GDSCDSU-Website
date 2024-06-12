@@ -1,8 +1,9 @@
+import axios from "axios";
 import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 export default function OurTopEvent() {
@@ -15,7 +16,16 @@ export default function OurTopEvent() {
   const handleShowList = () => {
     setShowForm(false);
   };
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    fetchEvents()
+  },[]);
+
+  const fetchEvents = async () => {
+    const {data} = await axios.get('http://localhost:3000/api/event?topEvent=true');
+    setData(data.data);
+  }
   return (
     <>
       <div className="flex justify-end mb-4">
@@ -53,10 +63,19 @@ export default function OurTopEvent() {
             <Button color="failure" className="">Delete</Button>
         </div>
         </form>
-        
       ) : (
         // List Component
-        <Image width={1000} height={100} src='/Highlights1.svg' alt=""></Image>
+        <div className="flex flex-wrap">
+        {data.map((item, index) => (
+          <Image 
+            key={index}
+            width={500} 
+            height={100} 
+            src={item.picture} 
+            alt={`Image ${index + 1}`} 
+          />
+        ))}
+      </div>
       )}
     </>
   );

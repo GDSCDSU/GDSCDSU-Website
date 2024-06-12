@@ -6,7 +6,7 @@ import 'flowbite/dist/flowbite.css';
 
 export default function ForgotPasswordForm({ onSubmit, showAlert, alertMessage, inputColor, onBack }) {
   return (
-    <form className="flex max-w-md flex-col gap-4" style={{ margin: '8%' }} onSubmit={onSubmit}>
+    <form className="flex max-w-md flex-col gap-4" style={{ margin: '15%' }} onSubmit={onSubmit}>
       <h4 className='text-blue-600'>Forgot Password?</h4>
       <span className='text-blue-600' style={{ marginTop: '-5%' }}>Enter your details Below</span>
       <div className="max-w-md">

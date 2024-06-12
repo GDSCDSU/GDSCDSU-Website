@@ -22,7 +22,7 @@ const Events = () => {
   return (
     <>
       <div data-aos="fade-up">
-        <img className="img-fluid" src="/events-header.svg" alt="" />
+        <img style={{maxWidth:'100%'}} src="/events-header.svg" alt="" />
       </div>
 
       <div data-aos="fade-up" className={eventsnav.EventsNavigation}>
@@ -32,21 +32,21 @@ const Events = () => {
         <button className={`${eventsnav.nav_button} ${eventsnav.Speakers} ${activeTab === 'Speaker' ? eventsnav.active : ''}`} onClick={() => setActiveTab('Speaker')}>Speakers</button>
       </div>
 
-      <div data-aos="fade-up" className="full-page-content">
-        <div className="d-flex flex-column align-items-center">
-          <h1>
-            <b>Our Top Events</b>
-          </h1>
-        </div>
-        <br />
-        <Carousel />
-      </div>
 
-      <section>
+      <section className={eventsnav.section_container}>
+        <div data-aos="fade-up" className="full-page-content">
+          <div className="d-flex flex-column align-items-center">
+            <h1>
+              <b>Our Top Events</b>
+            </h1>
+          </div>
+          <br />
+          <Carousel />
+        </div>
         {activeTab === 'AllEvents' ? <AllEvents /> : <Speaker />}
       </section>
 
-      <div className={eventsnav.section_container}>
+      <div>
         <img src="/ColorBoxes.svg" className="img-fluid" alt="" />
       </div>
 

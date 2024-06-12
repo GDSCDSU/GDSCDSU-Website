@@ -52,11 +52,11 @@ export default function OurStory(){
       }, []);
     return (
         <>
-        {/* Header Image */}
+        
         <div data-aos="fade-up" >
             <img className="img-fluid" src="/OurStory.png" alt=""/>
         </div>
-        {/* Story Landing Page Starts */}
+        
         <div className="m-5" data-aos="fade-up">
         <div className="d-flex flex-column align-items-center">
             <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
@@ -153,11 +153,6 @@ export default function OurStory(){
                 </div>
                 <div className="col-md-6" >
                     <div className="d-flex flex-column text-center align-items-center" >
-                        {/* <h5 style={{fontFamily:'Alice'}} >
-                        <b>“No nation can ever be worthy of its existence that cannot take its women along with the men. No struggle can ever succeed without women participating side by side with men. There are two powers in the world; one is the sword and the other is the pen. There is a great competition and rivalry between the two. There is a third power stronger than both, that of the women.”
-                        </b></h5>
-                        <br/>
-                        <h6 className="text-secondary" >~ Mohammad Ali Jinnah</h6> */}
                         <img src="/Quote.svg" alt="" className="" />
                     </div>
                 </div>

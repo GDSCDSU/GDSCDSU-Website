@@ -370,9 +370,9 @@
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .member_card {
-    width: 166%;
+    width: 145%;
     height: 300px;
-    margin-left: 10px;
+    margin-left: 50px;
     margin-right: auto;
     margin-bottom: 10px;
   }
@@ -382,10 +382,10 @@
   }
 
   .Quoteimg {
-    width: 40%;
+    width: 50%;
     margin-top: -90px;
     margin-bottom: -60px;
-    margin-left: 350px;
+    margin-left: 340px;
   }
 
   .image_div {
