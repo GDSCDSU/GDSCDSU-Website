@@ -36,15 +36,15 @@ const Team: React.FC = () => {
   return (
     <main className="min-h-screen bg-white">
       <div className="flex justify-center items-center">
-        <img src="/team-section.svg" alt="" className="w-full h-32 lg:h-64" />
+        <img src="/teams-header.svg" alt="" className="w-full h-32 lg:h-64" />
       </div>
-      <ul className={`flex justify-center text-center text-gray-500 bg-white-100 rounded-full p-1 border-4 ${activeTabBorderColor}`}>
+      <ul className={`grid grid-cols-6 sm:grid-cols-6 md:grid-cols-6 text-center text-gray-400 bg-white  h-20 rounded-full border-4 ${activeTabBorderColor}`}>
         {tabsData.map((tab) => (
-          <li key={tab.id} className="flex-1">
+          <li key={tab.id} className="m-1">
             <p
               onClick={() => handleTabClick(tab.title)}
-              className={`flex justify-center items-center py-4 text-xs md:text-lg cursor-pointer ${
-                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-white-100 rounded-full'
+              className={`py-3 text-xs md:text-lg cursor-pointer ${
+                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : ' rounded-full'
               }`}
             >
               {tab.title}

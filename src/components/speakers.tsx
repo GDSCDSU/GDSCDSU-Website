@@ -35,15 +35,15 @@ export default function Speakers() {
       </h1>
       
       {/* Speakers */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-2 ">
         {loading ? (
           <p className="text-center">Loading...</p>
         ) : (
           speakersData.length > 0 ? (
             speakersData[1].map(speaker => (
               speaker.speaker !== "NA" && (
-                <div key={speaker.id} className="flex flex-col items-center bg-white shadow-xl rounded-lg overflow-hidden">
-                  <img className="w-60 h-64 object-cover" src={speaker.speakerImage} alt="Profile" />
+                <div key={speaker.id} className="flex flex-col w-80 text-center bg-white shadow-xl rounded-xl overflow-hidden">
+                  <img className="w-60 h-60 justify-center" src={speaker.speakerImage} alt="Profile" />
                   <div className="p-6">
                     <h2 className="text-xl font-semibold mb-2">{speaker.speaker}</h2>
                     <p className="text-gray-600 mb-4">{speaker.SpeakerBio}</p>

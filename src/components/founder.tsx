@@ -91,15 +91,20 @@ const foundingmembers = [
 
 export default function Founder() {
   return (
-    <main className="flex flex-col gap-10 min-h-screen bg-white px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-      <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-2">
+    <main className="flex flex-col gap-10 min-h-screen bg-white px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-20">
+
+      <div data-aos="fade-up" className="w-full flex justify-center py-8">
+        <Image src='/executivesquote.svg' alt='' width={800} height={200} />
+      </div>
+
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
         {founders.map((member, index) => (
           <div key={index} className="flex flex-col h-40 mb-4 w-full bg-white shadow-2xl rounded-xl overflow-hidden shadow-xl">
             <div className="flex flex-col items-center p-5">
-              <div className="w-full h-10 mb-4 bg-green-50 flex items-center justify-center">
+              <div className="flex w-full bg-green-500 top-70">
                 <h1 className="text-black">Founder</h1>
               </div>
-              <Image src="/dotbackground.svg" alt="" width={100} height={100} className="absolute w-80  opacity-5" />
+              <Image src="/dotbackground.svg" alt="" width={462} height={300} className="absolute opacity-5" />
               <Image src={member.imageSrc} alt={member.name} width={160} height={160} className="relative rounded-full mb-4" />
               <h2 className="font-bold text-lg text-gray-900">{member.name}</h2>
               <p className="text-black">{member.designation}</p>
@@ -114,12 +119,14 @@ export default function Founder() {
             </div>
           </div>
         ))}
+      </div>
 
-        {foundingmembers.map((member, index) => (
-          <div key={index} className="flex flex-col h-40 mb-4 bg-white shadow-2xl rounded-xl overflow-hidden shadow-xl">
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
+      {foundingmembers.map((member, index) => (
+          <div key={index} className="flex flex-col w-full h-30 mb-2 bg-white rounded-xl overflow-hidden shadow-xl">
             <div className="flex flex-col items-center p-5">
-              <div className="w-full h-10 mb-4  flex items-center justify-left">
-                <Image src="/dotimgvertical.svg" alt="" width={100} height={100} />
+              <div className="w-full h-10 mb-4  flex items-center justify-left top-30">
+                <Image src="/dotimgvertical.svg" alt="" width={100} height={200} />
               </div>
               <Image src={member.imageSrc} alt={member.name} width={100} height={100} className="rounded-full mb-4" />
               <h2 className="font-bold text-lg text-gray-900">{member.name}</h2>
@@ -128,7 +135,7 @@ export default function Founder() {
             </div>
           </div>
         ))}
-      </div>
+        </div>
     </main>
   );
 }

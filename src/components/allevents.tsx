@@ -45,7 +45,7 @@ export default function AllEvents() {
           eventData.length > 0 ? (
             eventData[1].map(event => (
               <div key={event.id} className="flex pb-3">
-                <div className="flex flex-col w-full rounded-lg items-center overflow-hidden bg-white  shadow-xl">
+                <div className="flex flex-col w-full rounded-lg items-center overflow-hidden bg-white shadow-xl">
                   <img className="w-40" src={event.picture} alt="Event" />
                   <div className="p-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{event.name}</h3>
