@@ -27,7 +27,7 @@ export default function Leads() {
   }, []);
 
   return (
-    <main className="flex flex-col gap-5 min-h-screen bg-white">
+    <main className="flex flex-col gap-2 min-h-screen bg-white">
       {/* Quote Image */}
       <div data-aos="fade-up" className="w-full flex justify-center py-8">
         <Image src='/leadsquote.svg' alt='' width={800} height={200} />
@@ -40,10 +40,10 @@ export default function Leads() {
         ) : (
           <div className="grid gap-5 items-center justify-center sm:grid-cols-1 lg:grid-cols-1">
             {leads[1].map((lead, index) => (
-              <div key={index} className="flex pb-3 w-full h-50 flex-col rounded-xl justify-between overflow-hidden bg-white shadow-xl">
+              <div key={index} className="flex pb-2 w-full h-96 flex-col rounded-xl justify-between overflow-hidden bg-white shadow-xl">
                 <div className="relative p-5">
                   <div className="absolute top-0 left-0 mb-4">
-                    <Image src="/dotimgverticalred.svg" alt="" width={100} height={150} />
+                    <Image src="/dotimgverticalred.svg" alt="" width={170} height={100} />
                   </div>
                   <div className="absolute top-8 right-0 flex space-x-4">
                     <a href={`mailto:${lead.email}`} target="_blank" rel="noopener noreferrer">
@@ -62,10 +62,10 @@ export default function Leads() {
                   <div className="relative left-0 top-0 mb-4">
                     <Image src={lead.picture} className="rounded-full" width={100} height={100} alt={lead.fullname} />
                   </div>
-                  <div className="flex flex-col items-start">
-                    <p className="font-bold text-lg text-gray-900">{lead.fullname}</p>
-                    <p className="text-black">{lead.tagline}</p>
-                    <p className="text-black text-sm mt-2 w-50">{lead.bio}</p>
+                  <div className="flex flex-col mr-10 relative items-center">
+                    <p className="font-bold text-lg relative text-gray-900">{lead.fullname}</p>
+                    <p className="text-black relative  text-gray-900">{lead.tagline}</p>
+                    <p className="text-black relative mx-10  text-md  w-70">{lead.bio}</p>
                   </div>
                 </div>
               </div>

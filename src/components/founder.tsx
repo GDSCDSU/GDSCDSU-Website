@@ -125,7 +125,7 @@ export default function Founder() {
       {foundingmembers.map((member, index) => (
           <div key={index} className="flex flex-col w-full h-30 mb-2 bg-white rounded-xl overflow-hidden shadow-xl">
             <div className="flex flex-col items-center p-5">
-              <div className="w-full h-10 mb-4  flex items-center justify-left top-30">
+              <div className="w-96 h-10 mb-4 asbolute flex items-center justify-left ">
                 <Image src="/dotimgvertical.svg" alt="" width={100} height={200} />
               </div>
               <Image src={member.imageSrc} alt={member.name} width={100} height={100} className="rounded-full mb-4" />

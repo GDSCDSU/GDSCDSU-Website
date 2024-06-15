@@ -34,14 +34,15 @@ const Events: React.FC = () => {
         <img src="/team-section.svg" alt="" className="w-full h-32 lg:h-64" />
       </div>
 
-      <ul className={`flex justify-center text-center text-gray-500 bg-gray-100 rounded-full p-1 border-4 ${activeTabBorderColor}`}>
+      <ul className={`flex justify-center text-center text-gray-500 bg-white-100 rounded-full p-1 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
         {TabData.map((tab) => (
-          <li key={tab.id} className="flex-1">
+          <li key={tab.id} className="flex-1" style={{ marginBottom: 0 }}>
             <p
               onClick={() => handleTabClick(tab.title)}
-              className={`flex justify-center items-center py-4 text-xs md:text-lg cursor-pointer ${
-                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-gray-100 rounded-full'
+              className={`flex justify-center items-center py-3 text-xs md:text-lg cursor-pointer ${
+                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-white-100 rounded-full'
               }`}
+              style={{ marginBottom: 0 }}
             >
               {tab.title}
             </p>
