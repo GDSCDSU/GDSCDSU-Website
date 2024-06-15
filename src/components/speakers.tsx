@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from '../styles/speakers.module.css';
 import axios from 'axios';
 
 export default function Speakers() {
@@ -30,51 +28,42 @@ export default function Speakers() {
       });
   }, []);
 
-  console.log(speakersData);
-
   return (
-    <>
-      <h1 className={styles.heading} data-aos="fade-up">
+    <div className="min-h-screen bg-white py-12 px-4 sm:px-6 lg:px-8">
+      <h1 className="text-3xl font-bold text-center mb-8" data-aos="fade-up">
         <b>Speakers</b>
       </h1>
-      {/* Colour Boxes Image */}
-      <img className={styles.vectorimg1} src='/shapes.svg' alt='' />
-      {/* Golden Ring Image */}
-      <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
-
+      
       {/* Speakers */}
-      <div data-aos="fade-up" className="row">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {loading ? (
-          <p>Loading...</p>
+          <p className="text-center">Loading...</p>
         ) : (
           speakersData.length > 0 ? (
             speakersData[1].map(speaker => (
               speaker.speaker !== "NA" && (
-                <div key={speaker.id} className="col-lg-5">
-                  <div className={styles.card_container}>
-                    <img className={styles.image} src={speaker.speakerImage} alt="Profile" />
-                    <div className={styles.name}>{speaker.speaker}</div>
-                    <div className={styles.position}>{speaker.SpeakerBio}</div>
-                    <div className={styles.event}>Event Name:{speaker.name}</div>
-                    <div className={styles.eventTitle}>Event Type:{speaker.title}</div>
-                    <div className={styles.group718}>
-                      <a href={speaker.speakerLinkedln} target="_blank" rel="noopener noreferrer">
-                        <div className={styles.Group718}>
-                          <div className={styles.Rectangle191}></div>
-                          <img className={styles.Vector} src='/LinkedINfilled.svg' alt='' />
-                          <div className={styles.LinkedinProfile}>LinkedIn Profile</div>
-                        </div>
-                      </a>
-                    </div>
+                <div key={speaker.id} className="flex flex-col items-center bg-white shadow-xl rounded-lg overflow-hidden">
+                  <img className="w-60 h-64 object-cover" src={speaker.speakerImage} alt="Profile" />
+                  <div className="p-6">
+                    <h2 className="text-xl font-semibold mb-2">{speaker.speaker}</h2>
+                    <p className="text-gray-600 mb-4">{speaker.SpeakerBio}</p>
+                    <p className="text-gray-800 mb-2"><span className="font-semibold">Event Name:</span> {speaker.name}</p>
+                    <p className="text-gray-800 mb-4"><span className="font-semibold">Event Type:</span> {speaker.title}</p>
+                    <a href={speaker.speakerLinkedln} target="_blank" rel="noopener noreferrer" className="flex items-center text-gray-800 hover:text-black">
+                      <div className="h-8 w-8 rounded-full flex items-center justify-center bg-gray-200 mr-2">
+                        <img className="h-4 w-4" src="/LinkedINfilled.svg" alt="LinkedIn" />
+                      </div>
+                      <div>LinkedIn Profile</div>
+                    </a>
                   </div>
                 </div>
               )
             ))
           ) : (
-            <p>No speakers data available.</p>
+            <p className="text-center">No speakers data available.</p>
           )
         )}
       </div>
-    </>
+    </div>
   );
 }
