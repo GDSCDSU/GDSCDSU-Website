@@ -56,7 +56,7 @@ export default function Home(){
     useEffect(() => {
         const fetchHighlights = async () => {
             try {
-                const response = await axios.get('https://gdscdsu-website.vercel.app/api/highlight');
+                const response = await axios.get('https://gdscdsu.com/api/highlight');
                 const responseData = response.data;
     
                 // Check if responseData is an array or object

@@ -7,7 +7,7 @@ export default function Leads() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`https://gdscdsu-website.vercel.app/api/teams?role=lead`)
+    axios.get(`https://gdscdsu.com/api/teams?role=lead`)
       .then(response => {
         const responseData = response.data;
 
@@ -74,24 +74,6 @@ export default function Leads() {
             ))}
           </div>
         )}
-      </div>
-      <div className='bg-white rounded shadow-lg p-3 container' >
-        <div className='row' >
-            <div className='col-4' >
-                <div className="relative left-0 top-0 mb-4">
-                    <Image src='/leads/hira_fatima.png' className="rounded-full" width={100} height={100} alt='' />
-                </div>
-                
-                    <Image src="/EmailIcon1.svg" alt="Email icon" width={40} height={20} />
-                    <Image src="/FbIcon1.svg" alt="Facebook icon" width={40} height={20} />
-                    <Image src="/InstaIcon1.png" alt="Instagram icon" width={40} height={20} />
-                    <Image src="/LinkedInIcon1.svg" alt="LinkedIn icon" width={40} height={20} />
-
-            </div>
-            <div className='col-8' >
-
-            </div>
-        </div>
       </div>
     </main>
   );

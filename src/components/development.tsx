@@ -6,7 +6,7 @@ export default function Development() {
   const [developers, setDevelopers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://gdscdsu-website.vercel.app/api/teams?team=development')
+    axios.get('https://gdscdsu/api/teams?team=development')
       .then(response => {
         const responseData = response.data;
 
@@ -16,6 +16,7 @@ export default function Development() {
           // Convert the object to an array
           const developersArray = Object.values(responseData);
           setDevelopers(developersArray);
+          console.log(response)
         } else {
           console.error('Unexpected response format:', responseData);
         }

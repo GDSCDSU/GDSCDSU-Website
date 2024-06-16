@@ -6,7 +6,7 @@ export default function Marketing() {
   const [marketers, setMarketers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://gdscdsu-website.vercel.app/api/teams?team=marketing')
+    axios.get('https://gdscdsu.com/api/teams?team=marketing')
       .then(response => {
         const responseData = response.data;
 
