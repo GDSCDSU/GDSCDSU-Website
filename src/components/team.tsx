@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const components = {
   Founder: dynamic(() => import('../components/founder'), { ssr: false }),
@@ -36,7 +37,7 @@ const Team: React.FC = () => {
   return (
     <main className="min-h-screen bg-white">
       <div className="flex justify-center items-center">
-        <img src="/teams-header.svg" alt="" className="w-full h-32 lg:h-64" />
+        <Image src="/teams-header.svg" alt="" width={1600} height={100} />
       </div>
       <ul className={`grid grid-cols-6 sm:grid-cols-6 md:grid-cols-6 text-center text-gray-400 bg-white h-20 rounded-full border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
         {tabsData.map((tab) => (

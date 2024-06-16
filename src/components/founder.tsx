@@ -2,29 +2,34 @@ import React from 'react';
 import Image from 'next/image';
 
 const founders = [
-  {
-    name: 'Syed Ateeq',
-    designation: 'GDSC@DSU Lead 2020-2021 & Founder',
-    description: 'As a founder, he led over 100 students in coding bootcamps, tech conferences, and workshops. He also conducted more than 200 interviews each year to build a top-notch team of 10, whose talents have flourished at DSU. Moreover, he successfully secured sponsorship from the NYC-based startup Datacamp. His collaboration with Google injected a profound sense of excellence into these initiatives, paving the way for exponential career growth for those under his mentorship.',
-    imageSrc: '/founders/syed_ateeq.png',
-    socials: [
-      { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/profile.php?id=100004870847670&mibextid=ibOpuV' },
-      { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/syedateeq160/' },
-      { type: 'Email', image: 'EmailIcon1.svg', link: 'mailto:syedateeq1000@gmail.com' },
-      { type: 'Instagram', image: 'InstaIcon1.png', link: 'https://www.instagram.com/thesoftwarebatman/' },
-    ]
-  },
-  {
-    name: 'Dr. Ahmed Saeed Minhas',
-    designation: 'Pro Vice Chancellor',
-    description: "Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.",
-    imageSrc: '/founders/dr_minhas.png',
-    socials: [
-      { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/saeedminhas.ahmed?mibextid=ibOpuV' },
-      { type: 'Email', image: 'EmailIcon1.svg', link: 'mailto:saeedminhas.ahmed@dsu.edu.pk' },
-    ]
-  },
-];
+    {
+      name: 'Syed Ateeq',
+      designation: 'GDSC@DSU Lead 2020-2021 & Founder',
+      description: 'As a founder, he led over 100 students in coding bootcamps, tech conferences, and workshops. He also conducted more than 200 interviews each year to build a top-notch team of 10, whose talents have flourished at DSU. Moreover, he successfully secured sponsorship from the NYC-based startup Datacamp. His collaboration with Google injected a profound sense of excellence into these initiatives, paving the way for exponential career growth for those under his mentorship.',
+      imageSrc: '/founders/syed_ateeq.png',
+      socials: [
+        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/profile.php?id=100004870847670&mibextid=ibOpuV' },
+        { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/syedateeq160/' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'mailto:syedateeq1000@gmail.com' },
+        { type: 'Instagram', image: 'InstaIcon1.png', link: 'https://www.instagram.com/thesoftwarebatman/' },
+      ],
+      heading: "FOUNDER",
+      headingColor: 'bg-blue-500', // Color for Syed Ateeq
+    },
+    {
+      name: 'Dr. Ahmed Saeed Minhas',
+      designation: 'Pro Vice Chancellor',
+      description: "Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.",
+      imageSrc: '/founders/dr_minhas.png',
+      socials: [
+        { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/saeedminhas.ahmed?mibextid=ibOpuV' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'mailto:saeedminhas.ahmed@dsu.edu.pk' },
+      ],
+      heading: "FACULTY ADVISOR",
+      headingColor: 'bg-green-400', // Color for Dr. Ahmed Saeed Minhas
+    },
+  ];
+  
 
 const foundingmembers = [
   {
@@ -99,43 +104,50 @@ export default function Founder() {
 
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
         {founders.map((member, index) => (
-          <div key={index} className="flex flex-col h-40 mb-4 w-full bg-white shadow-2xl rounded-xl overflow-hidden shadow-xl">
-            <div className="flex flex-col items-center p-5">
-              <div className="flex w-full bg-green-500 top-70">
-                <h1 className="text-black">Founder</h1>
-              </div>
-              <Image src="/dotbackground.svg" alt="" width={462} height={300} className="absolute opacity-5" />
-              <Image src={member.imageSrc} alt={member.name} width={160} height={160} className="relative rounded-full mb-4" />
-              <h2 className="font-bold text-lg text-gray-900">{member.name}</h2>
-              <p className="text-black">{member.designation}</p>
-              <p className="text-black text-justify mt-2">{member.description}</p>
-              <div className="flex gap-2 mt-4">
+            <div key={index} className="flex flex-col mb-4 w-full bg-white rounded-xl overflow-hidden shadow-xl">
+            <div className={`relative w-full text-center py-2 rounded-t-xl ${member.headingColor}`}>
+                <h1 className="text-white font-bold text-lg tracking-widest">{member.heading}</h1>
+            </div>
+            <div className="relative flex flex-col items-center p-3">
+                <Image src="/dotbackground.svg" alt="" style={{top:'-2%'}} width={462} height={300} className="absolute w-full opacity-5" />
+                <Image src={member.imageSrc} alt={member.name} width={160} height={160} className="relative rounded-full mb-4 border-4 border-white -mt-16" />
+                <h3 className="font-bold text-xl text-gray-900">{member.name}</h3>
+                <p className="text-gray-600">{member.designation}</p>
+                <p className="text-gray-700 text-sm text-justify mt-2">{member.description}</p>
+                <div className="flex gap-4 mt-4">
                 {member.socials.map((social, idx) => (
-                  <a key={idx} href={social.link} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border-2 border-black opacity-60 transition-opacity hover:opacity-100">
+                    <a key={idx} href={social.link} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border-2 border-gray-300 hover:border-gray-500 transition-all">
                     <Image src={`/${social.image}`} alt={social.type} width={20} height={20} />
-                  </a>
+                    </a>
                 ))}
-              </div>
+                </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
-      {foundingmembers.map((member, index) => (
-          <div key={index} className="flex flex-col w-full h-30 mb-2 bg-white rounded-xl overflow-hidden shadow-xl">
-            <div className="flex flex-col items-center p-5">
-              <div className="w-96 h-10 mb-4 asbolute flex items-center justify-left ">
-                <Image src="/dotimgvertical.svg" alt="" width={100} height={200} />
-              </div>
-              <Image src={member.imageSrc} alt={member.name} width={100} height={100} className="rounded-full mb-4" />
-              <h2 className="font-bold text-lg text-gray-900">{member.name}</h2>
-              <p className="text-black">{member.designation}</p>
-              <p className="text-black text-justify mt-2">{member.description}</p>
             </div>
-          </div>
         ))}
         </div>
+
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
+            {foundingmembers.map((member, index) => (
+                <div key={index} className="flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
+                    <div
+                        className="absolute top-0 left-0 h-full w-16 bg-cover"
+                        style={{ backgroundImage: "url('/dotimgvertical.svg')" }}
+                    />
+                    <div className="" style={{display:'flex',marginTop:'-34%',marginLeft:'-2%',position:'relative'}} >
+                        <Image src={member.imageSrc} alt={member.name} width={70} height={40} className="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <div className="ml-4 flex-1">
+                        <h2 className="text-lg font-bold text-gray-900">{member.name}</h2>
+                        <p className="text-xs font-semibold text-gray-700 mb-2">{member.designation}</p>
+                        <p className="text-gray-600 text-xs text-justify">{member.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+
+
+
+
     </main>
   );
 }

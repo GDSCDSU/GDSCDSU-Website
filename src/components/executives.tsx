@@ -34,7 +34,7 @@ export default function Executives() {
       {executives.length > 0 && (
         <>
           {/* Members Div 1 */}
-          <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 gap-5 px-8 mx-auto max-w-screen-xl">
+          <div data-aos="fade-up" className="grid grid-cols-3 md:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">
             {executives[1].map((item, index) => (
               <div key={index} className="flex pb-3 w-80 flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl">
                 <div className="relative">
@@ -50,10 +50,11 @@ export default function Executives() {
                     </p>
                     <p className="text-black">{item.tagline}</p>
                     <p className="text-black text-justify text-sm mt-3 w-60">{item.bio}</p>
-                    <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="mb-2 flex p-1 items-center opacity-60 justify-center gap-2 px-5 mt-2 border-2 rounded-full border-black">
-                      <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} />
-                      <p className="text-black">LinkedIn Profile</p>
+                    <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
+                    <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
+                    <span>LinkedIn Profile</span>
                     </a>
+                    <br/>
                   </div>
                 </div>
               </div>

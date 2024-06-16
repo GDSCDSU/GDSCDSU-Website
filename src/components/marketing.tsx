@@ -50,10 +50,11 @@ export default function Marketing() {
                     {item.fullname}
                   </p>
                   <p className="text-black">{item.tagline || 'Role not specified'}</p>
-                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="mb-1 flex p-1 items-center opacity-40 justify-center  px-3 mt-4 border-4 rounded-full border-gray">
-                    <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} />
-                    <p className="text-black">LinkedIn Profile</p>
-                  </a>
+                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
+                    <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
+                    <span>LinkedIn Profile</span>
+                    </a>
+                    <br/>
                 </div>
               </div>
             </div>
