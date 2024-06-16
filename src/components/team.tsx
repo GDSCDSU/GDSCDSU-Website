@@ -37,7 +37,7 @@ const Team: React.FC = () => {
   return (
     <main className="min-h-screen bg-white">
       <div className="flex justify-center items-center">
-        <Image src="/teams-header.svg" alt="" width={1600} height={100} />
+        <Image src="/teams-header.svg" alt="" width={2000} height={400} />
       </div>
       <ul className={`grid grid-cols-6 sm:grid-cols-6 md:grid-cols-6 text-center text-gray-400 bg-white h-20 rounded-full border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
         {tabsData.map((tab) => (
