@@ -39,13 +39,13 @@ const Team: React.FC = () => {
       <div className="flex justify-center items-center">
         <Image src="/teams-header.svg" alt="" width={2000} height={400} />
       </div>
-      <ul className={`grid grid-cols-6 sm:grid-cols-6 md:grid-cols-6 text-center text-gray-400 bg-white h-20 rounded-full border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
+      <ul className={`flex justify-center text-center text-gray-500 bg-white-100 rounded-full p-1 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
         {tabsData.map((tab) => (
-          <li key={tab.id} className="m-1" style={{ marginBottom: 0 }}>
+          <li key={tab.id} className="flex-1" style={{ marginBottom: 0 }}>
             <p
               onClick={() => handleTabClick(tab.title)}
-              className={`py-3 text-xs md:text-lg cursor-pointer ${
-                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'rounded-full'
+              className={`flex justify-center items-center py-3 text-xs md:text-lg cursor-pointer ${
+                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-white-100 rounded-full'
               }`}
               style={{ marginBottom: 0 }}
             >
