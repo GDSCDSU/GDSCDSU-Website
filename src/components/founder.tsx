@@ -1,152 +1,153 @@
-// Founder.js
+import React from 'react';
+import Image from 'next/image';
 
-import founder from '../styles/founder.module.css'; // Import the CSS module
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-export default function Founder() {
-
-  const founders = [
+const founders = [
     {
       name: 'Syed Ateeq',
       designation: 'GDSC@DSU Lead 2020-2021 & Founder',
       description: 'As a founder, he led over 100 students in coding bootcamps, tech conferences, and workshops. He also conducted more than 200 interviews each year to build a top-notch team of 10, whose talents have flourished at DSU. Moreover, he successfully secured sponsorship from the NYC-based startup Datacamp. His collaboration with Google injected a profound sense of excellence into these initiatives, paving the way for exponential career growth for those under his mentorship.',
-      imageSrc: 'founders/syed_ateeq.png',
+      imageSrc: '/founders/syed_ateeq.png',
       socials: [
         { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/profile.php?id=100004870847670&mibextid=ibOpuV' },
         { type: 'LinkedIn', image: 'LinkedInIcon1.svg', link: 'https://www.linkedin.com/in/syedateeq160/' },
-        { type: 'Email', image: 'EmailIcon1.svg', link: 'https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=syedateeq1000@gmail.com' },
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'mailto:syedateeq1000@gmail.com' },
         { type: 'Instagram', image: 'InstaIcon1.png', link: 'https://www.instagram.com/thesoftwarebatman/' },
-      ]
+      ],
+      heading: "FOUNDER",
+      headingColor: 'bg-blue-500', // Color for Syed Ateeq
     },
     {
       name: 'Dr. Ahmed Saeed Minhas',
       designation: 'Pro Vice Chancellor',
       description: "Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.",
-      imageSrc: 'founders/dr_minhas.png',
+      imageSrc: '/founders/dr_minhas.png',
       socials: [
         { type: 'Facebook', image: 'FbIcon1.svg', link: 'https://www.facebook.com/saeedminhas.ahmed?mibextid=ibOpuV' },
-        { type: 'Email', image: 'EmailIcon1.svg', link: 'https://www.linkedin.com/in/dr-ahmed-saeed-minhas-220240196/' },
-      ]
+        { type: 'Email', image: 'EmailIcon1.svg', link: 'mailto:saeedminhas.ahmed@dsu.edu.pk' },
+      ],
+      heading: "FACULTY ADVISOR",
+      headingColor: 'bg-green-400', // Color for Dr. Ahmed Saeed Minhas
     },
   ];
+  
 
-  const foundingmembers = [
-    {
-      name: 'tarun kumar',
-      designation: 'TECH SAMURAI',
-      description: "Like most passionate team-ups in Pakistan, the GDSC DSU Chapter started over a cup of chai and strong motivation of creating a developers-focused club. Inspired by courses like MIT's Missing Semester and Harvard CS50, the team was driven by providing quality sessions that will make them shine in their craft. Suffice to say, working with a set of resilient people who - through thick and thin - shared my ideology of selfless giving back was the highlight of 2020 for me.",
-      imageSrc: 'founders/tarun_kumar.png',
-    },
-    {
-      name: 'Bahawal Baloch',
-      designation: 'AL SHINOBI',
-      description: "Best thing about GDCS@DSU 2020 is that Rather than going for one big event and then staying dormant for the rest of the year, we focused on smaller activities with big impact. These consistent events helped a lot of my peers throughout the year and I am glad to be part of this team through it's journey. would highly recommend for all students to join this exclusive team of geniuses to bring change and impact in our environment.",
-      imageSrc: 'founders/bahawal_baloch.png',
-    },
-    {
-      name: 'Abeer Shaikh',
-      designation: 'VICE PRESIDENT',
-      description: "Being a part of Google Developer Students Club for the tenure 2020 as a core team member was a honour for me, learned and taught so many new skills through the bootcamps and workshops held by us. It enhanced my skills and made me focused about my goals. I encourages everyone to be a part of this great club where we learn and grow. Throughout it was a reaily good experience.",
-      imageSrc: 'founders/abeer_shaikh.png',
-    },
-    {
-      name: 'Alishan',
-      designation: 'FLUTTER NINJA',
-      description: "The experience of serving as a Flutter Lead at GDSC DSU was worth remembering for me. I not only led the team but learnt many things as well from my team mates. It was the best working and learning experience for me and many others. / would recommend/ encourage students to take part in such initiatives to boost their learning and hands on.",
-      imageSrc: 'founders/alishan.png',
-    },
-    {
-      name: 'Abdur Rauf Bughio',
-      designation: 'CREATIVE DIRECTOR',
-      description: "For me being a part of GDSC was a journey to find myself and grow my self, it was a great journey along with some of the best people who always encouraged me to do better and appreciated all my efforts. / feel like joining GDSC was one of the best decision I made, and I would encourage others to make this decision as well. I hope that the work I did here with that amazing team had some impact on people's lives because in the end that's what really matters.",
-      imageSrc: 'founders/abdur_rauf_bughio.png',
-    },
-    {
-      name: 'Sarah Nasir',
-      designation: 'DATOS DALI',
-      description: "One of my best decisions was to apply for GDSC as a core team member. It encouraged me to learn more about emerging technologies and not only helped me in enhancing my skills but also how to utilize them effectively. Being a core team member, my ideas and work were always appreciated which boosted up my confidence and helped me in presenting the best version out of me.",
-      imageSrc: 'founders/sarah_nasir.png',
-    },
-    {
-      name: 'Shifali Kalra',
-      designation: 'FEMME TECH',
-      description: "GDSC is an amazing platform for one who wants to learn. I got to know most of the extremely talented and open-minded people and the interaction with them made me learn most of the ideas that can make one's thinking vast. / will always be grateful to this platform for all of the experience and I would definitely recommend everyone to join GDSC and make a difference that is gonna count.",
-      imageSrc: 'founders/shifali_kalra.png',
-    },
-    {
-      name: 'Muskan Karim',
-      designation: 'MARKO TICS',
-      description: "It was really an outstanding experience for me. I had the most memorable times in attending the meetings, and learning through the wider horizons. The moments experienced are priceless. My overall impression for this club can simply be termed as Epic.",
-      imageSrc: 'founders/muskan_karim.png',
-    },
-    {
-      name: 'Amina Kazim',
-      designation: 'XANTARERS',
-      description: "Working with GDSC has provided me with a collaborative forefront where like-minded people interacted and learned together. Hosting seminars and bootcamps on various topics has enhanced my learning passively and I am grateful for my team mates for always being supportive. GDSC is a forum for all those who want to learn and excel. I would definitely recommend everyone with the same mindset to join GDSC and help make a difference",
-      imageSrc: 'founders/amina_kazim.png',
-    },
-    {
-      name: 'Nimra Ali',
-      designation: 'DATOS DALI',
-      description: "As a core team member, DSC has provided me with an excellent opportunity to meet other students, share ideas, skills, and experience in managing and speaking at workshops. The entire program helped me grow tremendously, both personally and technically. I have learned a lot and achieved a lot of things throughout GDSC tenure 2020. I would highly encourage students at DSU to join GDSC and improve themselves in a productive and positive learning environment.",
-      imageSrc: 'founders/nimra_ali.png',
-    },
-  ];
+const foundingmembers = [
+  {
+    name: 'Tarun Kumar',
+    designation: 'TECH SAMURAI',
+    description: "Like most passionate team-ups in Pakistan, the GDSC DSU Chapter started over a cup of chai and strong motivation of creating a developers-focused club. Inspired by courses like MIT's Missing Semester and Harvard CS50, the team was driven by providing quality sessions that will make them shine in their craft. Suffice to say, working with a set of resilient people who - through thick and thin - shared my ideology of selfless giving back was the highlight of 2020 for me.",
+    imageSrc: '/founders/tarun_kumar.png',
+  },
+  {
+    name: 'Bahawal Baloch',
+    designation: 'AL SHINOBI',
+    description: "Best thing about GDCS@DSU 2020 is that Rather than going for one big event and then staying dormant for the rest of the year, we focused on smaller activities with big impact. These consistent events helped a lot of my peers throughout the year and I am glad to be part of this team through its journey. I would highly recommend all students to join this exclusive team of geniuses to bring change and impact in our environment.",
+    imageSrc: '/founders/bahawal_baloch.png',
+  },
+  {
+    name: 'Abeer Shaikh',
+    designation: 'VICE PRESIDENT',
+    description: "Being a part of Google Developer Students Club for the tenure 2020 as a core team member was an honor for me. I learned and taught so many new skills through the bootcamps and workshops held by us. It enhanced my skills and made me focused about my goals. I encourage everyone to be a part of this great club where we learn and grow. Throughout it was a really good experience.",
+    imageSrc: '/founders/abeer_shaikh.png',
+  },
+  {
+    name: 'Alishan',
+    designation: 'FLUTTER NINJA',
+    description: "The experience of serving as a Flutter Lead at GDSC DSU was worth remembering for me. I not only led the team but learnt many things as well from my teammates. It was the best working and learning experience for me and many others. I would recommend and encourage students to take part in such initiatives to boost their learning and hands-on experience.",
+    imageSrc: '/founders/alishan.png',
+  },
+  {
+    name: 'Abdur Rauf Bughio',
+    designation: 'CREATIVE DIRECTOR',
+    description: "For me being a part of GDSC was a journey to find myself and grow myself. It was a great journey along with some of the best people who always encouraged me to do better and appreciated all my efforts. I feel like joining GDSC was one of the best decisions I made, and I would encourage others to make this decision as well. I hope that the work I did here with that amazing team had some impact on people's lives because in the end, that's what really matters.",
+    imageSrc: '/founders/abdur_rauf_bughio.png',
+  },
+  {
+    name: 'Sarah Nasir',
+    designation: 'DATOS DALI',
+    description: "One of my best decisions was to apply for GDSC as a core team member. It encouraged me to learn more about emerging technologies and not only helped me in enhancing my skills but also how to utilize them effectively. Being a core team member, my ideas and work were always appreciated which boosted up my confidence and helped me in presenting the best version of myself.",
+    imageSrc: '/founders/sarah_nasir.png',
+  },
+  {
+    name: 'Shifali Kalra',
+    designation: 'FEMME TECH',
+    description: "GDSC is an amazing platform for one who wants to learn. I got to know most of the extremely talented and open-minded people and the interaction with them made me learn most of the ideas that can make one's thinking vast. I will always be grateful to this platform for all of the experience and I would definitely recommend everyone to join GDSC and make a difference that is going to count.",
+    imageSrc: '/founders/shifali_kalra.png',
+  },
+  {
+    name: 'Muskan Karim',
+    designation: 'MARKO TICS',
+    description: "It was really an outstanding experience for me. I had the most memorable times in attending the meetings, and learning through the wider horizons. The moments experienced are priceless. My overall impression of this club can simply be termed as Epic.",
+    imageSrc: '/founders/muskan_karim.png',
+  },
+  {
+    name: 'Amina Kazim',
+    designation: 'XANTARERS',
+    description: "Working with GDSC has provided me with a collaborative forefront where like-minded people interacted and learned together. Hosting seminars and bootcamps on various topics has enhanced my learning passively and I am grateful for my teammates for always being supportive. GDSC is a forum for all those who want to learn and excel. I would definitely recommend everyone with the same mindset to join GDSC and help make a difference",
+    imageSrc: '/founders/amina_kazim.png',
+  },
+  {
+    name: 'Nimra Ali',
+    designation: 'DATOS DALI',
+    description: "As a core team member, DSC has provided me with an excellent opportunity to meet other students, share ideas, skills, and experience in managing and speaking at workshops. The entire program helped me grow tremendously, both personally and technically. I have learned a lot and achieved a lot of things throughout GDSC tenure 2020. I would highly encourage students at DSU to join GDSC and improve themselves in a productive and positive learning environment.",
+    imageSrc: '/founders/nimra_ali.png',
+  },
+];
 
+export default function Founder() {
   return (
-    <>
-      {/* Quote Image */}
-      <div data-aos="fade-up" className='QuoteDiv'>
-        <img className={founder.Quoteimg} src='/founderquote.svg' alt='' />
+    <main className="flex flex-col gap-10 min-h-screen bg-white px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-20">
+
+      <div data-aos="fade-up" className="w-full flex justify-center py-8">
+        <Image src='/executivesquote.svg' alt='' width={800} height={200} />
       </div>
 
-      {/* Div to Display Founder and Faculty Advisor */}
-      <div data-aos="fade-up" className="row">
-        {founders.map((founderData, index) => (
-          <div key={index} className="col-lg-5">
-            <div className={`${founder.header} ${index === 1 ? founder.facultyHeader : ''}`}>
-              <h1>{index === 1 ? 'FACULTY ADVISOR' : 'FOUNDER'}</h1>
+      <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
+        {founders.map((member, index) => (
+            <div key={index} className="flex flex-col mb-4 w-full bg-white rounded-xl overflow-hidden shadow-xl">
+            <div className={`relative w-full text-center py-2 rounded-t-xl ${member.headingColor}`}>
+                <h1 className="text-white font-bold text-lg tracking-widest">{member.heading}</h1>
             </div>
-
-            <div className={founder.card}>
-              <img className={founder.dotimg} src='/dotbackground.svg' alt='' />
-
-              <img className={founder.founderimg} src={founderData.imageSrc} />
-              <h2 className={founder.foundername}>{founderData.name}</h2>
-              <p className={founder.founderdesignation}>{founderData.designation}</p>
-              <p className={founder.founderdescription}>{founderData.description}</p>
-
-              <div className={founder.group}>
-                {founderData.socials.map((social, index) => (
-                  <a href={social.type === 'Email' ? `mailto:${social.link}` : social.link} key={index} className={founder.icon}>
-                    <img src={social.image} alt="Social Media Icon" />
-                  </a>
+            <div className="relative flex flex-col items-center p-3">
+                <Image src="/dotbackground.svg" alt="" style={{top:'-2%'}} width={462} height={300} className="absolute w-full opacity-5" />
+                <Image src={member.imageSrc} alt={member.name} width={160} height={160} className="relative rounded-full mb-4 border-4 border-white -mt-16" />
+                <h3 className="font-bold text-xl text-gray-900">{member.name}</h3>
+                <p className="text-gray-600">{member.designation}</p>
+                <p className="text-gray-700 text-sm text-justify mt-2">{member.description}</p>
+                <div className="flex gap-4 mt-4">
+                {member.socials.map((social, idx) => (
+                    <a key={idx} href={social.link} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border-2 border-gray-300 hover:border-gray-500 transition-all">
+                    <Image src={`/${social.image}`} alt={social.type} width={20} height={20} />
+                    </a>
                 ))}
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Founding Team Members Div */}
-      <div data-aos="fade-up" className="row">
-        {foundingmembers.map((item, index) => (
-          <div className="col-lg-5" key={index}>
-            <div className={founder.container}>
-              <img className={founder.verticalimg} src='/dotimgvertical.svg' alt='' />
-              <div className={founder.imageContainer}>
-                <div className={founder.image_div}>
-                  <img className={founder.profilepic} src={item.imageSrc} alt="placeholder" />
                 </div>
-              </div>
-
-              <div className={founder.name}>{item.name}</div>
-              <div className={founder.designation}>{item.designation}</div>
-              <div className={founder.description}>{item.description}</div>
             </div>
-          </div>
+            </div>
         ))}
-      </div>
-    </>
+        </div>
+
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
+            {foundingmembers.map((member, index) => (
+                <div key={index} className="flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
+                    <div
+                        className="absolute top-0 left-0 h-full w-16 bg-cover"
+                        style={{ backgroundImage: "url('/dotimgvertical.svg')" }}
+                    />
+                    <div className="" style={{display:'flex',marginTop:'-34%',marginLeft:'-2%',position:'relative'}} >
+                        <Image src={member.imageSrc} alt={member.name} width={70} height={40} className="w-full h-full object-cover rounded-full" />
+                    </div>
+                    <div className="ml-4 flex-1">
+                        <h2 className="text-lg font-bold text-gray-900">{member.name}</h2>
+                        <p className="text-xs font-semibold text-gray-700 mb-2">{member.designation}</p>
+                        <p className="text-gray-600 text-xs text-justify">{member.description}</p>
+                    </div>
+                </div>
+            ))}
+        </div>
+
+
+
+
+    </main>
   );
 }

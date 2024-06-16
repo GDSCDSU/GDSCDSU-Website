@@ -1,11 +1,7 @@
 'use client';
-import styles from "../styles/teamsnav.module.css";
-import { useState } from "react";
+import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Footer } from "flowbite-react";
-import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin} from "react-icons/bs";
-import { IoMdMail } from "react-icons/io";
-import 'bootstrap/dist/css/bootstrap.min.css'; 
+import Image from 'next/image';
 
 const components = {
   Founder: dynamic(() => import('../components/founder'), { ssr: false }),
@@ -16,139 +12,53 @@ const components = {
   Development: dynamic(() => import('../components/development'), { ssr: false }),
 };
 
-export default function Team() {
-  const [activeTab, setActiveTab] = useState('Founder');
+const tabsData = [
+  { id: 1, title: 'Founder', color: 'border-blue-500 bg-blue-500' },
+  { id: 2, title: 'Leads', color: 'border-red-500 bg-red-500' },
+  { id: 3, title: 'Operations', color: 'border-green-500 bg-green-500' },
+  { id: 4, title: 'Development', color: 'border-blue-500 bg-blue-500' },
+  { id: 5, title: 'Marketing', color: 'border-green-500 bg-green-500' },
+  { id: 6, title: 'Executives', color: 'border-blue-500 bg-blue-500' },
+];
 
-  const handleTabClick = (tab) => {
+const Team: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<string>('Founder');
+
+  const handleTabClick = (tab: string) => {
     setActiveTab(tab);
   };
 
   const ActiveComponent = components[activeTab];
 
+  const activeTabData = tabsData.find(tab => tab.title === activeTab);
+  const activeTabBorderColor = activeTabData ? activeTabData.color.split(' ')[0] : 'border-gray-100';
+  const activeTabBgColor = activeTabData ? activeTabData.color.split(' ')[1] : 'bg-gray-100';
+
   return (
-    <>
-      <div data-aos="fade-up">
-        <img className="img-fluid" src="/teams-header.svg" alt="" />
+    <main className="min-h-screen bg-white">
+      <div className="flex justify-center items-center">
+        <Image src="/teams-header.svg" alt="" width={1600} height={100} />
       </div>
-
-      <div className="container">
-        <div data-aos="fade-up" className={styles.TeamNavigation}>
-          <div
-            className={`${styles.Rectangle196} ${
-              activeTab === 'Leads'
-                ? styles.redBorder
-                : activeTab === 'Marketing' || activeTab === 'Operations'
-                ? styles.greenBorder
-                : styles.blueBorder
-            }`}
-          />
-          <div
-            className={`${styles.Rectangle197} ${
-              activeTab === 'Founder'
-                ? styles.leftFounder
-                : activeTab === 'Leads'
-                ? styles.leftLeads
-                : activeTab === 'Marketing'
-                ? styles.leftMarketing
-                : activeTab === 'Development'
-                ? styles.leftDevelopment
-                : activeTab === 'Operations'
-                ? styles.leftOperations
-                : activeTab === 'Executives'
-                ? styles.leftExecutives
-                : ''
-            } ${
-              activeTab === 'Leads'
-                ? styles.redBackground
-                : activeTab === 'Marketing' || activeTab === 'Operations'
-                ? styles.greenBackground
-                : styles.blueBackground
-            }`}
-          />
-          <button
-            className={`${styles.NavButton} ${styles.Founder} ${
-              activeTab === 'Founder' ? styles.active : ''
-            }`}
-            onClick={() => handleTabClick('Founder')}
-          >
-            Founder
-          </button>
-          <button
-            className={`${styles.NavButton} ${styles.Leads} ${
-              activeTab === 'Leads' ? styles.active : ''
-            }`}
-            onClick={() => handleTabClick('Leads')}
-          >
-            Leads
-          </button>
-          <button
-            className={`${styles.NavButton} ${styles.MarketingTeam} ${
-              activeTab === 'Marketing' ? styles.active : ''
-            }`}
-            onClick={() => handleTabClick('Marketing')}
-          >
-            Marketing
-          </button>
-          <button
-            className={`${styles.NavButton} ${styles.DevelopmentTeam} ${
-              activeTab === 'Development' ? styles.active : ''
-            }`}
-            onClick={() => handleTabClick('Development')}
-          >
-            Development
-          </button>
-          <button
-            className={`${styles.NavButton} ${styles.OperationsTeam} ${
-              activeTab === 'Operations' ? styles.active : ''
-            }`}
-            onClick={() => handleTabClick('Operations')}
-          >
-            Operations
-          </button>
-          <button
-            className={`${styles.NavButton} ${styles.ExecutiveCoreTeam} ${
-              activeTab === 'Executives' ? styles.active : ''
-            }`}
-            onClick={() => handleTabClick('Executives')}
-          >
-            Executive
-          </button>
-        </div>
+      <ul className={`grid grid-cols-6 sm:grid-cols-6 md:grid-cols-6 text-center text-gray-400 bg-white h-20 rounded-full border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
+        {tabsData.map((tab) => (
+          <li key={tab.id} className="m-1" style={{ marginBottom: 0 }}>
+            <p
+              onClick={() => handleTabClick(tab.title)}
+              className={`py-3 text-xs md:text-lg cursor-pointer ${
+                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'rounded-full'
+              }`}
+              style={{ marginBottom: 0 }}
+            >
+              {tab.title}
+            </p>
+          </li>
+        ))}
+      </ul>
+      <div className="mt-5 p-5">
+        {ActiveComponent ? <ActiveComponent /> : <div>No Component Found</div>}
       </div>
-
-      <section className={styles.section_container}>
-        <ActiveComponent />
-      </section>
-
-      <div>
-        <img src="/ColorBoxes.svg" className="img-fluid" alt="" />
-      </div>
-
-      <div className="shadow-sm p-3 rounded-lg">
-        <div className="d-flex flex-column align-items-center text-center">
-          <img src="LOGO.svg" alt="" className="img-fluid mb-3" />
-          <div className="text-secondary mb-3"><b>Connect With Us</b></div>
-          <div className="d-flex justify-content-center flex-wrap">
-            <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
-            <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
-            <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
-            <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
-            <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
-            <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
-          </div>
-          <Footer.Divider />
-        </div>
-        <div>
-          <div className="row">
-            <div className="col-md-10 col-12 text-secondary">
-              ©2024 GDSC@DSU
-            </div>
-            <div className="col-md-2 col-12 text-end text-secondary">
-              <a href="https://www.dsu.edu.pk/">DHA Suffa University</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+    </main>
   );
-}
+};
+
+export default Team;

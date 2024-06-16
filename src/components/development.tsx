@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import teams from '../styles/teams.module.css'; // Import the CSS module
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Image from 'next/image';
 
 export default function Development() {
   const [developers, setDevelopers] = useState([]);
@@ -10,7 +9,7 @@ export default function Development() {
     axios.get('https://gdscdsu-website.vercel.app/api/teams?team=development')
       .then(response => {
         const responseData = response.data;
-  
+
         if (Array.isArray(responseData)) {
           setDevelopers(responseData);
         } else if (typeof responseData === 'object') {
@@ -28,67 +27,43 @@ export default function Development() {
   console.log(developers);
 
   return (
-    <>
-      <div data-aos="fade-up" className="QuoteDiv">
-        <img className={teams.Quoteimg} src='/developmentquote.svg' alt='' />
+    <main className="flex flex-col gap-5 min-h-screen bg-white">
+      {/* Quote Image */}
+      <div data-aos="fade-up" className="w-full flex justify-center py-8">
+        <Image src='/developmentquote.svg' alt='' width={800} height={200} />
       </div>
 
       {/* Ensure developers[1] exists before rendering */}
       {developers[1] && (
         <>
           {/* Members Div 1 */}
-          <div data-aos="fade-up" className={`row ${teams.customRow}`}>
-            {developers[1].slice(0, 3).map((item, index) => (
-              <div className={`col-md-2 ${teams.customCol}`} key={index}>
-                <div className={teams.member_card}>
-                  <div className={teams.picheader}></div>
-                  <div className={teams.card_content}>
-                    <img className={teams.dotimg} src='/blueverticalbar.svg' alt='' />
-                    <div className={teams.image_div}>
-                      <img className={teams.profilepic} src={item.picture} alt={item.fullname} />
-                    </div>
+          <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">
+            {developers[1].map((item, index) => (
+              <div key={index} className="flex pb-1 w-70 h-30 flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl">
+                <div className="relative">
+                  <div className="flex items-center justify-center w-full h-5 ">
+                    <Image src='/blueverticalbar.svg' alt='' width={600} height={100} />
                   </div>
-                  <div className={teams.name}>{item.fullname}</div>
-                  <div className={teams.role}>{item.tagline}</div>
-                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
-                    <div className={teams.member_button}>
-                      <div className={teams.btn_border}></div>
-                      <img className={teams.icon} src='/LinkedINfilled.svg' alt='' />
-                      <div className={teams.btn_text}>LinkedIn Profile</div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Members Div 2 */}
-          <div data-aos="fade-up" className={`row ${teams.customrowDev}`} >
-            {developers[1].slice(3, 5).map((item, index) => (
-              <div className={`col-md-2 offset-md-0 ${teams.customcolDev}`}  key={index}>
-                <div className={teams.member_card}>
-                  <div className={teams.picheader}></div>
-                  <div className={teams.card_content}>
-                    <img className={teams.dotimg} src='/blueverticalbar.svg' alt='' />
-                    <div className={teams.image_div}>
-                      <img className={teams.profilepic} src={item.picture} alt={item.fullname} />
-                    </div>
+                  <div className="flex justify-center">
+                    <Image src={item.picture} className="rounded-full" alt={item.fullname} width={100} height={100} />
                   </div>
-                  <div className={teams.name}>{item.fullname}</div>
-                  <div className={teams.role}>{item.tagline}</div>
-                  <a href={item.linkedin} target="_blank" rel="noopener noreferrer">
-                    <div className={teams.member_button}>
-                      <div className={teams.btn_border}></div>
-                      <img className={teams.icon} src='/LinkedINfilled.svg' alt='' />
-                      <div className={teams.btn_text}>LinkedIn Profile</div>
-                    </div>
-                  </a>
+                  <div className="flex flex-col items-center">
+                    <p className="mt-5 font-bold lg:text-lg text-md text-center text-gray-900">
+                      {item.fullname}
+                    </p>
+                    <p className="text-black text-sm">{item.tagline}</p>
+                    <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
+                    <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
+                    <span>LinkedIn Profile</span>
+                    </a>
+                    <br/>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </>
       )}
-    </>
+    </main>
   );
 }

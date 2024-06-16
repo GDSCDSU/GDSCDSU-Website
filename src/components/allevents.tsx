@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from '../styles/events.module.css';
 import axios from 'axios';
 
 export default function AllEvents() {
@@ -32,31 +30,37 @@ export default function AllEvents() {
       console.log(process.env.BASE_URL_API)}, []);
   
 
-  console.log(eventData);
+  console.log(eventData)
+
   return (
-    <>
-      <h1 className={styles.heading} data-aos="fade-up">
+    <main className="flex flex-col gap-5 min-h-screen bg-white">
+      <h1 className="text-3xl font-bold text-center my-8" data-aos="fade-up">
         <b>All Events</b>
       </h1>
-      <img className={styles.vectorimg1} src='/orngcircle.svg' alt='' />
-      <img className={styles.vectorimg2} src='/leftboxes.svg' alt='' />
       
-      {/* Events Div */}
-      <div className="row" data-aos="fade-up">
+
+      {/* Events Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">
         {loading ? (
-          <p>Loading...</p>
+          <p className="text-center col-span-full">Loading...</p>
         ) : (
-          eventData.length > 0 && eventData[1].slice(0,20).map(event => (
-            <div key={event.id} className="col-md-4 offset-md-0">
-              <div className={styles.event_card}>
-                <img className={styles.image} src={event.picture} alt="Event" />
-                <div className={styles.name}>{event.name}</div>
-                <div className={styles.event_type}>{event.title}</div>
+          eventData.length > 0 ? (
+            eventData[1].map(event => (
+              <div key={event.id} className="flex pb-3">
+                <div className="flex flex-col w-full rounded-lg items-center overflow-hidden bg-white shadow-xl">
+                  <img className="w-40" src={event.picture} alt="Event" />
+                  <div className="p-4">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{event.name}</h3>
+                    <p className="text-sm text-gray-600">{event.title}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))
+            ))
+          ) : (
+            <p className="text-center col-span-full">No events available.</p>
+          )
         )}
       </div>
-    </>
+    </main>
   );
 }
