@@ -6,7 +6,7 @@ export default function Development() {
   const [developers, setDevelopers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://gdscdsu/api/teams?team=development')
+    axios.get('https://gdscdsu.com/api/teams?team=development')
       .then(response => {
         const responseData = response.data;
 
