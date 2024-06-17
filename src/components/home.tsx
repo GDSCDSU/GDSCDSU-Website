@@ -132,7 +132,7 @@ export default function Home(){
             </div>
             <div className="ml-3 text-sm font-normal">
               <span className="mb-1 text-sm font-semibold text-black dark:text-white">New Event</span>
-              <div className="mb-2 text-sm font-normal text-gray"><b> Build with AI: Introduction to Gemini </b></div>
+              <div className="mb-2 text-sm font-normal text-gray"><b> GDSC Digital Debut </b></div>
             </div>
             <Toast.Toggle />
           </div>
