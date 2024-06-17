@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Footer } from 'flowbite-react';
 import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { IoMdMail } from 'react-icons/io';
+import { Carousel } from 'react-bootstrap';
 import Image from 'next/image';
 
 const AllEventsComponent = dynamic(() => import('../components/allevents'), { ssr: false });
@@ -17,8 +18,14 @@ const Events: React.FC = () => {
   };
 
   const TabData = [
-    { id: 1, title: 'Events', color: 'border-blue-500 bg-blue-500' },
-    { id: 2, title: 'Speakers', color: 'border-blue-500 bg-blue-500' },
+    { id: 1, title: 'Events', color: 'border-blue-400 bg-blue-500' },
+    { id: 2, title: 'Speakers', color: 'border-blue-400 bg-blue-500' },
+  ];
+
+  const highlights = [
+    {picture: '/Slider Images/Slider1.svg'},
+    {picture: '/Slider Images/Slider2.svg'},
+    {picture: '/Slider Images/Slider3.svg'},
   ];
 
   const activeTabData = TabData.find(tab => tab.title === activeTab);
@@ -58,8 +65,27 @@ const Events: React.FC = () => {
               <b>Our Top Events</b>
             </h1>
           </div>
-        </div>
-
+      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+        {highlights.length > 0 ? (
+          <Carousel>
+            {highlights.map((highlight, index) => (
+              <Carousel.Item key={index}>
+                <Image
+                  className="d-block w-100"
+                  src={highlight.picture}
+                  alt={`Highlight ${index + 1}`}
+                  width={50}
+                  height={50}
+                />
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        ) : (
+          <p>No highlights available.</p>
+        )}
+      </div>
+    </div>
+      
         {activeTab === 'Events' ? <AllEventsComponent /> : <SpeakersComponent />}
       </section>
 
@@ -70,7 +96,7 @@ const Events: React.FC = () => {
       <div>
         <div className="shadow-sm p-3 rounded-lg">
           <div className="d-flex flex-column align-items-center text-center">
-            <img src="LOGO.svg" alt="Logo" className="img-fluid mb-3" />
+            <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={100} height={100} />
             <div className="text-secondary mb-3"><b>Connect With Us</b></div>
             <div className="flex justify-center flex-wrap">
               <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>

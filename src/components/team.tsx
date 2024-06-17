@@ -16,12 +16,12 @@ const components = {
 };
 
 const tabsData = [
-  { id: 1, title: 'Founder', color: 'border-blue-500 bg-blue-500' },
+  { id: 1, title: 'Founder', color: 'border-blue-400 bg-blue-500' },
   { id: 2, title: 'Leads', color: 'border-red-500 bg-red-500' },
   { id: 3, title: 'Operations', color: 'border-green-500 bg-green-500' },
-  { id: 4, title: 'Development', color: 'border-blue-500 bg-blue-500' },
+  { id: 4, title: 'Development', color: 'border-blue-400 bg-blue-500' },
   { id: 5, title: 'Marketing', color: 'border-green-500 bg-green-500' },
-  { id: 6, title: 'Executives', color: 'border-blue-500 bg-blue-500' },
+  { id: 6, title: 'Executives', color: 'border-blue-400 bg-blue-500' },
 ];
 
 const Team: React.FC = () => {
@@ -42,12 +42,12 @@ const Team: React.FC = () => {
       <div className="flex justify-center items-center">
         <Image src="/teams-header.svg" alt="" width={2000} height={400} />
       </div>
-      <ul className={`flex justify-center text-center text-gray-500 bg-white-100 rounded-full p-1 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
+      <ul className={`flex justify-center text-center text-gray-500 bg-white-100 rounded-full p-2 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
         {tabsData.map((tab) => (
           <li key={tab.id} className="flex-1" style={{ marginBottom: 0 }}>
             <p
               onClick={() => handleTabClick(tab.title)}
-              className={`flex justify-center items-center py-3 px-1 text-xs xs:text-lg md:text-lg cursor-pointer ${
+              className={`flex justify-center items-center py-3 mx-1 text-xs xs:text-lg md:text-lg cursor-pointer ${
                 activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-white-100 rounded-full'
               }`}
               style={{ marginBottom: 0 }}
@@ -67,7 +67,7 @@ const Team: React.FC = () => {
       <div>
         <div className="shadow-sm p-3 rounded-lg">
           <div className="d-flex flex-column align-items-center text-center">
-            <img src="LOGO.svg" alt="Logo" className="img-fluid mb-3" />
+          <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={100} height={100} />
             <div className="text-secondary mb-3"><b>Connect With Us</b></div>
             <div className="flex justify-center flex-wrap">
               <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>

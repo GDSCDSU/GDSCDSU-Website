@@ -16,9 +16,7 @@ import CountUp from 'react-countup';
 export default function Home(){
     
     const [showToast, setShowToast] = useState(false);
-    const [partners, setPartners] = useState([]);
     const [highlights, setHighlights] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -419,18 +417,23 @@ export default function Home(){
     </div>
 
     {/* Sponsor Form: */}
-<div className="full-page-content" data-aos='fade-up' >
-    <div className="shadow-sm p-5 rounded-lg" style={{backgroundColor:'#FEECEC'}} >
+    <div className="full-page-content" data-aos='fade-up'>
+    <div className="shadow-sm p-5 rounded-lg" style={{ backgroundColor: '#FEECEC' }}>
         <div className="row align-items-center">
             <div className="col-md-6">
-                <h1 className="text-danger" ><b>Become our Sponsor</b></h1>
+                <h1 className="text-danger"><b>Become our Sponsor</b></h1>
                 <br />
-                <p className="text-secondary" >Grow audience with GDSC@DSU sponsorships</p>
-                <p className="text-secondary" >Learn more</p>
+                <p className="text-secondary">Grow audience with GDSC@DSU sponsorships</p>
+                <p className="text-secondary">Learn more</p>
             </div>
             <div className="col-md-3">
-                <Button className="custom-hover" color="failure" pill>
-                Become Sponsor
+                <Button
+                    className="custom-hover"
+                    color="failure"
+                    pill
+                    onClick={() => window.location.href = 'https://qj6nngakaoz.typeform.com/to/WY2PSuRz'}
+                >
+                    Become Sponsor
                 </Button>
             </div>
             <div className="col-md-3">
@@ -439,6 +442,7 @@ export default function Home(){
         </div>
     </div>
 </div>
+
 
 
 {/* Footer: */}

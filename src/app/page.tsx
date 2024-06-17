@@ -22,9 +22,16 @@ export default function HomePage() {
     const handleTabClick = useCallback((tab) => {
         if (tab === 'Contact') {
             document.getElementById('exampleModalBtn').click();
-        } else if (tab !== activeTab) {
-            setActiveTab(tab);
+        } else {
             setIsLoading(true);
+            if (tab === activeTab) {
+                setActiveTab('');
+                setTimeout(() => {
+                    setActiveTab(tab);
+                }, 0);
+            } else {
+                setActiveTab(tab);
+            }
         }
     }, [activeTab]);
 
@@ -115,17 +122,23 @@ export default function HomePage() {
                                     </div>
                                 </div>
                                 <div className="modal-footer">
-                                    <div className="d-flex justify-content-between align-items-center w-100">
-                                        <p className="mb-0">Want to become our sponsor?</p>
-                                        <div className="d-flex gap-2">
-                                            <Button color='blue' pill>Become Sponsor</Button>
-                                            <Button color="blue" pill>
-                                                <IoSend className="mr-2 h-5 w-5" />
-                                                Send
-                                            </Button>
-                                        </div>
+                                <div className="d-flex justify-content-between align-items-center w-100">
+                                    <p className="mb-0">Want to become our sponsor?</p>
+                                    <div className="d-flex gap-2">
+                                        <Button
+                                            color='blue'
+                                            pill
+                                            onClick={() => window.location.href = 'https://qj6nngakaoz.typeform.com/to/WY2PSuRz'}
+                                        >
+                                            Become Sponsor
+                                        </Button>
+                                        <Button color="blue" pill>
+                                            <IoSend className="mr-2 h-5 w-5" />
+                                            Send
+                                        </Button>
                                     </div>
                                 </div>
+                            </div>
                             </div>
                         </div>
                     </div>
