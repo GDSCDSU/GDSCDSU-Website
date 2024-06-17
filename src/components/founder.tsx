@@ -117,7 +117,7 @@ export default function Founder() {
                 <div className="flex gap-4 mt-4">
                 {member.socials.map((social, idx) => (
                     <a key={idx} href={social.link} target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border-2 border-gray-300 hover:border-gray-500 transition-all">
-                    <Image src={`/${social.image}`} alt={social.type} width={20} height={20} />
+                    <Image src={`/${social.image}`} alt={social.type} width={30} height={30} />
                     </a>
                 ))}
                 </div>
