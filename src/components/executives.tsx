@@ -34,7 +34,7 @@ export default function Executives() {
       {executives.length > 0 && (
         <>
           {/* Members Div 1 */}
-          <div data-aos="fade-up" className="grid grid-cols-3 md:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">
+          <div data-aos="fade-up" className="grid grid-cols-1 xs:items-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mx-auto max-w-screen-xl">
             {executives[1].map((item, index) => (
               <div key={index} className="flex pb-3 w-80 flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl">
                 <div className="relative">
