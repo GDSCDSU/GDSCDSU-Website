@@ -38,7 +38,7 @@ export default function Speakers() {
       </h1>
       
       {/* Speakers Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-5 px-8 mx-auto max-w-screen-xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">
         {loading ? (
           <p className="text-center col-span-full">Loading...</p>
         ) : (

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 'use client';
-import React,{useEffect} from "react";
+import React,{useEffect,useState} from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import Image from "next/image";
@@ -11,6 +11,8 @@ import { IoMdMail } from "react-icons/io";
 import { RiTeamFill } from "react-icons/ri";
 import AOS from 'aos';
 import { MdEvent } from "react-icons/md";
+import Events from "./events";
+import Team from "./team";
 import 'aos/dist/aos.css';
 
 const people = [
@@ -47,9 +49,18 @@ const people = [
       "/Nimra.svg"    },
   ];
 export default function OurStory(){
+
+    const [showEvents, setShowEvents] = useState(false);
+
+    // Function to handle clicking "View All" button
+    const handleViewAll = () => {
+        setShowEvents(true); // Set state to true to render Events component
+    };
+
     useEffect(() => {
         AOS.init();
       }, []);
+
     return (
         <>
         
@@ -188,19 +199,21 @@ export default function OurStory(){
                 </div>
                 <div className="col-md-6" >
                     <CardContainer className="inter-var">
-                        <CardBody >
+                        <CardBody>
+                        <a href="https://www.youtube.com/playlist?list=PLLyazdzLgFw43XOqsTk5GGrXuPOvd3Bzm" className="no-underline">
                             <CardItem translateZ="100" className="w-full">
-                            <Image
-                                src="/flutterbootcamps.svg"
-                                height="1000"
-                                width="1000"
-                                className="imgpadding"
-                                alt="thumbnail"
-                            />
+                                <Image
+                                    src="/flutterbootCamps.svg"
+                                    height="1000"
+                                    width="1000"
+                                    className="imgpadding"
+                                    alt="thumbnail"
+                                />
                             </CardItem>
+                        </a>
                         </CardBody>
                     </CardContainer>
-                </div>
+            </div>
             </div>
         </div>
         <div className="m-5" data-aos="fade-up" >
@@ -231,27 +244,29 @@ export default function OurStory(){
                 </div>
                 <div className="col-md-6" >
                     <CardContainer className="inter-var">
+                    <a href="https://www.youtube.com/playlist?list=PLLyazdzLgFw4SsqxcJzmoKZ94juVjEJZG" className="no-underline">
                         <CardBody >
                             <CardItem translateZ="100" className="w-full">
-                            <Image
-                                src="/python1.svg"
-                                height="1000"
-                                width="1000"
-                                className="imgpadding"
-                                alt="thumbnail"
-                            />
+                                <Image
+                                    src="/python1.svg"
+                                    height="1000"
+                                    width="1000"
+                                    className="imgpadding"
+                                    alt="thumbnail"
+                                />
                             </CardItem>
-                            <br/>
-                            <CardItem translateZ="100" className="w-full">
+                        <br/>
+                        <CardItem translateZ="100" className="w-full">
                             <Image
-                                src="/python2.svg"
-                                height="1000"
-                                width="1000"
-                                className="imgpadding"
-                                alt="thumbnail"
-                            />
+                                    src="/python2.svg"
+                                    height="1000"
+                                    width="1000"
+                                    className="imgpadding"
+                                    alt="thumbnail"
+                                />
                             </CardItem>
                         </CardBody>
+                        </a>
                     </CardContainer>
                 </div>
             </div>
@@ -284,15 +299,17 @@ export default function OurStory(){
                 <div className="col-md-6" >
                     <CardContainer className="inter-var">
                         <CardBody >
+                        <a href="https://www.datacamp.com/blog/how-datacamp-donates-connected-pakistani-students-during-covid" className="no-underline">
                             <CardItem translateZ="100" className="w-full">
-                            <Image
-                                src="/datacamp1.svg"
-                                height="1000"
-                                width="1000"
-                                className="imgpadding"
-                                alt="thumbnail"
-                            />
+                                <Image
+                                    src="/datacamp1.svg"
+                                    height="1000"
+                                    width="1000"
+                                    className="imgpadding"
+                                    alt="thumbnail"
+                                />
                             </CardItem>
+                        </a>
                         </CardBody>
                     </CardContainer>
                     
@@ -321,7 +338,8 @@ export default function OurStory(){
                 <div className="col-md-6" >
                     <CardContainer className="inter-var">
                         <CardBody >
-                            <CardItem translateZ="100" className="w-full">
+                        <a href="https://www.youtube.com/playlist?list=PLLyazdzLgFw4destGu7IsY_7LiKfKO6pc" className="no-underline">
+                        <CardItem translateZ="100" className="w-full">
                             <Image
                                 src="/cyber1.svg"
                                 height="1000"
@@ -330,6 +348,7 @@ export default function OurStory(){
                                 alt="thumbnail"
                             />
                             </CardItem>
+                        </a>
                         </CardBody>
                     </CardContainer>
                     
@@ -358,7 +377,8 @@ export default function OurStory(){
                 <div className="col-md-6" >
                     <CardContainer className="inter-var">
                         <CardBody >
-                            <CardItem translateZ="100" className="w-full">
+                        <a href="https://www.youtube.com/playlist?list=PLLyazdzLgFw7YKIV7tPhwruafPl388OoN" className="no-underline">
+                        <CardItem translateZ="100" className="w-full">
                             <Image
                                 src="/git1.svg"
                                 height="1000"
@@ -366,10 +386,10 @@ export default function OurStory(){
                                 className="imgpadding"
                                 alt="thumbnail"
                             />
-                            </CardItem>
+                        </CardItem>
+                    </a>
                         </CardBody>
                     </CardContainer>
-                    
                 </div>
             </div>
         </div>
@@ -386,14 +406,13 @@ export default function OurStory(){
                                 <div className="col-md-8" >
                                     <h3><b>More events & webinars that we conducted</b></h3>
                                 </div>
-                                <div className="col-md-4" >
-                                <Button className="custom-hover" color="blue" pill>
-                                    <MdEvent className="m-1" />
-                                    View All
-                                </Button>
+                                <div className="col-md-4">
+                                    <Button className="custom-hover" color="blue" pill>
+                                        <MdEvent className="m-1" />
+                                            View All
+                                    </Button>
                                 </div>
                             </div>
-                            
                         </div>
                         <div className="card-body d-flex flex-column align-items-center text-center">
                           <div className="row" >
