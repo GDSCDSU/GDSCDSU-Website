@@ -47,7 +47,7 @@ const Team: React.FC = () => {
           <li key={tab.id} className="flex-1" style={{ marginBottom: 0 }}>
             <p
               onClick={() => handleTabClick(tab.title)}
-              className={`flex justify-center items-center py-3 text-xs md:text-lg cursor-pointer ${
+              className={`flex justify-center items-center py-3 px-1 text-xs xs:text-lg md:text-lg cursor-pointer ${
                 activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-white-100 rounded-full'
               }`}
               style={{ marginBottom: 0 }}

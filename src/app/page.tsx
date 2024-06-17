@@ -22,11 +22,11 @@ export default function HomePage() {
     const handleTabClick = useCallback((tab) => {
         if (tab === 'Contact') {
             document.getElementById('exampleModalBtn').click();
-        } else {
+        } else if (tab !== activeTab) {
             setActiveTab(tab);
             setIsLoading(true);
         }
-    }, []);
+    }, [activeTab]);
 
     useEffect(() => {
         const timeout = setTimeout(() => {
