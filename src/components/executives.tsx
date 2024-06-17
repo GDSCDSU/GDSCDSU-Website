@@ -34,15 +34,18 @@ export default function Executives() {
       {executives.length > 0 && (
         <>
           {/* Members Div 1 */}
-          <div data-aos="fade-up" className="grid grid-cols-1 xs:items-center xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 mx-auto max-w-screen-xl">
+          <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto max-w-screen-xl">
             {executives[1].map((item, index) => (
-              <div key={index} className="flex pb-3 w-80 flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl">
+              <div 
+                key={index} 
+                className="flex pb-3 w-full max-w-sm flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl mx-auto md:mr-4"
+              >
                 <div className="relative">
                   <div className="flex items-center justify-center w-full h-5">
                     <Image src='/dotimgexecutive.svg' alt='' width={320} height={100} />
                   </div>
                   <div className="flex justify-center">
-                    <Image src={item.picture} className="w-30 h-30" alt={item.fullname} width={100} height={100} />
+                    <Image src={item.picture} className="w-20 h-20" alt={item.fullname} width={100} height={100} />
                   </div>
                   <div className="flex flex-col items-center">
                     <p className="mt-5 font-bold lg:text-lg text-md text-center text-gray-900">
@@ -51,8 +54,8 @@ export default function Executives() {
                     <p className="text-black">{item.tagline}</p>
                     <p className="text-black text-justify text-sm mt-3 w-60">{item.bio}</p>
                     <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
-                    <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
-                    <span>LinkedIn Profile</span>
+                      <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
+                      <span>LinkedIn Profile</span>
                     </a>
                     <br/>
                   </div>

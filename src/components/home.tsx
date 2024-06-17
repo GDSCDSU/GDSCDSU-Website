@@ -368,7 +368,7 @@ export default function Home(){
                 <br />
                 <div className="row d-flex justify-content-center text-center">
                     {counters.map((counter, index) => (
-                        <div key={index} className="col-md-4" data-aos="fade-up" data-aos-delay={`${index * 200}`}>
+                        <div key={index} className="col-md-4" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
                             <div className="d-flex flex-column align-items-center">
                                 <img
                                     src={index === 0 ? '/Years.svg' : index === 1 ? '/Attendees.svg' : '/events.svg'}
@@ -377,7 +377,7 @@ export default function Home(){
                                 />
                                 <h1>
                                     <b>
-                                        <CountUp start={0} end={counter.target} duration={2} />
+                                        <CountUp start={0} end={counter.target} duration={10} />
                                         +
                                     </b>
                                 </h1>

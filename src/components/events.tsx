@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Footer } from 'flowbite-react';
 import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { IoMdMail } from 'react-icons/io';
+import Image from 'next/image';
 
 const AllEventsComponent = dynamic(() => import('../components/allevents'), { ssr: false });
 const SpeakersComponent = dynamic(() => import('../components/speakers'), { ssr: false });
@@ -63,7 +64,7 @@ const Events: React.FC = () => {
       </section>
 
       <div>
-        <img src="/ColorBoxes.svg" className="img-fluid" alt="Color Boxes" />
+        <Image src="/ColorBoxes.svg" className="img-fluid" alt="Color Boxes" width={500} height={500} />
       </div>
 
       <div>
