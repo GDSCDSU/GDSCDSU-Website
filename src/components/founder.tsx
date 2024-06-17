@@ -54,7 +54,7 @@ const foundingmembers = [
     name: 'Alishan',
     designation: 'FLUTTER NINJA',
     description: "The experience of serving as a Flutter Lead at GDSC DSU was worth remembering for me. I not only led the team but learnt many things as well from my teammates. It was the best working and learning experience for me and many others. I would recommend and encourage students to take part in such initiatives to boost their learning and hands-on experience.",
-    imageSrc: '/founders/alishan.png',
+    imageSrc: '/founders/Alishan.png',
   },
   {
     name: 'Abdur Rauf Bughio',
