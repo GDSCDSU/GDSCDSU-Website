@@ -138,7 +138,7 @@ export default function Founder() {
                     </div>
                     <div className="ml-4 flex-1">
                         <h2 className="text-lg font-bold text-gray-900">{member.name}</h2>
-                        <p className="text-xs font-semibold text-gray-700 mb-2">{member.designation}</p>
+                        <p className="text-md font-semibold text-gray-700 ">{member.designation}</p>
                         <p className="text-gray-600 text-xs text-justify">{member.description}</p>
                     </div>
                 </div>
