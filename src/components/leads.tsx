@@ -93,7 +93,7 @@ export default function Leads() {
                   {/* Social Icons */}
                   <div className="flex justify-center space-x-2">
                     <a href={lead.instagram} className="relative w-10 h-9 rounded-full border border-zinc-500 flex items-center justify-center overflow-hidden">
-                      <Image src="/Instaicon1.png" alt="Social Icon 1" layout="fill" objectFit="contain" className="rounded-full" />
+                      <Image src="/InstaIcon1.png" alt="Social Icon 1" layout="fill" objectFit="contain" className="rounded-full" />
                     </a>
                     <a href={lead.linkedin} className="relative w-10 h-9 rounded-full border border-zinc-500 flex items-center justify-center overflow-hidden">
                       <Image src="/LinkedInIcon1.svg" alt="Social Icon 2" layout="fill" objectFit="contain" className="rounded-full" />
