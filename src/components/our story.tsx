@@ -11,8 +11,6 @@ import { IoMdMail } from "react-icons/io";
 import { RiTeamFill } from "react-icons/ri";
 import AOS from 'aos';
 import { MdEvent } from "react-icons/md";
-import Events from "./events";
-import Team from "./team";
 import 'aos/dist/aos.css';
 
 const people = [
