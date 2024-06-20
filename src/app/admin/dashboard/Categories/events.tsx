@@ -4,7 +4,7 @@ import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { BsLinkedin } from 'react-icons/bs';
 
 export default function Events() {
   const [showForm, setShowForm] = useState(false);

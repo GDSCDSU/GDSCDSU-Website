@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
-import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
+import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Contact() {
     const [activeTab, setActiveTab] = useState('Contact');
@@ -42,7 +42,7 @@ export default function Contact() {
                         <div className="col-span-1 flex flex-col justify-center items-center p-8">
                             <div className="mb-8 text-center">
                                 <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
-                                <p className="text-gray-700 mb-6">Let's talk about how we can help you.</p>
+                                <p className="text-gray-700 mb-6">How we can help you?</p>
                                 <div className="flex items-center mb-6">
                                     <HiOutlineMail className="text-primary inline-block mr-4 h-8 w-8" />
                                     <span className="text-gray-700 text-lg">gdscdsu@gmail.com</span>
