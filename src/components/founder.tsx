@@ -49,7 +49,7 @@ export default function Founder() {
             <h3 className="font-bold text-xl text-gray-900">Dr. Ahmed Saeed Minhas</h3>
             <p className="text-gray-600">Vice Chancellor</p>
             <p className="text-gray-700 text-sm text-justify mt-2">
-              Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives. Dr. Minhas's commitment to our club's mission has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.
+              Our club owes much of its success to the steadfast support of our faculty advisor, Pro-Vice-Chancellor Dr. Ahmad Saeed Minhas. His unwavering dedication and guidance have been pivotal in shaping our initiatives.The commitment of Dr.Minhas to the mission of our club has played a crucial role in our growth and influence within the university community. We are immensely grateful for his leadership and mentorship, which have been invaluable assets on our journey towards excellence.
             </p>
             <div className="flex gap-1 mt-4">
               <a href='https://www.facebook.com/saeedminhas.ahmed?mibextid=ibOpuV' target="_blank" rel="noopener noreferrer" className="p-2 rounded-full border-2 border-gray-300 hover:border-gray-500 transition-all">
@@ -73,7 +73,7 @@ export default function Founder() {
             <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Tarun Kumar</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>TECH SAMURAI</p>
             <p className="founder-description text-black-800 text-md text-justify">
-              Like most passionate team-ups in Pakistan, the GDSC DSU Chapter started over a cup of chai and strong motivation of creating a developers-focused club. Inspired by courses like MIT's Missing Semester and Harvard CS50, the team was driven by providing quality sessions that will make them shine in their craft. Suffice to say, working with a set of resilient people who - through thick and thin - shared my ideology of selfless giving back was the highlight of 2020 for me.
+              Like most passionate team-ups in Pakistan, the GDSC DSU Chapter started over a cup of chai and strong motivation of creating a developers-focused club. Inspired by courses like the Missing Semester of MIT and Harvard CS50, the team was driven by providing quality sessions that will make them shine in their craft. Suffice to say, working with a set of resilient people who - through thick and thin - shared my ideology of selfless giving back was the highlight of 2020 for me.
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function Founder() {
             <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Abdur Rauf Bughio</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>CREATIVE DIRECTOR</p>
             <p className="founder-description text-black-800 text-md text-justify">
-              For me being a part of GDSC was a journey to find myself and grow myself. It was a great journey along with some of the best people who always encouraged me to do better and appreciated all my efforts. I feel like joining GDSC was one of the best decisions I made, and I would encourage others to make this decision as well. I hope that the work I did here with that amazing team had some impact on people's lives because in the end, that's what really matters.
+              For me being a part of GDSC was a journey to find myself and grow myself. It was a great journey along with some of the best people who always encouraged me to do better and appreciated all my efforts. I feel like joining GDSC was one of the best decisions I made, and I would encourage others to make this decision as well. I hope that the work I did here with that amazing team had some impact on lives of the people because in the end, that is what really matters.
             </p>
           </div>
         </div>
@@ -157,7 +157,7 @@ export default function Founder() {
             <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Shifali Kalra</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>FEMME TECH</p>
             <p className="founder-description text-black-800 text-md text-justify">
-              GDSC is an amazing platform for one who wants to learn. I got to know most of the extremely talented and open-minded people and the interaction with them made me learn most of the ideas that can make one's thinking vast. I will always be grateful to this platform for all of the experience and I would definitely recommend everyone to join GDSC and make a difference that is going to count.
+              GDSC is an amazing platform for one who wants to learn. I got to know most of the extremely talented and open-minded people and the interaction with them made me learn most of the ideas that can make thinking vast of an individual. I will always be grateful to this platform for all of the experience and I would definitely recommend everyone to join GDSC and make a difference that is going to count.
             </p>
           </div>
         </div>
@@ -199,7 +199,7 @@ export default function Founder() {
             <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Nimra Ali</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>DATOS DALI</p>
             <p className="founder-description text-black-800 text-md text-justify">
-              As a core team member, DSC has provided me with an excellent opportunity to meet other students, share ideas, skills, and experience in managing and speaking at workshops. The entire program helped me grow tremendously, both personally and technically. I have learned a lot and achieved a lot of things throughout GDSC tenure 2020. I would highly encourage students at DSU to join GDSC and improve themselves in a productive and positive learning environment.
+              As a core team member, GDSC has provided me with an excellent opportunity to meet other students, share ideas, skills, and experience in managing and speaking at workshops. The entire program helped me grow tremendously, both personally and technically. I have learned a lot and achieved a lot of things throughout GDSC tenure 2020. I would highly encourage students at DSU to join GDSC and improve themselves in a productive and positive learning environment.
             </p>
           </div>
         </div>

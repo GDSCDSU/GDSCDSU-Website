@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Image from 'next/image';
+
 
 export default function AllEvents() {
   const [eventData, setEventData] = useState([]);
@@ -48,7 +50,7 @@ export default function AllEvents() {
             eventData[1].map(event => (
               <div key={event.id} className="flex pb-3">
                 <div className="flex flex-col w-full rounded-lg items-center overflow-hidden bg-white shadow-xl">
-                  <img className="w-40" src={event.picture} alt="Event" />
+                  <Image className="w-40" src={event.picture} alt="Event" width={100} height={100} />
                   <div className="p-4">
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{event.name}</h3>
                     <p className="text-sm text-gray-600">{event.title}</p>
