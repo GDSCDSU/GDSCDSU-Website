@@ -70,7 +70,7 @@ export default function Founder() {
             <Image src='/founders/tarun_kumar.png' alt='Tarun Kumar' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Tarun Kumar</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Tarun Kumar</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>TECH SAMURAI</p>
             <p className="founder-description text-black-800 text-md text-justify">
               Like most passionate team-ups in Pakistan, the GDSC DSU Chapter started over a cup of chai and strong motivation of creating a developers-focused club. Inspired by courses like the Missing Semester of MIT and Harvard CS50, the team was driven by providing quality sessions that will make them shine in their craft. Suffice to say, working with a set of resilient people who - through thick and thin - shared my ideology of selfless giving back was the highlight of 2020 for me.
@@ -84,7 +84,7 @@ export default function Founder() {
             <Image src='/founders/bahawal_baloch.png' alt='Bahawal Baloch' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Bahawal Baloch</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Bahawal Baloch</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>AL SHINOBI</p>
             <p className="founder-description text-black-800 text-md text-justify">
               Best thing about GDCS@DSU 2020 is that Rather than going for one big event and then staying dormant for the rest of the year, we focused on smaller activities with big impact. These consistent events helped a lot of my peers throughout the year and I am glad to be part of this team through its journey. I would highly recommend all students to join this exclusive team of geniuses to bring change and impact in our environment.
@@ -98,7 +98,7 @@ export default function Founder() {
             <Image src='/founders/abeer_shaikh.png' alt='Abeer Shaikh' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Abeer Shaikh</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Abeer Shaikh</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>VICE PRESIDENT</p>
             <p className="founder-description text-black-800 text-md text-justify">
               Being a part of Google Developer Students Club for the tenure 2020 as a core team member was an honor for me. I learned and taught so many new skills through the bootcamps and workshops held by us. It enhanced my skills and made me focused about my goals. I encourage everyone to be a part of this great club where we learn and grow. Throughout it was a really good experience.
@@ -109,10 +109,10 @@ export default function Founder() {
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
           <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
-            <Image src='/founders/alishan.png' alt='Alishan' width={900} height={50} className="w-full h-full rounded-full" />
+            <Image src='/founders/Alishan.png' alt='Alishan' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Alishan</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Alishan</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>FLUTTER NINJA</p>
             <p className="founder-description text-black-800 text-md text-justify">
               The experience of serving as a Flutter Lead at GDSC DSU was worth remembering for me. I not only led the team but learnt many things as well from my teammates. It was the best working and learning experience for me and many others. I would recommend and encourage students to take part in such initiatives to boost their learning and hands-on experience.
@@ -126,7 +126,7 @@ export default function Founder() {
             <Image src='/founders/abdur_rauf_bughio.png' alt='Abdur Rauf Bughio' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Abdur Rauf Bughio</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 35, marginLeft: 10 }}>Abdur Rauf Bughio</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>CREATIVE DIRECTOR</p>
             <p className="founder-description text-black-800 text-md text-justify">
               For me being a part of GDSC was a journey to find myself and grow myself. It was a great journey along with some of the best people who always encouraged me to do better and appreciated all my efforts. I feel like joining GDSC was one of the best decisions I made, and I would encourage others to make this decision as well. I hope that the work I did here with that amazing team had some impact on lives of the people because in the end, that is what really matters.
@@ -140,7 +140,7 @@ export default function Founder() {
             <Image src='/founders/sarah_nasir.png' alt='Sarah Nasir' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Sarah Nasir</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Sarah Nasir</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>DATOS DALI</p>
             <p className="founder-description text-black-800 text-md text-justify">
               One of my best decisions was to apply for GDSC as a core team member. It encouraged me to learn more about emerging technologies and not only helped me in enhancing my skills but also how to utilize them effectively. Being a core team member, my ideas and work were always appreciated which boosted up my confidence and helped me in presenting the best version of myself.
@@ -154,7 +154,7 @@ export default function Founder() {
             <Image src='/founders/shifali_kalra.png' alt='Shifali Kalra' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Shifali Kalra</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Shifali Kalra</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>FEMME TECH</p>
             <p className="founder-description text-black-800 text-md text-justify">
               GDSC is an amazing platform for one who wants to learn. I got to know most of the extremely talented and open-minded people and the interaction with them made me learn most of the ideas that can make thinking vast of an individual. I will always be grateful to this platform for all of the experience and I would definitely recommend everyone to join GDSC and make a difference that is going to count.
@@ -182,7 +182,7 @@ export default function Founder() {
             <Image src='/founders/amina_kazim.png' alt='Amina Kazim' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Amina Kazim</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Amina Kazim</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>XANTARERS</p>
             <p className="founder-description text-black-800 text-md text-justify">
               Working with GDSC has provided me with a collaborative forefront where like-minded people interacted and learned together. Hosting seminars and bootcamps on various topics has enhanced my learning passively and I am grateful for my teammates for always being supportive. GDSC is a forum for all those who want to learn and excel. I would definitely recommend everyone with the same mindset to join GDSC and help make a difference.
@@ -196,7 +196,7 @@ export default function Founder() {
             <Image src='/founders/nimra_ali.png' alt='Nimra Ali' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
-            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: -20, marginLeft: 10 }}>Nimra Ali</h2>
+            <h2 className="founder-name text-lg font-bold text-gray-900" style={{ marginTop: 20, marginLeft: 10 }}>Nimra Ali</h2>
             <p className="founder-designation text-md font-semibold text-gray-700" style={{ marginTop: -10, marginLeft: 10 }}>DATOS DALI</p>
             <p className="founder-description text-black-800 text-md text-justify">
               As a core team member, GDSC has provided me with an excellent opportunity to meet other students, share ideas, skills, and experience in managing and speaking at workshops. The entire program helped me grow tremendously, both personally and technically. I have learned a lot and achieved a lot of things throughout GDSC tenure 2020. I would highly encourage students at DSU to join GDSC and improve themselves in a productive and positive learning environment.

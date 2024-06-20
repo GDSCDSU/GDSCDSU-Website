@@ -1,10 +1,8 @@
-/* eslint-disable react/no-unescaped-entities */
-'use client'
+"use client";
 import { useState, useEffect } from 'react';
-import '../globals.css';
-import 'flowbite/dist/flowbite.css';
 import Navbar from '../../components/Navbar';
 import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
+
 export default function Contact() {
     const [activeTab, setActiveTab] = useState('Contact');
     const [isLoading, setIsLoading] = useState(true);
@@ -41,21 +39,20 @@ export default function Contact() {
             ) : (
                 <div className="container mx-auto px-4 mt-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div className="col-span-1 flex flex-col justify-center items-center p-8">
-                        <div className="mb-8 text-center">
-                            <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
-                            <p className="text-gray-700 mb-6">Let's talk about how we can help you.</p>
-                            <div className="flex items-center mb-6">
-                                <HiOutlineMail className="text-primary mr-4" size={24} />
-                                <span className="text-gray-700 text-lg">gdscdsu@gmail.com</span>
-                            </div>
-                            <div className="flex items-center">
-                                <HiOutlineLocationMarker className="text-primary mr-4" size={24} />
-                                <span className="text-gray-700 text-lg">Ph-VII، DG-78, Off Khayaban-e-Tufail، Ext, Phase 7 Ext Karachi, Karachi City, Sindh</span>
+                        <div className="col-span-1 flex flex-col justify-center items-center p-8">
+                            <div className="mb-8 text-center">
+                                <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
+                                <p className="text-gray-700 mb-6">Let's talk about how we can help you.</p>
+                                <div className="flex items-center mb-6">
+                                    <HiOutlineMail className="text-primary inline-block mr-4 h-8 w-8" />
+                                    <span className="text-gray-700 text-lg">gdscdsu@gmail.com</span>
+                                </div>
+                                <div className="flex items-center mb-6">
+                                    <HiOutlineLocationMarker className="text-primary inline-block mr-4 h-8 w-8" />
+                                    <span className="text-gray-700 text-lg">Ph VII ext,DHA Karachi</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
                         <div className="col-span-2">
                             <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
                             <form className="max-w-lg mx-auto">
@@ -80,17 +77,15 @@ export default function Contact() {
                                         <HiOutlineMail className="inline-block mr-2" /> Send
                                     </button>
                                     <span className="text-gray-500 self-center mx-4">OR</span>
-                                    <button type="button" onClick={() => window.location.href = 'https://qj6nngakaoz.typeform.com/to/WY2PSuRz'} className="inline-block px-4 py-2 text-white bg-secondary rounded-full hover:bg-secondary-dark focus:outline-none focus:ring focus:ring-secondary focus:ring-opacity-50" >
+                                    <button type="button" onClick={() => window.location.href = 'https://qj6nngakaoz.typeform.com/to/WY2PSuRz'} className="inline-block px-4 py-2 text-white bg-secondary rounded-full hover:bg-secondary-dark focus:outline-none focus:ring focus:ring-secondary focus:ring-opacity-50">
                                         Become a Sponsor
                                     </button>
                                 </div>
-
                             </form>
                         </div>
                     </div>
                 </div>
             )}
-            
         </>
     );
 }

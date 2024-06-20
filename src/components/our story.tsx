@@ -13,6 +13,7 @@ import { RiTeamFill } from "react-icons/ri";
 import AOS from 'aos';
 import { MdEvent } from "react-icons/md";
 import 'aos/dist/aos.css';
+import  '../styles/ourstory.css';
 const avatarUrls = [
     "/Ateeq.svg",
     "/Abeer.svg",
@@ -74,7 +75,7 @@ export default function OurStory(){
         </div>
         
         <div className="m-0" data-aos="fade-up">
-            <div className="d-flex flex-column align-items-center" style={{marginTop:-150}}>
+            <div className="journey-section d-flex flex-column align-items-center" >
                 <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
             </div>
         <br />
@@ -168,7 +169,7 @@ export default function OurStory(){
                 </div>
                 <div className="col-md-6" >
                     <div className="d-flex flex-column text-center align-items-center" >
-                        <Image src="/Quote.svg" alt="" className="" width={700} height={100} />
+                        <Image src="/Quote.svg" alt="" className="quoteimage-story" width={800} height={300} />
                     </div>
                 </div>
                 <div className="col-md-3" >
@@ -397,7 +398,7 @@ export default function OurStory(){
                 </div>
             </div>
         </div>
-        <div className="m-0" data-aos="fade-up" >
+        <div className="m-0 text-center" data-aos="fade-up" >
             <br/>
             <div className="row" >
                 <div className="col-md-2" >
@@ -418,22 +419,22 @@ export default function OurStory(){
                                 </div>
                             </div>
                         </div>
-                        <div className="card-body d-flex flex-column align-items-center text-center">
+                        <div className="events-section card-body d-flex flex-column align-items-center text-center">
                           <div className="row" >
                             <div className="col-md-2 my-3" >
-                            <Image className="img-fluid" src="/event1.svg" width={300} height={300} alt="" />
+                            <Image className="img-fluid" src="/event1.svg" width={200} height={200} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <Image className="img-fluid" src="/event2.svg" width={300} height={300} alt="" />
+                            <Image className="img-fluid" src="/event2.svg" width={200} height={200} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <Image className="img-fluid" src="/event3.svg" width={300} height={300} alt="" />
+                            <Image className="img-fluid" src="/event3.svg" width={200} height={200} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <Image className="img-fluid" src="/event4.svg" width={300} height={300} alt="" />
+                            <Image className="img-fluid" src="/event4.svg" width={200} height={200} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <Image className="img-fluid" src="/event5.svg" width={300} height={300} alt="" />
+                            <Image className="img-fluid" src="/event5.svg" width={200} height={200} alt="" />
                             </div>
                           </div>                              
                         </div>   
@@ -441,36 +442,55 @@ export default function OurStory(){
                 </div>
             </div>
         </div>
+
+<div className="flex flex-wrap items-center justify-center" style={{marginLeft:'10%'}}>
+<div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">   
+    <div className="px-4 justify-center">
+        <div className="end-section">
+            <div className="title w-48 h-16 text-gray-800 text-5xl font-bold font-sans">The End</div>
+            <div className="End-Para w-70 h-32 text-justify text-zinc-500 text-2xl font-normal font-sans">
+                Finally, I couldn't have done all this without my team. I would like to thank my core team for believing in my ideas for a better future. Sir Shaham Mahmood, Specially Pro-Vice Chancellor Dr. Ahmad Saeed Minhas for his strong support.
+            </div>
+        </div>
+    </div>
+ 
+    <div className="px-4">
+        <Image src="/TheEnd.svg" className="img-fluid end-image" alt="End-Image" width={600} height={200} />
+    </div>
+</div>
+</div>
+
+
         <div>
-            <Image className="img-fluid" src="/TheEnd.svg" alt="" width={2000} height={50} style={{marginTop:-150}}/>      
+        <Image src="/ColorBoxes.svg" className="img-fluid" alt="Color Boxes" width={500} height={500} />
         </div>
         {/* Story Landing Page Ends */}
         <div>
-            <div className="shadow-sm p-3 rounded-lg">
-                <div className="d-flex flex-column align-items-center text-center">
-                    <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
-                    <div className="text-secondary mb-3"><b>Connect With Us</b></div>
-                    <div className="d-flex justify-content-center flex-wrap">
-                        <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
-                        <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
-                        <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
-                        <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
-                        <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
-                        <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
-                    </div>
-                    <Footer.Divider />         
-                </div>
-                <div>
-                    <div className="row">
-                        <div className="col-md-10 col-12 text-secondary">
-                            ©2024 GDSC@DSU
-                        </div>
-                        <div className="col-md-2 col-12 text-end text-secondary">
-                            <a href="https://www.dsu.edu.pk/">DHA Suffa University</a>
-                        </div>
-                    </div>
-                </div>   
+        <div className="border-t border-black  shadow-sm p-3 rounded-lg">
+        <div className="flex flex-col items-center text-center">
+        <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
+        <div className="text-secondary mb-3"><b>Connect With Us</b></div>
+        <div className="flex justify-center flex-wrap">
+            <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
+            <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
+            <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
+            <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
+            <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
+            <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
+        </div>
+        <Footer.Divider />         
+    </div>
+    <div className="pt-0 mt-0 flex justify-center items-center">
+        <div className="flex w-full justify-center text-center">
+            <div className="text-gray-500 mr-3">
+                ©2024 GDSC@DSU
             </div>
+            <div className="text-gray-500">
+                <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
+            </div>
+        </div>
+    </div>   
+</div>
         </div>
         </>
       );

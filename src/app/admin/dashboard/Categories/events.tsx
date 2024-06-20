@@ -108,7 +108,7 @@ export default function Events() {
               data.map((item, index) => (
                 <Image 
                   key={index}
-                  width={500} 
+                  width={100} 
                   height={100} 
                   src={item.picture} 
                   alt={`Image ${index + 1}`} 
