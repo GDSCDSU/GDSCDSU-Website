@@ -10,8 +10,26 @@
 /* Adjust tab size for screens smaller than 400px */
 @media (max-width: 400px) {
   .tab-item {
-    padding: 6px 4px; /* Adjust padding as needed */
+    padding: 6px 8px; /* Adjust padding as needed */
   }
+}
+
+.team-navbar{
+  margin-top: 5%;
+}
+
+
+@media (max-width: 576px) {
+  .team-navbar{
+    margin-top: 5%;    
+  } 
+}
+
+/* Adjust tab size for screens smaller than 400px */
+@media (max-width: 400px) {
+  .team-navbar{
+    margin-top: 5%;
+  }  
 }
 
 .quote-image {

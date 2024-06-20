@@ -54,7 +54,7 @@ export default function Home(){
     useEffect(() => {
         const fetchHighlights = async () => {
             try {
-              const response = await axios.get('http://localhost:3000/api/highlight');
+              const response = await axios.get('https://gdscdsu.com/api/highlight');
               const responseData = response.data;
               if (Array.isArray(responseData)) {
                 setHighlights(responseData);
@@ -463,31 +463,32 @@ export default function Home(){
     <img src="/ColorBoxes.svg" className="img-fluid" alt="" />
 </div>
 <div>
-    <div className="shadow-sm p-3 rounded-lg">
-        <div className="d-flex flex-column align-items-center text-center">
-            <img src="LOGO.svg" alt="" className="img-fluid mb-3" />
-            <div className="text-secondary mb-3"><b>Connect With Us</b></div>
-            <div className="d-flex justify-content-center flex-wrap">
-                <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
-                <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
-                <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
-                <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
-                <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
-                <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
-            </div>
-            <Footer.Divider />         
+<div className="border-t border-black  shadow-sm p-3 rounded-lg">
+    <div className="flex flex-col items-center text-center">
+        <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
+        <div className="text-secondary mb-3"><b>Connect With Us</b></div>
+        <div className="flex justify-center flex-wrap">
+            <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
+            <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
+            <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
+            <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
+            <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
+            <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
         </div>
-        <div>
-            <div className="row">
-                <div className="col-md-10 col-12 text-secondary">
-                    ©2024 GDSC@DSU
-                </div>
-                <div className="col-md-2 col-12 text-end text-secondary">
-                    <a href="https://www.dsu.edu.pk/">DHA Suffa University</a>
-                </div>
-            </div>
-        </div>   
+        <Footer.Divider />         
     </div>
+    <div className="pt-0 mt-0 flex justify-center items-center">
+        <div className="flex w-full justify-center text-center">
+            <div className="text-gray-500 mr-3">
+                ©2024 GDSC@DSU
+            </div>
+            <div className="text-gray-500">
+                <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
+            </div>
+        </div>
+    </div>   
+</div>
+
 </div>
 </>
 )
