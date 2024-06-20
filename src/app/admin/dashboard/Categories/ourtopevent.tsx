@@ -23,7 +23,7 @@ export default function OurTopEvent() {
   },[]);
 
   const fetchEvents = async () => {
-    const {data} = await axios.get('http://localhost:3000/api/event?topEvent=true');
+    const {data} = await axios.get('https://gdscdsu.com/api/event?topEvent=true');
     setData(data.data);
   }
   return (
@@ -69,7 +69,7 @@ export default function OurTopEvent() {
         {data.map((item, index) => (
           <Image 
             key={index}
-            width={500} 
+            width={100} 
             height={100} 
             src={item.picture} 
             alt={`Image ${index + 1}`} 

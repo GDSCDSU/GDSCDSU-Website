@@ -22,7 +22,7 @@ export default function GDSCLeads() {
   , []);
 
   const fetchLeads = async () => {
-    const {data} = await axios.get('http://localhost:3000/api/teams?team=marketing');
+    const {data} = await axios.get('https://gdscdsu.com/api/teams?team=marketing');
     console.log(data.data);
     setLeads(data.data);
   }

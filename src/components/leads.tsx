@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import '../styles/teams.css'; // Adjust path as needed
 
 export default function Leads() {
   const [leads, setLeads] = useState([]);
@@ -59,22 +60,21 @@ export default function Leads() {
     <main className="flex flex-col gap-3 min-h-screen justify-center bg-white">
       {/* Quote Image */}
       <div data-aos="fade-up" className="w-full flex justify-center py-8">
-        <Image src='/leadsquote.svg' alt='Leads Quote' width={800} height={200} />
+        <Image src='/leadsquote.svg' className='quote-image' alt='Leads Quote' width={800} height={200} />
       </div>
       
       <div className="flex flex-col items-center gap-8">
         {leads[1].map((lead, index) => (
-          <div key={index} className="flex items-start w-full max-w-2xl">
-            <div className="relative w-32  h-full">
-              <div className={`absolute text-justify text-xl font-bold font-['Google Sans'] ${years[index].isCurrent ? 'text-red-500' : 'text-red-500'}`}>
+          <div key={index} className="leads-container flex items-start w-full max-w-2xl">
+            <div className="relative w-32 h-full">
+              <div className={`years-bar text-justify text-xl font-bold font-['Google Sans']  ${years[index].isCurrent ? 'text-red-500' : 'text-red-500'}`}>
                 <div>{years[index].year}</div>
                 {!years[index].isCurrent && (
                   <div className="flex items-center w-auto justify-center mt-1">
                     <Image src='/redline.svg' alt='Red Line' width={5} height={40} />
                   </div>
                 )}
-                {years[index].isCurrent && <div className="text-xs ">
-                  CURRENT</div>}
+                {years[index].isCurrent && <div className="text-xs">CURRENT</div>}
               </div>
             </div>
             <div className="flex-grow w-full max-w-2xl h-auto p-6 bg-white rounded-2xl shadow-md relative">

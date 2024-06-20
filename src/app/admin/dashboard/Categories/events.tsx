@@ -25,8 +25,8 @@ export default function Events() {
 
   const fetchFilteredData = async () => {
     const endpoint = filter === 'speakers' 
-      ? 'http://localhost:3000/api/event?topEvent=true&speaker=true'
-      : 'http://localhost:3000/api/event?topEvent=true';
+      ? 'https://gdscdsu.com/api/event?topEvent=true&speaker=true'
+      : 'https://gdscdsu.com/api/event?topEvent=true';
     const { data } = await axios.get(endpoint);
     setData(data.data);
   };

@@ -23,7 +23,7 @@ export default function Events() {
   },[]);
 
   const fetchPartner = async () => {
-    const {data} = await axios.get('http://localhost:3000/api/highlight');
+    const {data} = await axios.get('https://gdscdsu.com/api/highlight');
     setData(data.data);
   }
   return (

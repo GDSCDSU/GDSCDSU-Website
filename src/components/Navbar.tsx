@@ -19,13 +19,13 @@ const Navbar: React.FC<NavbarProps> = ({ activeTab }) => {
     return (
         <FlowbiteNavbar rounded>
             <FlowbiteNavbar.Brand as={Link} href="/home">
-                <Image src='/LOGO.svg' alt='' width={275} height={0} />
+                <Image src='/LOGO.svg' alt='logo' width={275} height={0} />
             </FlowbiteNavbar.Brand>
             <FlowbiteNavbar.Toggle />
-            <FlowbiteNavbar.Collapse>
-                <ul className="nav nav-underline font-manrope font-bold">
+            <FlowbiteNavbar.Collapse className="custom-collapse">
+                <ul className="nav nav-underline font-manrope font-bold custom-nav">
                     {['Home', 'Our Story', 'Events', 'Team', 'Contact'].map((tab) => (
-                        <li key={tab} className="nav-item">
+                        <li key={tab} className="nav-item custom-nav-item">
                             <button
                                 className='nav-link'
                                 onClick={() => handleTabClick(tab)}

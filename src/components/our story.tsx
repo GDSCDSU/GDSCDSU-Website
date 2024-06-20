@@ -70,11 +70,11 @@ export default function OurStory(){
         <>
         
         <div data-aos="fade-up" >
-            <Image width={1500} height={500} className="img-fluid" src="/OurStory.svg" alt=""></Image>
+            <Image width={1500} height={100} className="img-fluid" src="/OurStory.svg" alt=""></Image>
         </div>
         
-        <div className="m-5" data-aos="fade-up">
-            <div className="d-flex flex-column align-items-center">
+        <div className="m-0" data-aos="fade-up">
+            <div className="d-flex flex-column align-items-center" style={{marginTop:-150}}>
                 <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
             </div>
         <br />
@@ -168,7 +168,7 @@ export default function OurStory(){
                 </div>
                 <div className="col-md-6" >
                     <div className="d-flex flex-column text-center align-items-center" >
-                        <img src="/Quote.svg" alt="" className="" />
+                        <Image src="/Quote.svg" alt="" className="" width={700} height={100} />
                     </div>
                 </div>
                 <div className="col-md-3" >
@@ -397,7 +397,7 @@ export default function OurStory(){
                 </div>
             </div>
         </div>
-        <div className="m-5" data-aos="fade-up" >
+        <div className="m-0" data-aos="fade-up" >
             <br/>
             <div className="row" >
                 <div className="col-md-2" >
@@ -421,19 +421,19 @@ export default function OurStory(){
                         <div className="card-body d-flex flex-column align-items-center text-center">
                           <div className="row" >
                             <div className="col-md-2 my-3" >
-                                <img className="img-fluid" src="/event1.svg" alt="" />
+                            <Image className="img-fluid" src="/event1.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event2.svg" alt="" />
+                            <Image className="img-fluid" src="/event2.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event3.svg" alt="" />
+                            <Image className="img-fluid" src="/event3.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event4.svg" alt="" />
+                            <Image className="img-fluid" src="/event4.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event5.svg" alt="" />
+                            <Image className="img-fluid" src="/event5.svg" width={300} height={300} alt="" />
                             </div>
                           </div>                              
                         </div>   
@@ -442,13 +442,13 @@ export default function OurStory(){
             </div>
         </div>
         <div>
-            <img className="img-fluid" src="/TheEnd.svg" alt=""/>      
+            <Image className="img-fluid" src="/TheEnd.svg" alt="" width={2000} height={50} style={{marginTop:-150}}/>      
         </div>
         {/* Story Landing Page Ends */}
         <div>
             <div className="shadow-sm p-3 rounded-lg">
                 <div className="d-flex flex-column align-items-center text-center">
-                    <img src="LOGO.svg" alt="" className="img-fluid mb-3" />
+                    <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
                     <div className="text-secondary mb-3"><b>Connect With Us</b></div>
                     <div className="d-flex justify-content-center flex-wrap">
                         <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>

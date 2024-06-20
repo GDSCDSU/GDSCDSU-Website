@@ -408,3 +408,26 @@
 .font-manrope {
     font-family: 'Manrope', sans-serif;
 }
+
+
+/* Custom styles for the navbar */
+@media (max-width: 640px) { /* Tailwind CSS sm breakpoint */
+  .custom-collapse .custom-nav {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+  }
+
+  .custom-nav-item {
+      width: 100%;
+  }
+
+  .custom-nav-item .nav-link {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 1rem;
+  }
+}

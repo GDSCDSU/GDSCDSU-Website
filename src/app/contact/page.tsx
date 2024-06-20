@@ -47,15 +47,11 @@ export default function Contact() {
                             <p className="text-gray-700 mb-6">Let's talk about how we can help you.</p>
                             <div className="flex items-center mb-6">
                                 <HiOutlineMail className="text-primary mr-4" size={24} />
-                                <span className="text-gray-700 text-lg">info@example.com</span>
-                            </div>
-                            <div className="flex items-center mb-6">
-                                <HiOutlinePhone className="text-primary mr-4" size={24} />
-                                <span className="text-gray-700 text-lg">+123 456 7890</span>
+                                <span className="text-gray-700 text-lg">gdscdsu@gmail.com</span>
                             </div>
                             <div className="flex items-center">
                                 <HiOutlineLocationMarker className="text-primary mr-4" size={24} />
-                                <span className="text-gray-700 text-lg">123 Main St, City, Country</span>
+                                <span className="text-gray-700 text-lg">Ph-VII، DG-78, Off Khayaban-e-Tufail، Ext, Phase 7 Ext Karachi, Karachi City, Sindh</span>
                             </div>
                         </div>
                     </div>
@@ -84,8 +80,8 @@ export default function Contact() {
                                         <HiOutlineMail className="inline-block mr-2" /> Send
                                     </button>
                                     <span className="text-gray-500 self-center mx-4">OR</span>
-                                    <button type="button" className="inline-block px-4 py-2 text-white bg-secondary rounded-full hover:bg-secondary-dark focus:outline-none focus:ring focus:ring-secondary focus:ring-opacity-50">
-                                        Become a Partner
+                                    <button type="button" onClick={() => window.location.href = 'https://qj6nngakaoz.typeform.com/to/WY2PSuRz'} className="inline-block px-4 py-2 text-white bg-secondary rounded-full hover:bg-secondary-dark focus:outline-none focus:ring focus:ring-secondary focus:ring-opacity-50" >
+                                        Become a Sponsor
                                     </button>
                                 </div>
 
@@ -93,8 +89,8 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
-
             )}
+            
         </>
     );
 }

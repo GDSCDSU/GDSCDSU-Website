@@ -54,7 +54,7 @@ export default function Home(){
     useEffect(() => {
         const fetchHighlights = async () => {
             try {
-              const response = await axios.get('https://gdscdsu.com/api/highlight');
+              const response = await axios.get('http://localhost:3000/api/highlight');
               const responseData = response.data;
               if (Array.isArray(responseData)) {
                 setHighlights(responseData);
@@ -144,7 +144,7 @@ export default function Home(){
       )}
     <br/>
     {/* What is GDSC Portion: */}
-    <div className="d-flex justify-content-center align-items-center h-96" data-aos='fade-up'>
+    <div className="d-flex justify-content-center align-items-center h-70 py-9" data-aos='fade-up'>
         <div className="container">
             <div className="row">
                 <div className="col-md-6 mb-5 d-flex justify-content-center">
