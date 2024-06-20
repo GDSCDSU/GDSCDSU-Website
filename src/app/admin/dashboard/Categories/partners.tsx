@@ -21,7 +21,7 @@ export default function Partners() {
   },[]);
 
   const fetchPartner = async () => {
-    const {data} = await axios.get('http://localhost:3000/api/partner');
+    const {data} = await axios.get('https://gdscdsu.com/api/partner');
     setData(data.data);
   }
   return (

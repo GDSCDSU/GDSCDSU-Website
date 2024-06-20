@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import  '../styles/teams.css'; // Adjust path as needed
 
 export default function Operations() {
   const [operators, setOperators] = useState([]);
@@ -27,7 +28,7 @@ export default function Operations() {
     <main className="min-h-screen bg-white">
       {/* Quote Image */}
       <div data-aos="fade-up" className="w-full flex justify-center py-8">
-        <Image src='/operationsquote.svg' alt='' width={800} height={200} />
+        <Image src='/operationsquote.svg' alt='' width={800} height={200} className='quote-image' />
       </div>
 
       {/* Ensure operators is not empty before rendering */}
@@ -43,20 +44,15 @@ export default function Operations() {
                   <Image src={item.picture} className="rounded-full" alt={item.fullname} width={100} height={100} />
                 </div>
                 <div className="flex flex-col items-center">
-                  <p className="mt-5 font-bold lg:text-lg text-md text-center text-gray-900">
+                  <p className="mt-5 font-bold text-xl text-center text-gray-900">
                     {item.fullname}
                   </p>
-                  <p className="text-black">{item.tagline || 'Role not specified'}</p>
+                  <p className="text-black text-xs">{item.tagline || 'Role not specified'}</p>
                   <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
                     <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
                     <span>LinkedIn Profile</span>
-                    </a>
-                    <br/>
-
-
-
-
-
+                  </a>
+                  <br/>
                 </div>
               </div>
             </div>

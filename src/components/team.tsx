@@ -1,10 +1,10 @@
-'use client';
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
 import { Footer } from 'flowbite-react';
 import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { IoMdMail } from 'react-icons/io';
 import Image from 'next/image';
+import  '../styles/teams.css'; // Adjust path as needed
 
 const components = {
   Founder: dynamic(() => import('../components/founder'), { ssr: false }),
@@ -38,25 +38,27 @@ const Team: React.FC = () => {
   const activeTabBgColor = activeTabData ? activeTabData.color.split(' ')[1] : 'bg-gray-100';
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white justify-center">
       <div className="flex justify-center items-center">
         <Image src="/teams-header.svg" alt="" width={2000} height={400} />
       </div>
-      <ul className={`flex justify-center text-center text-gray-500 bg-white-100 rounded-full p-2 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
-        {tabsData.map((tab) => (
-          <li key={tab.id} className="flex-1" style={{ marginBottom: 0 }}>
-            <p
-              onClick={() => handleTabClick(tab.title)}
-              className={`flex justify-center items-center py-3 mx-1 text-xs xs:text-lg md:text-lg cursor-pointer ${
-                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-white-100 rounded-full'
-              }`}
-              style={{ marginBottom: 0 }}
-            >
-              {tab.title}
-            </p>
-          </li>
-        ))}
-      </ul>
+      <div className="flex justify-center">
+        <ul className={`flex items-center justify-center w-full max-w-2xl text-center text-gray-500 bg-white rounded-full p-2 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
+          {tabsData.map((tab) => (
+            <li key={tab.id} className="flex-1">
+              <p
+                onClick={() => handleTabClick(tab.title)}
+                className={`flex justify-center items-center py-2 px-1 sm:py-3 sm:px-2 text-xs sm:text-sm md:text-lg cursor-pointer tab-item ${
+                  activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'rounded-full'
+                }`}
+                style={{ marginBottom: 0 }}
+              >
+                {tab.title}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
       <div className="mt-5 p-5">
         {ActiveComponent ? <ActiveComponent /> : <div>No Component Found</div>}
       </div>
@@ -67,7 +69,7 @@ const Team: React.FC = () => {
       <div>
         <div className="shadow-sm p-3 rounded-lg">
           <div className="d-flex flex-column align-items-center text-center">
-          <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={100} height={100} />
+            <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
             <div className="text-secondary mb-3"><b>Connect With Us</b></div>
             <div className="flex justify-center flex-wrap">
               <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>

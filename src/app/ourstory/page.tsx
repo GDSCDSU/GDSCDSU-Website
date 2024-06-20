@@ -3,16 +3,16 @@ import { useState, useEffect } from 'react';
 import '../globals.css';
 import 'flowbite/dist/flowbite.css';
 import Navbar from '../../components/Navbar';
-import Team from '../../components/team';
+import OurStory from '../../components/our story';
 
-export default function TeamPage() {
-    const [activeTab, setActiveTab] = useState('Team');
+export default function OurStoryPage() {
+    const [activeTab, setActiveTab] = useState('OurStory');
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const pathname = window.location.pathname;
         const tab = pathname.substring(1).charAt(0).toUpperCase() + pathname.substring(2);
-        setActiveTab(tab === '' ? 'Team' : tab);
+        setActiveTab(tab === '' ? 'OurStory' : tab);
         const timeout = setTimeout(() => {
             setIsLoading(false);
         }, 500);
@@ -39,7 +39,7 @@ export default function TeamPage() {
                     </div>
                 </div>
             ) : (
-                <Team />
+                <OurStory />
             )}
         </>
     );

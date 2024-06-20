@@ -8,7 +8,7 @@ import { IoMdMail } from "react-icons/io";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Button, Toast } from "flowbite-react";
-import { MdStars } from "react-icons/md";
+import { MdEvent } from "react-icons/md";
 import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 import CountUp from 'react-countup';
@@ -54,26 +54,24 @@ export default function Home(){
     useEffect(() => {
         const fetchHighlights = async () => {
             try {
-                const response = await axios.get('https://gdscdsu.com/api/highlight');
-                const responseData = response.data;
-    
-                // Check if responseData is an array or object
-                if (Array.isArray(responseData)) {
-                    setHighlights(responseData);
-                } else if (typeof responseData === 'object') {
-                    // Convert the object to an array
-                    const highlightsArray = Object.values(responseData);
-                    setHighlights(highlightsArray);
-                } else {
-                    console.error('Unexpected response format:', responseData);
-                }
+              const response = await axios.get('http://localhost:3000/api/highlight');
+              const responseData = response.data;
+              if (Array.isArray(responseData)) {
+                setHighlights(responseData);
+              } else if (typeof responseData === 'object') {
+                const highlightsArray = Object.values(responseData);
+                setHighlights(highlightsArray);
+              } else {
+                console.error('Unexpected response format:', responseData);
+              }
             } catch (error) {
-                console.error('Error fetching highlights:', error);
+              console.error('Error fetching highlights:', error);
             }
-        };
-    
-        fetchHighlights();
-    }, []);
+          };
+      
+          fetchHighlights();
+        }, []);
+      
     
     const [counters, setCounters] = useState([
         { target: 5, current: 0 },
@@ -125,54 +123,62 @@ export default function Home(){
     {/* Upcoming Event Card:*/}
     {showToast && (
         <div className="scrollable-content" >
-        <Toast className="m-2 toast-relative">
-          <div className="flex items-start">
-            <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-cyan-500 dark:bg-cyan-900 dark:text-cyan-300">
-              <MdStars className="h-5 w-5" />
+        <Toast className="m-2 toast-relative" >
+      <div className="flex items-start">
+        <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-cyan-500 dark:bg-cyan-900 dark:text-cyan-300">
+          <MdEvent className="h-5 w-5" />
+        </div>
+        <div className="ml-3 text-sm font-normal">
+          <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">New Event</span>
+          <div className="mb-2 text-sm font-normal">Build with AI: Introduction to Gemini</div>
+          <div className="flex gap-2">
+            <div className="w-auto">
+              <Button color="blue" href="/events" size="xs">Check Out</Button>
             </div>
-            <div className="ml-3 text-sm font-normal">
-              <span className="mb-1 text-sm font-semibold text-black dark:text-white">New Event</span>
-              <div className="mb-2 text-sm font-normal text-gray"><b> GDSC Digital Debut </b></div>
-            </div>
-            <Toast.Toggle />
           </div>
-        </Toast>
+        </div>
+        <Toast.Toggle />
+      </div>
+    </Toast>
         </div>
       )}
     <br/>
     {/* What is GDSC Portion: */}
-    <div className="d-flex justify-content-center align-items-center full-page-content" data-aos='fade-up'>
-        <div className="container" >
+    <div className="d-flex justify-content-center align-items-center h-70 py-9" data-aos='fade-up'>
+        <div className="container">
             <div className="row">
-                <div className="col-md-6 mb-5">
-                    <Image src="isGdsc.svg" alt="" height={1000} width={1000}/>
+                <div className="col-md-6 mb-5 d-flex justify-content-center">
+                    <Image src="isGdsc.svg" alt="" height={1000} width={1000} className="img-fluid" />
                 </div>
-                <div className="col-md-6 mb-5">
+                <div className="col-md-6 mb-5 d-flex justify-content-center">
                     <Image
                         src="/what.svg"
                         height={600}
                         width={400}
                         alt=""
+                        className="img-fluid"
                     />
                 </div>
             </div>
         </div>
     </div>
+
+
     {/* About Section: */}
     <div className="bg-image" data-aos="fade-up">
-        <div className="d-flex justify-content-center align-items-center full-page-content" style={{height:'110%'}}  >
+        <div className="d-flex justify-content-center align-items-center" style={{height:'110%'}}  >
             <div className="container">
-                <div className="row">
+                <div className="row p-5">
                     <div className="col-md-6 mb-5">
                         <Image
                             src="/dhaSuffa.svg"
                             height={600}
-                            width={400}
+                            width={500}
                             alt=""
                         />
                     </div>
                     <div className="col-md-6 mb-5">
-                        <Image src="About.svg" alt="" height={1000} width={1000}/>
+                        <Image src="About.svg" alt="" height={600} width={500}/>
                     </div>
                 </div>
             </div>
@@ -358,66 +364,75 @@ export default function Home(){
 </div>
     {/* Community Counter: */}
     
-    <div id="counters-section" ref={countersRef}>
-            <div className="full-page-content" data-aos="fade-up" data-aos-once="true">
-                <div className="d-flex flex-column align-items-center">
-                    <h1><b>The Community is Growing Everyday</b></h1>
+    <div id="counters-section" ref={countersRef} className="counters-section">
+        <div data-aos="fade-up" data-aos-once="true">
+            <div className="d-flex flex-column align-items-center text-center">
+                <h2 className="mb-3"><b>The Community is Growing Everyday</b></h2>
+            </div>
+            <br />
+            <div className="row d-flex justify-content-center text-center">
+            {counters.map((counter, index) => (
+                <div key={index} className="col-md-3 col-12" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
+                    <div className="d-flex flex-column align-items-center">
+                        <img
+                            src={index === 0 ? '/Years.svg' : index === 1 ? '/Attendees.svg' : '/events.svg'}
+                            alt=""
+                            className="img-fluid mb-2"
+                        />
+                        <h1>
+                            <b>
+                                <CountUp start={0} end={counter.target} duration={10} />
+                                +
+                            </b>
+                        </h1>
+                        <p className="text-secondary">
+                            {index === 0 ? 'YEARS' : index === 1 ? 'Attendees' : 'Events'}
+                        </p>
+                    </div>
                 </div>
-                <br />
-                <div className="row d-flex justify-content-center text-center">
-                    {counters.map((counter, index) => (
-                        <div key={index} className="col-md-4" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
-                            <div className="d-flex flex-column align-items-center">
-                                <img
-                                    src={index === 0 ? '/Years.svg' : index === 1 ? '/Attendees.svg' : '/events.svg'}
-                                    alt=""
-                                    className="img-fluid mb-3"
-                                />
-                                <h1>
-                                    <b>
-                                        <CountUp start={0} end={counter.target} duration={10} />
-                                        +
-                                    </b>
-                                </h1>
-                                <p className="text-secondary">
-                                    {index === 0 ? 'YEARS' : index === 1 ? 'Attendees' : 'Events'}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
+            ))}
             </div>
         </div>
-
-
+    </div>
 
     {/* Highlights Carousel: */}
-    <div className="full-page-content">
-      <div className="d-flex flex-column align-items-center">
-        <h1><b>Highlights</b></h1>
-      </div>
-      <br />
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-        {highlights.length > 0 ? (
-          <Carousel>
-            {highlights[1].map((highlight, index) => (
-              <Carousel.Item key={index}>
-                <img
-                  className="d-block w-100"
-                  src={highlight.picture}
-                  alt={`Highlight ${index + 1}`}
-                />
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        ) : (
-          <p>No highlights available.</p>
-        )}
+    <div className="d-flex justify-content-center align-items-center p-5">
+      <div>
+        <div className="d-flex flex-column align-items-center">
+          <h1><b>Highlights</b></h1>
+        </div>
+        <br />
+        <div className="d-flex justify-content-center">
+            {/* <Carousel>
+                <Carousel.Item>
+                    <img src="/carousel1.svg" alt="" ></img>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img src="/carousel1.svg" alt="" ></img>
+                </Carousel.Item>
+            </Carousel> */}
+          {highlights.length > 0 ? (
+            <Carousel>
+              {highlights.map((highlight, index) => (
+                <Carousel.Item key={index}>
+                  <img
+                    src={highlight.picture}
+                    alt={`Highlight ${index + 1}`}
+                  />
+                </Carousel.Item>
+              ))}
+            </Carousel>
+          ) : (
+            <p>No highlights available.</p>
+          )}
+        </div>
       </div>
     </div>
 
+
+
     {/* Sponsor Form: */}
-    <div className="full-page-content" data-aos='fade-up'>
+    <div className="d-flex justify-content-center align-items-center p-3">
     <div className="shadow-sm p-5 rounded-lg" style={{ backgroundColor: '#FEECEC' }}>
         <div className="row align-items-center">
             <div className="col-md-6">
@@ -427,14 +442,13 @@ export default function Home(){
                 <p className="text-secondary">Learn more</p>
             </div>
             <div className="col-md-3">
-                <Button
-                    className="custom-hover"
-                    color="failure"
-                    pill
+                <button
+                    className="btn btn-danger custom-hover"
+                    style={{ borderRadius: '50px' }}
                     onClick={() => window.location.href = 'https://qj6nngakaoz.typeform.com/to/WY2PSuRz'}
                 >
                     Become Sponsor
-                </Button>
+                </button>
             </div>
             <div className="col-md-3">
                 <img src="/sponsor.svg" alt="" className="img-fluid" />
@@ -442,7 +456,6 @@ export default function Home(){
         </div>
     </div>
 </div>
-
 
 
 {/* Footer: */}

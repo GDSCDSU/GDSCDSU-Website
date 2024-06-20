@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import  '../styles/teams.css'; // Adjust path as needed
+
 
 export default function Executives() {
   const [executives, setExecutives] = useState([]);
@@ -27,14 +29,14 @@ export default function Executives() {
     <main className="flex flex-col gap-5 min-h-screen bg-white">
       {/* Quote Image */}
       <div data-aos="fade-up" className="w-full flex justify-center py-8">
-        <Image src='/executivesquote.svg' alt='' width={800} height={200} />
+        <Image src='/executivesquote.svg' className='quote-image' alt='' width={800} height={200} />
       </div>
 
       {/* Ensure executives is not empty before rendering */}
       {executives.length > 0 && (
         <>
           {/* Members Div 1 */}
-          <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto max-w-screen-xl">
+          <div data-aos="fade-up" className="team-card grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto max-w-screen-xl">
             {executives[1].map((item, index) => (
               <div 
                 key={index} 

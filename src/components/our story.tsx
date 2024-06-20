@@ -3,6 +3,7 @@
 'use client';
 import React,{useEffect,useState} from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import AvatarCircles from "./ui/avatar-circles";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
 import Image from "next/image";
 import { Avatar, Button, FooterDivider, Footer } from "flowbite-react";
@@ -12,40 +13,46 @@ import { RiTeamFill } from "react-icons/ri";
 import AOS from 'aos';
 import { MdEvent } from "react-icons/md";
 import 'aos/dist/aos.css';
-
-const people = [
-    {
-      id: 1,
-      name: "Syed Ateeq",
-      designation: "GDSC@DSU Founder",
-      image:
-        "/Ateeq.svg",
-    },
-    {
-      id: 2,
-      name: "Abeer Shaikh",
-      designation: "Vice President",
-      image:
-      "/Abeer.svg"    },
-    {
-      id: 3,
-      name: "Tarun Kumar",
-      designation: "Tech Samurai",
-      image:
-      "/Tarun.svg"    },
-    {
-      id: 4,
-      name: "Alishan",
-      designation: "Flutter Ninja",
-      image:
-      "/Alishan.svg"    },
-    {
-      id: 5,
-      name: "Nimra Ali",
-      designation: "Daten Sanders",
-      image:
-      "/Nimra.svg"    },
+const avatarUrls = [
+    "/Ateeq.svg",
+    "/Abeer.svg",
+    "/Tarun.svg",
+    "/Alishan.svg",
+    "/Nimra.svg",
   ];
+// const people = [
+//     {
+//       id: 1,
+//       name: "Syed Ateeq",
+//       designation: "GDSC@DSU Founder",
+//       image:
+//         "/Ateeq.svg",
+//     },
+//     {
+//       id: 2,
+//       name: "Abeer Shaikh",
+//       designation: "Vice President",
+//       image:
+//       "/Abeer.svg"    },
+//     {
+//       id: 3,
+//       name: "Tarun Kumar",
+//       designation: "Tech Samurai",
+//       image:
+//       "/Tarun.svg"    },
+//     {
+//       id: 4,
+//       name: "Alishan",
+//       designation: "Flutter Ninja",
+//       image:
+//       "/Alishan.svg"    },
+//     {
+//       id: 5,
+//       name: "Nimra Ali",
+//       designation: "Daten Sanders",
+//       image:
+//       "/Nimra.svg"    },
+//   ];
 export default function OurStory(){
 
     const [showEvents, setShowEvents] = useState(false);
@@ -63,13 +70,13 @@ export default function OurStory(){
         <>
         
         <div data-aos="fade-up" >
-            <img className="img-fluid" src="/OurStory.png" alt=""/>
+            <Image width={1500} height={100} className="img-fluid" src="/OurStory.svg" alt=""></Image>
         </div>
         
-        <div className="m-5" data-aos="fade-up">
-        <div className="d-flex flex-column align-items-center">
-            <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
-        </div>
+        <div className="m-0" data-aos="fade-up">
+            <div className="d-flex flex-column align-items-center" style={{marginTop:-150}}>
+                <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
+            </div>
         <br />
         <div className="row">
             <div className="col-md-2"></div>
@@ -126,14 +133,13 @@ export default function OurStory(){
                 </div>
             </div>
             <br />
-            <FooterDivider />
-            <div className="flex flex-row items-center justify-center mb-10 w-full">
-                <AnimatedTooltip items={people} />
-                <Button color="blue" className="custom-hover" pill>
-                <RiTeamFill />
-                View Team
+            <div className="flex flex-row mb-10 w-full">
+                <AvatarCircles numPeople={10} avatarUrls={avatarUrls}/> {/* Added inline style for right margin */}
+                <Button color="blue" className="custom-hover" href="/team" pill style={{ marginLeft: '5px' }}>
+                    View Team
                 </Button>
             </div>
+            <FooterDivider />     
             </div>
             <div className="col-md-6">
                 <CardContainer className="inter-var">
@@ -162,7 +168,7 @@ export default function OurStory(){
                 </div>
                 <div className="col-md-6" >
                     <div className="d-flex flex-column text-center align-items-center" >
-                        <img src="/Quote.svg" alt="" className="" />
+                        <Image src="/Quote.svg" alt="" className="" width={700} height={100} />
                     </div>
                 </div>
                 <div className="col-md-3" >
@@ -391,7 +397,7 @@ export default function OurStory(){
                 </div>
             </div>
         </div>
-        <div className="m-5" data-aos="fade-up" >
+        <div className="m-0" data-aos="fade-up" >
             <br/>
             <div className="row" >
                 <div className="col-md-2" >
@@ -404,8 +410,8 @@ export default function OurStory(){
                                 <div className="col-md-8" >
                                     <h3><b>More events & webinars that we conducted</b></h3>
                                 </div>
-                                <div className="col-md-4">
-                                    <Button className="custom-hover" color="blue" pill>
+                                <div className="col-md-2">
+                                    <Button className="custom-hover" href="/events" color="blue" pill>
                                         <MdEvent className="m-1" />
                                             View All
                                     </Button>
@@ -415,19 +421,19 @@ export default function OurStory(){
                         <div className="card-body d-flex flex-column align-items-center text-center">
                           <div className="row" >
                             <div className="col-md-2 my-3" >
-                                <img className="img-fluid" src="/event1.svg" alt="" />
+                            <Image className="img-fluid" src="/event1.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event2.svg" alt="" />
+                            <Image className="img-fluid" src="/event2.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event3.svg" alt="" />
+                            <Image className="img-fluid" src="/event3.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event4.svg" alt="" />
+                            <Image className="img-fluid" src="/event4.svg" width={300} height={300} alt="" />
                             </div>
                             <div className="col-md-2 my-3" >
-                            <img className="img-fluid" src="/event5.svg" alt="" />
+                            <Image className="img-fluid" src="/event5.svg" width={300} height={300} alt="" />
                             </div>
                           </div>                              
                         </div>   
@@ -436,13 +442,13 @@ export default function OurStory(){
             </div>
         </div>
         <div>
-            <img className="img-fluid" src="/TheEnd.svg" alt=""/>      
+            <Image className="img-fluid" src="/TheEnd.svg" alt="" width={2000} height={50} style={{marginTop:-150}}/>      
         </div>
         {/* Story Landing Page Ends */}
         <div>
             <div className="shadow-sm p-3 rounded-lg">
                 <div className="d-flex flex-column align-items-center text-center">
-                    <img src="LOGO.svg" alt="" className="img-fluid mb-3" />
+                    <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
                     <div className="text-secondary mb-3"><b>Connect With Us</b></div>
                     <div className="d-flex justify-content-center flex-wrap">
                         <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>

@@ -5,7 +5,6 @@ import { useState } from "react";
 import Link from 'next/link';
 import 'flowbite/dist/flowbite.css';
 import axios from "axios";
-import img from '../../../../public/University.svg';
 import { useRouter } from "next/navigation";
 export default function SignInForm({ onSubmit, showAlert, alertMessage, inputColor, onForgotPassword }) {
   
@@ -16,18 +15,21 @@ export default function SignInForm({ onSubmit, showAlert, alertMessage, inputCol
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/api/login', {
+      const response = await axios.post('https://gdscdsu.com:3000/api/login', {
       email: email,
       password: password
       });
       
       if(response.status===200){
+        const token = response.data.data.token; // Adjust this line based on your API response structure
+        console.log("Token:", token);
         router.push('/admin/dashboard');
       }
     } catch (error) {
       console.log(error);
       setError(error.response.data.message)
     }
+
   }
   return (
  <form className="flex max-w-md flex-col gap-4" style={{ margin: '15%' }} >

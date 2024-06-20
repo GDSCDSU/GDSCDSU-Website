@@ -34,62 +34,60 @@ const Events: React.FC = () => {
 
   return (
     <>
-      <div data-aos="fade-up">
-        <img style={{ maxWidth: '100%' }} src="/events-header.svg" alt="Events Header" />
+      <div className="flex justify-center items-center">
+        <Image src="/events-header.svg" alt="" width={2000} height={200} />
       </div>
 
-      <div data-aos="fade-up" className="flex justify-center items-center">
-        <img src="/team-section.svg" alt="" className="w-full h-32 lg:h-64" />
+      <div className="flex justify-center mt-4">
+        <ul className={`flex items-center justify-center w-full max-w-2xl text-center text-gray-500 bg-white rounded-full p-2 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
+          {TabData.map((tab) => (
+            <li key={tab.id} className="flex-1" style={{ marginBottom: 0 }}>
+              <p
+                onClick={() => handleTabClick(tab.title)}
+                className={`flex justify-center items-center py-2 px-1 sm:py-3 sm:px-2 text-xs sm:text-sm md:text-lg cursor-pointer ${
+                  activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'rounded-full'
+                }`}
+                style={{ marginBottom: 0 }}
+              >
+                {tab.title}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
 
-      <ul className={`flex justify-center text-center text-gray-500 bg-white-100 rounded-full p-1 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
-        {TabData.map((tab) => (
-          <li key={tab.id} className="flex-1" style={{ marginBottom: 0 }}>
-            <p
-              onClick={() => handleTabClick(tab.title)}
-              className={`flex justify-center items-center py-3 text-xs md:text-lg cursor-pointer ${
-                activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'bg-white-100 rounded-full'
-              }`}
-              style={{ marginBottom: 0 }}
-            >
-              {tab.title}
-            </p>
-          </li>
-        ))}
-      </ul>
-
-      <section className="section_container">
+      <section className="section_container mt-5">
         <div data-aos="fade-up" className="full-page-content">
           <div className="d-flex flex-column align-items-center">
             <h1 className="text-3xl md:text-5xl font-bold mb-5">
               <b>Our Top Events</b>
             </h1>
           </div>
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-        {highlights.length > 0 ? (
-          <Carousel>
-            {highlights.map((highlight, index) => (
-              <Carousel.Item key={index}>
-                <Image
-                  className="d-block w-100"
-                  src={highlight.picture}
-                  alt={`Highlight ${index + 1}`}
-                  width={50}
-                  height={50}
-                />
-              </Carousel.Item>
-            ))}
-          </Carousel>
-        ) : (
-          <p>No highlights available.</p>
-        )}
-      </div>
-    </div>
-      
+          <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+            {highlights.length > 0 ? (
+              <Carousel>
+                {highlights.map((highlight, index) => (
+                  <Carousel.Item key={index}>
+                    <Image
+                      className="d-block w-100"
+                      src={highlight.picture}
+                      alt={`Highlight ${index + 1}`}
+                      width={50}
+                      height={50}
+                    />
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            ) : (
+              <p>No highlights available.</p>
+            )}
+          </div>
+        </div>
+        
         {activeTab === 'Events' ? <AllEventsComponent /> : <SpeakersComponent />}
       </section>
 
-      <div>
+      <div className="flex justify-center mt-5">
         <Image src="/ColorBoxes.svg" className="img-fluid" alt="Color Boxes" width={500} height={500} />
       </div>
 

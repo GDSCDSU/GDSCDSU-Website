@@ -23,7 +23,7 @@ export default function Speakers() {
   },[]);
 
   const fetchSpeakers = async () => {
-    const {data} = await axios.get('http://localhost:3000/api/event?topEvent=true&speaker=true');
+    const {data} = await axios.get('https://gdscdsu.com/api/event?topEvent=true&speaker=true');
     setData(data.data);
   }
   return (
