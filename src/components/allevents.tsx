@@ -10,7 +10,7 @@ export default function AllEvents() {
   useEffect(() => {
     axios.get('https://gdscdsu.com/api/event?topEvent=true')
       .then(response => {
-        const responseData = response.data;
+        const responseData = response.data.data;
 
         if (Array.isArray(responseData)) {
           setEventData(responseData);
@@ -47,7 +47,7 @@ export default function AllEvents() {
           <p className="text-center col-span-full">Loading...</p>
         ) : (
           eventData.length > 0 ? (
-            eventData[1].map(event => (
+            eventData.map(event => (
               <div key={event.id} className="flex pb-3">
                 <div className="flex flex-col w-full rounded-lg items-center overflow-hidden bg-white shadow-xl">
                   <Image className="w-40" src={event.picture} alt="Event" width={100} height={100} />

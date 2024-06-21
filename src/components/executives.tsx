@@ -10,7 +10,7 @@ export default function Executives() {
   useEffect(() => {
     axios.get('https://gdscdsu.com/api/teams?role=Executive-core-team-member')
       .then(response => {
-        const responseData = response.data;
+        const responseData = response.data.data;
 
         if (Array.isArray(responseData)) {
           setExecutives(responseData);
@@ -37,7 +37,7 @@ export default function Executives() {
         <>
           {/* Members Div 1 */}
           <div data-aos="fade-up" className="team-card grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto max-w-screen-xl">
-            {executives[1].map((item, index) => (
+            {executives.map((item, index) => (
               <div 
                 key={index} 
                 className="flex pb-3 w-full max-w-sm flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl mx-auto md:mr-4"

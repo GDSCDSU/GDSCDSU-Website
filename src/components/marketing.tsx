@@ -10,7 +10,7 @@ export default function Marketing() {
   useEffect(() => {
     axios.get('https://gdscdsu.com/api/teams?team=marketing')
       .then(response => {
-        const responseData = response.data;
+        const responseData = response.data.data;
 
         if (Array.isArray(responseData)) {
           setMarketers(responseData);
@@ -38,7 +38,7 @@ export default function Marketing() {
       {/* Ensure marketers is not empty before rendering */}
       {marketers.length > 0 && (
         <div data-aos="fade-up" className="team-card grid grid-cols-1 md:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">
-          {marketers[1].map((item, index) => (
+          {marketers.map((item, index) => (
             <div key={index} className="flex pb-1 w-70 h-30 flex-col rounded-xl justify-between overflow-hidden bg-white shadow-xl">
               <div className="relative">
                 <div className="flex items-center justify-center w-full h-5 ">
