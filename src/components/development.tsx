@@ -10,7 +10,7 @@ export default function Development() {
   useEffect(() => {
     axios.get('https://gdscdsu.com/api/teams?team=development')
       .then(response => {
-        const responseData = response.data;
+        const responseData = response.data.data;
 
         if (Array.isArray(responseData)) {
           setDevelopers(responseData);
@@ -37,11 +37,11 @@ export default function Development() {
       </div>
 
       {/* Ensure developers[1] exists before rendering */}
-      {developers[1] && (
+      {developers && (
         <>
           {/* Members Div 1 */}
           <div data-aos="fade-up" className="team-card grid grid-cols-1 md:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">
-            {developers[1].map((item, index) => (
+            {developers.map((item, index) => (
               <div key={index} className="flex pb-1 w-70 h-30 flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl">
                 <div className="relative">
                   <div className="flex items-center justify-center w-full h-5 ">

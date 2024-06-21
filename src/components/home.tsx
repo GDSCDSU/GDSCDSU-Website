@@ -55,7 +55,7 @@ export default function Home(){
         const fetchHighlights = async () => {
             try {
               const response = await axios.get('https://gdscdsu.com/api/highlight');
-              const responseData = response.data;
+              const responseData = response.data.data;
               if (Array.isArray(responseData)) {
                 setHighlights(responseData);
               } else if (typeof responseData === 'object') {
@@ -413,7 +413,7 @@ export default function Home(){
             </Carousel> */}
           {highlights.length > 0 ? (
             <Carousel>
-              {highlights[1].map((highlight, index) => (
+              {highlights.map((highlight, index) => (
                 <Carousel.Item key={index}>
                   <img
                     src={highlight.picture}

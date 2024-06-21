@@ -9,7 +9,7 @@ export default function Speakers() {
   useEffect(() => {
     axios.get('https://gdscdsu.com/api/event?topEvent=true')
       .then(response => {
-        const responseData = response.data;
+        const responseData = response.data.data;
 
         if (Array.isArray(responseData)) {
           setSpeakersData(responseData);
@@ -43,7 +43,7 @@ export default function Speakers() {
           <p className="text-center col-span-full">Loading...</p>
         ) : (
           speakersData.length > 0 ? (
-            speakersData[1].map(speaker => (
+            speakersData.map(speaker => (
               speaker.speaker !== "NA" && (
                 <div key={speaker.id} className="flex pb-3">
                   <div className="flex flex-col w-full items-center text-center bg-white shadow-xl rounded-xl overflow-hidden">

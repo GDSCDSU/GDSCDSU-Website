@@ -9,28 +9,20 @@ export default function Leads() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://gdscdsu.com/api/teams?role=lead`)
-      .then(response => {
-        const responseData = response.data;
-
-        if (Array.isArray(responseData)) {
-          setLeads(responseData);
-        } else if (typeof responseData === 'object') {
-          // Convert the object to an array
-          const leadsArray = Object.values(responseData);
-          setLeads(leadsArray);
-        } else {
-          console.error('Unexpected response format:', responseData);
-          setError('Unexpected response format.');
-        }
-
-        setLoading(false); // Set loading to false after data is fetched
-      })
-      .catch(error => {
+    const fetchData = async () => {
+      try {
+        const { data } = await axios.get('https://gdscdsu.com/api/teams?role=lead');
+        console.log(data.data);
+        setLeads(data.data);
+        setLoading(false);
+      } catch (error) {
         console.error('Error fetching leads:', error);
         setError('Error fetching leads.');
-        setLoading(false); // Set loading to false if there's an error
-      });
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
   if (loading) {
@@ -49,12 +41,12 @@ export default function Leads() {
     );
   }
 
-  const years = [
-    { year: 2020, isCurrent: false },
-    { year: 2021, isCurrent: false },
-    { year: 2022, isCurrent: false },
-    { year: 2023, isCurrent: true },
-  ];
+  // Calculate years based on the number of leads
+  const startYear = 2020;
+  const years = leads.map((_, index) => ({
+    year: startYear + index,
+    isCurrent: index === leads.length - 1
+  }));
 
   return (
     <main className="flex flex-col gap-3 min-h-screen justify-center bg-white">
@@ -64,10 +56,10 @@ export default function Leads() {
       </div>
       
       <div className="flex flex-col items-center gap-8">
-        {leads[1].map((lead, index) => (
+        {leads.map((lead, index) => (
           <div key={index} className="leads-container flex items-start w-full max-w-2xl">
             <div className="relative w-32 h-full">
-              <div className={`years-bar text-justify text-xl font-bold font-['Google Sans']  ${years[index].isCurrent ? 'text-red-500' : 'text-red-500'}`}>
+              <div className={`years-bar text-justify text-xl font-bold font-['Google Sans'] ${years[index].isCurrent ? 'text-red-500' : 'text-red-500'}`}>
                 <div>{years[index].year}</div>
                 {!years[index].isCurrent && (
                   <div className="flex items-center w-auto justify-center mt-1">
