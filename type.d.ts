@@ -18,3 +18,21 @@ interface IUser {
 interface DecodedToken extends JwtPayload {
   email: string; 
 }
+
+export type CardProps = {
+  fullname: string;
+  email: string;
+  role: string;
+  tagline: string;
+  bio: string;
+  facebook: string;
+  instagram: string;
+  linkedin: string;
+  picture: string;
+};
+
+export interface AvatarCirclesProps {
+  className?: string;
+  numPeople?: number;
+  avatarUrls: string[];
+}

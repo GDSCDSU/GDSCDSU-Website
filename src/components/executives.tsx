@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import  '../styles/teams.css'; // Adjust path as needed
+import { BASE_URL } from '../util/constant';
 
 
 export default function Executives() {
   const [executives, setExecutives] = useState([]);
 
   useEffect(() => {
-    axios.get('https://gdscdsu.com/api/teams?role=Executive-core-team-member')
+    axios.get(`${BASE_URL}}/teams?role=Executive-core-team-member`)
       .then(response => {
         const responseData = response.data.data;
 

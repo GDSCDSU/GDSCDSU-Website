@@ -3,6 +3,7 @@ import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { BASE_URL } from "../../../../util/constant";
 
 export default function Partners() {
   const [showForm, setShowForm] = useState(false);
@@ -21,7 +22,7 @@ export default function Partners() {
   },[]);
 
   const fetchPartner = async () => {
-    const {data} = await axios.get('https://gdscdsu.com/api/partner');
+    const {data} = await axios.get(`${BASE_URL}/partner`);
     setData(data.data);
   }
   return (

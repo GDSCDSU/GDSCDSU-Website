@@ -1,14 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 
+import { AvatarCirclesProps } from "../../../type";
 import { cn } from "./utils/cn";
 import React from "react";
 
-interface AvatarCirclesProps {
-  className?: string;
-  numPeople?: number;
-  avatarUrls: string[];
-}
+
 
 const AvatarCircles = ({ numPeople, className, avatarUrls }: AvatarCirclesProps) => {
   return (

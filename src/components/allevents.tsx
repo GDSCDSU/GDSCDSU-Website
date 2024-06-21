@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import { BASE_URL } from '../util/constant';
 
 
 export default function AllEvents() {
@@ -8,38 +9,35 @@ export default function AllEvents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('https://gdscdsu.com/api/event?topEvent=true')
+    axios.get(`${BASE_URL}event?topEvent=true`)
       .then(response => {
         const responseData = response.data.data;
 
         if (Array.isArray(responseData)) {
           setEventData(responseData);
         } else if (typeof responseData === 'object') {
-          // Convert the object to an array
           const eventArray = Object.values(responseData);
           setEventData(eventArray);
         } else {
           console.error('Unexpected response format:', responseData);
         }
-
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false); 
       })
       .catch(error => {
         console.error('Error fetching events:', error);
         setLoading(false);
       }
       );
-      console.log(process.env.BASE_URL_API)}, []);
-  
+  }, []);
 
-  console.log(eventData)
+
 
   return (
     <main className="flex flex-col gap-5 min-h-screen bg-white">
       <h1 className="text-3xl font-bold text-center my-8" data-aos="fade-up">
         <b>All Events</b>
       </h1>
-      
+
 
       {/* Events Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 px-8 mx-auto max-w-screen-xl">

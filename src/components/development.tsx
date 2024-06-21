@@ -2,16 +2,16 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import  '../styles/teams.css'; // Adjust path as needed
+import { BASE_URL } from '../util/constant';
 
 
 export default function Development() {
   const [developers, setDevelopers] = useState([]);
 
   useEffect(() => {
-    axios.get('https://gdscdsu.com/api/teams?team=development')
+    axios.get(`${BASE_URL}/teams?team=development`)
       .then(response => {
         const responseData = response.data.data;
-
         if (Array.isArray(responseData)) {
           setDevelopers(responseData);
         } else if (typeof responseData === 'object') {

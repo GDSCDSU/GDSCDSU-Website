@@ -1,10 +1,8 @@
 import axios from "axios";
 import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
-import { Textarea } from "flowbite-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 
 export default function OurTopEvent() {
   const [showForm, setShowForm] = useState(false);

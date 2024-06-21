@@ -1,22 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { CardProps } from "../../../type";
 
-type CardProps = {
-    fullname: string;
-    email: string;
-    role: string;
-    tagline: string;
-    bio: string;
-    facebook: string;
-    instagram: string;
-    linkedin: string;
-    picture: string;
-  };
+
   const Card: React.FC<CardProps> = ({
     fullname,
-    email,
-    role,
     tagline,
     bio,
     facebook,

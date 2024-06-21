@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
 import '../styles/teams.css'; // Adjust path as needed
+import { BASE_URL } from '../util/constant';
 
 export default function Leads() {
   const [leads, setLeads] = useState([]);
@@ -11,7 +12,7 @@ export default function Leads() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data } = await axios.get('https://gdscdsu.com/api/teams?role=lead');
+        const { data } = await axios.get(`${BASE_URL}/teams?role=lead`);
         console.log(data.data);
         setLeads(data.data);
         setLoading(false);

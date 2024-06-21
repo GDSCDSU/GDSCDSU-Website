@@ -6,6 +6,7 @@ import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin } from 'react-
 import { IoMdMail } from 'react-icons/io';
 import { Carousel } from 'react-bootstrap';
 import Image from 'next/image';
+import { TabData, highlights } from '../util/constant';
 
 const AllEventsComponent = dynamic(() => import('../components/allevents'), { ssr: false });
 const SpeakersComponent = dynamic(() => import('../components/speakers'), { ssr: false });
@@ -17,17 +18,6 @@ const Events: React.FC = () => {
     setActiveTab(tab);
   };
 
-  const TabData = [
-    { id: 1, title: 'Events', color: 'border-blue-400 bg-blue-500' },
-    { id: 2, title: 'Speakers', color: 'border-blue-400 bg-blue-500' },
-  ];
-
-  const highlights = [
-    {picture: '/Slider Images/Slider1.svg'},
-    {picture: '/Slider Images/Slider2.svg'},
-    {picture: '/Slider Images/Slider3.svg'},
-  ];
-
   const activeTabData = TabData.find(tab => tab.title === activeTab);
   const activeTabBorderColor = activeTabData ? activeTabData.color.split(' ')[0] : 'border-gray-100';
   const activeTabBgColor = activeTabData ? activeTabData.color.split(' ')[1] : 'bg-gray-100';
@@ -37,7 +27,6 @@ const Events: React.FC = () => {
       <div className="flex justify-center items-center">
         <Image src="/events-header.svg" alt="" width={2000} height={200} />
       </div>
-
       <div className="flex justify-center mt-4">
         <ul className={`flex items-center justify-center w-full max-w-2xl text-center text-gray-500 bg-white rounded-full p-2 border-4 ${activeTabBorderColor}`} style={{ marginBottom: 0 }}>
           {TabData.map((tab) => (
@@ -55,7 +44,6 @@ const Events: React.FC = () => {
           ))}
         </ul>
       </div>
-
       <section className="section_container mt-5">
         <div data-aos="fade-up" className="full-page-content">
           <div className="d-flex flex-column align-items-center">

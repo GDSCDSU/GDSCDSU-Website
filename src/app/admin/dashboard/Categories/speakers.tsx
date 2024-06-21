@@ -4,7 +4,8 @@ import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { BsFacebook, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import {  BsLinkedin } from 'react-icons/bs';
+import { BASE_URL } from "../../../../util/constant";
 
 export default function Speakers() {
   const [showForm, setShowForm] = useState(false);
@@ -23,7 +24,7 @@ export default function Speakers() {
   },[]);
 
   const fetchSpeakers = async () => {
-    const {data} = await axios.get('https://gdscdsu.com/api/event?topEvent=true&speaker=true');
+    const {data} = await axios.get(`${BASE_URL}/event?topEvent=true&speaker=true`);
     setData(data.data);
   }
   return (

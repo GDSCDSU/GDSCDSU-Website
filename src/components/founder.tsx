@@ -8,7 +8,6 @@ export default function Founder() {
       <div data-aos="fade-up" className="flex w-full h-full justify-center py-8">
         <Image src='/founderquote.svg' className='quote-image-founder' alt='' width={800} height={200} />
       </div>
-
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
         <div className="flex flex-col mb-4 w-full bg-white rounded-xl overflow-hidden shadow-xl">
           <div className="relative w-full text-center py-2 rounded-t-xl bg-blue-500">
@@ -64,6 +63,7 @@ export default function Founder() {
       </div>
 
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
+        
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
           <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>

@@ -4,25 +4,8 @@ import { Footer } from 'flowbite-react';
 import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin } from 'react-icons/bs';
 import { IoMdMail } from 'react-icons/io';
 import Image from 'next/image';
-import  '../styles/teams.css'; // Adjust path as needed
-
-const components = {
-  Founder: dynamic(() => import('../components/founder'), { ssr: false }),
-  Leads: dynamic(() => import('../components/leads'), { ssr: false }),
-  Operations: dynamic(() => import('../components/operations'), { ssr: false }),
-  Executives: dynamic(() => import('../components/executives'), { ssr: false }),
-  Marketing: dynamic(() => import('../components/marketing'), { ssr: false }),
-  Development: dynamic(() => import('../components/development'), { ssr: false }),
-};
-
-const tabsData = [
-  { id: 1, title: 'Founder', color: 'border-blue-400 bg-blue-500' },
-  { id: 2, title: 'Leads', color: 'border-red-500 bg-red-500' },
-  { id: 3, title: 'Operations', color: 'border-green-500 bg-green-500' },
-  { id: 4, title: 'Development', color: 'border-blue-400 bg-blue-500' },
-  { id: 5, title: 'Marketing', color: 'border-green-500 bg-green-500' },
-  { id: 6, title: 'Executives', color: 'border-blue-400 bg-blue-500' },
-];
+import '../styles/teams.css'; // Adjust path as needed
+import { components, tabsData } from '../util/constant';
 
 const Team: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('Founder');
@@ -32,7 +15,6 @@ const Team: React.FC = () => {
   };
 
   const ActiveComponent = components[activeTab];
-
   const activeTabData = tabsData.find(tab => tab.title === activeTab);
   const activeTabBorderColor = activeTabData ? activeTabData.color.split(' ')[0] : 'border-gray-100';
   const activeTabBgColor = activeTabData ? activeTabData.color.split(' ')[1] : 'bg-gray-100';
@@ -48,9 +30,8 @@ const Team: React.FC = () => {
             <li key={tab.id} className="flex-1">
               <p
                 onClick={() => handleTabClick(tab.title)}
-                className={`flex justify-center items-center py-2 px-1 sm:py-3 sm:px-2 text-xs sm:text-sm md:text-lg cursor-pointer tab-item ${
-                  activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'rounded-full'
-                }`}
+                className={`flex justify-center items-center py-2 px-1 sm:py-3 sm:px-2 text-xs sm:text-sm md:text-lg cursor-pointer tab-item ${activeTab === tab.title ? `${activeTabBgColor} text-white rounded-full shadow` : 'rounded-full'
+                  }`}
                 style={{ marginBottom: 0 }}
               >
                 {tab.title}
@@ -67,32 +48,32 @@ const Team: React.FC = () => {
         <Image src="/ColorBoxes.svg" className="img-fluid" alt="Color Boxes" width={500} height={500} />
       </div>
       <div>
-<div className="border-t border-black  shadow-sm p-3 rounded-lg">
-    <div className="flex flex-col items-center text-center">
-        <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
-        <div className="text-secondary mb-3"><b>Connect With Us</b></div>
-        <div className="flex justify-center flex-wrap">
-            <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
-            <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
-            <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
-            <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
-            <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
-            <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
-        </div>
-        <Footer.Divider />         
-    </div>
-    <div className="pt-0 mt-0 flex justify-center items-center">
-        <div className="flex w-full justify-center text-center">
-            <div className="text-gray-500 mr-3">
+        <div className="border-t border-black  shadow-sm p-3 rounded-lg">
+          <div className="flex flex-col items-center text-center">
+            <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
+            <div className="text-secondary mb-3"><b>Connect With Us</b></div>
+            <div className="flex justify-center flex-wrap">
+              <div className="p-2"><Footer.Icon href="https://www.facebook.com/GoogleDeveloperStudentClubDHASuffaUniversity/" icon={BsFacebook} /></div>
+              <div className="p-2"><Footer.Icon href="https://github.com/GDSCDSU/" icon={BsGithub} /></div>
+              <div className="p-2"><Footer.Icon href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=gdscdsu@gmail.com" icon={IoMdMail} /></div>
+              <div className="p-2"><Footer.Icon href="https://www.instagram.com/googledev.dsu/" icon={BsInstagram} /></div>
+              <div className="p-2"><Footer.Icon href="https://www.linkedin.com/company/developer-student-club-dsu-powered-by-google-developers/" icon={BsLinkedin} /></div>
+              <div className="p-2"><Footer.Icon href="https://www.youtube.com/@GoogleDSCatDHASuffaUniversity" icon={BsYoutube} /></div>
+            </div>
+            <Footer.Divider />
+          </div>
+          <div className="pt-0 mt-0 flex justify-center items-center">
+            <div className="flex w-full justify-center text-center">
+              <div className="text-gray-500 mr-3">
                 ©2024 GDSC@DSU
-            </div>
-            <div className="text-gray-500">
+              </div>
+              <div className="text-gray-500">
                 <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
+              </div>
             </div>
+          </div>
         </div>
-    </div>   
-</div>
-</div>
+      </div>
     </main>
   );
 };

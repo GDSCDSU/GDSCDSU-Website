@@ -4,10 +4,12 @@ import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import { useEffect, useState } from "react";
 import Card from "../../../../components/card/Card";
+import { BASE_URL } from "../../../../util/constant";
 
 export default function GDSCLeads() {
   const [showForm, setShowForm] = useState(false);
   const [leads, setLeads] = useState([]);
+  
   const handleShowForm = () => {
     setShowForm(true);
   };
@@ -22,7 +24,7 @@ export default function GDSCLeads() {
   , []);
 
   const fetchLeads = async () => {
-    const {data} = await axios.get('https://gdscdsu.com/api/teams?team=operation');
+    const {data} = await axios.get(`${BASE_URL}/teams?team=operation`);
     console.log(data.data);
     setLeads(data.data);
   }

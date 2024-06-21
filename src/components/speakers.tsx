@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import { BASE_URL } from '../util/constant';
 
 export default function Speakers() {
   const [speakersData, setSpeakersData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('https://gdscdsu.com/api/event?topEvent=true')
+    axios.get(`${BASE_URL}/event?topEvent=true`)
       .then(response => {
         const responseData = response.data.data;
 

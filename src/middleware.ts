@@ -3,6 +3,22 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
+  const path = request.nextUrl.pathname;
+
+  const privatePaths = [
+    "/admin/dashboard",
+    "/admin/dashboard/categories",
+    "/admin/dashboard/menus",
+  ];
+
+  const isPrivatePath = privatePaths.includes(path);
+
+  const token = request.cookies.get("session")?.value;
+  
+  if (isPrivatePath && !token) {
+    return NextResponse.redirect(new URL("/admin", request.nextUrl));
+  }
+
   if (request.nextUrl.pathname.startsWith("/api/password")) {
     if (request.method === "POST") {
       const token = cookies().get("otpToken")?.value;
@@ -33,4 +49,6 @@ export function middleware(request: NextRequest) {
       }
     }
   }
+
+
 }
