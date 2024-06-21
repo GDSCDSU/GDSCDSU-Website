@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
-import { HiOutlineMail, HiOutlinePhone, HiOutlineLocationMarker } from 'react-icons/hi';
+import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Contact() {
     const [activeTab, setActiveTab] = useState('Contact');

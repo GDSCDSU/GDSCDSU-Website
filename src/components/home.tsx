@@ -413,7 +413,7 @@ export default function Home(){
             </Carousel> */}
           {highlights.length > 0 ? (
             <Carousel>
-              {highlights.map((highlight, index) => (
+              {highlights[1].map((highlight, index) => (
                 <Carousel.Item key={index}>
                   <img
                     src={highlight.picture}

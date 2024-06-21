@@ -21,14 +21,14 @@
 
 @media (max-width: 576px) {
   .team-navbar{
-    margin-top: 5%;    
+    margin-top: 10%;    
   } 
 }
 
 /* Adjust tab size for screens smaller than 400px */
 @media (max-width: 400px) {
   .team-navbar{
-    margin-top: 5%;
+    margin-top: 10%;
   }  
 }
 
@@ -54,7 +54,7 @@
   max-width: 600px; /* Ensure it doesn't exceed a certain maximum width */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Ensure it behaves as a block element */
-  margin-top: -150px;
+  margin-top: -110px;
 }
 
 .team-card{

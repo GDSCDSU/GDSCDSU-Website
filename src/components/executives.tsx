@@ -29,7 +29,7 @@ export default function Executives() {
     <main className="flex flex-col gap-5 min-h-screen bg-white">
       {/* Quote Image */}
       <div data-aos="fade-up" className="w-full flex justify-center py-8">
-        <Image src='/executivesquote.svg' className='quote-image' alt='' width={800} height={200} />
+        <Image src='/executivesquote.svg' className='quote-image' alt='' width={820} height={200} />
       </div>
 
       {/* Ensure executives is not empty before rendering */}
