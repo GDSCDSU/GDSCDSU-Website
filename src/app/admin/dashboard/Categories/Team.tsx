@@ -95,7 +95,6 @@ export default function Team() {
 
    
     const formData = new FormData();
-    formData.append('team', selectedTeam);
     formData.append('fullname', name);
     formData.append('picture', file);
     formData.append('bio', description);
@@ -157,9 +156,9 @@ export default function Team() {
               <Label htmlFor="team" value="Team" />
               <Select id="team" onChange={handleTeamChange} required>
                 <option value="">Select Team</option>
-                <option value="Marketing">Marketing</option>
-                <option value="Operation">Operation</option>
-                <option value="Development">Development</option>
+                <option value="marketing">Marketing</option>
+                <option value="operation">Operation</option>
+                <option value="development">Development</option>
               </Select>
             </div>
           )}
@@ -224,7 +223,7 @@ export default function Team() {
               </div>
             </div>
           )}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
             {leads.map((lead, index) => (
               <div key={index} className="flex flex-col">
                 <Card
@@ -238,7 +237,7 @@ export default function Team() {
                   role={lead.role}
                   tagline={lead.tagline}
                 />
-                <Button color="failure" onClick={() => handleDelete(lead._id)} className="mt-2">Delete</Button>
+                <Button color="failure" onClick={() => handleDelete(lead._id)} className="mt-1 items-center w-20">Delete</Button>
               </div>
             ))}
           </div>
