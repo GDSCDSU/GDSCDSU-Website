@@ -9,7 +9,7 @@ export default function AllEvents() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}event?topEvent=true`)
+    axios.get(`${BASE_URL}/event?topEvent=true`)
       .then(response => {
         const responseData = response.data.data;
 

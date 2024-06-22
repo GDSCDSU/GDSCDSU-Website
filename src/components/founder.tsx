@@ -6,7 +6,7 @@ export default function Founder() {
   return (
     <main className="flex flex-col gap-10 min-h-screen bg-white px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-lg md:px-24 lg:px-8 lg:py-20">
       <div data-aos="fade-up" className="flex w-full h-full justify-center py-8">
-        <Image src='/founderquote.svg' className='quote-image-founder' alt='' width={800} height={200} />
+        <Image src='/founderquote.svg' className='quote-image' alt='' width={800} height={200} />
       </div>
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-2">
         <div className="flex flex-col mb-4 w-full bg-white rounded-xl overflow-hidden shadow-xl">

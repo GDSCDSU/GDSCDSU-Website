@@ -116,7 +116,7 @@ export default function Home() {
                             </div>
                             <div className="ml-3 text-sm font-normal">
                                 <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">New Event</span>
-                                <div className="mb-2 text-sm font-normal">Build with AI: Introduction to Gemini</div>
+                                <div className="mb-2 text-sm font-normal">GDSC Digital Debut</div>
                                 <div className="flex gap-2">
                                     <div className="w-auto">
                                         <Button color="blue" href="/events" size="xs">Check Out</Button>

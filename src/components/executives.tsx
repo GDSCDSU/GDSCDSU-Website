@@ -44,8 +44,8 @@ export default function Executives() {
                 className="flex pb-3 w-full max-w-sm flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl mx-auto md:mr-4"
               >
                 <div className="relative">
-                  <div className="flex items-center justify-center w-full h-5">
-                    <Image src='/dotimgexecutive.svg' alt='' width={320} height={100} />
+                  <div className="flex items-center justify-center w-full h-7">
+                    <Image src='/dotimgexecutive.svg' alt='' width={370} height={100} />
                   </div>
                   <div className="flex justify-center">
                     <Image src={item.picture} className="w-20 h-20" alt={item.fullname} width={100} height={100} />

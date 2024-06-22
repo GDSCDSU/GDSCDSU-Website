@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Button, Label, TextInput, FileInput } from "flowbite-react";
+import { Button, Label, FileInput } from "flowbite-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { BASE_URL } from "../../../../util/constant";
@@ -7,8 +7,6 @@ import { BASE_URL } from "../../../../util/constant";
 export default function Partners() {
   const [showForm, setShowForm] = useState(false);
   const [data, setData] = useState([]);
-
-  // State variables for form fields
   const [file, setFile] = useState(null);
 
   const handleShowForm = () => {
@@ -24,12 +22,22 @@ export default function Partners() {
   }, []);
 
   const fetchPartner = async () => {
-    const { data } = await axios.get(`${BASE_URL}/partner`);
-    setData(data.data);
+    try {
+      const { data } = await axios.get(`${BASE_URL}/partner`);
+      setData(data.data);
+    } catch (error) {
+      console.error('Error fetching partners:', error);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate file upload before submitting
+    if (!file) {
+      alert('Please select a file.');
+      return;
+    }
 
     const formData = new FormData();
     formData.append('picture', file);
@@ -42,19 +50,10 @@ export default function Partners() {
       });
 
       console.log('Response:', response.data);
-      fetchPartner(); 
-      handleShowList(); 
+      fetchPartner();
+      handleShowList();
     } catch (error) {
-      if (error.response) {
-        console.error('Error response data:', error.response.data);
-        console.error('Error response status:', error.response.status);
-        console.error('Error response headers:', error.response.headers);
-      } else if (error.request) {
-        console.error('Error request data:', error.request);
-      } else {
-        console.error('Error message:', error.message);
-      }
-      console.error('Error config:', error.config);
+      console.error('Error adding partner:', error);
     }
   };
 
@@ -70,7 +69,7 @@ export default function Partners() {
             <div className="mb-2 block">
               <Label htmlFor="file-upload" value="Upload Image" />
             </div>
-            <FileInput id="file-upload" onChange={(e) => setFile(e.target.files[0])} />
+            <FileInput id="file-upload" onChange={(e) => setFile(e.target.files[0])} required />
           </div>
           <div className="flex mt-8">
             <Button color="success" className="" type="submit">Save</Button>

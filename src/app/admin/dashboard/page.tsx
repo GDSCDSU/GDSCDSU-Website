@@ -1,5 +1,5 @@
-'use client'
-import { Button, Drawer, TextInput, Label,Sidebar } from "flowbite-react";
+"use client";
+import { Button, Drawer, TextInput, Label, Sidebar } from "flowbite-react";
 import 'flowbite/dist/flowbite.css';
 import Image from "next/image";
 import { useState } from "react";
@@ -10,12 +10,13 @@ import dynamic from 'next/dynamic';
 const Categories = dynamic(() => import('./Menus/Categories'), { ssr: false });
 const PushNotification = dynamic(() => import('./Menus/PushNotification'), { ssr: false });
 import {
-    HiChartPie,
-    HiLogin,
-    HiSearch,
-  } from "react-icons/hi";
-  import { HiMenu } from "react-icons/hi";
-export default function Dashboard() {
+  HiChartPie,
+  HiLogin,
+  HiSearch,
+} from "react-icons/hi";
+import { HiMenu } from "react-icons/hi";
+
+const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [editMode, setEditMode] = useState(false);
   const [firstName, setFirstName] = useState("GDSC");
@@ -35,32 +36,39 @@ export default function Dashboard() {
       timer: 1500
     });
   };
+
   const [isSideOpen, setIsSideOpen] = useState(false);
   const [activeComponent, setActiveComponent] = useState('categories');
   const handleSideClose = () => setIsSideOpen(false);
 
+  const handleSignOut = () => {
+    // Perform sign out actions here
+    // For example, clear session or cookies
+
+    // Redirect using window.location
+    window.location.href = '/admin';
+  };
+
   return (
     <>
-    
-    <div className="min-h-[50vh] flex items-center justify-between p-4">
-  <div className="flex items-center">
-    <Button color="blue" onClick={() => setIsSideOpen(true)}>
-        <HiMenu className="w-4 h-4" />
-    </Button>
-  </div>
-  <div className="flex items-center">
-    <div className="relative mr-4">
-      <HiOutlineBell className="w-8 h-8" />
-      <span className="absolute top-0 right-0 translate-middle badge rounded-pill bg-danger"></span>
-    </div>
-    <div className="cursor-pointer" onClick={handleDrawerOpen}>
-      <Image src="/dashboard.svg" width={80} height={80} alt="Dashboard" />
-    </div>
-  </div>
-</div>
+      <div className="min-h-[50vh] flex items-center justify-between p-4">
+        <div className="flex items-center">
+          <Button color="blue" onClick={() => setIsSideOpen(true)}>
+            <HiMenu className="w-4 h-4" />
+          </Button>
+        </div>
+        <div className="flex items-center">
+          <div className="relative mr-4">
+            <HiOutlineBell className="w-8 h-8" />
+            <span className="absolute top-0 right-0 translate-middle badge rounded-pill bg-danger"></span>
+          </div>
+          <div className="cursor-pointer" onClick={handleDrawerOpen}>
+            <Image src="/dashboard.svg" width={80} height={80} alt="Dashboard" />
+          </div>
+        </div>
+      </div>
 
-      
-<Drawer open={isSideOpen} onClose={handleSideClose}>
+      <Drawer open={isSideOpen} onClose={handleSideClose}>
         <Drawer.Header title="MENU" titleIcon={() => <></>} />
         <Drawer.Items>
           <Sidebar
@@ -82,7 +90,7 @@ export default function Dashboard() {
                       <HiOutlineBell className="mr-2 h-5 w-5" />
                       Notifications
                     </Button>
-                    <Button color="blue">
+                    <Button color="blue" onClick={handleSignOut}>
                       <HiLogin className="mr-2 h-5 w-5" />
                       Sign Out
                     </Button>
@@ -98,6 +106,7 @@ export default function Dashboard() {
         {activeComponent === 'categories' && <Categories />}
         {activeComponent === 'notifications' && <PushNotification />}
       </div>
+
       <Drawer open={isOpen} onClose={handleDrawerClose} position="right">
         <Drawer.Header title="Profile Information" />
         <Drawer.Items>
@@ -111,21 +120,21 @@ export default function Dashboard() {
             ) : (
               <h6 className="para">{firstName}</h6>
             )}
-            <br/>
+            <br />
             <Label htmlFor="lastName">Last Name</Label>
             {editMode ? (
               <TextInput id="lastName" value={lastName} onChange={(e) => setLastName(e.target.value)} />
             ) : (
               <h6>{lastName}</h6>
             )}
-            <br/>
+            <br />
             <Label htmlFor="username">Username</Label>
             {editMode ? (
               <TextInput id="username" value={username} onChange={(e) => setUsername(e.target.value)} />
             ) : (
               <h6>{username}</h6>
             )}
-            <br/>
+            <br />
             <Label htmlFor="email">Email</Label>
             {editMode ? (
               <TextInput type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
@@ -133,7 +142,7 @@ export default function Dashboard() {
               <h6>{email}</h6>
             )}
           </div>
-          <br/>
+          <br />
           {editMode ? (
             <Button color="blue" type="button" onClick={handleSave}>Save</Button>
           ) : (
@@ -143,4 +152,6 @@ export default function Dashboard() {
       </Drawer>
     </>
   );
-}
+};
+
+export default Dashboard;

@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import 'flowbite/dist/flowbite.css';
 import dynamic from 'next/dynamic';
@@ -22,7 +23,7 @@ export default function Admin() {
         setInputColor("failure");
     };
 
-    const handleResetPassword = async (e) => {
+    const handleResetPassword = (e) => {
         e.preventDefault();
         const email = e.target.email.value;
         if (!email) {
@@ -30,59 +31,36 @@ export default function Admin() {
             setAlertMessage('Please enter your email');
             setInputColor("failure");
         } else {
-            try {
-                // Make a PUT request to your API endpoint to send OTP
-                const response = await fetch('http://localhost:3000/api/otp', {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email }),
-                });
+            const otp = Math.floor(1000 + Math.random() * 9000);
 
-                if (!response.ok) {
-                    throw new Error('Failed to send OTP');
+            Swal.fire({
+                icon: 'info',
+                title: 'OTP Verification',
+                text: `An OTP has been sent to your email. Please enter the OTP: ${otp}`,
+                input: 'text',
+                inputAttributes: {
+                    maxLength: '4',
+                    autocapitalize: 'off',
+                    autocorrect: 'off'
+                },
+                showCancelButton: true,
+                confirmButtonText: 'Submit',
+                cancelButtonText: 'Cancel',
+                preConfirm: (enteredOTP) => {
+                    return new Promise((resolve) => {
+                        if (enteredOTP === otp.toString()) {
+                            resolve(true);
+                        } else {
+                            Swal.showValidationMessage('Incorrect OTP');
+                            resolve(false);
+                        }
+                    });
                 }
-
-                const data = await response.json();
-                const otp = data.otp; // Assuming your API returns the OTP
-
-                // Show OTP verification dialog
-                Swal.fire({
-                    icon: 'info',
-                    title: 'OTP Verification',
-                    text: `An OTP has been sent to your email. Please enter the OTP: ${otp}`,
-                    input: 'text',
-                    inputAttributes: {
-                        maxLength: '4',
-                        autocapitalize: 'off',
-                        autocorrect: 'off'
-                    },
-                    showCancelButton: true,
-                    confirmButtonText: 'Submit',
-                    cancelButtonText: 'Cancel',
-                    preConfirm: (enteredOTP) => {
-                        return new Promise((resolve) => {
-                            if (enteredOTP === otp.toString()) {
-                                resolve(true);
-                            } else {
-                                Swal.showValidationMessage('Incorrect OTP');
-                                resolve(false);
-                            }
-                        });
-                    }
-                }).then((result) => {
-                    if (result.isConfirmed) {
-                        setCurrentForm('resetpassword');
-                    }
-                });
-
-            } catch (error) {
-                console.error('Error:', error);
-                setShowAlert(true);
-                setAlertMessage('Failed to send OTP. Please try again.');
-                setInputColor("failure");
-            }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    setCurrentForm('resetpassword');
+                }
+            });
         }
     };
 
@@ -128,6 +106,8 @@ export default function Admin() {
                         alertMessage={alertMessage}
                         inputColor={inputColor}
                         onBack={() => setCurrentForm('signin')}
+                        onPasswordChange={(e) => setPassword(e.target.value)}
+                        onConfirmPasswordChange={(e) => setConfirmPassword(e.target.value)}
                     />
                 )}
             </div>

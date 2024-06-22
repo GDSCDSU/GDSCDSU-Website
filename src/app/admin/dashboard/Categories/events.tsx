@@ -20,8 +20,8 @@ export default function Events() {
   const [speakerImage, setSpeakerImage] = useState(null);
   const [speakerName, setSpeakerName] = useState('');
   const [speakerBio, setSpeakerBio] = useState('');
-  const [topEvent, setTopEvent] = useState('true');
-  
+  const [topEvent, setTopEvent] = useState(true); // Changed to boolean true
+
   const handleShowForm = () => {
     setShowForm(true);
   };
@@ -48,6 +48,12 @@ export default function Events() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate inputs before submitting
+    if (!name || !file || !content || !title || !location || !speaker || !speakerImage || !speakerName || !speakerBio) {
+      alert('Please fill out all fields.');
+      return;
+    }
 
     const formData = new FormData();
     formData.append('name', name);
@@ -110,7 +116,7 @@ export default function Events() {
           </div>
           <div>
             <Label htmlFor="file-upload" value="Upload Image" />
-            <FileInput id="file-upload" onChange={(e) => setFile(e.target.files[0])} />
+            <FileInput id="file-upload" onChange={(e) => setFile(e.target.files[0])} required />
           </div>
           <div>
             <Label htmlFor="content" value="Content" />
@@ -130,7 +136,7 @@ export default function Events() {
           </div>
           <div>
             <Label htmlFor="speakerImage" value="Upload Speaker Image" />
-            <FileInput id="speakerImage" onChange={(e) => setSpeakerImage(e.target.files[0])} />
+            <FileInput id="speakerImage" onChange={(e) => setSpeakerImage(e.target.files[0])} required />
           </div>
           <div>
             <Label htmlFor="speakerName" value="Speaker Name" />

@@ -44,20 +44,18 @@ export default function Team() {
       let url = `${BASE_URL}/teams?`;
       if (selectedTeamRecords === "Team Lead") {
         url += 'role=lead';
-      } 
-      else if(selectedTeamRecords === "Executive-Core-Team-Member"){
+      } else if (selectedTeamRecords === "Executive-Core-Team-Member") {
         url += 'role=Executive-core-team-member';
-      }
-      else if (selectedTeamRecords === "Core Team Member") {
+      } else if (selectedTeamRecords === "Core Team Member") {
         if (selectedRoleRecords) {
           url += `team=${selectedRoleRecords.toLowerCase().replace(/\s/g, '-')}`;
-        }    
+        }
       } else if (selectedTeamRecords) {
         url += `team=${selectedTeamRecords.toLowerCase().replace(/\s/g, '-')}`;
       }
-  
+
       console.log("Fetching data from URL:", url);
-  
+
       const { data } = await axios.get(url);
       console.log("Data fetched:", data.data);
       setLeads(data.data);
@@ -84,7 +82,7 @@ export default function Team() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/teams?id=${id}`);
+      const response = await axios.delete(`${BASE_URL}/teams?id=${id}`);
       console.log('Delete response:', response.data);
       fetchTeam(); // Refresh the list after deleting an item
     } catch (error) {
@@ -94,6 +92,12 @@ export default function Team() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate required fields
+    if (!selectedTeam || !name || !file || !description || !title || !facebook || !linkedin || !instagram || !email) {
+      alert('Please fill in all required fields.');
+      return;
+    }
 
     const formData = new FormData();
     formData.append('team', selectedTeam);
@@ -105,7 +109,7 @@ export default function Team() {
     formData.append('linkedin', linkedin);
     formData.append('instagram', instagram);
     formData.append('email', email);
-    
+
     // Only append the role if it's not "Core Team Member"
     if (role !== "Core Team Member") {
       formData.append('role', role);
@@ -118,7 +122,7 @@ export default function Team() {
         }
       });
 
-      fetchTeam(); 
+      fetchTeam();
       handleShowList();
       console.log('Response:', response.data);
     } catch (error) {
@@ -155,9 +159,9 @@ export default function Team() {
               <Label htmlFor="team" value="Team" />
               <Select id="team" onChange={handleTeamChange} required>
                 <option value="">Select Team</option>
-                <option value="marketing">Marketing</option>
-                <option value="operation">Operation</option>
-                <option value="development">Development</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Operation">Operation</option>
+                <option value="Development">Development</option>
               </Select>
             </div>
           )}
@@ -167,7 +171,7 @@ export default function Team() {
           </div>
           <div>
             <Label htmlFor="file-upload" value="Upload Image" />
-            <FileInput id="file-upload" onChange={(e) => setFile(e.target.files[0])} />
+            <FileInput id="file-upload" onChange={(e) => setFile(e.target.files[0])} required />
           </div>
           <div>
             <Label htmlFor="description" value="Bio" />
@@ -195,7 +199,7 @@ export default function Team() {
           </div>
           <div>
             <Button color="success" type="submit">Save</Button>
-            <Button color="failure" type="button">Delete</Button>
+            <Button color="failure" type="button" onClick={handleShowList}>Cancel</Button>
           </div>
         </form>
       ) : (
@@ -215,9 +219,9 @@ export default function Team() {
               <div>
                 <Select id="role-records" onChange={handleRoleRecordsChange} required>
                   <option value="">Select Role</option>
-                  <option value="marketing">Marketing</option>
-                  <option value="operation">Operation</option>
-                  <option value="development">Development</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Operation">Operation</option>
+                  <option value="Development">Development</option>
                 </Select>
               </div>
             </div>

@@ -24,12 +24,22 @@ export default function Events() {
   }, []);
 
   const fetchHighlights = async () => {
-    const { data } = await axios.get(`${BASE_URL}/highlight`);
-    setData(data.data);
+    try {
+      const { data } = await axios.get(`${BASE_URL}/highlight`);
+      setData(data.data);
+    } catch (error) {
+      console.error('Error fetching highlights:', error);
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validate inputs before submitting
+    if (!name || !title || !file) {
+      alert('Please fill out all fields.');
+      return;
+    }
 
     const formData = new FormData();
     formData.append('speaker', name);
@@ -47,16 +57,7 @@ export default function Events() {
       fetchHighlights(); 
       handleShowList();
     } catch (error) {
-      if (error.response) {
-        console.error('Error response data:', error.response.data);
-        console.error('Error response status:', error.response.status);
-        console.error('Error response headers:', error.response.headers);
-      } else if (error.request) {
-        console.error('Error request data:', error.request);
-      } else {
-        console.error('Error message:', error.message);
-      }
-      console.error('Error config:', error.config);
+      console.error('Error adding highlight:', error);
     }
   };
 
@@ -101,6 +102,7 @@ export default function Events() {
             <FileInput
               id="file-upload"
               onChange={(e) => setFile(e.target.files[0])}
+              required
             />
           </div>
           <div className="flex mt-8">
