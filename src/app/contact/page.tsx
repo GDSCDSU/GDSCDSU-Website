@@ -73,7 +73,7 @@ export default function Contact() {
                                     <textarea id="message" name="message" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50"></textarea>
                                 </div>
                                 <div className="flex justify-end mb-4">
-                                    <button type="submit" className="inline-block px-4 py-2 text-white bg-primary rounded-full hover:bg-primary-dark focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50">
+                                    <button type="button" className="inline-block px-4 py-2 text-white bg-primary rounded-full hover:bg-primary-dark focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50">
                                         <HiOutlineMail className="inline-block mr-2" /> Send
                                     </button>
                                     <span className="text-gray-500 self-center mx-4">OR</span>
