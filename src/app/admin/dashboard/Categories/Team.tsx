@@ -104,7 +104,7 @@ export default function Team() {
     formData.append('instagram', instagram);
     formData.append('email', email);
 
-    if (role !== "lead") {
+    if (role !== "lead" && role !== "Executive-core-team-member") {
       formData.append('team', selectedTeam);
     }
     
@@ -223,7 +223,7 @@ export default function Team() {
               </div>
             </div>
           )}
-          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 w-full flex flex-wrap">
             {leads.map((lead, index) => (
               <div key={index} className="flex flex-col">
                 <Card
