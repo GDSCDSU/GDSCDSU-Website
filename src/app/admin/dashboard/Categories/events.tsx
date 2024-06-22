@@ -20,7 +20,7 @@ export default function Events() {
   const [speakerImage, setSpeakerImage] = useState(null);
   const [speakerName, setSpeakerName] = useState('');
   const [speakerBio, setSpeakerBio] = useState('');
-  const [topEvent, setTopEvent] = useState(true); // Changed to boolean true
+  const [topEvent, setTopEvent] = useState('true'); // Default to true as a string
 
   const handleShowForm = () => {
     setShowForm(true);
@@ -65,7 +65,7 @@ export default function Events() {
     formData.append('speakerImage', speakerImage);
     formData.append('speakerName', speakerName);
     formData.append('SpeakerBio', speakerBio);
-    formData.append('topEvent', topEvent);
+    formData.append('topEvent', topEvent); // Add topEvent to formData
 
     try {
       const response = await axios.post(`${BASE_URL}/event`, formData, {
@@ -93,7 +93,7 @@ export default function Events() {
 
   const handleDelete = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:3000/api/event?id=${id}`);
+      const response = await axios.delete(`${BASE_URL}/event?id=${id}`);
       console.log('Delete response:', response.data);
       fetchFilteredData(); // Refresh the list after deleting an item
     } catch (error) {
@@ -101,6 +101,7 @@ export default function Events() {
     }
   };
 
+  
   return (
     <>
       <div className="flex justify-end mb-4 space-x-2">
@@ -145,6 +146,13 @@ export default function Events() {
           <div>
             <Label htmlFor="speakerBio" value="Speaker Bio" />
             <Textarea id="speakerBio" placeholder="Enter Speaker Bio..." required rows={4} value={speakerBio} onChange={(e) => setSpeakerBio(e.target.value)} />
+          </div>
+          <div>
+            <Label htmlFor="topEvent" value="Top Event" />
+            <Select id="topEvent" onChange={(e) => setTopEvent(e.target.value)} required value={topEvent}>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </Select>
           </div>
           <div className="flex mt-8">
             <Button color="success" className="mr-4" type="submit">Save</Button>
