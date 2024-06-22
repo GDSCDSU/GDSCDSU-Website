@@ -17,7 +17,7 @@ export default function SignInForm({ onSubmit, showAlert, alertMessage, inputCol
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`https://gdscdsu.com//api/login`, {
+      const response = await axios.post(`${BASE_URL}//api/login`, {
         email: email,
         password: password
       });
