@@ -105,7 +105,10 @@ export default function Team() {
     formData.append('instagram', instagram);
     formData.append('email', email);
 
-    // Only append the role if it's not "Core Team Member"
+    if (role !== "lead") {
+      formData.append('team', selectedTeam);
+    }
+    
     if (role !== "Core Team Member") {
       formData.append('role', role);
     }
