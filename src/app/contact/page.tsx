@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
+import 'flowbite/dist/flowbite.css';
 import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Contact() {
