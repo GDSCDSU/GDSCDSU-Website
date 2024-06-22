@@ -93,12 +93,7 @@ export default function Team() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate required fields
-    if (!selectedTeam || !name || !file || !description || !title || !facebook || !linkedin || !instagram || !email) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-
+   
     const formData = new FormData();
     formData.append('team', selectedTeam);
     formData.append('fullname', name);

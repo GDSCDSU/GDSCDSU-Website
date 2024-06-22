@@ -49,12 +49,6 @@ export default function Events() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate inputs before submitting
-    if (!name || !file || !content || !title || !location || !speaker || !speakerImage || !speakerName || !speakerBio) {
-      alert('Please fill out all fields.');
-      return;
-    }
-
     const formData = new FormData();
     formData.append('name', name);
     formData.append('picture', file);

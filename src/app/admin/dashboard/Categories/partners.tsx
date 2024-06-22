@@ -33,11 +33,7 @@ export default function Partners() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate file upload before submitting
-    if (!file) {
-      alert('Please select a file.');
-      return;
-    }
+    
 
     const formData = new FormData();
     formData.append('picture', file);
