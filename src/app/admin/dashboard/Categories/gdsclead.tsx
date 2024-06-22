@@ -3,6 +3,7 @@ import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import { useEffect, useState } from "react";
+import { BASE_URL } from "../../../../util/constant";
 import Card from "../../../../components/card/Card";
 
 export default function GDSCLeads() {
@@ -22,7 +23,7 @@ export default function GDSCLeads() {
   , []);
 
   const fetchLeads = async () => {
-    const {data} = await axios.get('https://gdscdsu.com/api/teams?role=lead');
+    const {data} = await axios.get(`${BASE_URL}/teams?role=lead`);
     console.log(data.data);
     setLeads(data.data);
   }

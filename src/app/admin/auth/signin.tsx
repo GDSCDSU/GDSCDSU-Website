@@ -23,8 +23,6 @@ export default function SignInForm({ onSubmit, showAlert, alertMessage, inputCol
       });
 
       if (response.status === 200) {
-        const token = response.data.data.token; // Adjust this line based on your API response structure
-        console.log("Token:", token);
         router.push('/admin/dashboard');
       }
     } catch (error: any) {

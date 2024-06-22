@@ -2,6 +2,7 @@ import axios from "axios";
 import { Button, Label, TextInput } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import Image from "next/image";
+import { BASE_URL } from "../../../../util/constant";
 import { useEffect, useState } from "react";
 
 export default function OurTopEvent() {
@@ -21,7 +22,7 @@ export default function OurTopEvent() {
   },[]);
 
   const fetchEvents = async () => {
-    const {data} = await axios.get('https://gdscdsu.com/api/event?topEvent=true');
+    const {data} = await axios.get(`${BASE_URL}/event?topEvent=true`);
     setData(data.data);
   }
   return (

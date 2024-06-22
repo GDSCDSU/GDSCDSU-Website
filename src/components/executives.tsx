@@ -9,7 +9,7 @@ export default function Executives() {
   const [executives, setExecutives] = useState([]);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}}/teams?role=Executive-core-team-member`)
+    axios.get(`${BASE_URL}/teams?role=Executive-core-team-member`)
       .then(response => {
         const responseData = response.data.data;
 

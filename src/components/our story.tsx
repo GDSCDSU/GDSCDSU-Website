@@ -82,7 +82,7 @@ export default function OurStory() {
                                     The formation of a team is always the problem, the right talent and team can do wonders for your character. Our Recruitment process was strictly based on merit and the right talent where the talent quota was made to recruit five males and five females to be in the team. The same ratio of gender diversity can make your team more successful as compared to teams with less gender diversity.
                                 </p>
                                 <p className="text-secondary">
-                                    In computer science industry, there is very less amount of women's working and the problem is that they are not encouraged and motivated to work in the tech, we broke that stereotype, made it compulsory for every core team member to attend which resulted in female students discover Flutter and felt in love with the technology, now their vision is more clear and they aim to become Flutter Developers after graduation.
+                                    In computer science industry, there is very less amount of women working and the problem is that they are not encouraged and motivated to work in the tech, we broke that stereotype, made it compulsory for every core team member to attend which resulted in female students discover Flutter and felt in love with the technology, now their vision is more clear and they aim to become Flutter Developers after graduation.
                                 </p>
                             </div>
                         </div>
@@ -148,7 +148,7 @@ export default function OurStory() {
                                 </p>
 
                                 <p className="text-secondary">
-                                    A student from India, reached out since Urdu and Hindi are similar. The journey became easier to learn Flutter in Urdu. Later we built a team to continue the legacy (here's Palivi joining the team virtually from india)
+                                    A student from India, reached out since Urdu and Hindi are similar. The journey became easier to learn Flutter in Urdu. Later we built a team to continue the legacy (here is Palivi joining the team virtually from india)
                                 </p>
                             </div>
                         </div>
@@ -402,7 +402,7 @@ export default function OurStory() {
                         <div className="end-section">
                             <div className="title w-48 h-16 text-gray-800 text-5xl font-bold font-sans">The End</div>
                             <div className="End-Para w-70 h-32 text-justify text-zinc-500 text-2xl font-normal font-sans">
-                                Finally, I couldn't have done all this without my team. I would like to thank my core team for believing in my ideas for a better future. Sir Shaham Mahmood, Specially Pro-Vice Chancellor Dr. Ahmad Saeed Minhas for his strong support.
+                                Finally, I could not have done all this without my team. I would like to thank my core team for believing in my ideas for a better future. Sir Shaham Mahmood, Specially Pro-Vice Chancellor Dr. Ahmad Saeed Minhas for his strong support.
                             </div>
                         </div>
                     </div>
