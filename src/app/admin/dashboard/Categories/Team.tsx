@@ -223,7 +223,7 @@ export default function Team() {
               </div>
             </div>
           )}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {leads.map((lead, index) => (
               <div key={index} className="flex flex-col">
                 <Card
@@ -237,7 +237,7 @@ export default function Team() {
                   role={lead.role}
                   tagline={lead.tagline}
                 />
-                <Button color="failure" onClick={() => handleDelete(lead._id)} className="mt-1 items-center w-20">Delete</Button>
+                <Button color="failure" onClick={() => handleDelete(lead._id)} className="mt-1 w-20">Delete</Button>
               </div>
             ))}
           </div>
