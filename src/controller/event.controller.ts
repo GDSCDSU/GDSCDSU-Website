@@ -53,7 +53,6 @@ class EventAPi{
             if(topEvent){
                 if(!body.get('speaker')) throw new Error("Speaker is required");
                 if(!body.get('speakerImage')) throw new Error("Speaker Image is required");
-                if(!body.get('speakerName')) throw new Error("Speaker Name is required");
                 if(!body.get('SpeakerBio')) throw new Error("Speaker Bio is required");
             }
 
@@ -67,6 +66,8 @@ class EventAPi{
                 topEvent,
                 location: body.get('location') as string,
                 speaker: body.get('speaker') as string,
+                speakerBio: body.get('SpeakerBio') as string,
+                speakerLinkedln: body.get('speakerLinkedln') as string,
                 speakerImage: speakerImage.secure_url as string,
             });
             
