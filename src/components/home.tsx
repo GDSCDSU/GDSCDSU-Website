@@ -8,15 +8,12 @@ import 'aos/dist/aos.css';
 import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 import CountUp from 'react-countup';
-import { BASE_URL, hrefs, logos } from "../util/constant";
+import { BASE_URL} from "../util/constant";
 
 export default function Home() {
 
     const [highlights, setHighlights] = useState([]);
-    const allHrefs = [...hrefs, ...hrefs];
-    const allLogos = [...logos, ...logos];
-
-
+    const [partners, setPartners] = useState([]);
 
     useEffect(() => {
         const fetchHighlights = async () => {
@@ -36,9 +33,18 @@ export default function Home() {
             }
         };
 
-        fetchHighlights();
-    }, []);
+        const fetchPartners = async () => {
+            try {
+                const response = await axios.get('http://localhost:3000/api/partner');
+                setPartners(response.data.data);
+            } catch (error) {
+                console.error('Error fetching partners:', error);
+            }
+        };
 
+        fetchHighlights();
+        fetchPartners();
+    }, []);
 
     const [counters, setCounters] = useState([
         { target: 5, current: 0 },
@@ -73,12 +79,11 @@ export default function Home() {
         }
     }, [countersVisible]);
 
-
-
     useEffect(() => {
         AOS.init();
     }, []);
 
+    const allPartners = [...partners, ...partners];
     return (
 
         <>
@@ -131,23 +136,24 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Partners */}
+             {/* Partners */}
             <br />
-            <div className="m-5" >
-                <div className="d-flex flex-column align-items-center" >
+            <div className="m-5">
+                <div className="d-flex flex-column align-items-center">
                     <h2><b>Our Partners</b></h2>
                 </div>
                 <br />
                 <div className="logo-container">
                     <div className="logo-slider">
-                        {allLogos.map((logo, index) => (
-                            <a className="logo-item" href={allHrefs[index]} key={index} target="_blank" rel="noopener noreferrer">
-                                <Image src={logo} alt="" className="img-fluid" width={300} height={100} />
+                        {allPartners.map((partner, index) => (
+                            <a className="logo-item" href={partner.link} key={index} target="_blank" rel="noopener noreferrer">
+                                <Image src={partner.picture} alt={partner.name} className="img-fluid" width={300} height={100} />
                             </a>
                         ))}
                     </div>
                 </div>
             </div>
+            <br />
             <br />
             {/* What GDSC Does Portion: */}
             <div className="m-5" >
@@ -412,15 +418,15 @@ export default function Home() {
                         <Footer.Divider />
                     </div>
                     <div className="pt-0 mt-0 flex justify-center items-center">
-                        <div className="flex w-full justify-center text-center">
-                            <div className="text-gray-500 mr-3">
-                                ©2024 GDSC@DSU
-                            </div>
-                            <div className="text-gray-500">
-                                <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
-                            </div>
-                        </div>
-                    </div>
+    <div className="flex flex-col w-full justify-center text-center">
+        <div className="text-gray-500 mb-1">
+            ©2024 GDSC@DSU
+        </div>
+        <div className="text-gray-500">
+            <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
+        </div>
+    </div>
+</div>
                 </div>
 
             </div>

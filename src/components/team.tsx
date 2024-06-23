@@ -60,18 +60,16 @@ const Team: React.FC = () => {
             </div>
             <Footer.Divider />
           </div>
-          <div className="pt-0 mt-0 flex justify-center items-center">
-            <div className="flex w-full justify-center text-center">
-              <div className="text-gray-500 mr-3">
-                ©2024 GDSC@DSU
-              </div>
-              <div className="text-gray-500">
-                <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
-              </div>
+          <div className="flex flex-col w-full justify-center text-center">
+            <div className="text-gray-500 mb-1">
+               ©2024 GDSC@DSU
+             </div>
+            <div className="text-gray-500">
+              <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
             </div>
           </div>
-        </div>
-      </div>
+          </div>
+          </div>
     </main>
   );
 };

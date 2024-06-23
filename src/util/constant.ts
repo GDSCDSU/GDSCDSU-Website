@@ -29,25 +29,9 @@ export const highlights = [
   { picture: '/Slider Images/Slider1.svg' },
   { picture: '/Slider Images/Slider2.svg' },
   { picture: '/Slider Images/Slider3.svg' },
+  { picture: '/Slider Images/Slider4.svg' },
+  { picture: '/Slider Images/Slider5.svg' },
 ];
-
-export const logos = [
-  "/bitrupt.svg",
-  "/datacamp.svg",
-  "/zapdas.svg",
-  "/geeks.svg",
-  "/vivids.svg",
-];
-
-
-export const hrefs = [
-  "https://bitrupt.co/",
-  "https://www.datacamp.com/",
-  "https://zapdas.co/",
-  "https://geeksofkolachi.com/",
-  "https://www.facebook.com/vividlabpk?_rdc=1&_rdr",
-];
-
 
 export const avatarUrls = [
   "/Ateeq.svg",

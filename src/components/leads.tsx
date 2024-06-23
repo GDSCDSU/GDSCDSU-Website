@@ -13,7 +13,6 @@ export default function Leads() {
     const fetchData = async () => {
       try {
         const { data } = await axios.get(`${BASE_URL}/teams?role=lead`);
-        console.log(data.data);
         setLeads(data.data);
         setLoading(false);
       } catch (error) {
@@ -78,7 +77,7 @@ export default function Leads() {
               {/* Lead Content */}
               <div className="flex flex-col items-center justify-center mt-12 text-center">
                 <div className="relative w-30 h-30 mb-4">
-                  <Image src={lead.picture || "https://via.placeholder.com/94x94"} alt={lead.fullname} className="object-cover rounded-full" width={100} height={100} />
+                  <Image src={lead.picture} alt={lead.fullname} className="object-cover rounded-full" width={100} height={100} />
                 </div>
                 <div className="flex-1 p-4">
                   <h3 className="text-gray-800 text-2xl font-bold">{lead.fullname}</h3>

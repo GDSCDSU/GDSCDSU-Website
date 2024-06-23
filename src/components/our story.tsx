@@ -27,7 +27,7 @@ export default function OurStory() {
                 <Image width={1500} height={100} className="img-fluid" src="/OurStory.svg" alt=""></Image>
             </div>
 
-            <div className="m-0" data-aos="fade-up">
+            <div className="m-0" data-aos="fade-up" style={{marginTop:-30}}>
                 <div className="journey-section d-flex flex-column align-items-center" >
                     <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
                 </div>
@@ -73,7 +73,7 @@ export default function OurStory() {
                     <h1><b>The <span className="text-success">Best Team</span></b></h1>
                 </div>
                 <br />
-                <div className="row" style={{marginTop:-30}}>
+                <div className="row" style={{marginTop:10}}>
                     <div className="col-md-2"></div>
                     <div className="col-md-4">
                         <div className="card" style={{ borderColor: 'transparent' }}>
@@ -432,14 +432,12 @@ export default function OurStory() {
                         </div>
                         <Footer.Divider />
                     </div>
-                    <div className="pt-0 mt-0 flex justify-center items-center">
-                        <div className="flex w-full justify-center text-center">
-                            <div className="text-gray-500 mr-3">
-                                ©2024 GDSC@DSU
-                            </div>
-                            <div className="text-gray-500">
-                                <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
-                            </div>
+                    <div className="flex flex-col w-full justify-center text-center">
+                        <div className="text-gray-500 mb-1">
+                            ©2024 GDSC@DSU
+                        </div>
+                        <div className="text-gray-500">
+                            <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
                         </div>
                     </div>
                 </div>
