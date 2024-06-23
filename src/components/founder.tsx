@@ -66,7 +66,7 @@ export default function Founder() {
         
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image" >
             <Image src='/founders/tarun_kumar.png' alt='Tarun Kumar' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -80,7 +80,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image">
             <Image src='/founders/bahawal_baloch.png' alt='Bahawal Baloch' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -94,7 +94,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image">
             <Image src='/founders/abeer_shaikh.png' alt='Abeer Shaikh' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -108,7 +108,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image" >
             <Image src='/founders/Alishan.png' alt='Alishan' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -122,7 +122,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image" >
             <Image src='/founders/abdur_rauf_bughio.png' alt='Abdur Rauf Bughio' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -136,7 +136,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image">
             <Image src='/founders/sarah_nasir.png' alt='Sarah Nasir' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -150,7 +150,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image" >
             <Image src='/founders/shifali_kalra.png' alt='Shifali Kalra' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -164,7 +164,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image-muskan">
             <Image src='/founders/muskan_karim.png' alt='Muskan Karim' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -178,7 +178,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image" >
             <Image src='/founders/amina_kazim.png' alt='Amina Kazim' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">
@@ -192,7 +192,7 @@ export default function Founder() {
 
         <div className="founder-container flex items-center bg-white rounded-xl shadow-xl p-6 mb-4 relative">
           <div className="dot-background absolute top-0 left-0 h-full w-16 bg-cover" style={{ backgroundImage: "url('/dotimgvertical.svg')" }} />
-          <div className="founder-image" style={{ display: 'flex', marginTop: '-20%', marginLeft: '-2%', position: 'relative' }}>
+          <div className="founder-image" >
             <Image src='/founders/nimra_ali.png' alt='Nimra Ali' width={900} height={50} className="w-full h-full rounded-full" />
           </div>
           <div className="founder-content ml-4 flex-1">

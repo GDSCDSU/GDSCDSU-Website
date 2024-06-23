@@ -18,6 +18,32 @@
   margin-top: 5%;
 }
 
+.founder-image{
+  display: 'flex'; 
+  margin-top: -20%; 
+  margin-left: -2%; 
+  position: relative; 
+}
+
+.founder-image-muskan{
+  display: 'flex'; 
+  margin-top: -20%; 
+  margin-left: -2%; 
+  position: relative; 
+}
+
+@media (max-width: 400px) {
+  .founder-image {
+    margin-top: -80%;   
+  }
+
+  .founder-image-muskan {
+    margin-top: -60%;   
+  }
+}
+
+
+
 
 @media (max-width: 576px) {
   .team-navbar{
