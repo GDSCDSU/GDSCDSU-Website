@@ -35,12 +35,6 @@ export default function Events() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate inputs before submitting
-    if (!name || !title || !file) {
-      alert('Please fill out all fields.');
-      return;
-    }
-
     const formData = new FormData();
     formData.append('speaker', name);
     formData.append('title', title);
