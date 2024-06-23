@@ -35,7 +35,7 @@ export default function Home() {
 
         const fetchPartners = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/partner');
+                const response = await axios.get(`${BASE_URL}/partner`);
                 setPartners(response.data.data);
             } catch (error) {
                 console.error('Error fetching partners:', error);
@@ -418,15 +418,15 @@ export default function Home() {
                         <Footer.Divider />
                     </div>
                     <div className="pt-0 mt-0 flex justify-center items-center">
-    <div className="flex flex-col w-full justify-center text-center">
-        <div className="text-gray-500 mb-1">
-            ©2024 GDSC@DSU
-        </div>
-        <div className="text-gray-500">
-            <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
-        </div>
-    </div>
-</div>
+                    <div className="flex flex-col w-full justify-center text-center">
+                        <div className="text-gray-500 mb-1">
+                            ©2024 GDSC@DSU
+                        </div>
+                        <div className="text-gray-500">
+                            <a href="https://www.dsu.edu.pk/" className="text-gray-500 no-underline">DHA Suffa University</a>
+                        </div>
+                    </div>
+                </div>
                 </div>
 
             </div>
