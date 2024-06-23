@@ -5,8 +5,6 @@ import { BsFacebook, BsGithub, BsInstagram, BsYoutube, BsLinkedin } from "react-
 import { IoMdMail } from "react-icons/io";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Button, Toast } from "flowbite-react";
-import { MdEvent } from "react-icons/md";
 import axios from 'axios';
 import { Carousel } from 'react-bootstrap';
 import CountUp from 'react-countup';
@@ -106,28 +104,7 @@ export default function Home() {
                 <img className="img-fluid" src="/Header.svg" alt="" />
             </div>
             <br />
-            {/* Upcoming Event Card:*/}
-            {showToast && (
-                <div className="scrollable-content" >
-                    <Toast className="m-2 toast-relative" >
-                        <div className="flex items-start">
-                            <div className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-100 text-cyan-500 dark:bg-cyan-900 dark:text-cyan-300">
-                                <MdEvent className="h-5 w-5" />
-                            </div>
-                            <div className="ml-3 text-sm font-normal">
-                                <span className="mb-1 text-sm font-semibold text-gray-900 dark:text-white">New Event</span>
-                                <div className="mb-2 text-sm font-normal">GDSC Digital Debut</div>
-                                <div className="flex gap-2">
-                                    <div className="w-auto">
-                                        <Button color="blue" href="/events" size="xs">Check Out</Button>
-                                    </div>
-                                </div>
-                            </div>
-                            <Toast.Toggle />
-                        </div>
-                    </Toast>
-                </div>
-            )}
+            
             <br />
             {/* What is GDSC Portion: */}
             <div className="d-flex justify-content-center align-items-center h-70 py-9" data-aos='fade-up'>
