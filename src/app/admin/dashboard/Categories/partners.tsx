@@ -34,7 +34,6 @@ export default function Partners() {
     e.preventDefault();
 
     
-
     const formData = new FormData();
     formData.append('picture', file);
 
@@ -45,7 +44,6 @@ export default function Partners() {
         }
       });
 
-      console.log('Response:', response.data);
       fetchPartner();
       handleShowList();
     } catch (error) {

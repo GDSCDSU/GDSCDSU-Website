@@ -57,7 +57,6 @@ export default function Team() {
       console.log("Fetching data from URL:", url);
 
       const { data } = await axios.get(url);
-      console.log("Data fetched:", data.data);
       setLeads(data.data);
     } catch (error) {
       console.error("Error fetching leads:", error);
@@ -83,7 +82,6 @@ export default function Team() {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(`${BASE_URL}/teams?id=${id}`);
-      console.log('Delete response:', response.data);
       fetchTeam(); // Refresh the list after deleting an item
     } catch (error) {
       console.error("Error deleting item:", error);
@@ -121,7 +119,6 @@ export default function Team() {
 
       fetchTeam();
       handleShowList();
-      console.log('Response:', response.data);
     } catch (error) {
       if (error.response) {
         console.error('Error response data:', error.response.data);

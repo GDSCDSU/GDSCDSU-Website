@@ -70,14 +70,11 @@ export default function Events() {
         }
       });
 
-      console.log('Response:', response.data);
       fetchFilteredData(); 
       handleShowList();
     } catch (error) {
       if (error.response) {
         console.error('Error response data:', error.response.data);
-        console.error('Error response status:', error.response.status);
-        console.error('Error response headers:', error.response.headers);
       } else if (error.request) {
         console.error('Error request data:', error.request);
       } else {
@@ -90,8 +87,7 @@ export default function Events() {
   const handleDelete = async (id) => {
     try {
       const response = await axios.delete(`${BASE_URL}/event?id=${id}`);
-      console.log('Delete response:', response.data);
-      fetchFilteredData(); // Refresh the list after deleting an item
+      fetchFilteredData();
     } catch (error) {
       console.error("Error deleting event:", error);
     }

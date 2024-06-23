@@ -47,7 +47,6 @@ export default function Events() {
         }
       });
 
-      console.log('Response:', response.data);
       fetchHighlights(); 
       handleShowList();
     } catch (error) {
