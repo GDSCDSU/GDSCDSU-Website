@@ -72,6 +72,7 @@ export default function Founder() {
             <Image src='/yellowdotimg.svg' alt='' width={2000} height={800} />
           </div>
           <div className="flex justify-center">
+
             <Image src='/founders/tarun_kumar.png' className="w-35 h-30" alt='Tarun Kumar' width={100} height={100} />
           </div>
           <div className="flex flex-col items-center" style={{marginTop:-30}}>
