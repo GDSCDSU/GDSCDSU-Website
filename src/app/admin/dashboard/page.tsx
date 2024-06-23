@@ -9,6 +9,7 @@ import './dasboard.css'
 import dynamic from 'next/dynamic';
 const Categories = dynamic(() => import('./Menus/Categories'), { ssr: false });
 const PushNotification = dynamic(() => import('./Menus/PushNotification'), { ssr: false });
+const ContactList = dynamic(() => import('./Menus/ContactList'), { ssr: false });
 import {
   HiChartPie,
   HiLogin,
@@ -90,6 +91,10 @@ const Dashboard = () => {
                       <HiOutlineBell className="mr-2 h-5 w-5" />
                       Notifications
                     </Button>
+                    <Button color="blue" onClick={() => { setActiveComponent('contact'); setIsSideOpen(false); }}>
+                      <HiOutlineBell className="mr-2 h-5 w-5" />
+                      Contact List
+                    </Button>
                     <Button color="blue" onClick={handleSignOut}>
                       <HiLogin className="mr-2 h-5 w-5" />
                       Sign Out
@@ -105,6 +110,7 @@ const Dashboard = () => {
       <div className="container mx-auto mt-4">
         {activeComponent === 'categories' && <Categories />}
         {activeComponent === 'notifications' && <PushNotification />}
+        {activeComponent === 'contact' && <ContactList />}
       </div>
 
       <Drawer open={isOpen} onClose={handleDrawerClose} position="right">
