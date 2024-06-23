@@ -32,7 +32,7 @@ export const highlights = [
 ];
 
 export const logos = [
-  "/Maskgroup.svg",
+  "/bitrupt.svg",
   "/datacamp.svg",
   "/zapdas.svg",
   "/geeks.svg",

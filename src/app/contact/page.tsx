@@ -53,7 +53,7 @@ export default function Contact() {
                             Your message has been sent successfully!
                         </div>
                     )}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
                         <div className="col-span-1 flex flex-col justify-center items-center p-8">
                             <div className="mb-8 text-center">
                                 <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>

@@ -51,7 +51,7 @@ export default function OurStory() {
                         <br />
                         <FooterDivider />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-md-6" style={{marginTop:-120}}>
                         <CardContainer className="inter-var">
                             <CardBody>
                                 <CardItem translateZ="100" className="w-96">
@@ -115,14 +115,14 @@ export default function OurStory() {
             </div>
 
             <br />
-            <div className="m-5" data-aos="fade-up" >
+            <div className="m-5 mt-5" data-aos="fade-up" >
                 <div className="row" >
                     <div className="col-md-3" >
 
                     </div>
                     <div className="col-md-6" >
-                        <div className="d-flex flex-column text-center align-items-center" >
-                            <Image src="/Quote.svg" alt="" className="quoteimage-story" width={800} height={300} />
+                        <div className="d-flex flex-column text-center align-items-center" style={{marginTop:30}} >
+                            <Image src="/Quote.svg" alt="" className="quoteimage-story" width={800} height={400} />
                         </div>
                     </div>
                     <div className="col-md-3" >
@@ -142,7 +142,7 @@ export default function OurStory() {
                             <div className="card-heading" >
                                 <h1><b>Flutter Bootcamp</b></h1>
                             </div>
-                            <div className="card-body">
+                            <div className="card-body" style={{marginLeft:-20}}>
                                 <p className="text-secondary" >
                                     Flutter bootcamp was the first online bootcamp in DSC Pakistan which used to be held on weekend days like Friday, Saturday and Sunday at 9:00PM, which became an ideal time for students where we had attendance of more than 90+ students in a single class. After bootcamp, Gave paid internships to top three performers.
                                 </p>
@@ -185,8 +185,8 @@ export default function OurStory() {
                             <div className="card-heading" >
                                 <h1><b>Python Bootcamp</b></h1>
                             </div>
-                            <div className="card-body">
-                                <p className="text-secondary" >
+                            <div className="card-body" style={{marginLeft:-20}}>
+                                <p className="text-secondary">
                                     But teaching Data Science, which is new in Pakistan with very few opportunities, was still a long procedure, because it has requirements to be fulfilled and a bigger roadmap than any other technology. We understood the problem and made a decision to make a bootcamp completely focused on learning Python and planned later to start Data Science Bootcamp.
                                 </p>
                                 <p className="text-secondary" >
@@ -241,7 +241,7 @@ export default function OurStory() {
                             <div className="card-heading" >
                                 <h1><b>Sponsored By Datacamp</b></h1>
                             </div>
-                            <div className="card-body">
+                            <div className="card-body" style={{marginLeft:-20}}>
                                 <p className="text-secondary" >
                                     We also got sponsored by Silicon valley based Edtech startup DataCamp with 500 accounts. one account cost 60K PKR making us the only chapter to get this sponsorship.
                                 </p>
@@ -285,8 +285,8 @@ export default function OurStory() {
                             <div className="card-heading" >
                                 <h1><b>Cyber Security Bootcamp</b></h1>
                             </div>
-                            <div className="card-body">
-                                <p className="text-secondary" >
+                            <div className="card-body"style={{marginLeft:-20}}>
+                                <p className="text-secondary">
                                     In a world full of cyber security threats, we need defenders who can help us save the world for good, so our last bootcamp was focused on cyber security teaching people fundamentals and to ace their technical interviews.</p>
                             </div>
                         </div>
@@ -324,8 +324,8 @@ export default function OurStory() {
                             <div className="card-heading" >
                                 <h1><b>GIT Crash Course</b></h1>
                             </div>
-                            <div className="card-body">
-                                <p className="text-secondary" >
+                            <div className="card-body" style={{marginLeft:-20}}>
+                                <p className="text-secondary">
                                     Breaking Records and Creating History was the main vision in which we also identified a major issue where students were not implementing the concepts of version control system, in which an ultimate guide series was made in native urdu language to educate students. (we taught github basically :D)                            </p>
                             </div>
                         </div>

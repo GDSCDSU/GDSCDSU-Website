@@ -113,7 +113,7 @@ export default function Home() {
                         <div className="col-md-6 mb-5 d-flex justify-content-center">
                             <Image src="isGdsc.svg" alt="" height={1000} width={1000} className="img-fluid" />
                         </div>
-                        <div className="col-md-6 mb-5 d-flex justify-content-center">
+                        <div className="col-md-6 mb-9 d-flex justify-content-center">
                             <Image
                                 src="/what.svg"
                                 height={600}
@@ -159,7 +159,7 @@ export default function Home() {
                     <div className="logo-slider">
                         {allLogos.map((logo, index) => (
                             <a className="logo-item" href={allHrefs[index]} key={index} target="_blank" rel="noopener noreferrer">
-                                <img src={logo} alt="" className="img-fluid" />
+                                <Image src={logo} alt="" className="img-fluid" width={300} height={100} />
                             </a>
                         ))}
                     </div>
@@ -174,7 +174,6 @@ export default function Home() {
                 </div>
                 <div className="row" >
                     <div className="col-md-2 d-flex flex-column align-items-center" >
-                        <img className="img-fluid" src="/Dots.svg" alt="" />
                     </div>
                     <br />
                     <div className="col-md-8" >
@@ -321,7 +320,6 @@ export default function Home() {
                         </div>
                     </div>
                     <div className="col-md-2 d-flex flex-column align-items-center" >
-                        <img className="img-fluid" src="/Boxes.svg" alt="" />
                     </div>
                 </div>
             </div>
