@@ -108,23 +108,23 @@ export default function Events() {
         // Form Component
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleSubmit}>
           <div>
-            <Label htmlFor="name" value="Name" />
-            <TextInput id="name" type="text" placeholder="Enter Name Here" required value={name} onChange={(e) => setName(e.target.value)} />
+            <Label htmlFor="name" value="Event Name" />
+            <TextInput id="name" type="text" placeholder="Enter Event Name Here" required value={name} onChange={(e) => setName(e.target.value)} />
           </div>
           <div>
-            <Label htmlFor="file-upload" value="Upload Image" />
+            <Label htmlFor="file-upload" value="Upload Event Image" />
             <FileInput id="file-upload" onChange={(e) => setFile(e.target.files[0])} required />
           </div>
           <div>
-            <Label htmlFor="content" value="Content" />
+            <Label htmlFor="content" value="Event Content" />
             <Textarea id="content" placeholder="Leave a comment..." required rows={4} value={content} onChange={(e) => setContent(e.target.value)} />
           </div>
           <div>
-            <Label htmlFor="title" value="Title" />
+            <Label htmlFor="title" value="Event Title" />
             <TextInput id="title" type="text" placeholder="Enter Title Here" required value={title} onChange={(e) => setTitle(e.target.value)} />
           </div>
           <div>
-            <Label htmlFor="location" value="Location" />
+            <Label htmlFor="location" value="Event Location" />
             <TextInput id="location" type="text" placeholder="Enter Location Here" required value={location} onChange={(e) => setLocation(e.target.value)} />
           </div>
           <div>
@@ -156,7 +156,7 @@ export default function Events() {
           </div>
           <div className="flex mt-8">
             <Button color="success" className="mr-4" type="submit">Save</Button>
-            <Button color="failure" type="button">Delete</Button>
+            <Button color="failure" className="" type="button" onClick={handleShowList}>Cancel</Button>
           </div>
         </form>
       ) : (
@@ -182,6 +182,7 @@ export default function Events() {
                     height={200} 
                     src={item.picture} 
                     alt={`Event ${index + 1}`} 
+                    className="rounded-full"
                   />
                   <Button 
                     color="failure" 

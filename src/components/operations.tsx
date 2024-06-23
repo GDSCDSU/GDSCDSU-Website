@@ -48,7 +48,7 @@ export default function Operations() {
                   <p className="mt-5 font-bold text-xl text-center text-gray-900">
                     {item.fullname}
                   </p>
-                  <p className="text-black text-xs">{item.tagline || 'Role not specified'}</p>
+                  <p className="text-gray-700 text-sm">{item.tagline}</p>
                   <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
                     <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
                     <span>LinkedIn Profile</span>

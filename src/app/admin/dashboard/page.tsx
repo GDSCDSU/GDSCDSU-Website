@@ -59,10 +59,6 @@ const Dashboard = () => {
           </Button>
         </div>
         <div className="flex items-center">
-          <div className="relative mr-4">
-            <HiOutlineBell className="w-8 h-8" />
-            <span className="absolute top-0 right-0 translate-middle badge rounded-pill bg-danger"></span>
-          </div>
           <div className="cursor-pointer" onClick={handleDrawerOpen}>
             <Image src="/dashboard.svg" width={80} height={80} alt="Dashboard" />
           </div>
@@ -78,24 +74,21 @@ const Dashboard = () => {
           >
             <div className="flex h-full flex-col justify-between py-2">
               <div>
-                <form className="pb-3">
-                  <TextInput icon={HiSearch} type="search" placeholder="Search" required size={32} />
-                </form>
                 <Sidebar.Items>
                   <Sidebar.ItemGroup>
-                    <Button color="blue" onClick={() => { setActiveComponent('categories'); setIsSideOpen(false); }}>
+                    <Button color="white" onClick={() => { setActiveComponent('categories'); setIsSideOpen(false); }}>
                       <HiChartPie className="mr-2 h-5 w-5" />
                       Categories
                     </Button>
-                    <Button color="blue" onClick={() => { setActiveComponent('notifications'); setIsSideOpen(false); }}>
+                    <Button color="white" onClick={() => { setActiveComponent('notifications'); setIsSideOpen(false); }}>
                       <HiOutlineBell className="mr-2 h-5 w-5" />
                       Notifications
                     </Button>
-                    <Button color="blue" onClick={() => { setActiveComponent('contact'); setIsSideOpen(false); }}>
+                    <Button color="white" onClick={() => { setActiveComponent('contact'); setIsSideOpen(false); }}>
                       <HiOutlineBell className="mr-2 h-5 w-5" />
                       Contact List
                     </Button>
-                    <Button color="blue" onClick={handleSignOut}>
+                    <Button color="white" onClick={handleSignOut}>
                       <HiLogin className="mr-2 h-5 w-5" />
                       Sign Out
                     </Button>

@@ -1,21 +1,35 @@
-import { useState } from 'react';
-import { Table, Pagination, Button, Modal } from 'flowbite-react';
-
-const contacts = [
-    { firstName: 'Ali', lastName: 'Khan', email: 'Ali@example.com', description: 'My name is Ali and I am a software developer living in San Francisco.' },
-    { firstName: 'John', lastName: 'Doe', email: 'john.doe@example.com', description: 'My name is John and I am an architect.' },
-    { firstName: 'Jane', lastName: 'Smith', email: 'jane.smith@example.com', description: 'My name is Jane and I work as a graphic designer.' },
-    { firstName: 'Michael', lastName: 'Johnson', email: 'michael.johnson@example.com', description: 'My name is Michael and I am a marketing specialist.' },
-    { firstName: 'Alice', lastName: 'Brown', email: 'alice.brown@example.com', description: 'My name is Alice and I am a data analyst.' },
-    { firstName: 'Bob', lastName: 'Martin', email: 'bob.martin@example.com', description: 'My name is Bob and I am a project manager.' },
-];
+import { useState, useEffect } from 'react';
+import { Table, Pagination, Button, Modal, Spinner, Alert } from 'flowbite-react';
+import { BASE_URL } from '../../../../util/constant';
 
 const ITEMS_PER_PAGE = 3;
 
 export default function ContactList() {
+    const [contacts, setContacts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [showModal, setShowModal] = useState(false);
     const [selectedContact, setSelectedContact] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchContacts = async () => {
+            try {
+                const response = await fetch(`${BASE_URL}/contact`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch contacts');
+                }
+                const data = await response.json();
+                setContacts(data.data);
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        fetchContacts();
+    }, []);
 
     const handlePageChange = (page) => {
         setCurrentPage(page);
@@ -31,49 +45,69 @@ export default function ContactList() {
         setSelectedContact(null);
     };
 
+    const getShortMessage = (message) => {
+        const words = message.split(' ');
+        if (words.length > 5) {
+            return words.slice(0, 3).join(' ') + '...';
+        }
+        return message;
+    };
+
     const displayedContacts = contacts.slice(
         (currentPage - 1) * ITEMS_PER_PAGE,
         currentPage * ITEMS_PER_PAGE
     );
 
-    const getShortDescription = (description) => {
-        const words = description.split(' ');
-        if (words.length > 5) {
-            return words.slice(0, 3).join(' ') + '...';
-        }
-        return description;
-    };
+    if (isLoading) {
+        return (
+            <div className="flex justify-center items-center h-screen">
+                <Spinner aria-label="Loading spinner" />
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="flex justify-center items-center h-screen">
+                <Alert color="failure">
+                    <span>
+                        <strong>Error:</strong> {error}
+                    </span>
+                </Alert>
+            </div>
+        );
+    }
 
     return (
         <>
-            <div className='className="overflow-x-auto"' >
-            <Table striped={true} hoverable={true}>
-                <Table.Head>
-                    <Table.HeadCell>First Name</Table.HeadCell>
-                    <Table.HeadCell>Second Name</Table.HeadCell>
-                    <Table.HeadCell>Email Address</Table.HeadCell>
-                    <Table.HeadCell>Description</Table.HeadCell>
-                    <Table.HeadCell>Action</Table.HeadCell>
-                </Table.Head>
-                <Table.Body>
-                    {displayedContacts.map((contact, index) => (
-                        <Table.Row key={index}>
-                            <Table.Cell>{contact.firstName}</Table.Cell>
-                            <Table.Cell>{contact.lastName}</Table.Cell>
-                            <Table.Cell>{contact.email}</Table.Cell>
-                            <Table.Cell>{getShortDescription(contact.description)}</Table.Cell>
-                            <Table.Cell>
-                                <Button color="blue" onClick={() => handleDetailsClick(contact)}>Details</Button>
-                            </Table.Cell>
-                        </Table.Row>
-                    ))}
-                </Table.Body>
-            </Table>
-            <Pagination
-                currentPage={currentPage}
-                totalPages={Math.ceil(contacts.length / ITEMS_PER_PAGE)}
-                onPageChange={handlePageChange}
-            />
+            <div className="overflow-x-auto">
+                <Table striped={true} hoverable={true}>
+                    <Table.Head>
+                        <Table.HeadCell>First Name</Table.HeadCell>
+                        <Table.HeadCell>Last Name</Table.HeadCell>
+                        <Table.HeadCell>Email Address</Table.HeadCell>
+                        <Table.HeadCell>Message</Table.HeadCell>
+                        <Table.HeadCell>Action</Table.HeadCell>
+                    </Table.Head>
+                    <Table.Body>
+                        {displayedContacts.map((contact, index) => (
+                            <Table.Row key={index}>
+                                <Table.Cell>{contact.firstName}</Table.Cell>
+                                <Table.Cell>{contact.lastName}</Table.Cell>
+                                <Table.Cell>{contact.email}</Table.Cell>
+                                <Table.Cell>{getShortMessage(contact.message)}</Table.Cell>
+                                <Table.Cell>
+                                    <Button color="blue" onClick={() => handleDetailsClick(contact)}>Details</Button>
+                                </Table.Cell>
+                            </Table.Row>
+                        ))}
+                    </Table.Body>
+                </Table>
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={Math.ceil(contacts.length / ITEMS_PER_PAGE)}
+                    onPageChange={handlePageChange}
+                />
             </div>
             
             {selectedContact && (
@@ -85,7 +119,7 @@ export default function ContactList() {
                         <p><strong>First Name:</strong> {selectedContact.firstName}</p>
                         <p><strong>Last Name:</strong> {selectedContact.lastName}</p>
                         <p><strong>Email:</strong> {selectedContact.email}</p>
-                        <p><strong>Description:</strong> {selectedContact.description}</p>
+                        <p><strong>Message:</strong> {selectedContact.message}</p>
                     </Modal.Body>
                 </Modal>
             )}

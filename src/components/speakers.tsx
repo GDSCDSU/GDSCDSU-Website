@@ -30,8 +30,6 @@ export default function Speakers() {
       });
   }, []);
 
-  console.log(speakersData)
-
   return (
     <main className="flex flex-col gap-5 min-h-screen bg-white">
       <h1 className="text-3xl font-bold text-center my-8" data-aos="fade-up">
@@ -48,7 +46,7 @@ export default function Speakers() {
               speaker.speaker !== "NA" && (
                 <div key={speaker.id} className="flex pb-3">
                   <div className="flex flex-col w-full items-center text-center bg-white shadow-xl rounded-xl overflow-hidden">
-                    <Image className="w-40 items-center" src={speaker.speakerImage} width={100} height={100} alt="Profile" />
+                    <Image className="w-40 items-center rounded-full" src={speaker.speakerImage} width={100} height={100} alt="Profile" />
                     <div className="p-4">
                       <h2 className="text-lg font-semibold mb-2 text-gray-900">{speaker.speaker}</h2>
                       <p className="text-sm text-gray-600 mb-4">{speaker.speakerBio}</p>
