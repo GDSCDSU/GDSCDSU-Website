@@ -32,7 +32,7 @@ export default function OurStory() {
                     <h1><b>The <span className="text-danger">Journey Begins</span></b></h1>
                 </div>
                 <br />
-                <div className="row">
+                <div className="row" style={{marginTop:-30}}>
                     <div className="col-md-2"></div>
                     <div className="col-md-4">
                         <div className="card" style={{ borderColor: 'transparent' }}>
@@ -73,7 +73,7 @@ export default function OurStory() {
                     <h1><b>The <span className="text-success">Best Team</span></b></h1>
                 </div>
                 <br />
-                <div className="row">
+                <div className="row" style={{marginTop:-30}}>
                     <div className="col-md-2"></div>
                     <div className="col-md-4">
                         <div className="card" style={{ borderColor: 'transparent' }}>
@@ -121,7 +121,7 @@ export default function OurStory() {
 
                     </div>
                     <div className="col-md-6" >
-                        <div className="d-flex flex-column text-center align-items-center" style={{marginTop:30}} >
+                        <div className="d-flex flex-column text-center align-items-center" style={{marginTop:40}} >
                             <Image src="/Quote.svg" alt="" className="quoteimage-story" width={800} height={400} />
                         </div>
                     </div>
