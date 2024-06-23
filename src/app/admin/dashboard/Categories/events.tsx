@@ -19,8 +19,9 @@ export default function Events() {
   const [speaker, setSpeaker] = useState('');
   const [speakerImage, setSpeakerImage] = useState(null);
   const [speakerName, setSpeakerName] = useState('');
+  const [speakerLinkedIn, setSpeakerLinkedIn] = useState('');
   const [speakerBio, setSpeakerBio] = useState('');
-  const [topEvent, setTopEvent] = useState('true'); // Default to true as a string
+  const [topEvent, setTopEvent] = useState('true'); 
 
   const handleShowForm = () => {
     setShowForm(true);
@@ -59,7 +60,8 @@ export default function Events() {
     formData.append('speakerImage', speakerImage);
     formData.append('speakerName', speakerName);
     formData.append('SpeakerBio', speakerBio);
-    formData.append('topEvent', topEvent); // Add topEvent to formData
+    formData.append('speakerLinkedln', speakerLinkedIn);
+    formData.append('topEvent', topEvent); 
 
     try {
       const response = await axios.post(`${BASE_URL}/event`, formData, {
@@ -140,6 +142,10 @@ export default function Events() {
           <div>
             <Label htmlFor="speakerBio" value="Speaker Bio" />
             <Textarea id="speakerBio" placeholder="Enter Speaker Bio..." required rows={4} value={speakerBio} onChange={(e) => setSpeakerBio(e.target.value)} />
+          </div>
+          <div>
+            <Label htmlFor="speakerLinkedIn" value="Speaker LinkedIn" />
+            <TextInput id="speakerLinkedIn" placeholder="Enter Speaker LinkedIn Profile..." value={speakerLinkedIn} onChange={(e) => setSpeakerLinkedIn(e.target.value)} />
           </div>
           <div>
             <Label htmlFor="topEvent" value="Top Event" />

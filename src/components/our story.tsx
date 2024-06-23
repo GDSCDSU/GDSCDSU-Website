@@ -414,12 +414,10 @@ export default function OurStory() {
             </div>
 
 
-            <div>
-                <Image src="/ColorBoxes.svg" className="img-fluid" alt="Color Boxes" width={500} height={500} />
-            </div>
+            
             {/* Story Landing Page Ends */}
             <div>
-                <div className="border-t border-black  shadow-sm p-3 rounded-lg">
+                <div className="shadow-sm p-3 rounded-lg">
                     <div className="flex flex-col items-center text-center">
                         <Image src="LOGO.svg" alt="Logo" className="img-fluid mb-3" width={350} height={100} />
                         <div className="text-secondary mb-3"><b>Connect With Us</b></div>
