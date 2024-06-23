@@ -236,7 +236,7 @@ export default function Founder() {
   </div>
 
   {/* Founder: Nimra Ali */}
-  <div className="flex pb-3 px-5 w-full flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl mx-auto md:mr-4">
+  <div className="flex pb-3 px-0 w-full flex-col rounded-xl justify-between overflow-hidden transition-shadow bg-white shadow-lg hover:shadow-xl mx-auto md:mr-4">
     <div className="relative">
       <div className="flex items-center justify-center w-full h-3">
         <Image src='/yellowdotimg.svg' alt='' width={570} height={100} />
@@ -247,7 +247,7 @@ export default function Founder() {
       <div className="flex flex-col items-center" style={{marginTop:-30}}>
         <p className="mt-5 font-bold lg:text-lg text-md text-center text-gray-900">Nimra Ali</p>
         <p className="text-black" style={{marginTop:-10}}>DATOS DALI</p>
-        <p className="text-gray-700 text-sm text-justify" style={{marginTop:-5,width:'100%'}}>
+        <p className="text-gray-700 text-sm text-justify" style={{marginTop:-5,width:'80%'}}>
           As a core team member, GDSC has provided me with an excellent opportunity to meet other students, share ideas, skills, and experience in managing and speaking at workshops. The entire program helped me grow tremendously, both personally and technically. I have learned a lot and achieved a lot of things throughout GDSC tenure 2020. I would highly encourage students at DSU to join GDSC and improve themselves in a productive and positive learning environment.
         </p>
       </div>
