@@ -7,6 +7,7 @@ import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi';
 export default function Contact() {
     const [activeTab, setActiveTab] = useState('Contact');
     const [isLoading, setIsLoading] = useState(true);
+    const [showAlert, setShowAlert] = useState(false);
 
     useEffect(() => {
         const pathname = window.location.pathname;
@@ -18,6 +19,14 @@ export default function Contact() {
 
         return () => clearTimeout(timeout);
     }, []);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setShowAlert(true);
+        setTimeout(() => {
+            setShowAlert(false);
+        }, 3000); // Hide the alert after 3 seconds
+    };
 
     return (
         <>
@@ -39,6 +48,11 @@ export default function Contact() {
                 </div>
             ) : (
                 <div className="container mx-auto px-4 mt-8">
+                    {showAlert && (
+                        <div className="alert alert-success" role="alert">
+                            Your message has been sent successfully!
+                        </div>
+                    )}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="col-span-1 flex flex-col justify-center items-center p-8">
                             <div className="mb-8 text-center">
@@ -50,13 +64,13 @@ export default function Contact() {
                                 </div>
                                 <div className="flex items-center mb-6">
                                     <HiOutlineLocationMarker className="text-primary inline-block mr-4 h-8 w-8" />
-                                    <span className="text-gray-700 text-lg">Ph VII ext,DHA Karachi</span>
+                                    <span className="text-gray-700 text-lg">Ph VII ext, DHA Karachi</span>
                                 </div>
                             </div>
                         </div>
                         <div className="col-span-2">
                             <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
-                            <form className="max-w-lg mx-auto">
+                            <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
                                 <div className="mb-4">
                                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700">First Name</label>
                                     <input type="text" id="firstName" name="firstName" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50" />
