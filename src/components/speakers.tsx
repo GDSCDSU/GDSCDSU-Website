@@ -51,9 +51,12 @@ export default function Speakers() {
                     <Image className="w-40 items-center" src={speaker.speakerImage} width={100} height={100} alt="Profile" />
                     <div className="p-4">
                       <h2 className="text-lg font-semibold mb-2 text-gray-900">{speaker.speaker}</h2>
-                      <p className="text-sm text-gray-600 mb-4">{speaker.SpeakerBio}</p>
-                      <p className="text-sm text-gray-800 mb-2"><span className="font-semibold">Event Name:</span> {speaker.name}</p>
-                      <p className="text-sm text-gray-800 mb-4"><span className="font-semibold">Event Type:</span> {speaker.title}</p>
+                      <p className="text-sm text-gray-600 mb-4">{speaker.speakerBio}</p>
+                      <p className="text-sm text-gray-800 mb-2"><span className="font-semibold">Speaker at:</span> {speaker.name}</p>
+                      <a href={speaker.speakerLinkedln} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
+                      <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
+                      <span>LinkedIn Profile</span>
+                    </a>
                     </div>
                   </div>
                 </div>
