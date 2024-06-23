@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Navbar from '../../components/Navbar';
 import 'flowbite/dist/flowbite.css';
+import './form.css'
 import { HiOutlineMail, HiOutlineLocationMarker } from 'react-icons/hi';
 
 export default function Contact() {
@@ -53,7 +54,7 @@ export default function Contact() {
                             Your message has been sent successfully!
                         </div>
                     )}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-1">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-0" >
                         <div className="col-span-1 flex flex-col justify-center items-center p-8">
                             <div className="mb-8 text-center">
                                 <h2 className="text-3xl font-semibold mb-6">Get in Touch</h2>
@@ -68,7 +69,7 @@ export default function Contact() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-span-2">
+                        <div className="form-div col-span-2">
                             <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
                             <form className="max-w-lg mx-auto" onSubmit={handleSubmit}>
                                 <div className="mb-4">
