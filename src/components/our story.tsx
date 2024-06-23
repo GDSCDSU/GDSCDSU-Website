@@ -355,10 +355,9 @@ export default function OurStory() {
                 <br />
                 <div className="row" >
                     <div className="col-md-2" >
-                        <img src="toys.svg" alt="" className="img-fluid" />
                     </div>
                     <div className="col-md-10" >
-                        <div className="card" style={{ borderColor: 'transparent' }} >
+                        <div className="card" style={{ borderColor: 'transparent',marginTop:-120 }} >
                             <div className="card-heading" >
                                 <div className="row" >
                                     <div className="col-md-8" >
@@ -400,10 +399,12 @@ export default function OurStory() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
                     <div className="px-4 justify-center">
                         <div className="end-section">
-                            <div className="title w-48 h-16 text-gray-800 text-5xl font-bold font-sans">The End</div>
-                            <div className="End-Para w-70 h-32 text-justify text-zinc-500 text-2xl font-normal font-sans">
-                                Finally, I could not have done all this without my team. I would like to thank my core team for believing in my ideas for a better future. Sir Shaham Mahmood, Specially Pro-Vice Chancellor Dr. Ahmad Saeed Minhas for his strong support.
-                            </div>
+                            <div className="title">
+                            <h1><b>The <span>End</span></b></h1>
+                                </div>
+                                <p className="text-secondary w-full">
+                                    This was the best moment of my life. I received an email selecting me as the Google DSC Lead for my university. It felt like a dream come true, especially since I was the first applicant. With all the excitement, I also understood the significant responsibilities that came with the role.
+                                </p>
                         </div>
                     </div>
 

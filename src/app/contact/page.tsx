@@ -90,7 +90,7 @@ export default function Contact() {
                                 </div>
                                 <div className="flex justify-end mb-4">
                                     <button type="submit" className="inline-block px-4 py-2 text-white bg-primary rounded-full hover:bg-primary-dark focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50">
-                                        <HiOutlineMail className="inline-block mr-2" /> Send
+                                        Send
                                     </button>
                                     <span className="text-gray-500 self-center mx-4">OR</span>
                                     <button type="button" onClick={() => window.location.href = 'https://qj6nngakaoz.typeform.com/to/WY2PSuRz'} className="inline-block px-4 py-2 text-white bg-secondary rounded-full hover:bg-secondary-dark focus:outline-none focus:ring focus:ring-secondary focus:ring-opacity-50">

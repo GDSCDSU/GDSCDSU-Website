@@ -50,12 +50,12 @@ export default function Executives() {
                   <div className="flex justify-center">
                     <Image src={item.picture} className="w-20 h-20" alt={item.fullname} width={100} height={100} />
                   </div>
-                  <div className="flex flex-col items-center">
+                  <div className="flex flex-col items-center" style={{marginTop:-30}}>
                     <p className="mt-5 font-bold lg:text-lg text-md text-center text-gray-900">
                       {item.fullname}
                     </p>
-                    <p className="text-black">{item.tagline}</p>
-                    <p className="text-black text-justify text-sm mt-3 w-60">{item.bio}</p>
+                    <p className="text-black" style={{marginTop:-10}}>{item.tagline}</p>
+                    <p className="text-black text-justify text-sm w-60" style={{marginTop:-5}}>{item.bio}</p>
                     <a href={item.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center border border-gray-300 rounded-full px-3 py-1 text-md text-black hover:bg-gray-100 hover:border-gray-400 transition duration-300 ease-in-out no-underline">
                       <Image src='/LinkedINfilled.svg' alt='LinkedIn' width={20} height={20} className="mr-2" />
                       <span>LinkedIn Profile</span>
