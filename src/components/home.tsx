@@ -12,24 +12,7 @@ import { BASE_URL, hrefs, logos } from "../util/constant";
 
 export default function Home() {
 
-    const [showToast, setShowToast] = useState(false);
     const [highlights, setHighlights] = useState([]);
-
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setShowToast(true);
-            playMessageSound();
-        }, 1000);
-
-        return () => clearTimeout(timer);
-    }, []);
-
-    const playMessageSound = () => {
-        const audio = new Audio('/message.mp3');
-        audio.play().catch(error => console.error("Audio play failed:", error));
-    };
-
-
     const allHrefs = [...hrefs, ...hrefs];
     const allLogos = [...logos, ...logos];
 
