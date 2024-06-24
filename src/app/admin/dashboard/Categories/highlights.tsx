@@ -54,6 +54,31 @@ export default function Events() {
     }
   };
 
+  const handleDelete = async (id) => {
+    try {
+      console.log('Attempting to delete highlight with id:', id);
+      const requestData = { id: id };
+      console.log('Request data:', requestData);
+  
+      const response = await axios({
+        method: 'delete',
+        url: `${BASE_URL}/highlight`,
+        data: requestData,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+  
+      fetchHighlights();
+    } catch (error) {
+      if (error.response) {
+        console.error('Error deleting highlight:', error.response.data.data);
+      } else {
+        console.error('Error deleting highlight:', error.message);
+      }
+    }
+  };
+  
   return (
     <>
       <div className="flex justify-end mb-4">
@@ -64,12 +89,12 @@ export default function Events() {
         <form className="grid grid-cols-1 md:grid-cols-2 gap-4" onSubmit={handleSubmit}>
           <div>
             <div className="mb-2 block">
-              <Label htmlFor="name" value="Name" />
+              <Label htmlFor="name" value="Speaker Name" />
             </div>
             <TextInput
               id="name"
               type="text"
-              placeholder="Enter Name Here"
+              placeholder="Enter Speaker Name Here"
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -104,10 +129,18 @@ export default function Events() {
           </div>
         </form>
       ) : (
-        // List Component
         <div className="flex gap-5 flex-wrap">
           {data.map((highlight) => (
-            <Image key={highlight.id} src={highlight.picture} width={1000} height={100} alt="" />
+            <div key={highlight._id} className="relative">
+              <Image src={highlight.picture} width={1000} height={100} alt="" />
+              <Button
+                color="failure"
+                className="absolute top-0 right-0"
+                onClick={() => handleDelete(highlight._id)}
+              >
+                Delete
+              </Button>
+            </div>
           ))}
         </div>
       )}

@@ -33,7 +33,6 @@ export default function Partners() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    
     const formData = new FormData();
     formData.append('picture', file);
 
@@ -48,6 +47,31 @@ export default function Partners() {
       handleShowList();
     } catch (error) {
       console.error('Error adding partner:', error);
+    }
+  };
+
+  const handleDelete = async (id) => {
+    try {
+      console.log('Attempting to delete partner with id:', id);
+      const requestData =  { id: id };
+      
+      const response = await axios({
+        method: 'delete',
+        url: `${BASE_URL}/partner`,
+        data: requestData,
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+
+      console.log('Delete response:', response.data.data);
+      fetchPartner(); // Refresh the list after deletion
+    } catch (error) {
+      if (error.response) {
+        console.error('Error deleting partner:', error.response.data.data);
+      } else {
+        console.error('Error deleting partner:', error.message);
+      }
     }
   };
 
@@ -74,7 +98,16 @@ export default function Partners() {
         // List Component
         <div className="flex gap-5 flex-wrap">
           {data.map((partner) => (
-            <Image key={partner.id} src={partner.picture} width={100} height={100} alt="" />
+            <div key={partner._id} className="relative">
+              <Image src={partner.picture} width={100} height={100} alt="" />
+              <Button
+                color="failure"
+                className="absolute top-0 right-0"
+                onClick={() => handleDelete(partner._id)}
+              >
+                Delete
+              </Button>
+            </div>
           ))}
         </div>
       )}
