@@ -1,4 +1,4 @@
-import mongoose,{ Schema } from 'mongoose';
+import mongoose,{ Model, Schema } from 'mongoose';
 
 interface IHighlight {
     title: string;
@@ -23,7 +23,7 @@ const highlightSchema = new Schema({
     },
 });
 
-const Highlight = mongoose.models.Highlight || mongoose.model<IHighlight>("Highlight", highlightSchema);
+const Highlight:Model<IHighlight> = mongoose.models.Highlight || mongoose.model<IHighlight>("Highlight", highlightSchema);
 
 export const createHighlight = (obj:any) => Highlight.create(obj);
 

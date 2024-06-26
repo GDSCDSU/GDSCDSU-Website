@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Model, Schema } from "mongoose";
 
 interface IUser  {
   fullname: string;
@@ -65,7 +65,7 @@ const UserSchema: Schema = new Schema(
   { timestamps: true,versionKey: false  }
 );
 
-const User = mongoose.models.user || mongoose.model<IUser>("user", UserSchema);
+const User:Model<IUser> = mongoose.models.user || mongoose.model<IUser>("user", UserSchema);
 
 
 export const createUser = (obj: any) => User.create(obj);
