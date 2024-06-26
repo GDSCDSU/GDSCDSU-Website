@@ -17,24 +17,24 @@ class Auth {
   private encryptPassword = async (password: string) => await bcrypt.hash(password, 10);
   // is user exist in database
   private isUserExist = async (email: string) => await findUser({ email });
-  
+
   // Validate the request body
   private validate = async (body: any) => {
     const { error } = userLoginValidator.validate(body);
-    return {error};
+    return { error };
   };
   // check is user valid
   private isUserValid = async (body: LoginCredentials) => {
-      const user = await this.isUserExist(body.email);
+    const user = await this.isUserExist(body.email);
 
-     if(!user) return null;
-      // Validate the password of the user
-    
-      const checkPassword =  await this.isPasswordCorrect(body.password, user.password)
-    if(!checkPassword){
+    if (!user) return null;
+    // Validate the password of the user
+
+    const checkPassword = await this.isPasswordCorrect(body.password, user.password)
+    if (!checkPassword) {
       return generateResponse(null, "Invalid Password", STATUS_CODES.BAD_REQUEST);
-  }
-      return user;
+    }
+    return user;
   };
 
   // compare password
@@ -45,48 +45,64 @@ class Auth {
     return await bcrypt.compare(password, userPassword);
   };
   // generate Access Token
-  private generateAccessToken = function (user: IUser) {
+  private generateAccessToken = function ({
+    _id,
+    email,
+    fullname,
+    role
+  }: {
+    _id: string; email: string; fullname: string; role: string
+  }) {
     return jwt.sign(
       {
-        id: user._id,
-        email: user.email,
-        fullname: user.fullname,
-        role: user.role
+        id: _id,
+        email,
+        fullname,
+        role
       },
       process.env.ACCESS_TOKEN_SECRET || "secret",
-      { expiresIn: process.env.ACCESS_TOKEN_EXPIRATION }
+      { expiresIn: '1d' }
     );
   };
   // login controller
   public login = async (request: Request) => {
     try {
       const body = await request.json();
-      
+
       // validate the body
-     const {error} = await this.validate(body);
-      if(error) return generateResponse(null, error.message, STATUS_CODES.BAD_REQUEST);
+      const { error } = await this.validate(body);
+      if (error) return generateResponse(null, error.message, STATUS_CODES.BAD_REQUEST);
       // is user exist in database
-     const user = await this.isUserValid(body);
-      if(!user) return generateResponse(null, "Invalid Credentials", STATUS_CODES.BAD_REQUEST);
+      const user:any = await this.isUserValid(body);
+      if (!user) return generateResponse(null, "Invalid Credentials", STATUS_CODES.BAD_REQUEST);
       // create a jwt token for admin dashboard
-      const token =   this.generateAccessToken(user);
+      let token;
+      if(user) {
+         token = this.generateAccessToken({
+          _id: user._id,
+          email: user.email,
+          fullname: user.fullname,
+          role: user.role
+        });
+      }
+      
       cookies().set('session', token, { maxAge: 60 * 60 * 24, });
 
-      return generateResponse({  user,token }, "Login Successful", STATUS_CODES.SUCCESS);
+      return generateResponse({ user, token }, "Login Successful", STATUS_CODES.SUCCESS);
     } catch (error: any) {
       console.log(error);
       return generateResponse(null, error.message, STATUS_CODES.INTERNAL_SERVER_ERROR);
     }
   };
   // register controller
-  public register = async(request:Request) =>{
+  public register = async (request: Request) => {
     try {
       const body = await request.json();
       // validate the body
       await this.validate(body);
       // is user exist in database
       const user = await this.isUserExist(body.email);
-      if(user) throw new Error("User with this email Already exist")
+      if (user) throw new Error("User with this email Already exist")
       // hash the password
       body.password = await this.encryptPassword(body.password);
       // create user
@@ -99,18 +115,18 @@ class Auth {
   }
 
   // otp controller
-  public generateOTP = async(request:Request) =>{
+  public generateOTP = async (request: Request) => {
     try {
       const body = await request.json();
 
       // is user exist in database
       const user = await this.isUserExist(body.email);
-      if(!user) throw new Error("User with this email does not exist")
+      if (!user) throw new Error("User with this email does not exist")
 
       // generate OTP
       const otp = generateRandomOTP();
       // save otp and expiry time in database
-      user.otp = otp;
+      user.otp = String(otp);
       user.otpExpiry = new Date(Date.now() + 60000);
       await user.save();
       // send otp to user email
@@ -121,51 +137,56 @@ class Auth {
     }
   }
   // verify otp controller
-  public verifyOTP = async(request:Request) =>{
+  public verifyOTP = async (request: Request) => {
     try {
       const body = await request.json();
 
       // is user exist in database
       const user = await this.isUserExist(body.email);
-      if(!user) throw new Error("User with this email does not exist")
+      if (!user) throw new Error("User with this email does not exist")
 
       // check if otp is valid
-      if(user.otp !== body.otp) throw new Error("Invalid OTP")
+      if (user.otp !== body.otp) throw new Error("Invalid OTP")
       // check if otp is expired
-      if(new Date() > user.otpExpiry) throw new Error("OTP expired")
+      if (new Date() > user.otpExpiry) throw new Error("OTP expired")
       // generate Access Token
-      const token = this.generateAccessToken(user);
-      
+      const token = this.generateAccessToken({
+        _id: user._id,
+        email: user.email,
+        fullname: user.fullname,
+        role: user.role
+      });
+
       user.otp = null;
       user.otpExpiry = null;
       user.save();
 
       cookies().set('otpToken', token, { maxAge: 60 * 5, });
-      
+
       return generateResponse(null, "OTP verified successfully", STATUS_CODES.SUCCESS);
     } catch (error: any) {
       return generateResponse(null, error.message, STATUS_CODES.INTERNAL_SERVER_ERROR);
     }
   }
   // reset password controller
-  public resetPassword = async(request:Request) => {
+  public resetPassword = async (request: Request) => {
     try {
       const body = await request.json();
-      
+
       // decode the token
-      const decodeToken = jwt.verify(cookies().get('otpToken')?.value ?? '', process.env.ACCESS_TOKEN_SECRET || "secret")  as DecodedToken;
+      const decodeToken = jwt.verify(cookies().get('otpToken')?.value ?? '', process.env.ACCESS_TOKEN_SECRET || "secret") as DecodedToken;
       // find user 
       const user = await this.isUserExist(decodeToken.email);
-      if(!user) throw new Error("User with this email does not exist")
+      if (!user) throw new Error("User with this email does not exist")
 
       // hash the password and then update it
       const hash = await this.encryptPassword(body.password);
       user.password = hash;
       user.save();
-      
+
       // destory the cookies
       cookies().delete('otpToken');
-      
+
       return generateResponse(null, "Password reset successfully", STATUS_CODES.SUCCESS);
     } catch (error: any) {
       return generateResponse(null, error.message, STATUS_CODES.INTERNAL_SERVER_ERROR);

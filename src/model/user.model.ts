@@ -1,11 +1,15 @@
 import mongoose, { Model, Schema } from "mongoose";
 
 interface IUser  {
+  _id:string,
+  
   fullname: string;
   email: string;
   password: string;
   otp: string;
   isLead: boolean;
+  otpExpiry: Date;
+
   team:string;
   bio:string;
   role:string
