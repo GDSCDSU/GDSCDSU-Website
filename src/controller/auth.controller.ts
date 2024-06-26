@@ -7,6 +7,7 @@ import bcrypt from "bcrypt";
 import jwt from 'jsonwebtoken';
 import { cookies } from "next/headers";
 import { ValidationError } from "joi";
+import { DecodedToken, IUser, LoginCredentials } from "../../type";
 class Auth {
 
   constructor() {
