@@ -29,5 +29,5 @@ const ContactSchema: Schema = new Schema({
 // Create and export the Contact model
 const Contact = mongoose.models.Contact || mongoose.model<IContact>('Contact', ContactSchema);
 
-export const createMessage = (message: Partial<IContact>) => Contact.create(message);
+export const createMessage = (message: any) => Contact.create(message);
 export const fetchMessages = () => Contact.find().sort({ createdAt: -1 });
