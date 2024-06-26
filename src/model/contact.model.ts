@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from 'mongoose';
+import mongoose, { Schema, Document, Model } from 'mongoose';
 
 // Define the interface for the Contact model
 interface IContact extends Document {
@@ -23,11 +23,10 @@ const ContactSchema: Schema = new Schema({
     message: {
         type: String,
     },
-
 }, { timestamps: true });
 
 // Create and export the Contact model
-const Contact = mongoose.models.Contact || mongoose.model<IContact>('Contact', ContactSchema);
+const Contact: Model<IContact> = mongoose.models.Contact || mongoose.model<IContact>('Contact', ContactSchema);
 
-export const createMessage = (message: any) => Contact.create(message);
+export const createMessage = (message: any) => (Contact as Model<IContact>).create(message);
 export const fetchMessages = () => Contact.find().sort({ createdAt: -1 });
