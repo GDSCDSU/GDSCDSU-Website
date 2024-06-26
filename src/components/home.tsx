@@ -89,7 +89,7 @@ export default function Home() {
         <>
             {/* Header Image: */}
             <div data-aos="fade-up" >
-                <img className="img-fluid" src="/Header.svg" alt="" />
+                <Image className="img-fluid" src="/Header.svg" alt="" width={2000} height={100} />
             </div>
             <br />
             
@@ -173,7 +173,7 @@ export default function Home() {
                                         <div className="container">
                                             <div className="row justify-content-center">
                                                 <div className="col text-center">
-                                                    <img src='/worshopicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
+                                                    <Image src='/worshopicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
                                                 </div>
                                             </div>
                                             <br />
@@ -196,7 +196,7 @@ export default function Home() {
                                         <div className="container">
                                             <div className="row justify-content-center">
                                                 <div className="col text-center">
-                                                    <img src='/codeicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
+                                                    <Image src='/codeicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
                                                 </div>
                                             </div>
                                             <br />
@@ -219,7 +219,7 @@ export default function Home() {
                                         <div className="container">
                                             <div className="row justify-content-center">
                                                 <div className="col text-center">
-                                                    <img src='/techtalkicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
+                                                    <Image src='/techtalkicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
                                                 </div>
                                             </div>
                                             <br />
@@ -243,7 +243,7 @@ export default function Home() {
                                         <div className="container">
                                             <div className="row justify-content-center">
                                                 <div className="col text-center">
-                                                    <img src='/bootcampsicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
+                                                    <Image src='/bootcampsicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
                                                 </div>
                                             </div>
                                             <br />
@@ -267,7 +267,7 @@ export default function Home() {
                                         <div className="container">
                                             <div className="row justify-content-center">
                                                 <div className="col text-center">
-                                                    <img src='/studyjamsicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
+                                                    <Image src='/studyjamsicon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
                                                 </div>
                                             </div>
                                             <br />
@@ -290,7 +290,7 @@ export default function Home() {
                                         <div className="container">
                                             <div className="row justify-content-center">
                                                 <div className="col text-center">
-                                                    <img src='/careericon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
+                                                    <Image src='/careericon.svg' alt="" width={50} height={50} style={{ display: 'block', margin: '0 auto' }} />
                                                 </div>
                                             </div>
                                             <br />
@@ -324,10 +324,12 @@ export default function Home() {
                         {counters.map((counter, index) => (
                             <div key={index} className="col-md-3 col-12" data-aos="fade-up" data-aos-delay={`${index * 100}`}>
                                 <div className="d-flex flex-column align-items-center">
-                                    <img
+                                    <Image
                                         src={index === 0 ? '/Years.svg' : index === 1 ? '/Attendees.svg' : '/events.svg'}
                                         alt=""
                                         className="img-fluid mb-2"
+                                        width={50}
+                                        height={50}
                                     />
                                     <h1>
                                         <b>
@@ -357,7 +359,9 @@ export default function Home() {
                             <Carousel>
                                 {highlights.map((highlight, index) => (
                                     <Carousel.Item key={index}>
-                                        <img
+                                        <Image
+                                            width={100}
+                                            height={100}
                                             src={highlight.picture}
                                             alt={`Highlight ${index + 1}`}
                                         />
@@ -393,7 +397,7 @@ export default function Home() {
                             </button>
                         </div>
                         <div className="col-md-3">
-                            <img src="/sponsor.svg" alt="" className="img-fluid" />
+                            <Image src="/sponsor.svg" alt="" className="img-fluid" width={300} height={150}/>
                         </div>
                     </div>
                 </div>

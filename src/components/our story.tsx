@@ -135,7 +135,7 @@ export default function OurStory() {
                 <br />
                 <div className="row" >
                     <div className="col-md-2" >
-                        <img src="flutter.svg" alt="" className="img-fluid" />
+                        <Image src="flutter.svg" alt="" className="img-fluid" width={250} height={100} />
                     </div>
                     <div className="col-md-4" >
                         <div className="card" style={{ borderColor: 'transparent' }} >
@@ -178,7 +178,7 @@ export default function OurStory() {
                 <br />
                 <div className="row" >
                     <div className="col-md-2" >
-                        <img src="python.svg" alt="" className="img-fluid" />
+                        <Image src="python.svg" alt="" className="img-fluid" width={250} height={100} />
                     </div>
                     <div className="col-md-4" >
                         <div className="card" style={{ borderColor: 'transparent' }} >
@@ -234,7 +234,7 @@ export default function OurStory() {
                 <br />
                 <div className="row" >
                     <div className="col-md-2" >
-                        <img src="datacamplogo.svg" alt="" className="img-fluid" />
+                        <Image src="datacamplogo.svg" alt="" className="img-fluid" width={250} height={100} />
                     </div>
                     <div className="col-md-4" >
                         <div className="card" style={{ borderColor: 'transparent' }} >
@@ -278,7 +278,7 @@ export default function OurStory() {
                 <br />
                 <div className="row" >
                     <div className="col-md-2" >
-                        <img src="cyber.svg" alt="" className="img-fluid" />
+                        <Image src="cyber.svg" alt="" className="img-fluid" width={250} height={100}/>
                     </div>
                     <div className="col-md-4" >
                         <div className="card" style={{ borderColor: 'transparent' }} >
@@ -317,7 +317,7 @@ export default function OurStory() {
                 <br />
                 <div className="row" >
                     <div className="col-md-2" >
-                        <img src="git.svg" alt="" className="img-fluid" />
+                        <Image src="git.svg" alt="" className="img-fluid" width={250} height={100}/>
                     </div>
                     <div className="col-md-4" >
                         <div className="card" style={{ borderColor: 'transparent' }} >

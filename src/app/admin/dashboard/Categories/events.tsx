@@ -3,7 +3,7 @@ import { Button, Label, TextInput, Select } from "flowbite-react";
 import { FileInput } from "flowbite-react";
 import { Textarea } from "flowbite-react";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { BASE_URL } from "../../../../util/constant";
 
 export default function Events() {
@@ -31,17 +31,17 @@ export default function Events() {
     setShowForm(false);
   };
 
-  useEffect(() => {
-    fetchFilteredData();
-  }, [filter]);
-
-  const fetchFilteredData = async () => {
+  const fetchFilteredData = useCallback(async () => {
     const endpoint = filter === 'speakers' 
       ? `${BASE_URL}/event?topEvent=true&speaker=true`
       : `${BASE_URL}/event?topEvent=true`;
     const { data } = await axios.get(endpoint);
     setData(data.data);
-  };
+  }, [filter]);
+
+  useEffect(() => {
+    fetchFilteredData();
+  }, [fetchFilteredData]);
 
   const handleFilterChange = (event) => {
     setFilter(event.target.value);
@@ -93,7 +93,6 @@ export default function Events() {
     }
   };
 
-  
   return (
     <>
       <div className="flex justify-end mb-4 space-x-2">
@@ -198,7 +197,6 @@ export default function Events() {
 }
 
 const SpeakerCard = ({ image, name, content }) => {
-
   return (
     <div className="p-4 shadow-lg w-64 h-64 mb-4">
       <div className="flex justify-center">
