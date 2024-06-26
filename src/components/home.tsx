@@ -328,7 +328,7 @@ export default function Home() {
                                         src={index === 0 ? '/Years.svg' : index === 1 ? '/Attendees.svg' : '/events.svg'}
                                         alt=""
                                         className="img-fluid mb-2"
-                                        width={50}
+                                        width={100}
                                         height={50}
                                     />
                                     <h1>
@@ -360,8 +360,8 @@ export default function Home() {
                                 {highlights.map((highlight, index) => (
                                     <Carousel.Item key={index}>
                                         <Image
-                                            width={100}
-                                            height={100}
+                                            width={1500}
+                                            height={300}
                                             src={highlight.picture}
                                             alt={`Highlight ${index + 1}`}
                                         />
