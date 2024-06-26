@@ -27,7 +27,6 @@
     "react-countup": "^6.5.3",
     "react-datepicker": "^6.9.0",
     "react-dom": "^18",
-    "react-quill": "^2.0.0",
     "sweetalert2": "^11.11.0",
     "tailwind-merge": "^2.2.2"
   },
