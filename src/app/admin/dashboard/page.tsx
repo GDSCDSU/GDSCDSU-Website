@@ -8,7 +8,6 @@ import Swal from 'sweetalert2';
 import './dasboard.css'
 import dynamic from 'next/dynamic';
 const Categories = dynamic(() => import('./Menus/Categories'), { ssr: false });
-const PushNotification = dynamic(() => import('./Menus/PushNotification'), { ssr: false });
 const ContactList = dynamic(() => import('./Menus/ContactList'), { ssr: false });
 import {
   HiChartPie,
@@ -80,10 +79,6 @@ const Dashboard = () => {
                       <HiChartPie className="mr-2 h-5 w-5" />
                       Categories
                     </Button>
-                    <Button color="white" onClick={() => { setActiveComponent('notifications'); setIsSideOpen(false); }}>
-                      <HiOutlineBell className="mr-2 h-5 w-5" />
-                      Notifications
-                    </Button>
                     <Button color="white" onClick={() => { setActiveComponent('contact'); setIsSideOpen(false); }}>
                       <HiOutlineBell className="mr-2 h-5 w-5" />
                       Contact List
@@ -102,7 +97,6 @@ const Dashboard = () => {
 
       <div className="container mx-auto mt-4">
         {activeComponent === 'categories' && <Categories />}
-        {activeComponent === 'notifications' && <PushNotification />}
         {activeComponent === 'contact' && <ContactList />}
       </div>
 
