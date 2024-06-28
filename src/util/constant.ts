@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 
-export const BASE_URL = "http://gdsc.dsu.edu.pk/api";
+export const BASE_URL = "https://gdsc.dsu.edu.pk/api";
 
 export const components = {
   Founder: dynamic(() => import('../components/founder'), { ssr: false }),
